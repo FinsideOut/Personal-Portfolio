@@ -8,6 +8,8 @@ let percent80 = Math.floor((screenWidth / 10) * 8);
 let percent90 = Math.floor((screenWidth / 10) * 9);
 
 const bookText = document.querySelectorAll(".book-text-right, .book-text-left");
+const bookTextRight = document.querySelectorAll(".book-text-right");
+const bookTextLeft = document.querySelectorAll(".book-text-left");
 
 bookText.forEach((line) => {
   let txt = line.innerText;
@@ -17,7 +19,6 @@ bookText.forEach((line) => {
   line.innerHTML = newTxt;
 });
 
-const bookTextRight = document.querySelectorAll(".book-text-right");
 bookTextRight.forEach((line) => {
   let spans = line.children;
   for (let i = 0; i < spans.length; i++) {
@@ -27,7 +28,6 @@ bookTextRight.forEach((line) => {
   }
 });
 
-const bookTextLeft = document.querySelectorAll(".book-text-left");
 bookTextLeft.forEach((line) => {
   let spans = line.children;
   for (let i = 0; i < spans.length; i++) {
@@ -37,6 +37,19 @@ bookTextLeft.forEach((line) => {
   }
 });
 
+window.onclick = () => {
+  console.log("remove");
+  bookText.forEach((line) => {
+    let spans = line.children;
+    console.log(spans);
+    for (let i = 0; i < spans.length; i++) {
+      span = spans[i];
+      console.log(span);
+      span.removeAttribute("class");
+    }
+  });
+};
+// window.onscroll = addCurve();
 // // find position of each span
 function getPos(el) {
   // yay readability
