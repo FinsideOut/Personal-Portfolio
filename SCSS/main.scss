@@ -1,0 +1,63 @@
+@import "funcs";
+@import "defaults";
+@import "utils";
+@import "menu";
+
+#book-screen,
+#social,
+#sub-screen {
+  width: 90vw;
+  margin: 5vh auto;
+}
+#book-screen,
+#social {
+  height: 95vh;
+}
+#book-screen {
+  background: url("../svg/basic_book.svg") no-repeat center center/cover;
+  @include flex(row, center);
+}
+#left-page,
+#right-page {
+  width: 35%;
+  height: 85%;
+  @include flex(column, space-between);
+  align-items: flex-start;
+  padding: 0.25rem;
+}
+#right-page {
+  margin-left: 1rem;
+}
+
+#left-page {
+  margin-right: 1rem;
+  p {
+    text-align: center;
+  }
+  nav {
+    align-self: center;
+    ul {
+      align-items: center;
+    }
+    h2 {
+      font-size: 2.5rem;
+    }
+  }
+}
+
+#social {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  @include flex(column, flex-end);
+  width: 5vw;
+}
+
+#main-footer {
+  margin-top: 5vh;
+  padding: 1rem;
+  text-align: center;
+  .footer-text {
+    font-size: 0.8rem;
+  }
+}
