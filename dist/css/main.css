@@ -3,7 +3,6 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  border: 1px solid black;
 }
 
 body {
@@ -111,6 +110,8 @@ form {
       -ms-flex-pack: center;
           justify-content: center;
   grid-gap: 5vh;
+  width: 80%;
+  margin: 0 auto;
 }
 
 form .subject,
@@ -129,7 +130,8 @@ label {
 
 input,
 textarea {
-  width: 80%;
+  font-family: "Lato", sans-serif;
+  width: 100%;
   font-size: 1.5rem;
   padding: 0.5rem;
 }
@@ -154,11 +156,6 @@ input {
           justify-content: space-between;
 }
 
-.subject {
-  width: 50%;
-  margin: 0 auto;
-}
-
 button {
   outline: none;
   border: none;
@@ -171,6 +168,10 @@ button {
   font-size: 2rem;
   padding: 0.5rem 1rem;
   border: 2px solid black;
+}
+
+text {
+  fill: #ff9800;
 }
 
 .menu-wrap {
@@ -412,6 +413,7 @@ button {
 }
 
 #left-page {
+  text-align: center;
   margin-right: 1rem;
 }
 
@@ -463,5 +465,13 @@ button {
 
 #main-footer .footer-text {
   font-size: 0.8rem;
+}
+
+.blue {
+  color: blue;
+}
+
+.red {
+  color: red;
 }
 /*# sourceMappingURL=MAIN.css.map */

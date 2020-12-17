@@ -5,7 +5,7 @@
   padding: 0;
   box-sizing: border-box;
 
-  border: 1px solid black;
+  //   border: 1px solid black;
 }
 
 body {
@@ -84,6 +84,8 @@ form {
   align-items: center;
   justify-content: center;
   grid-gap: 5vh;
+  width: 80%;
+  margin: 0 auto;
   .subject,
   .message,
   .submit {
@@ -97,7 +99,9 @@ label {
 }
 input,
 textarea {
-  width: 80%;
+  font-family: "Lato", sans-serif;
+
+  width: 100%;
   font-size: 1.5rem;
   padding: 0.5rem;
 }
@@ -108,10 +112,10 @@ input {
 .input-wrapper {
   @include flex(column, space-between);
 }
-.subject {
-  width: 50%;
-  margin: 0 auto;
-}
+// .subject {
+//   width: 50%;
+//   margin: 0 auto;
+// }
 
 button {
   outline: none;
@@ -122,4 +126,11 @@ button {
   font-size: 2rem;
   padding: 0.5rem 1rem;
   border: 2px solid black;
+}
+// path {
+//   fill: transparent;
+// }
+
+text {
+  fill: #ff9800;
 }
