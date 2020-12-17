@@ -21,6 +21,7 @@
 #right-page {
   width: 35%;
   height: 85%;
+  margin-top: 5vh;
   @include flex(column, space-between);
   align-items: flex-start;
   padding: 0.25rem;

@@ -3,6 +3,7 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  border: 1px solid black;
 }
 
 body {
@@ -386,6 +387,7 @@ button {
 #right-page {
   width: 35%;
   height: 85%;
+  margin-top: 5vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -462,4 +464,4 @@ button {
 #main-footer .footer-text {
   font-size: 0.8rem;
 }
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=MAIN.css.map */
