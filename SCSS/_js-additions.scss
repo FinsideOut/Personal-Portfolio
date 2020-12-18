@@ -1,0 +1,26 @@
+.blue {
+  color: blue;
+}
+.red {
+  color: red;
+}
+// .body-zoomed {
+//   background: black;
+//   color: white;
+// }
+// .book-screen-zoomed {
+//   //   transform: scale(1.1);
+//   flex-direction: column !important;
+//   height: fit-content !important;
+//   //   As already anwsered, flex-direction can't be animated directly, and browsers "have no idea" how to interpolate the positions of flex items visually during such transition. But you can kind of emulate such transition by transitioning transforms and changing flex-direction on transitionend event (a quick demo to illustrate the idea: http://codepen.io/SelenIT/pen/ZBXrXV/).
+// }
+// .page-zoomed {
+//   //   text-align: center !important;
+//   width: 100% !important;
+// }
+
+// .shown {
+//   visibility: visible !important;
+//   display: block !important;
+//   transform: none !important;
+// }

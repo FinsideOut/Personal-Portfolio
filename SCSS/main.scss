@@ -13,8 +13,16 @@
 #social {
   height: 95vh;
 }
+#book-bg {
+  position: absolute;
+  top: 5vh;
+  left: 0;
+  background: url("../svg/basic_book.svg") no-repeat center center / cover;
+  background-size: 110% 110%;
+  width: 100%;
+  height: 100%;
+}
 #book-screen {
-  background: url("../svg/basic_book.svg") no-repeat center center/cover;
   @include flex(row, center);
 }
 #left-page,
@@ -63,9 +71,4 @@
     font-size: 0.8rem;
   }
 }
-.blue {
-  color: blue;
-}
-.red {
-  color: red;
-}
+@import "js-additions";
