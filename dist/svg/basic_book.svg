@@ -75,12 +75,12 @@
      inkscape:groupmode="layer"
      id="layer1">
     <path
-       style="fill:none;stroke:#000000;stroke-width:3.175;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:black;stroke:#000000;stroke-width:3.175;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="M 254,37.041666 V 248.70833 c 63.5,-23.8125 127,0 190.5,0 V 37.041666 c -60.85417,-10.583333 -140.22917,-23.812499 -190.5,0 z"
        id="path26"
        sodipodi:nodetypes="ccccc" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:3.175;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:black;stroke:#000000;stroke-width:3.175;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="M 254,37.041666 V 248.70833 c -63.5,-23.8125 -127,0 -190.499997,0 V 37.041666 c 60.854167,-10.58333 140.229167,-23.8125 190.499997,0 z"
        id="path26-8"
        sodipodi:nodetypes="ccccc" />

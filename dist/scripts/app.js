@@ -11,6 +11,18 @@ const bookText = document.querySelectorAll(".book-text-right, .book-text-left");
 const bookTextRight = document.querySelectorAll(".book-text-right");
 const bookTextLeft = document.querySelectorAll(".book-text-left");
 
+const bookPageRight = document.getElementById("right-page");
+const bookPageLeft = document.getElementById("left-page");
+
+bookPageRight.onclick = () => {
+  bookPageRight.classList.add("right-page-to-center");
+  bookPageLeft.classList.add("page-to-up");
+};
+bookPageLeft.onclick = () => {
+  bookPageLeft.classList.add("left-page-to-center");
+  bookPageRight.classList.add("page-to-down");
+};
+
 bookText.forEach((line) => {
   let txt = line.innerText;
   let newTxt = txt.replace(/\w/g, function (c) {
@@ -38,13 +50,13 @@ bookTextLeft.forEach((line) => {
 });
 
 window.onclick = () => {
-  console.log("remove");
+  // console.log("remove");
   bookText.forEach((line) => {
     let spans = line.children;
-    console.log(spans);
+    // console.log(spans);
     for (let i = 0; i < spans.length; i++) {
       span = spans[i];
-      console.log(span);
+      // console.log(span);
       span.removeAttribute("class");
     }
   });

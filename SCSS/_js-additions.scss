@@ -4,6 +4,21 @@
 .red {
   color: red;
 }
+
+.right-page-to-center {
+  color: green;
+}
+.left-page-to-center {
+  color: orange;
+}
+.page-to-up {
+  color: yellow;
+  transform: translateY(-100vh);
+}
+.page-to-down {
+  color: yellow;
+  transform: translateY(100vh);
+}
 // .body-zoomed {
 //   background: black;
 //   color: white;
