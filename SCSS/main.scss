@@ -26,9 +26,11 @@
 #book-screen {
   @include flex(row, center);
   color: white;
+  border: 1px solid black;
 }
 #left-page,
 #right-page {
+  border: 1px solid white;
   transition: transform $transit-time ease-in-out;
   width: 35%;
   height: 85%;
@@ -43,7 +45,7 @@
 
 #left-page {
   text-align: center;
-  margin-right: 1rem;
+  // margin-right: 1rem;
   p {
     text-align: center;
   }

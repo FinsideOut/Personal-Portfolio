@@ -64,6 +64,7 @@ window.onclick = () => {
 // window.onscroll = addCurve();
 // // find position of each span
 function getPos(el) {
+  // needs to be relative to #book screen
   // yay readability
   for (
     var lx = 0, ly = 0;
