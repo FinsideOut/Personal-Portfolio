@@ -11,16 +11,15 @@ const bookText = document.querySelectorAll(".book-text-right, .book-text-left");
 const bookTextRight = document.querySelectorAll(".book-text-right");
 const bookTextLeft = document.querySelectorAll(".book-text-left");
 
+const bookScreen = document.getElementById("book-screen");
 const bookPageRight = document.getElementById("right-page");
 const bookPageLeft = document.getElementById("left-page");
+const bookBg = document.getElementById("book-bg");
 
-bookPageRight.onclick = () => {
-  bookPageRight.classList.add("right-page-to-center");
-  bookPageLeft.classList.add("page-to-up");
-};
-bookPageLeft.onclick = () => {
-  bookPageLeft.classList.add("left-page-to-center");
+bookScreen.onclick = () => {
+  bookPageLeft.classList.add("page-to-center");
   bookPageRight.classList.add("page-to-down");
+  bookBg.classList.add("book-bg-zoom");
 };
 
 bookText.forEach((line) => {

@@ -4,18 +4,20 @@
 // .red {
 //   color: red;
 // }
-
-.right-page-to-center {
-  transform: translateX(-50%);
+.book-bg-zoom {
+  transform: translate(-50%, -50%) scaleX(2) scaleY(7) !important;
 }
-.left-page-to-center {
-  transform: translateX(50%);
+.page-to-center {
+  transform: translate(-50%, -50%) !important;
+  // width: 100%;
+  // width: 100% !important;
 }
-.page-to-up {
-  transform: translateY(-100vh);
-}
+// .page-to-up {
+//   transform: translateY(-100vh) !important;
+// }
 .page-to-down {
-  transform: translateY(100vh);
+  transform: translate(-50%, 50%) !important;
+  // width: 100% !important;
 }
 // .body-zoomed {
 //   background: black;

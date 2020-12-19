@@ -88,10 +88,6 @@ nav ul {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  text-align: left;
 }
 
 nav ul li {
@@ -369,43 +365,37 @@ text {
 
 #book-bg {
   position: absolute;
-  top: 5vh;
-  left: 0;
+  top: 50%;
+  left: 50%;
   background: url("../svg/basic_book.svg") no-repeat center center/cover;
-  background-size: 110% 110%;
   width: 100%;
   height: 100%;
-  z-index: -1;
+  z-index: 2;
+  -webkit-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
+  -webkit-transition: -webkit-transform 1000ms ease-in-out;
+  transition: -webkit-transform 1000ms ease-in-out;
+  transition: transform 1000ms ease-in-out;
+  transition: transform 1000ms ease-in-out, -webkit-transform 1000ms ease-in-out;
 }
 
 #book-screen {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  background: url("../svg/basic_book.svg") no-repeat center center/cover;
+  position: relative;
   color: white;
-  border: 1px solid black;
+  margin-top: 5vh;
 }
 
 #left-page,
 #right-page {
-  border: 1px solid white;
+  position: absolute;
   -webkit-transition: -webkit-transform 400ms ease-in-out;
   transition: -webkit-transform 400ms ease-in-out;
   transition: transform 400ms ease-in-out;
   transition: transform 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
   width: 35%;
   height: 85%;
-  margin-top: 5vh;
+  z-index: 3;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -419,17 +409,22 @@ text {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  align-items: center;
   padding: 0.25rem;
 }
 
 #right-page {
-  margin-left: 1rem;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 #left-page {
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-100%, -50%);
+          transform: translate(-100%, -50%);
   text-align: center;
 }
 
@@ -483,23 +478,18 @@ text {
   font-size: 0.8rem;
 }
 
-.right-page-to-center {
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+.book-bg-zoom {
+  -webkit-transform: translate(-50%, -50%) scaleX(2) scaleY(7) !important;
+          transform: translate(-50%, -50%) scaleX(2) scaleY(7) !important;
 }
 
-.left-page-to-center {
-  -webkit-transform: translateX(50%);
-          transform: translateX(50%);
-}
-
-.page-to-up {
-  -webkit-transform: translateY(-100vh);
-          transform: translateY(-100vh);
+.page-to-center {
+  -webkit-transform: translate(-50%, -50%) !important;
+          transform: translate(-50%, -50%) !important;
 }
 
 .page-to-down {
-  -webkit-transform: translateY(100vh);
-          transform: translateY(100vh);
+  -webkit-transform: translate(-50%, 50%) !important;
+          transform: translate(-50%, 50%) !important;
 }
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=MAIN.css.map */

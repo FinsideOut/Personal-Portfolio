@@ -70,8 +70,8 @@ nav {
   height: 100%;
   ul {
     @include flex(column, space-between);
-    align-items: flex-start;
-    text-align: left;
+    // align-items: flex-start;
+    // text-align: left;
     li {
       padding: 1rem;
     }
