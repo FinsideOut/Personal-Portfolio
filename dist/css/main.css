@@ -8,6 +8,8 @@
 body {
   font-family: "Lato", sans-serif;
   overflow-x: hidden;
+  -webkit-transition: background-color 100ms ease-in-out 800ms;
+  transition: background-color 100ms ease-in-out 800ms;
 }
 
 a {
@@ -389,10 +391,10 @@ text {
 #left-page,
 #right-page {
   position: absolute;
-  -webkit-transition: -webkit-transform 400ms ease-in-out;
-  transition: -webkit-transform 400ms ease-in-out;
-  transition: transform 400ms ease-in-out;
-  transition: transform 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
+  -webkit-transition: -webkit-transform 800ms ease-in-out;
+  transition: -webkit-transform 800ms ease-in-out;
+  transition: transform 800ms ease-in-out;
+  transition: transform 800ms ease-in-out, -webkit-transform 800ms ease-in-out;
   width: 35%;
   height: 85%;
   z-index: 3;
@@ -479,8 +481,8 @@ text {
 }
 
 .book-bg-zoom {
-  -webkit-transform: translate(-50%, -50%) scaleX(2) scaleY(7) !important;
-          transform: translate(-50%, -50%) scaleX(2) scaleY(7) !important;
+  -webkit-transform: translate(-50%, -50%) scaleX(1.5) scaleY(1.5) !important;
+          transform: translate(-50%, -50%) scaleX(1.5) scaleY(1.5) !important;
 }
 
 .page-to-center {
@@ -492,4 +494,12 @@ text {
   -webkit-transform: translate(-50%, 50%) !important;
           transform: translate(-50%, 50%) !important;
 }
-/*# sourceMappingURL=MAIN.css.map */
+
+.body-zoomed {
+  background: black !important;
+}
+
+.hidden {
+  visibility: hidden;
+}
+/*# sourceMappingURL=main.css.map */

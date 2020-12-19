@@ -15,11 +15,15 @@ const bookScreen = document.getElementById("book-screen");
 const bookPageRight = document.getElementById("right-page");
 const bookPageLeft = document.getElementById("left-page");
 const bookBg = document.getElementById("book-bg");
+const conntact = document.getElementById("contact");
+const body = document.getElementsByTagName("body")[0];
 
 bookScreen.onclick = () => {
   bookPageLeft.classList.add("page-to-center");
   bookPageRight.classList.add("page-to-down");
   bookBg.classList.add("book-bg-zoom");
+  body.classList.add("body-zoomed");
+  conntact.classList.add("hidden");
 };
 
 bookText.forEach((line) => {
