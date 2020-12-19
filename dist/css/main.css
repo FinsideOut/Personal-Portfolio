@@ -366,15 +366,11 @@ text {
 }
 
 #book-bg {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  background: url("../svg/basic_book.svg") no-repeat center center/cover;
-  width: 100%;
-  height: 100%;
+  background: url("../img/book.png") no-repeat center center/cover;
+  border: 1px solid black;
   z-index: 2;
-  -webkit-transform: translate(-50%, -50%) scale(1);
-          transform: translate(-50%, -50%) scale(1);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   -webkit-transition: -webkit-transform 1000ms ease-in-out;
   transition: -webkit-transform 1000ms ease-in-out;
   transition: transform 1000ms ease-in-out;
@@ -382,7 +378,6 @@ text {
 }
 
 #book-screen {
-  background: url("../svg/basic_book.svg") no-repeat center center/cover;
   position: relative;
   color: white;
   margin-top: 5vh;
@@ -412,6 +407,7 @@ text {
       -ms-flex-pack: justify;
           justify-content: space-between;
   align-items: center;
+  margin-top: 2%;
   padding: 0.25rem;
 }
 
@@ -420,9 +416,11 @@ text {
   left: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+  border: 1px solid yellow;
 }
 
 #left-page {
+  border: 1px solid green;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-100%, -50%);
@@ -480,6 +478,14 @@ text {
   font-size: 0.8rem;
 }
 
+.blue {
+  color: blue !important;
+}
+
+.red {
+  color: red !important;
+}
+
 .book-bg-zoom {
   -webkit-transform: translate(-50%, -50%) scaleX(1.5) scaleY(1.5) !important;
           transform: translate(-50%, -50%) scaleX(1.5) scaleY(1.5) !important;
@@ -502,4 +508,4 @@ text {
 .hidden {
   visibility: hidden;
 }
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=MAIN.css.map */
