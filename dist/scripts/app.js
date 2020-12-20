@@ -27,8 +27,9 @@ bookText.forEach((line) => {
 });
 
 let percent = [];
-for (let i = 0; i < 11; i++) {
-  percent.push((bookPageLeft.offsetWidth / 10) * [i]);
+const num = 40;
+for (let i = 0; i < num; i++) {
+  percent.push((bookPageLeft.offsetWidth / num) * [i]);
 }
 
 bookTextRight.forEach((line) => {
@@ -50,8 +51,8 @@ bookTextLeft.forEach((line) => {
   for (let i = 0; i < spans.length; i++) {
     for (let j = 0; j < percent.length; j++) {
       if (
-        spans[i].offsetLeft >= percent[j] &&
-        spans[i].offsetLeft <= percent[j + 1]
+        spans[i].offsetLeft + spans[i].offsetWidth >= percent[j] &&
+        spans[i].offsetLeft + spans[i].offsetWidth <= percent[j + 1]
       ) {
         spans[i].classList.add("left-curve" + j);
       }
@@ -64,7 +65,7 @@ window.onclick = () => {
     let spans = line.children;
     for (let i = 0; i < spans.length; i++) {
       span = spans[i];
-      span.removeAttribute("class");
+      span.style.transform = "none";
     }
   });
 };

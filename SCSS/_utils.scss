@@ -15,6 +15,7 @@ body {
 }
 span {
   display: inline-block;
+  transition: transform $transit-time ease-in-out !important;
 }
 a {
   text-decoration: none;
