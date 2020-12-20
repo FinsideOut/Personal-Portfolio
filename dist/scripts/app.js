@@ -41,6 +41,7 @@ bookTextRight.forEach((line) => {
         spans[i].offsetLeft <= percent[j + 1]
       ) {
         spans[i].classList.add("right-curve" + j);
+        spans[i].classList.add("letters");
       }
     }
   }
@@ -55,6 +56,7 @@ bookTextLeft.forEach((line) => {
         spans[i].offsetLeft + spans[i].offsetWidth <= percent[j + 1]
       ) {
         spans[i].classList.add("left-curve" + j);
+        spans[i].classList.add("letters");
       }
     }
   }

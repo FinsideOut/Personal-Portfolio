@@ -485,6 +485,11 @@ text {
           transform: none;
 }
 
+.letters {
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+}
+
 .left-curve0 {
   -webkit-transform: translateY(0rem);
           transform: translateY(0rem);
@@ -556,8 +561,8 @@ text {
 }
 
 .left-curve14 {
-  -webkit-transform: translateY(-0.6rem);
-          transform: translateY(-0.6rem);
+  -webkit-transform: translateY(-0.5rem);
+          transform: translateY(-0.5rem);
 }
 
 .left-curve15 {
@@ -566,123 +571,123 @@ text {
 }
 
 .left-curve16 {
-  -webkit-transform: translateY(-0.4rem);
-          transform: translateY(-0.4rem);
+  -webkit-transform: translateY(-0.5rem);
+          transform: translateY(-0.5rem);
 }
 
 .left-curve17 {
-  -webkit-transform: translateY(-0.3rem);
-          transform: translateY(-0.3rem);
+  -webkit-transform: translateY(-0.6rem);
+          transform: translateY(-0.6rem);
 }
 
 .left-curve18 {
-  -webkit-transform: translateY(-0.2rem);
-          transform: translateY(-0.2rem);
+  -webkit-transform: translateY(-1rem);
+          transform: translateY(-1rem);
 }
 
 .left-curve19 {
-  -webkit-transform: translateY(-0.1rem);
-          transform: translateY(-0.1rem);
+  -webkit-transform: translateY(-1.1rem);
+          transform: translateY(-1.1rem);
 }
 
 .left-curve20 {
-  -webkit-transform: translateY(0rem);
-          transform: translateY(0rem);
+  -webkit-transform: translateY(-1.2rem);
+          transform: translateY(-1.2rem);
 }
 
 .left-curve21 {
-  -webkit-transform: translateY(-0.9rem);
-          transform: translateY(-0.9rem);
+  -webkit-transform: translateY(-1.3rem);
+          transform: translateY(-1.3rem);
 }
 
 .left-curve22 {
-  -webkit-transform: translateY(-0.8rem);
-          transform: translateY(-0.8rem);
+  -webkit-transform: translateY(-1.3rem);
+          transform: translateY(-1.3rem);
 }
 
 .left-curve23 {
-  -webkit-transform: translateY(-0.7rem);
-          transform: translateY(-0.7rem);
+  -webkit-transform: translateY(-1.3rem);
+          transform: translateY(-1.3rem);
 }
 
 .left-curve24 {
-  -webkit-transform: translateY(-0.6rem);
-          transform: translateY(-0.6rem);
+  -webkit-transform: translateY(-1.3rem);
+          transform: translateY(-1.3rem);
 }
 
 .left-curve25 {
-  -webkit-transform: translateY(-0.5rem);
-          transform: translateY(-0.5rem);
+  -webkit-transform: translateY(-1.4rem);
+          transform: translateY(-1.4rem);
 }
 
 .left-curve26 {
-  -webkit-transform: translateY(-0.4rem);
-          transform: translateY(-0.4rem);
+  -webkit-transform: translateY(-1.5rem);
+          transform: translateY(-1.5rem);
 }
 
 .left-curve27 {
-  -webkit-transform: translateY(-0.3rem);
-          transform: translateY(-0.3rem);
+  -webkit-transform: translateY(-1.6rem);
+          transform: translateY(-1.6rem);
 }
 
 .left-curve28 {
-  -webkit-transform: translateY(-0.2rem);
-          transform: translateY(-0.2rem);
+  -webkit-transform: translateY(-1.7rem);
+          transform: translateY(-1.7rem);
 }
 
 .left-curve29 {
-  -webkit-transform: translateY(-0.1rem);
-          transform: translateY(-0.1rem);
+  -webkit-transform: translateY(-1.6rem);
+          transform: translateY(-1.6rem);
 }
 
 .left-curve30 {
-  -webkit-transform: translateY(0rem);
-          transform: translateY(0rem);
+  -webkit-transform: translateY(-1.5rem);
+          transform: translateY(-1.5rem);
 }
 
 .left-curve31 {
+  -webkit-transform: translateY(-1.4rem);
+          transform: translateY(-1.4rem);
+}
+
+.left-curve32 {
+  -webkit-transform: translateY(-1.3rem);
+          transform: translateY(-1.3rem);
+}
+
+.left-curve33 {
+  -webkit-transform: translateY(-1.2rem);
+          transform: translateY(-1.2rem);
+}
+
+.left-curve34 {
+  -webkit-transform: translateY(-1.1rem);
+          transform: translateY(-1.1rem);
+}
+
+.left-curve35 {
+  -webkit-transform: translateY(-1rem);
+          transform: translateY(-1rem);
+}
+
+.left-curve36 {
   -webkit-transform: translateY(-0.9rem);
           transform: translateY(-0.9rem);
 }
 
-.left-curve32 {
-  -webkit-transform: translateY(-0.8rem);
-          transform: translateY(-0.8rem);
-}
-
-.left-curve33 {
+.left-curve37 {
   -webkit-transform: translateY(-0.7rem);
           transform: translateY(-0.7rem);
 }
 
-.left-curve34 {
-  -webkit-transform: translateY(-0.6rem);
-          transform: translateY(-0.6rem);
-}
-
-.left-curve35 {
-  -webkit-transform: translateY(-0.5rem);
-          transform: translateY(-0.5rem);
-}
-
-.left-curve36 {
+.left-curve38 {
   -webkit-transform: translateY(-0.4rem);
           transform: translateY(-0.4rem);
 }
 
-.left-curve37 {
-  -webkit-transform: translateY(-0.3rem);
-          transform: translateY(-0.3rem);
-}
-
-.left-curve38 {
-  -webkit-transform: translateY(-0.3rem);
-          transform: translateY(-0.3rem);
-}
-
 .left-curve39 {
-  -webkit-transform: translateY(-0.1rem);
-          transform: translateY(-0.1rem);
+  -webkit-transform: translateY(-0.2rem);
+          transform: translateY(-0.2rem);
 }
 
 .left-curve40 {
