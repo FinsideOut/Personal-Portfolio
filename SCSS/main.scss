@@ -23,8 +23,6 @@
   position: relative;
 }
 #book-screen {
-  border: 1px solid black;
-
   color: white;
   margin-top: 3vh;
 }
@@ -45,12 +43,12 @@
 }
 #right-page {
   transform: translateY(-50%);
-  border: 1px solid yellow;
+  // border: 1px solid yellow;
   // color: yellow;
 }
 
 #left-page {
-  border: 1px solid green;
+  // border: 1px solid green;
   transform: translate(-100%, -50%);
   text-align: center;
   p {

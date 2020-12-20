@@ -386,7 +386,6 @@ text {
 }
 
 #book-screen {
-  border: 1px solid black;
   color: white;
   margin-top: 3vh;
 }
@@ -423,11 +422,9 @@ text {
 #right-page {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  border: 1px solid yellow;
 }
 
 #left-page {
-  border: 1px solid green;
   -webkit-transform: translate(-100%, -50%);
           transform: translate(-100%, -50%);
   text-align: center;
@@ -756,4 +753,4 @@ text {
 .hidden {
   visibility: hidden;
 }
-/*# sourceMappingURL=MAIN.css.map */
+/*# sourceMappingURL=main.css.map */
