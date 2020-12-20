@@ -14,14 +14,17 @@
   height: 95vh;
 }
 #book-bg {
-  background: url("../img/book.png") no-repeat center center / contain;
-  border: 1px solid black;
-  width: 100%;
+  // background: url("../img/book.png") no-repeat center center / contain;
+  display: block;
+  width: 90%;
   height: 100%;
+  margin: auto;
   transition: transform $transit-time-long ease-in-out;
+  position: relative;
 }
 #book-screen {
-  position: relative;
+  border: 1px solid black;
+
   color: white;
   margin-top: 3vh;
 }

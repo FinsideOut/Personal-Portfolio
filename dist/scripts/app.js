@@ -5,9 +5,10 @@ const bookTextLeft = document.querySelectorAll(".book-text-left");
 
 const bookPageRight = document.getElementById("right-page");
 const bookPageLeft = document.getElementById("left-page");
-const bookBg = document.getElementById("book-bg");
 const conntact = document.getElementById("contact");
 const body = document.getElementsByTagName("body")[0];
+
+const bookBg = document.getElementById("book-bg");
 
 bookScreen.onclick = () => {
   bookPageLeft.classList.add("page-to-center");
@@ -25,21 +26,29 @@ bookText.forEach((line) => {
   line.innerHTML = newTxt;
 });
 
-bookTextRight.forEach((line) => {
-  let spans = line.children;
-  for (let i = 0; i < spans.length; i++) {
-    if (spans[i].offsetLeft > percents[5]) {
-      spans[i].classList.add("blue");
-    }
-  }
-});
-
+// bookTextRight.forEach((line) => {
+//   let spans = line.children;
+//   for (let i = 0; i < spans.length; i++) {
+//     if (spans[i].offsetLeft > percents[5]) {
+//       spans[i].classList.add("blue");
+//     }
+//   }
+// });
+const test = bookPageLeft.offsetWidth / 3;
 bookTextLeft.forEach((line) => {
   let spans = line.children;
   for (let i = 0; i < spans.length; i++) {
-    if (spans[i].offsetLeft < percents[5]) {
+    if (spans[i].offsetLeft < test) {
       spans[i].classList.add("red");
-      // console.log(spans[0].offsetLeft + spans[0].innerText);
+    }
+  }
+});
+const test2 = bookPageRight.offsetWidth / 3;
+bookTextRight.forEach((line) => {
+  let spans = line.children;
+  for (let i = 0; i < spans.length; i++) {
+    if (spans[i].offsetLeft > test2) {
+      spans[i].classList.add("blue");
     }
   }
 });

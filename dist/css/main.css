@@ -366,18 +366,19 @@ text {
 }
 
 #book-bg {
-  background: url("../img/book.png") no-repeat center center/contain;
-  border: 1px solid black;
-  width: 100%;
+  display: block;
+  width: 90%;
   height: 100%;
+  margin: auto;
   -webkit-transition: -webkit-transform 1000ms ease-in-out;
   transition: -webkit-transform 1000ms ease-in-out;
   transition: transform 1000ms ease-in-out;
   transition: transform 1000ms ease-in-out, -webkit-transform 1000ms ease-in-out;
+  position: relative;
 }
 
 #book-screen {
-  position: relative;
+  border: 1px solid black;
   color: white;
   margin-top: 3vh;
 }
