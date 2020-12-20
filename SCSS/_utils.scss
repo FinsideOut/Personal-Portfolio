@@ -13,7 +13,9 @@ body {
   overflow-x: hidden;
   transition: background-color 100ms ease-in-out $transit-time;
 }
-
+span {
+  display: inline-block;
+}
 a {
   text-decoration: none;
   color: inherit;

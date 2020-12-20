@@ -12,6 +12,10 @@ body {
   transition: background-color 100ms ease-in-out 800ms;
 }
 
+span {
+  display: inline-block;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -475,12 +479,86 @@ text {
   font-size: 0.8rem;
 }
 
-.red {
-  color: red !important;
+.left-curve0 {
+  color: green;
 }
 
-.blue {
-  color: blue !important;
+.left-curve1 {
+  color: #0000e6;
+}
+
+.left-curve2 {
+  color: #cc0000;
+}
+
+.left-curve3 {
+  color: #0000b3;
+}
+
+.left-curve4 {
+  color: #990000;
+}
+
+.left-curve5 {
+  color: navy;
+}
+
+.left-curve6 {
+  color: #660000;
+}
+
+.left-curve7 {
+  color: #00004d;
+}
+
+.left-curve8 {
+  color: #330000;
+}
+
+.left-curve9 {
+  color: #330000;
+  color: green;
+}
+
+.right-curve0 {
+  color: green;
+}
+
+.right-curve1 {
+  color: #e60000;
+}
+
+.right-curve2 {
+  color: #cc0000;
+}
+
+.right-curve3 {
+  color: #b30000;
+}
+
+.right-curve4 {
+  color: #990000;
+}
+
+.right-curve5 {
+  color: maroon;
+}
+
+.right-curve6 {
+  color: #660000;
+}
+
+.right-curve7 {
+  color: #4d0000;
+}
+
+.right-curve8 {
+  color: #330000;
+}
+
+.right-curve9 {
+  color: #330000;
+  color: green;
 }
 
 .book-bg-zoom {
@@ -505,4 +583,4 @@ text {
 .hidden {
   visibility: hidden;
 }
-/*# sourceMappingURL=MAIN.css.map */
+/*# sourceMappingURL=main.css.map */

@@ -1,9 +1,69 @@
-.red {
-  color: red !important;
+.left-curve0 {
+  color: green;
 }
-.blue {
-  color: blue !important;
+.left-curve1 {
+  color: darken(blue, 5%);
 }
+.left-curve2 {
+  color: darken(red, 10%);
+}
+.left-curve3 {
+  color: darken(blue, 15%);
+}
+.left-curve4 {
+  color: darken(red, 20%);
+}
+.left-curve5 {
+  color: darken(blue, 25%);
+  // transform: translateY(3rem) !important;
+}
+.left-curve6 {
+  color: darken(red, 30%);
+}
+.left-curve7 {
+  color: darken(blue, 35%);
+}
+.left-curve8 {
+  color: darken(red, 40%);
+}
+.left-curve9 {
+  color: darken(red, 40%);
+  color: green;
+}
+
+.right-curve0 {
+  color: green;
+}
+.right-curve1 {
+  color: darken(red, 5%);
+}
+.right-curve2 {
+  color: darken(red, 10%);
+}
+.right-curve3 {
+  color: darken(red, 15%);
+}
+.right-curve4 {
+  color: darken(red, 20%);
+}
+.right-curve5 {
+  color: darken(red, 25%);
+  // transform: translateY(3rem) !important;
+}
+.right-curve6 {
+  color: darken(red, 30%);
+}
+.right-curve7 {
+  color: darken(red, 35%);
+}
+.right-curve8 {
+  color: darken(red, 40%);
+}
+.right-curve9 {
+  color: darken(red, 40%);
+  color: green;
+}
+
 .book-bg-zoom {
   transform: scaleX(1.5) scaleY(1.5) !important;
 }

@@ -20,35 +20,41 @@ bookScreen.onclick = () => {
 
 bookText.forEach((line) => {
   let txt = line.innerText;
-  let newTxt = txt.replace(/\w/g, function (c) {
+  let newTxt = txt.replace(/\S/g, function (c) {
     return "<span>" + c + "</span>";
   });
   line.innerHTML = newTxt;
 });
 
-// bookTextRight.forEach((line) => {
-//   let spans = line.children;
-//   for (let i = 0; i < spans.length; i++) {
-//     if (spans[i].offsetLeft > percents[5]) {
-//       spans[i].classList.add("blue");
-//     }
-//   }
-// });
-const test = bookPageLeft.offsetWidth / 3;
-bookTextLeft.forEach((line) => {
-  let spans = line.children;
-  for (let i = 0; i < spans.length; i++) {
-    if (spans[i].offsetLeft < test) {
-      spans[i].classList.add("red");
-    }
-  }
-});
-const test2 = bookPageRight.offsetWidth / 3;
+let percent = [];
+for (let i = 0; i < 11; i++) {
+  percent.push((bookPageLeft.offsetWidth / 10) * [i]);
+}
+
 bookTextRight.forEach((line) => {
   let spans = line.children;
   for (let i = 0; i < spans.length; i++) {
-    if (spans[i].offsetLeft > test2) {
-      spans[i].classList.add("blue");
+    for (let j = 0; j < percent.length; j++) {
+      if (
+        spans[i].offsetLeft >= percent[j] &&
+        spans[i].offsetLeft <= percent[j + 1]
+      ) {
+        spans[i].classList.add("right-curve" + j);
+      }
+    }
+  }
+});
+
+bookTextLeft.forEach((line) => {
+  let spans = line.children;
+  for (let i = 0; i < spans.length; i++) {
+    for (let j = 0; j < percent.length; j++) {
+      if (
+        spans[i].offsetLeft >= percent[j] &&
+        spans[i].offsetLeft <= percent[j + 1]
+      ) {
+        spans[i].classList.add("left-curve" + j);
+      }
     }
   }
 });
