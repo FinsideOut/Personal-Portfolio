@@ -91,7 +91,7 @@ bookPageRight.onclick = () => {
   bookPageLeft.classList.add("page-to-center");
   bookPageRight.classList.add("page-to-down");
   bookBg.classList.add("book-bg-zoom");
-  // body.classList.add("body-zoomed");
+  body.classList.add("body-zoomed");
   contact.classList.add("hidden");
   bookText.forEach((line) => {
     let spans = line.children;
@@ -104,7 +104,7 @@ logo.onclick = () => {
   bookPageLeft.classList.remove("page-to-center");
   bookPageRight.classList.remove("page-to-down");
   bookBg.classList.remove("book-bg-zoom");
-  // body.classList.remove("body-zoomed");
+  body.classList.remove("body-zoomed");
   contact.classList.remove("hidden");
   addCurve();
 };

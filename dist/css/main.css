@@ -8,8 +8,6 @@
 body {
   font-family: "Lato", sans-serif;
   overflow-x: hidden;
-  -webkit-transition: background-color 100ms ease-in-out 800ms;
-  transition: background-color 100ms ease-in-out 800ms;
 }
 
 span {
@@ -378,10 +376,8 @@ text {
 
 .body-zoomed {
   background: black !important;
-}
-
-.body-revert {
-  background: white !important;
+  -webkit-transition: background-color 800ms ease-in-out;
+  transition: background-color 800ms ease-in-out;
 }
 
 .page-to-center {
@@ -526,4 +522,4 @@ text {
 #main-footer .footer-text {
   font-size: 0.8rem;
 }
-/*# sourceMappingURL=MAIN.css.map */
+/*# sourceMappingURL=main.css.map */
