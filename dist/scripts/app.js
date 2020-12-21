@@ -5,7 +5,8 @@ const bookTextLeft = document.querySelectorAll(".book-text-left");
 
 const bookPageRight = document.getElementById("right-page");
 const bookPageLeft = document.getElementById("left-page");
-const conntact = document.getElementById("contact");
+const contact = document.getElementById("contact");
+const logo = document.getElementById("logo-home");
 const body = document.getElementsByTagName("body")[0];
 const header = document.getElementsByTagName("HEAD")[0];
 
@@ -22,17 +23,17 @@ bookText.forEach((line) => {
 
 //create classes relative to x position on page
 let percent = [];
-const num = 50;
+const num = 100;
 for (let i = 0; i < num; i++) {
   percent.push((bookPageLeft.offsetWidth / num) * [i]);
   const elementLeft = document.createElement("style");
   const elementRight = document.createElement("style");
 
-  let shiftLeft = Math.cos(i * 0.1) * 1.3 + "rem";
-  let tiltLeft = Math.sin(i * 0.1) * -13 + "deg";
+  let shiftLeft = Math.cos(i * 0.05) * 1.5 + "rem";
+  let tiltLeft = Math.sin(i * 0.05) * -15 + "deg";
 
-  let shiftRight = Math.cos(i * 0.1 - 180) * 1.3 + "rem";
-  let tiltRight = Math.sin(i * 0.1 - 180) * -13 + "deg";
+  let shiftRight = Math.cos(i * 0.05 - 180) * 1.5 + "rem";
+  let tiltRight = Math.sin(i * 0.05 - 180) * -15 + "deg";
   elementLeft.innerHTML =
     ".left-curve" +
     i +
@@ -40,7 +41,7 @@ for (let i = 0; i < num; i++) {
     shiftLeft +
     ") rotate(" +
     tiltLeft +
-    ");}";
+    ") !important;}";
   elementRight.innerHTML =
     ".right-curve" +
     i +
@@ -48,53 +49,62 @@ for (let i = 0; i < num; i++) {
     shiftRight +
     ") rotate(" +
     tiltRight +
-    ");}";
+    ") !important;}";
   header.appendChild(elementLeft);
   header.appendChild(elementRight);
 }
 
 //apply relevant class to each letter span on page
-bookTextRight.forEach((line) => {
-  let spans = line.children;
-  for (let i = 0; i < spans.length; i++) {
-    for (let j = 0; j < percent.length; j++) {
-      if (
-        spans[i].offsetLeft + spans[i].offsetWidth / 2 >= percent[j] &&
-        spans[i].offsetLeft + spans[i].offsetWidth / 2 <= percent[j + 1]
-      ) {
-        // let rightAdjust = 50 - j;
-        spans[i].classList.add("right-curve" + j);
+function addCurve() {
+  bookTextRight.forEach((line) => {
+    let spans = line.children;
+    for (let i = 0; i < spans.length; i++) {
+      for (let j = 0; j < percent.length; j++) {
+        if (
+          spans[i].offsetLeft + spans[i].offsetWidth / 2 >= percent[j] &&
+          spans[i].offsetLeft + spans[i].offsetWidth / 2 <= percent[j + 1]
+        ) {
+          // let rightAdjust = 50 - j;
+          spans[i].classList.add("right-curve" + j);
+        }
       }
     }
-  }
-});
+  });
 
-bookTextLeft.forEach((line) => {
-  let spans = line.children;
-  for (let i = 0; i < spans.length; i++) {
-    for (let j = 0; j < percent.length; j++) {
-      if (
-        spans[i].offsetLeft + spans[i].offsetWidth / 2 >= percent[j] &&
-        spans[i].offsetLeft + spans[i].offsetWidth / 2 <= percent[j + 1]
-      ) {
-        spans[i].classList.add("left-curve" + j);
+  bookTextLeft.forEach((line) => {
+    let spans = line.children;
+    for (let i = 0; i < spans.length; i++) {
+      for (let j = 0; j < percent.length; j++) {
+        if (
+          spans[i].offsetLeft + spans[i].offsetWidth / 2 >= percent[j] &&
+          spans[i].offsetLeft + spans[i].offsetWidth / 2 <= percent[j + 1]
+        ) {
+          spans[i].classList.add("left-curve" + j);
+        }
       }
     }
-  }
-});
-
+  });
+}
+addCurve();
 // state transition
-bookScreen.onclick = () => {
+bookPageRight.onclick = () => {
   bookPageLeft.classList.add("page-to-center");
   bookPageRight.classList.add("page-to-down");
   bookBg.classList.add("book-bg-zoom");
-  body.classList.add("body-zoomed");
-  conntact.classList.add("hidden");
+  // body.classList.add("body-zoomed");
+  contact.classList.add("hidden");
   bookText.forEach((line) => {
     let spans = line.children;
     for (let i = 0; i < spans.length; i++) {
-      span = spans[i];
-      span.style.transform = "none";
+      spans[i].className = "";
     }
   });
+};
+logo.onclick = () => {
+  bookPageLeft.classList.remove("page-to-center");
+  bookPageRight.classList.remove("page-to-down");
+  bookBg.classList.remove("book-bg-zoom");
+  // body.classList.remove("body-zoomed");
+  contact.classList.remove("hidden");
+  addCurve();
 };

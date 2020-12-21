@@ -366,6 +366,48 @@ text {
   color: yellow;
 }
 
+.book-bg-zoom {
+  -webkit-transform: scaleX(1.5) scaleY(1.5);
+          transform: scaleX(1.5) scaleY(1.5);
+}
+
+.book-bg-revert {
+  -webkit-transform: none !important;
+          transform: none !important;
+}
+
+.body-zoomed {
+  background: black !important;
+}
+
+.body-revert {
+  background: white !important;
+}
+
+.page-to-center {
+  -webkit-transform: translate(-50%, -50%) !important;
+          transform: translate(-50%, -50%) !important;
+}
+
+.page-to-down {
+  -webkit-transform: translate(-50%, 50%) !important;
+          transform: translate(-50%, 50%) !important;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.left-page-revert {
+  -webkit-transform: translate(-50%, -50%) !important;
+          transform: translate(-50%, -50%) !important;
+}
+
+.normalize {
+  -webkit-transform: none !important;
+          transform: none !important;
+}
+
 #book-screen,
 #social,
 #sub-screen {
@@ -484,27 +526,4 @@ text {
 #main-footer .footer-text {
   font-size: 0.8rem;
 }
-
-.book-bg-zoom {
-  -webkit-transform: scaleX(1.5) scaleY(1.5) !important;
-          transform: scaleX(1.5) scaleY(1.5) !important;
-}
-
-.page-to-center {
-  -webkit-transform: translate(-50%, -50%) !important;
-          transform: translate(-50%, -50%) !important;
-}
-
-.page-to-down {
-  -webkit-transform: translate(-50%, 50%) !important;
-          transform: translate(-50%, 50%) !important;
-}
-
-.body-zoomed {
-  background: black !important;
-}
-
-.hidden {
-  visibility: hidden;
-}
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=MAIN.css.map */

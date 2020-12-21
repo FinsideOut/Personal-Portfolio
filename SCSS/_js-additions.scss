@@ -1,38 +1,29 @@
 .book-bg-zoom {
-  transform: scaleX(1.5) scaleY(1.5) !important;
+  transform: scaleX(1.5) scaleY(1.5);
 }
-.page-to-center {
-  transform: translate(-50%, -50%) !important;
-  // width: 100%;
-  // width: 100% !important;
-}
-// .page-to-up {
-//   transform: translateY(-100vh) !important;
-// }
-.page-to-down {
-  transform: translate(-50%, 50%) !important;
-
-  // width: 100% !important;
+.book-bg-revert {
+  transform: none !important;
 }
 .body-zoomed {
   background: black !important;
-  // color: white;
 }
-// .book-screen-zoomed {
-//   //   transform: scale(1.1);
-//   flex-direction: column !important;
-//   height: fit-content !important;
-//   //   As already anwsered, flex-direction can't be animated directly, and browsers "have no idea" how to interpolate the positions of flex items visually during such transition. But you can kind of emulate such transition by transitioning transforms and changing flex-direction on transitionend event (a quick demo to illustrate the idea: http://codepen.io/SelenIT/pen/ZBXrXV/).
-// }
-// .page-zoomed {
-//   //   text-align: center !important;
-//   width: 100% !important;
-// }
+.body-revert {
+  background: white !important;
+}
+.page-to-center {
+  transform: translate(-50%, -50%) !important;
+}
+.page-to-down {
+  transform: translate(-50%, 50%) !important;
+}
+
 .hidden {
   visibility: hidden;
 }
-// .shown {
-//   visibility: visible !important;
-//   display: block !important;
-//   transform: none !important;
-// }
+.left-page-revert {
+  transform: translate(-50%, -50%) !important;
+}
+
+.normalize {
+  transform: none !important;
+}

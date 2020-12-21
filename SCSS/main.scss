@@ -2,6 +2,7 @@
 @import "funcs";
 @import "utils";
 @import "menu";
+@import "js-additions";
 
 #book-screen,
 #social,
@@ -46,7 +47,6 @@
 }
 
 #left-page {
-  // border: 1px solid green;
   transform: translate(-100%, -50%);
   text-align: center;
   p {
@@ -79,4 +79,3 @@
     font-size: 0.8rem;
   }
 }
-@import "js-additions";
