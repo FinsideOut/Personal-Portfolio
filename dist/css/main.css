@@ -80,6 +80,7 @@ i {
 }
 
 nav {
+  width: 100%;
   margin-bottom: 5vh;
   height: 100%;
 }
@@ -98,10 +99,14 @@ nav ul {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 nav ul li {
   padding: 1rem;
+  margin: 0;
 }
 
 form {

@@ -38,12 +38,10 @@
 
   @include flex(column, space-between);
   align-items: center;
-  // margin-top: 2rem;
   padding: 0.25rem;
 }
 #right-page {
   transform: translateY(-50%);
-  // border: 1px solid yellow;
   // color: yellow;
 }
 
