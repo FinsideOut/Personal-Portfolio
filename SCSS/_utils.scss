@@ -16,6 +16,9 @@ span {
   display: inline-block;
   transition: transform $transit-time ease-in-out !important;
 }
+.word {
+  display: inline-block;
+}
 a {
   text-decoration: none;
   color: inherit;

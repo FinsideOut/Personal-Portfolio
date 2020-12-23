@@ -13,12 +13,18 @@ const header = document.getElementsByTagName("HEAD")[0];
 const bookBg = document.getElementById("book-bg");
 
 //wrap each letter in span
-bookText.forEach((line) => {
-  let txt = line.innerText;
+bookText.forEach((el) => {
+  let txt = el.innerText;
   let newTxt = txt.replace(/\S/g, function (c) {
     return "<span>" + c + "</span>";
   });
-  line.innerHTML = newTxt;
+  let splitWords = newTxt.split(" ");
+  for (let i = 0; i < splitWords.length; i++) {
+    splitWords[i] = "<div class = 'word'>" + splitWords[i] + "</div>";
+  }
+  el.innerHTML = splitWords.join("");
+  console.log(el.innerHTML);
+  // console.log(el.innerHTML);
 });
 
 //create classes relative to x position on page
@@ -58,6 +64,7 @@ for (let i = 0; i < num; i++) {
 function addCurve() {
   bookTextRight.forEach((line) => {
     let spans = line.children;
+
     for (let i = 0; i < spans.length; i++) {
       for (let j = 0; j < percent.length; j++) {
         if (

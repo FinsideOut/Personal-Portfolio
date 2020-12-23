@@ -18,6 +18,10 @@ span {
   transition: transform 800ms ease-in-out, -webkit-transform 800ms ease-in-out !important;
 }
 
+.word {
+  display: inline-block;
+}
+
 a {
   text-decoration: none;
   color: inherit;
