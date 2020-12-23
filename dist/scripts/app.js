@@ -22,8 +22,8 @@ bookText.forEach((el) => {
   for (let i = 0; i < splitWords.length; i++) {
     splitWords[i] = "<div class = 'word'>" + splitWords[i] + "</div>";
   }
-  el.innerHTML = splitWords.join("");
-  console.log(el.innerHTML);
+  el.innerHTML = splitWords.join(" ");
+  // console.log(el.innerHTML);
   // console.log(el.innerHTML);
 });
 
@@ -63,36 +63,52 @@ for (let i = 0; i < num; i++) {
 //apply relevant class to each letter span on page
 function addCurve() {
   bookTextRight.forEach((line) => {
-    let spans = line.children;
-
-    for (let i = 0; i < spans.length; i++) {
-      for (let j = 0; j < percent.length; j++) {
-        if (
-          spans[i].offsetLeft + spans[i].offsetWidth / 2 >= percent[j] &&
-          spans[i].offsetLeft + spans[i].offsetWidth / 2 <= percent[j + 1]
-        ) {
-          // let rightAdjust = 50 - j;
-          spans[i].classList.add("right-curve" + j);
+    let words = line.childNodes;
+    words.forEach((word) => {
+      letters = word.childNodes;
+      for (let i = 0; i < letters.length; i++) {
+        for (let j = 0; j < percent.length; j++) {
+          if (
+            letters[i].offsetLeft + letters[i].offsetWidth / 2 >= percent[j] &&
+            letters[i].offsetLeft + letters[i].offsetWidth / 2 <= percent[j + 1]
+          ) {
+            letters[i].classList.add("right-curve" + j);
+          }
         }
       }
-    }
+    });
   });
 
   bookTextLeft.forEach((line) => {
-    let spans = line.children;
-    for (let i = 0; i < spans.length; i++) {
-      for (let j = 0; j < percent.length; j++) {
-        if (
-          spans[i].offsetLeft + spans[i].offsetWidth / 2 >= percent[j] &&
-          spans[i].offsetLeft + spans[i].offsetWidth / 2 <= percent[j + 1]
-        ) {
-          spans[i].classList.add("left-curve" + j);
+    let words = line.childNodes;
+    words.forEach((word) => {
+      letters = word.childNodes;
+      for (let i = 0; i < letters.length; i++) {
+        for (let j = 0; j < percent.length; j++) {
+          if (
+            letters[i].offsetLeft + letters[i].offsetWidth / 2 >= percent[j] &&
+            letters[i].offsetLeft + letters[i].offsetWidth / 2 <= percent[j + 1]
+          ) {
+            letters[i].classList.add("left-curve" + j);
+          }
         }
       }
-    }
+    });
   });
 }
 addCurve();
+
+function removeCurve() {
+  bookText.forEach((line) => {
+    let words = line.childNodes;
+    words.forEach((word) => {
+      letters = word.childNodes;
+      for (let i = 0; i < letters.length; i++) {
+        letters[i].className = "";
+      }
+    });
+  });
+}
 // state transition
 bookPageRight.onclick = () => {
   bookPageLeft.classList.add("page-to-center");
@@ -100,12 +116,7 @@ bookPageRight.onclick = () => {
   bookBg.classList.add("book-bg-zoom");
   body.classList.add("body-zoomed");
   contact.classList.add("hidden");
-  bookText.forEach((line) => {
-    let spans = line.children;
-    for (let i = 0; i < spans.length; i++) {
-      spans[i].className = "";
-    }
-  });
+  removeCurve();
 };
 logo.onclick = () => {
   bookPageLeft.classList.remove("page-to-center");

@@ -20,6 +20,8 @@ span {
 
 .word {
   display: inline-block;
+  white-space: nowrap;
+  /* this does the trick */
 }
 
 a {
