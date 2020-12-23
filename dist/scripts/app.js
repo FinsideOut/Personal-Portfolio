@@ -62,15 +62,41 @@ for (let i = 0; i < num; i++) {
 
 //apply relevant class to each letter span on page
 function addCurve() {
-  bookTextRight.forEach((line) => {
+  // bookTextRight.forEach((line) => {
+  //   let words = line.childNodes;
+  //   words.forEach((word) => {
+  //     letters = word.childNodes;
+  //     for (let i = 0; i < letters.length; i++) {
+  //       for (let j = 0; j < percent.length; j++) {
+  //         if (
+  //           letters[i].offsetLeft + letters[i].offsetWidth / 2 >= percent[j] &&
+  //           letters[i].offsetLeft + letters[i].offsetWidth / 2 <= percent[j + 1]
+  //         ) {
+  //           letters[i].classList.add("right-curve" + j);
+  //         }
+  //       }
+  //     }
+  //   });
+  // });
+
+  bookText.forEach((line) => {
     let words = line.childNodes;
     words.forEach((word) => {
       letters = word.childNodes;
       for (let i = 0; i < letters.length; i++) {
+        letterPosRel = letters[i].offsetLeft + letters[i].offsetWidth / 2;
+        letterPosAbso = letters[i].getBoundingClientRect().left;
         for (let j = 0; j < percent.length; j++) {
           if (
-            letters[i].offsetLeft + letters[i].offsetWidth / 2 >= percent[j] &&
-            letters[i].offsetLeft + letters[i].offsetWidth / 2 <= percent[j + 1]
+            letterPosRel >= percent[j] &&
+            letterPosRel <= percent[j + 1] &&
+            line.classList.contains("book-text-left")
+          ) {
+            letters[i].classList.add("left-curve" + j);
+          } else if (
+            letterPosRel >= percent[j] &&
+            letterPosRel <= percent[j + 1] &&
+            line.classList.contains("book-text-right")
           ) {
             letters[i].classList.add("right-curve" + j);
           }
@@ -78,26 +104,8 @@ function addCurve() {
       }
     });
   });
-
-  bookTextLeft.forEach((line) => {
-    let words = line.childNodes;
-    words.forEach((word) => {
-      letters = word.childNodes;
-      for (let i = 0; i < letters.length; i++) {
-        for (let j = 0; j < percent.length; j++) {
-          if (
-            letters[i].offsetLeft + letters[i].offsetWidth / 2 >= percent[j] &&
-            letters[i].offsetLeft + letters[i].offsetWidth / 2 <= percent[j + 1]
-          ) {
-            letters[i].classList.add("left-curve" + j);
-          }
-        }
-      }
-    });
-  });
 }
 addCurve();
-
 function removeCurve() {
   bookText.forEach((line) => {
     let words = line.childNodes;
