@@ -72,6 +72,7 @@ i {
 
 .logo {
   margin-bottom: 1rem;
+  white-space: nowrap;
 }
 
 .section-header {
@@ -375,112 +376,6 @@ text {
   color: yellow;
 }
 
-.book-bg-zoom {
-  -webkit-transform: scaleX(1.5) scaleY(1.5);
-          transform: scaleX(1.5) scaleY(1.5);
-}
-
-.book-bg-revert {
-  -webkit-transform: none !important;
-          transform: none !important;
-}
-
-.body-zoomed {
-  background: black !important;
-  -webkit-transition: background-color 800ms ease-in-out;
-  transition: background-color 800ms ease-in-out;
-}
-
-.page-to-center {
-  -webkit-transform: translate(-50%, -50%) !important;
-          transform: translate(-50%, -50%) !important;
-}
-
-.page-to-down {
-  -webkit-transform: translate(-50%, 50%) !important;
-          transform: translate(-50%, 50%) !important;
-}
-
-.hidden {
-  visibility: hidden;
-  display: none;
-  opacity: 0;
-}
-
-.left-page-revert {
-  -webkit-transform: translate(-50%, -50%) !important;
-          transform: translate(-50%, -50%) !important;
-}
-
-.normalize {
-  -webkit-transform: none !important;
-          transform: none !important;
-}
-
-.transition {
-  -webkit-transition: -webkit-transform 800ms ease-in-out;
-  transition: -webkit-transform 800ms ease-in-out;
-  transition: transform 800ms ease-in-out;
-  transition: transform 800ms ease-in-out, -webkit-transform 800ms ease-in-out;
-}
-
-.shifted-down {
-  -webkit-transform: translateY(100vh) !important;
-          transform: translateY(100vh) !important;
-}
-
-.lead-full {
-  -webkit-transform: translateY(60vh) !important;
-          transform: translateY(60vh) !important;
-}
-
-.aspiring-full {
-  -webkit-transform: translateY(80vh) !important;
-          transform: translateY(80vh) !important;
-}
-
-.educator-full {
-  -webkit-transform: translateY(80vh) translateX(-40vw) !important;
-          transform: translateY(80vh) translateX(-40vw) !important;
-  -webkit-transform-origin: center;
-          transform-origin: center;
-}
-
-.engineer-full {
-  -webkit-transform: translateY(120vh) translateX(40vw) !important;
-          transform: translateY(120vh) translateX(40vw) !important;
-  -webkit-transform-origin: center;
-          transform-origin: center;
-}
-
-.musician-full {
-  -webkit-transform: translateY(160vh) translateX(-40vw) !important;
-          transform: translateY(160vh) translateX(-40vw) !important;
-  -webkit-transform-origin: center;
-          transform-origin: center;
-}
-
-.services-full {
-  -webkit-transform: translateY(200vh) !important;
-          transform: translateY(200vh) !important;
-  -webkit-transform-origin: center;
-          transform-origin: center;
-}
-
-.work-full {
-  -webkit-transform: translateY(240vh) !important;
-          transform: translateY(240vh) !important;
-  -webkit-transform-origin: center;
-          transform-origin: center;
-}
-
-.cv-full {
-  -webkit-transform: translateY(280vh) !important;
-          transform: translateY(280vh) !important;
-  -webkit-transform-origin: center;
-          transform-origin: center;
-}
-
 #book-screen,
 #social,
 #sub-screen {
@@ -566,10 +461,6 @@ text {
           align-items: center;
 }
 
-#left-page nav h2 {
-  font-size: 2.5rem;
-}
-
 #about-me {
   margin-top: 50vh;
   color: white;
@@ -605,5 +496,129 @@ text {
 
 #main-footer .footer-text {
   font-size: 0.8rem;
+}
+
+#aspiring {
+  white-space: nowrap;
+}
+
+.book-bg-zoom {
+  -webkit-transform: scaleX(1.5) scaleY(1.5);
+          transform: scaleX(1.5) scaleY(1.5);
+}
+
+.book-bg-revert {
+  -webkit-transform: none !important;
+          transform: none !important;
+}
+
+.body-zoomed {
+  background: black !important;
+  -webkit-transition: background-color 800ms ease-in-out;
+  transition: background-color 800ms ease-in-out;
+}
+
+.page-to-center {
+  -webkit-transform: translate(-50%, -50%) !important;
+          transform: translate(-50%, -50%) !important;
+}
+
+.page-to-down {
+  -webkit-transform: translate(-50%, 100%) !important;
+          transform: translate(-50%, 100%) !important;
+}
+
+.hidden {
+  visibility: hidden;
+  display: none;
+  opacity: 0;
+}
+
+.left-page-revert {
+  -webkit-transform: translate(-50%, -50%) !important;
+          transform: translate(-50%, -50%) !important;
+}
+
+.normalize {
+  -webkit-transform: none !important;
+          transform: none !important;
+}
+
+.transition {
+  -webkit-transition-property: font-size, -webkit-transform;
+  transition-property: font-size, -webkit-transform;
+  transition-property: transform, font-size;
+  transition-property: transform, font-size, -webkit-transform;
+  -webkit-transition-duration: 800ms;
+          transition-duration: 800ms;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+}
+
+.shifted-down {
+  -webkit-transform: translateY(100vh) !important;
+          transform: translateY(100vh) !important;
+}
+
+.lead-full {
+  -webkit-transform: translateY(55vh) !important;
+          transform: translateY(55vh) !important;
+}
+
+.aspiring-full {
+  -webkit-transform: translateY(80vh) !important;
+          transform: translateY(80vh) !important;
+  font-size: 4rem !important;
+}
+
+.educator-full {
+  -webkit-transform: translateY(80vh) translateX(-40vw) !important;
+          transform: translateY(80vh) translateX(-40vw) !important;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  font-size: 4rem !important;
+}
+
+.engineer-full {
+  -webkit-transform: translateY(120vh) translateX(40vw) !important;
+          transform: translateY(120vh) translateX(40vw) !important;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  font-size: 4rem !important;
+}
+
+.musician-full {
+  -webkit-transform: translateY(160vh) translateX(-40vw) !important;
+          transform: translateY(160vh) translateX(-40vw) !important;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  font-size: 4rem !important;
+}
+
+.services-full {
+  -webkit-transform: translateY(200vh) !important;
+          transform: translateY(200vh) !important;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+.work-full {
+  -webkit-transform: translateY(240vh) !important;
+          transform: translateY(240vh) !important;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+.cv-full {
+  -webkit-transform: translateY(280vh) !important;
+          transform: translateY(280vh) !important;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+.logo-full {
+  -webkit-transform: translateY(-5vh);
+          transform: translateY(-5vh);
+  font-size: 5rem;
 }
 /*# sourceMappingURL=MAIN.css.map */

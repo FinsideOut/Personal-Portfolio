@@ -107,9 +107,9 @@ addCurve();
 
 function homeScreen() {
   console.log("home");
-  // logo.classList.remove("shifted-down");
+  logo.classList.remove("logo-full");
   lead.classList.remove("lead-full");
-  aspiring.classList.remove("aspiring");
+  aspiring.classList.remove("aspiring-full");
   educator.classList.remove("educator-full");
   engineer.classList.remove("engineer-full");
   musician.classList.remove("musician-full");
@@ -140,6 +140,7 @@ function fullScreen() {
 }
 function shift() {
   bookPageLeft.removeEventListener("transitionend", shift);
+  logo.classList.add("logo-full");
   lead.classList.add("lead-full");
   aspiring.classList.add("aspiring-full");
   educator.classList.add("educator-full");

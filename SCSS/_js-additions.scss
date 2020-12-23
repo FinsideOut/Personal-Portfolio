@@ -14,7 +14,7 @@
   transform: translate(-50%, -50%) !important;
 }
 .page-to-down {
-  transform: translate(-50%, 50%) !important;
+  transform: translate(-50%, 100%) !important;
 }
 
 .hidden {
@@ -31,28 +31,34 @@
 }
 
 .transition {
-  transition: transform $transit-time ease-in-out;
+  transition-property: transform, font-size;
+  transition-duration: $transit-time;
+  transition-timing-function: ease-in-out;
 }
 .shifted-down {
   transform: translateY(100vh) !important;
 }
 .lead-full {
-  transform: translateY(60vh) !important;
+  transform: translateY(55vh) !important;
 }
 .aspiring-full {
   transform: translateY(80vh) !important;
+  font-size: 4rem !important;
 }
 .educator-full {
   transform: translateY(80vh) translateX(-40vw) !important;
   transform-origin: center;
+  font-size: 4rem !important;
 }
 .engineer-full {
   transform: translateY(120vh) translateX(40vw) !important;
   transform-origin: center;
+  font-size: 4rem !important;
 }
 .musician-full {
   transform: translateY(160vh) translateX(-40vw) !important;
   transform-origin: center;
+  font-size: 4rem !important;
 }
 .services-full {
   transform: translateY(200vh) !important;
@@ -65,4 +71,8 @@
 .cv-full {
   transform: translateY(280vh) !important;
   transform-origin: center;
+}
+.logo-full {
+  transform: translateY(-5vh);
+  font-size: 5rem;
 }

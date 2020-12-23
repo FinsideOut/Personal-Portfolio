@@ -2,7 +2,6 @@
 @import "funcs";
 @import "utils";
 @import "menu";
-@import "js-additions";
 
 #book-screen,
 #social,
@@ -57,9 +56,9 @@
     ul {
       align-items: center;
     }
-    h2 {
-      font-size: 2.5rem;
-    }
+    // h2 {
+    //   font-size: 2.5rem;
+    // }
   }
 }
 
@@ -89,3 +88,8 @@
     font-size: 0.8rem;
   }
 }
+#aspiring {
+  white-space: nowrap;
+}
+
+@import "js-additions";
