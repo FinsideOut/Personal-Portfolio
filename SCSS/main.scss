@@ -63,6 +63,16 @@
   }
 }
 
+#about-me {
+  margin-top: 50vh;
+  color: white;
+  border: 1px solid white;
+  z-index: 3;
+  // position: absolute;
+  // transform: scale(0);
+  // display: none;
+}
+
 #social {
   position: fixed;
   bottom: 0;

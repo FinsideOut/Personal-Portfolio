@@ -10,6 +10,11 @@ body {
   overflow-x: hidden;
 }
 
+.container {
+  width: 90%;
+  margin: auto;
+}
+
 span {
   display: inline-block;
   -webkit-transition: -webkit-transform 800ms ease-in-out !important;
@@ -398,6 +403,8 @@ text {
 
 .hidden {
   visibility: hidden;
+  display: none;
+  opacity: 0;
 }
 
 .left-page-revert {
@@ -408,6 +415,70 @@ text {
 .normalize {
   -webkit-transform: none !important;
           transform: none !important;
+}
+
+.transition {
+  -webkit-transition: -webkit-transform 800ms ease-in-out;
+  transition: -webkit-transform 800ms ease-in-out;
+  transition: transform 800ms ease-in-out;
+  transition: transform 800ms ease-in-out, -webkit-transform 800ms ease-in-out;
+}
+
+.shifted-down {
+  -webkit-transform: translateY(100vh) !important;
+          transform: translateY(100vh) !important;
+}
+
+.lead-full {
+  -webkit-transform: translateY(60vh) !important;
+          transform: translateY(60vh) !important;
+}
+
+.aspiring-full {
+  -webkit-transform: translateY(80vh) !important;
+          transform: translateY(80vh) !important;
+}
+
+.educator-full {
+  -webkit-transform: translateY(80vh) translateX(-40vw) !important;
+          transform: translateY(80vh) translateX(-40vw) !important;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+.engineer-full {
+  -webkit-transform: translateY(120vh) translateX(40vw) !important;
+          transform: translateY(120vh) translateX(40vw) !important;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+.musician-full {
+  -webkit-transform: translateY(160vh) translateX(-40vw) !important;
+          transform: translateY(160vh) translateX(-40vw) !important;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+.services-full {
+  -webkit-transform: translateY(200vh) !important;
+          transform: translateY(200vh) !important;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+.work-full {
+  -webkit-transform: translateY(240vh) !important;
+          transform: translateY(240vh) !important;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+.cv-full {
+  -webkit-transform: translateY(280vh) !important;
+          transform: translateY(280vh) !important;
+  -webkit-transform-origin: center;
+          transform-origin: center;
 }
 
 #book-screen,
@@ -499,6 +570,13 @@ text {
   font-size: 2.5rem;
 }
 
+#about-me {
+  margin-top: 50vh;
+  color: white;
+  border: 1px solid white;
+  z-index: 3;
+}
+
 #social {
   position: fixed;
   bottom: 0;
@@ -528,4 +606,4 @@ text {
 #main-footer .footer-text {
   font-size: 0.8rem;
 }
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=MAIN.css.map */

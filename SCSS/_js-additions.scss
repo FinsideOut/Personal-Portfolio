@@ -1,6 +1,7 @@
 .book-bg-zoom {
   transform: scaleX(1.5) scaleY(1.5);
 }
+
 .book-bg-revert {
   transform: none !important;
 }
@@ -18,6 +19,8 @@
 
 .hidden {
   visibility: hidden;
+  display: none;
+  opacity: 0;
 }
 .left-page-revert {
   transform: translate(-50%, -50%) !important;
@@ -25,4 +28,41 @@
 
 .normalize {
   transform: none !important;
+}
+
+.transition {
+  transition: transform $transit-time ease-in-out;
+}
+.shifted-down {
+  transform: translateY(100vh) !important;
+}
+.lead-full {
+  transform: translateY(60vh) !important;
+}
+.aspiring-full {
+  transform: translateY(80vh) !important;
+}
+.educator-full {
+  transform: translateY(80vh) translateX(-40vw) !important;
+  transform-origin: center;
+}
+.engineer-full {
+  transform: translateY(120vh) translateX(40vw) !important;
+  transform-origin: center;
+}
+.musician-full {
+  transform: translateY(160vh) translateX(-40vw) !important;
+  transform-origin: center;
+}
+.services-full {
+  transform: translateY(200vh) !important;
+  transform-origin: center;
+}
+.work-full {
+  transform: translateY(240vh) !important;
+  transform-origin: center;
+}
+.cv-full {
+  transform: translateY(280vh) !important;
+  transform-origin: center;
 }
