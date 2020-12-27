@@ -464,7 +464,7 @@ button {
 }
 
 #engineer-content {
-  top: 195vh;
+  top: 220vh;
 }
 
 #social {
@@ -569,8 +569,8 @@ button {
 }
 
 .engineer-full {
-  -webkit-transform: translateY(120vh) translateX(40vw) !important;
-          transform: translateY(120vh) translateX(40vw) !important;
+  -webkit-transform: translateY(200vh) translateX(40vw) !important;
+          transform: translateY(200vh) translateX(40vw) !important;
   -webkit-transform-origin: center;
           transform-origin: center;
   font-size: 4rem !important;
@@ -624,4 +624,4 @@ button {
   -webkit-transform: none !important;
           transform: none !important;
 }
-/*# sourceMappingURL=MAIN.css.map */
+/*# sourceMappingURL=main.css.map */

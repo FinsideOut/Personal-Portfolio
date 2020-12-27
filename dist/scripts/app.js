@@ -199,8 +199,10 @@ const isInViewport = (el) => {
 
 const run = () =>
   items.forEach((item) => {
-    if (isInViewport(item)) {
-      item.classList.add("shown");
+    if (!showBook) {
+      if (isInViewport(item)) {
+        item.classList.add("shown");
+      }
     }
   });
 
