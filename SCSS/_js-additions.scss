@@ -1,15 +1,14 @@
+.word {
+  display: inline-block;
+  white-space: nowrap;
+}
 .book-bg-zoom {
   transform: scaleX(1.5) scaleY(1.5);
-}
-
-.book-bg-revert {
-  transform: none !important;
 }
 .body-zoomed {
   background: black !important;
   transition: background-color $transit-time ease-in-out;
 }
-
 .page-to-center {
   transform: translate(-50%, -50%) !important;
 }
@@ -17,17 +16,8 @@
   transform: translate(-50%, 100%) !important;
 }
 
-.hidden {
-  visibility: hidden;
-  display: none;
-  opacity: 0;
-}
 .left-page-revert {
   transform: translate(-50%, -50%) !important;
-}
-
-.normalize {
-  transform: none !important;
 }
 
 .transition {
@@ -35,8 +25,9 @@
   transition-duration: $transit-time;
   transition-timing-function: ease-in-out;
 }
-.shifted-down {
-  transform: translateY(100vh) !important;
+.logo-full {
+  transform: translateY(-5vh);
+  font-size: 5rem;
 }
 .lead-full {
   transform: translateY(55vh) !important;
@@ -72,7 +63,19 @@
   transform: translateY(280vh) !important;
   transform-origin: center;
 }
-.logo-full {
-  transform: translateY(-5vh);
-  font-size: 5rem;
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+.shown {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.normalize {
+  transform: none !important;
+}
+.book-bg-revert {
+  transform: none !important;
 }

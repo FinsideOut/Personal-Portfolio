@@ -62,16 +62,24 @@
   }
 }
 
-#about-me {
-  margin-top: 50vh;
+#educator-content,
+#engineer-content {
+  position: absolute;
+  top: 143vh;
+
   color: white;
   border: 1px solid white;
   z-index: 3;
+  width: inherit;
+  transition: opacity 500ms ease-in-out;
   // position: absolute;
   // transform: scale(0);
   // display: none;
 }
 
+#engineer-content {
+  top: 195vh;
+}
 #social {
   position: fixed;
   bottom: 0;

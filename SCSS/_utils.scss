@@ -20,10 +20,7 @@ span {
   display: inline-block;
   transition: transform $transit-time ease-in-out !important;
 }
-.word {
-  display: inline-block;
-  white-space: nowrap; /* this does the trick */
-}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -139,11 +136,4 @@ button {
   font-size: 2rem;
   padding: 0.5rem 1rem;
   border: 2px solid black;
-}
-// path {
-//   fill: transparent;
-// }
-
-text {
-  fill: #ff9800;
 }

@@ -1,18 +1,31 @@
-const bookScreen = document.getElementById("book-screen");
 const bookText = document.querySelectorAll(".book-text-right, .book-text-left");
-const bookTextRight = document.querySelectorAll(".book-text-right");
-const bookTextLeft = document.querySelectorAll(".book-text-left");
-
+// const bookTextRight = document.querySelectorAll(".book-text-right");
+// const bookTextLeft = document.querySelectorAll(".book-text-left");
 const bookPageRight = document.getElementById("right-page");
 const bookPageLeft = document.getElementById("left-page");
 const contact = document.getElementById("contact");
-const logo = document.getElementById("logo-home");
 const body = document.getElementsByTagName("body")[0];
 const header = document.getElementsByTagName("HEAD")[0];
-
 const bookBg = document.getElementById("book-bg");
+const logo = document.getElementById("logo-home");
+const lead = document.getElementById("lead");
+const aspiring = document.getElementById("aspiring");
+const educator = document.getElementById("educator");
+const engineer = document.getElementById("engineer");
+const musician = document.getElementById("musician");
+const services = document.getElementById("services");
+const work = document.getElementById("work");
+const cv = document.getElementById("cv");
+
+const educatorContent = document.getElementById("educator-content");
+const content = document.querySelectorAll(".hidden");
+
+// global vars
 let percent = [];
 const num = 100;
+let showBook = true;
+let fired = 0;
+
 for (let i = 0; i < num; i++) {
   const elementLeft = document.createElement("style");
   const elementRight = document.createElement("style");
@@ -33,7 +46,6 @@ for (let i = 0; i < num; i++) {
   elementRight.innerHTML = `.right-curve${i}{transform:translateY(${shiftRight}) rotate(${tiltRight}) !important;}`;
   header.appendChild(elementLeft);
   header.appendChild(elementRight);
-  calcWidth();
 }
 //wrap each letter in span
 bookText.forEach((el) => {
@@ -84,16 +96,7 @@ function removeCurve() {
     });
   });
 }
-let showBook = true;
-let fired = 0;
-const lead = document.getElementById("lead");
-const aspiring = document.getElementById("aspiring");
-const educator = document.getElementById("educator");
-const engineer = document.getElementById("engineer");
-const musician = document.getElementById("musician");
-const services = document.getElementById("services");
-const work = document.getElementById("work");
-const cv = document.getElementById("cv");
+
 logo.classList.add("transition");
 lead.classList.add("transition");
 educator.classList.add("transition");
@@ -116,30 +119,31 @@ function homeScreen() {
   services.classList.remove("services-full");
   work.classList.remove("work-full");
   cv.classList.remove("cv-full");
-  bookPageRight.addEventListener("transitionend", revert);
+  bookPageRight.addEventListener("transitionend", revertToHome);
+  content.forEach((section) => {
+    section.classList.remove("shown");
+  });
 }
-function revert() {
-  console.log("revert");
+function revertToHome() {
+  bookPageRight.removeEventListener("transitionend", revertToHome);
   bookPageLeft.classList.remove("page-to-center");
   bookPageRight.classList.remove("page-to-down");
   bookBg.classList.remove("book-bg-zoom");
   body.classList.remove("body-zoomed");
   contact.classList.remove("hidden");
   addCurve();
-  bookPageRight.removeEventListener("transitionend", revert);
 }
 function fullScreen() {
-  console.log("full");
   bookPageLeft.classList.add("page-to-center");
   bookPageRight.classList.add("page-to-down");
   bookBg.classList.add("book-bg-zoom");
   body.classList.add("body-zoomed");
   contact.classList.add("hidden");
   removeCurve();
-  bookPageLeft.addEventListener("transitionend", shift);
+  bookPageLeft.addEventListener("transitionend", shiftHeaders);
 }
-function shift() {
-  bookPageLeft.removeEventListener("transitionend", shift);
+function shiftHeaders() {
+  bookPageLeft.removeEventListener("transitionend", shiftHeaders);
   logo.classList.add("logo-full");
   lead.classList.add("lead-full");
   aspiring.classList.add("aspiring-full");
@@ -149,7 +153,13 @@ function shift() {
   services.classList.add("services-full");
   work.classList.add("work-full");
   cv.classList.add("cv-full");
+  // bookPageLeft.addEventListener("transitionend", addContent);
+
+  // content.forEach((section) => {
+  //   section.classList.add("shown");
+  // });
 }
+
 // state transition
 bookPageRight.onclick = () => {
   changeState();
@@ -172,3 +182,28 @@ function calcWidth() {
     percent.push((bookPageLeft.offsetWidth / num) * [i]);
   }
 }
+
+//from traversy mdeia
+const items = document.querySelectorAll(".hidden");
+
+const isInViewport = (el) => {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <=
+      (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+};
+
+const run = () =>
+  items.forEach((item) => {
+    if (isInViewport(item)) {
+      item.classList.add("shown");
+    }
+  });
+
+window.addEventListener("load", run);
+window.addEventListener("resize", run);
+window.addEventListener("scroll", run);

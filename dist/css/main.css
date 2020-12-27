@@ -23,12 +23,6 @@ span {
   transition: transform 800ms ease-in-out, -webkit-transform 800ms ease-in-out !important;
 }
 
-.word {
-  display: inline-block;
-  white-space: nowrap;
-  /* this does the trick */
-}
-
 a {
   text-decoration: none;
   color: inherit;
@@ -189,10 +183,6 @@ button {
   font-size: 2rem;
   padding: 0.5rem 1rem;
   border: 2px solid black;
-}
-
-text {
-  fill: #ff9800;
 }
 
 .menu-wrap {
@@ -461,11 +451,20 @@ text {
           align-items: center;
 }
 
-#about-me {
-  margin-top: 50vh;
+#educator-content,
+#engineer-content {
+  position: absolute;
+  top: 143vh;
   color: white;
   border: 1px solid white;
   z-index: 3;
+  width: inherit;
+  -webkit-transition: opacity 500ms ease-in-out;
+  transition: opacity 500ms ease-in-out;
+}
+
+#engineer-content {
+  top: 195vh;
 }
 
 #social {
@@ -502,14 +501,14 @@ text {
   white-space: nowrap;
 }
 
+.word {
+  display: inline-block;
+  white-space: nowrap;
+}
+
 .book-bg-zoom {
   -webkit-transform: scaleX(1.5) scaleY(1.5);
           transform: scaleX(1.5) scaleY(1.5);
-}
-
-.book-bg-revert {
-  -webkit-transform: none !important;
-          transform: none !important;
 }
 
 .body-zoomed {
@@ -528,20 +527,9 @@ text {
           transform: translate(-50%, 100%) !important;
 }
 
-.hidden {
-  visibility: hidden;
-  display: none;
-  opacity: 0;
-}
-
 .left-page-revert {
   -webkit-transform: translate(-50%, -50%) !important;
           transform: translate(-50%, -50%) !important;
-}
-
-.normalize {
-  -webkit-transform: none !important;
-          transform: none !important;
 }
 
 .transition {
@@ -555,9 +543,10 @@ text {
           transition-timing-function: ease-in-out;
 }
 
-.shifted-down {
-  -webkit-transform: translateY(100vh) !important;
-          transform: translateY(100vh) !important;
+.logo-full {
+  -webkit-transform: translateY(-5vh);
+          transform: translateY(-5vh);
+  font-size: 5rem;
 }
 
 .lead-full {
@@ -616,9 +605,23 @@ text {
           transform-origin: center;
 }
 
-.logo-full {
-  -webkit-transform: translateY(-5vh);
-          transform: translateY(-5vh);
-  font-size: 5rem;
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.shown {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.normalize {
+  -webkit-transform: none !important;
+          transform: none !important;
+}
+
+.book-bg-revert {
+  -webkit-transform: none !important;
+          transform: none !important;
 }
 /*# sourceMappingURL=MAIN.css.map */
