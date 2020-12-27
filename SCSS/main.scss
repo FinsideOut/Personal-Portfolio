@@ -76,6 +76,16 @@
   // transform: scale(0);
   // display: none;
 }
+#educator-content {
+  @include flex(column, space-between);
+  .educator-icons-container {
+    @include flex(row, space-around);
+    .icon-container {
+      @include flex(column, space-between);
+      text-align: center;
+    }
+  }
+}
 
 #engineer-content {
   top: 220vh;

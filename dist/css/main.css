@@ -54,7 +54,6 @@ h3 {
 }
 
 p {
-  margin: 0 1rem 0.5rem;
   font-size: 1.3rem;
   line-height: 1.3;
 }
@@ -463,6 +462,54 @@ button {
   transition: opacity 500ms ease-in-out;
 }
 
+#educator-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#educator-content .educator-icons-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#educator-content .educator-icons-container .icon-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: center;
+}
+
 #engineer-content {
   top: 220vh;
 }
@@ -624,4 +671,4 @@ button {
   -webkit-transform: none !important;
           transform: none !important;
 }
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=MAIN.css.map */
