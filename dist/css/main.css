@@ -580,7 +580,142 @@ button {
 }
 
 #engineer-content {
-  top: 220vh;
+  top: 215vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#engineer-content #skills-graph {
+  min-width: 60vw;
+  min-height: 80vh;
+  display: -ms-grid;
+  display: grid;
+  grid-template: "y-axis title" 1fr "y-axis graph" 8fr "y-axis x-axis" 1fr/ 1fr 9fr;
+}
+
+#engineer-content .x-label {
+  grid-area: x-axis;
+  text-align: center;
+}
+
+#engineer-content .y-label {
+  grid-area: y-axis;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -webkit-transform: rotateZ(-90deg) translateY(150%);
+          transform: rotateZ(-90deg) translateY(150%);
+}
+
+#engineer-content .graph-title {
+  grid-area: title;
+  text-align: center;
+}
+
+#engineer-content .graph-content {
+  grid-area: graph;
+  border-left: 3px solid white;
+  border-bottom: 3px solid white;
+  position: relative;
+  color: white;
+}
+
+#engineer-content .graph-content img,
+#engineer-content .graph-content i {
+  width: 45px;
+  font-size: 45px;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#engineer-content .graph-content .fa-python {
+  left: 80%;
+  top: 10%;
+}
+
+#engineer-content .graph-content .fa-html5 {
+  left: 90%;
+  top: 20%;
+}
+
+#engineer-content .graph-content .fa-css3 {
+  left: 70%;
+  top: 30%;
+}
+
+#engineer-content .graph-content .fa-github {
+  left: 60%;
+  top: 40%;
+}
+
+#engineer-content .graph-content .fa-js-square {
+  left: 50%;
+  top: 50%;
+}
+
+#engineer-content .graph-content .fa-sass {
+  left: 50%;
+  top: 60%;
+}
+
+#engineer-content .graph-content .fa-microchip {
+  left: 40%;
+  top: 70%;
+}
+
+#engineer-content .graph-content .c-plus {
+  left: 30%;
+  top: 20%;
+}
+
+#engineer-content .graph-content .matlab {
+  left: 10%;
+  top: 70%;
+}
+
+#engineer-content .graph-content .pcb {
+  left: 60%;
+  top: 70%;
+}
+
+#engineer-content .graph-content .arduino {
+  left: 40%;
+  top: 40%;
+}
+
+#engineer-content .graph-content .right-arrow {
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid white;
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+}
+
+#engineer-content .graph-content .up-arrow {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid white;
+  position: absolute;
+  top: -10px;
+  left: -10px;
 }
 
 #social {
@@ -685,16 +820,16 @@ button {
 }
 
 .engineer-full {
-  -webkit-transform: translateY(200vh) translateX(40vw) !important;
-          transform: translateY(200vh) translateX(40vw) !important;
+  -webkit-transform: translateY(140vh) translateX(40vw) !important;
+          transform: translateY(140vh) translateX(40vw) !important;
   -webkit-transform-origin: center;
           transform-origin: center;
   font-size: 4rem !important;
 }
 
 .musician-full {
-  -webkit-transform: translateY(160vh) translateX(-40vw) !important;
-          transform: translateY(160vh) translateX(-40vw) !important;
+  -webkit-transform: translateY(260vh) translateX(-40vw) !important;
+          transform: translateY(260vh) translateX(-40vw) !important;
   -webkit-transform-origin: center;
           transform-origin: center;
   font-size: 4rem !important;
