@@ -72,9 +72,14 @@
   visibility: visible !important;
   opacity: 1 !important;
 }
-
+.obscure {
+  opacity: 0.2 !important;
+  color: darken(white, 60%);
+}
 .normalize {
   transform: none !important;
+  // visibility: visible !important;
+  opacity: 1 !important;
 }
 .book-bg-revert {
   transform: none !important;

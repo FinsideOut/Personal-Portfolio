@@ -209,3 +209,45 @@ const run = () =>
 window.addEventListener("load", run);
 window.addEventListener("resize", run);
 window.addEventListener("scroll", run);
+
+educatorIconRight = document.getElementById("educator-icon-right");
+educatorIconCenter = document.getElementById("educator-icon-center");
+educatorIconLeft = document.getElementById("educator-icon-left");
+moreInfoRight = document.getElementById("more-info-right");
+moreInfoLeft = document.getElementById("more-info-left");
+moreInfoCenterLeft = document.getElementById("more-info-center-left");
+moreInfoCenterRight = document.getElementById("more-info-center-right");
+
+educatorIconRight.addEventListener("mouseover", (e) => {
+  educatorIconCenter.classList.add("obscure");
+  educatorIconLeft.classList.add("obscure");
+  moreInfoRight.classList.add("normalize");
+});
+educatorIconRight.addEventListener("mouseout", (e) => {
+  educatorIconCenter.classList.remove("obscure");
+  educatorIconLeft.classList.remove("obscure");
+  moreInfoRight.classList.remove("normalize");
+});
+
+educatorIconLeft.addEventListener("mouseover", (e) => {
+  educatorIconCenter.classList.add("obscure");
+  educatorIconRight.classList.add("obscure");
+  moreInfoLeft.classList.add("normalize");
+});
+educatorIconLeft.addEventListener("mouseout", (e) => {
+  educatorIconCenter.classList.remove("obscure");
+  educatorIconRight.classList.remove("obscure");
+  moreInfoLeft.classList.remove("normalize");
+});
+educatorIconCenter.addEventListener("mouseover", (e) => {
+  educatorIconLeft.classList.add("obscure");
+  educatorIconRight.classList.add("obscure");
+  moreInfoCenterLeft.classList.add("normalize");
+  moreInfoCenterRight.classList.add("normalize");
+});
+educatorIconCenter.addEventListener("mouseout", (e) => {
+  educatorIconLeft.classList.remove("obscure");
+  educatorIconRight.classList.remove("obscure");
+  moreInfoCenterLeft.classList.remove("normalize");
+  moreInfoCenterRight.classList.remove("normalize");
+});

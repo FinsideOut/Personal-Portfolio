@@ -455,7 +455,6 @@ button {
   position: absolute;
   top: 143vh;
   color: white;
-  border: 1px solid white;
   z-index: 3;
   width: inherit;
   -webkit-transition: opacity 500ms ease-in-out;
@@ -478,7 +477,20 @@ button {
           justify-content: space-between;
 }
 
-#educator-content .educator-icons-container {
+#educator-content .hover-icons-wrapper {
+  position: relative;
+}
+
+#educator-content .hover-icons-wrapper .educator-icons-container > div {
+  -webkit-transition-property: opacity, color;
+  transition-property: opacity, color;
+  -webkit-transition-duration: 800ms;
+          transition-duration: 800ms;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+}
+
+#educator-content .hover-icons-wrapper .educator-icons-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -493,7 +505,8 @@ button {
       justify-content: space-around;
 }
 
-#educator-content .educator-icons-container .icon-container {
+#educator-content .hover-icons-wrapper .educator-icons-container .icon-container {
+  max-width: 33%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -508,6 +521,62 @@ button {
       -ms-flex-pack: justify;
           justify-content: space-between;
   text-align: center;
+  padding: 0.5rem 1rem;
+}
+
+#educator-content .hover-icons-wrapper .more-info-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+}
+
+#educator-content .hover-icons-wrapper .more-info-container div,
+#educator-content .hover-icons-wrapper .more-info-container p {
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 800ms;
+          transition-duration: 800ms;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+  position: absolute;
+  width: 100%;
+  top: 0;
+}
+
+#educator-content .hover-icons-wrapper .more-info-container #more-info-right {
+  left: 0;
+  max-width: 66%;
+  -webkit-transform: translateX(-100vw);
+          transform: translateX(-100vw);
+}
+
+#educator-content .hover-icons-wrapper .more-info-container #more-info-left {
+  right: 0;
+  max-width: 66%;
+  text-align: right;
+  -webkit-transform: translateX(100vw);
+          transform: translateX(100vw);
+}
+
+#educator-content .hover-icons-wrapper .more-info-container #more-info-center-left {
+  right: 0;
+  max-width: 33%;
+  text-align: right;
+  -webkit-transform: translateX(100vw);
+          transform: translateX(100vw);
+}
+
+#educator-content .hover-icons-wrapper .more-info-container #more-info-center-right {
+  left: 0;
+  max-width: 33%;
+  text-align: left;
+  -webkit-transform: translateX(-100vw);
+          transform: translateX(-100vw);
 }
 
 #engineer-content {
@@ -662,9 +731,15 @@ button {
   opacity: 1 !important;
 }
 
+.obscure {
+  opacity: 0.2 !important;
+  color: #666666;
+}
+
 .normalize {
   -webkit-transform: none !important;
           transform: none !important;
+  opacity: 1 !important;
 }
 
 .book-bg-revert {
