@@ -455,7 +455,7 @@ button {
   position: absolute;
   top: 143vh;
   color: white;
-  z-index: 3;
+  z-index: 100;
   width: inherit;
   -webkit-transition: opacity 500ms ease-in-out;
   transition: opacity 500ms ease-in-out;
@@ -597,7 +597,7 @@ button {
 }
 
 #engineer-content #skills-graph {
-  min-width: 60vw;
+  min-width: 70vw;
   min-height: 80vh;
   display: -ms-grid;
   display: grid;
