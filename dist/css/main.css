@@ -671,6 +671,12 @@ button {
   top: calc(50% - 100px);
 }
 
+#engineer-content .graph-content .graph-icon .img,
+#engineer-content .graph-content .graph-icon i {
+  top: calc(50% - 23px);
+  left: calc(50% - 23px);
+}
+
 #engineer-content .graph-content .graph-icon .bg {
   width: 100%;
   height: 100%;
@@ -700,12 +706,16 @@ button {
 }
 
 #engineer-content .graph-content .python .bg {
-  background: rgba(0, 120, 120, 0.5);
+  background: rgba(0, 120, 120, 0.7);
 }
 
-#engineer-content .graph-content .python .fa-python {
-  top: calc(50% - 23px);
-  left: calc(50% - 23px);
+#engineer-content .graph-content .github {
+  left: calc(60% - 250px);
+  top: calc(40% - 250px);
+}
+
+#engineer-content .graph-content .github .bg {
+  background: rgba(0, 120, 20, 0.7);
 }
 
 #engineer-content .graph-content .fa-html5 {
@@ -716,11 +726,6 @@ button {
 #engineer-content .graph-content .fa-css3 {
   left: 70%;
   top: 30%;
-}
-
-#engineer-content .graph-content .fa-github {
-  left: 60%;
-  top: 40%;
 }
 
 #engineer-content .graph-content .fa-js-square {
