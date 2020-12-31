@@ -193,12 +193,37 @@
       height: 500px;
       left: calc(80% - 250px);
       top: calc(10% - 250px);
-      background: rgba(120, 0, 120, 0.5);
-      border-radius: 50%;
+      .bg {
+        width: 100%;
+        height: 100%;
+        background: rgba(120, 0, 120, 0.5);
+        border-radius: 50%;
+        transform: scale(0);
+        transition: transform $transit-time ease-in-out;
+      }
+      &:hover {
+        .bg {
+          transform: none;
+        }
+      }
+      h3 {
+        position: absolute;
+        width: 100%;
+        top: calc(50% - 100px);
+        text-align: center;
+      }
       .fa-python {
-        margin: auto;
+        // margin: auto;
         top: calc(50% - 23px);
         left: calc(50% - 23px);
+      }
+      p {
+        position: absolute;
+
+        width: 80%;
+        left: 10%;
+        top: calc(50% + 50px);
+        text-align: center;
       }
     }
     .fa-html5 {
