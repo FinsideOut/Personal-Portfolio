@@ -647,6 +647,7 @@ button {
   top: 0;
   left: 0;
   padding: 0;
+  display: block;
 }
 
 #engineer-content .graph-content img {
@@ -672,21 +673,36 @@ button {
 #engineer-content .graph-content .graph-icons p {
   width: 80%;
   left: 10%;
-  top: calc(50% + 50px);
+  top: calc(50% + 75px);
 }
 
 #engineer-content .graph-content .graph-icons h3 {
   width: 100%;
-  top: calc(50% - 100px);
+  top: calc(50% - 150px);
+  font-size: 3.5rem;
 }
 
 #engineer-content .graph-content .graph-icons img,
 #engineer-content .graph-content .graph-icons i {
   top: calc(50% - 23px);
   left: calc(50% - 23px);
-  -webkit-transition: opacity 300ms ease-in-out;
-  transition: opacity 300ms ease-in-out;
+  -webkit-transition-property: opacity, -webkit-transform;
+  transition-property: opacity, -webkit-transform;
+  transition-property: opacity, transform;
+  transition-property: opacity, transform, -webkit-transform;
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
   z-index: 5;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+#engineer-content .graph-content .graph-icons img:hover,
+#engineer-content .graph-content .graph-icons i:hover {
+  -webkit-transform: scale(2);
+          transform: scale(2);
 }
 
 #engineer-content .graph-content .graph-icons .bg {
@@ -704,21 +720,23 @@ button {
 }
 
 #engineer-content .graph-content .python {
-  left: calc(80% - 375px);
-  top: calc(10% - 375px);
+  left: calc(40% - 375px);
+  top: calc(20% - 375px);
 }
 
 #engineer-content .graph-content .python .bg {
-  background: rgba(0, 120, 120, 0.7);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(52, 116, 168, 0.8)), to(rgba(255, 212, 65, 0.8)));
+  background: linear-gradient(rgba(52, 116, 168, 0.8), rgba(255, 212, 65, 0.8));
 }
 
 #engineer-content .graph-content .github {
-  left: calc(20% - 375px);
-  top: calc(40% - 375px);
+  left: calc(60% - 375px);
+  top: calc(10% - 375px);
 }
 
 #engineer-content .graph-content .github .bg {
-  background: rgba(0, 120, 20, 0.7);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(68, 170, 0, 0.8)), to(rgba(0, 0, 0, 0.8)));
+  background: linear-gradient(rgba(68, 170, 0, 0.8), rgba(0, 0, 0, 0.8));
 }
 
 #engineer-content .graph-content .javascript {
@@ -727,16 +745,18 @@ button {
 }
 
 #engineer-content .graph-content .javascript .bg {
-  background: rgba(150, 100, 0, 0.7);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(250, 213, 0, 0.8)), to(rgba(0, 0, 0, 0.8)));
+  background: linear-gradient(rgba(250, 213, 0, 0.8), rgba(0, 0, 0, 0.8));
 }
 
 #engineer-content .graph-content .html5 {
-  left: calc(90% - 375px);
-  top: calc(20% - 375px);
+  left: calc(60% - 375px);
+  top: calc(40% - 375px);
 }
 
 #engineer-content .graph-content .html5 .bg {
-  background: rgba(150, 0, 0, 0.7);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(228, 77, 38, 0.8)), to(rgba(10, 3, 1, 0.8)));
+  background: linear-gradient(rgba(228, 77, 38, 0.8), rgba(10, 3, 1, 0.8));
 }
 
 #engineer-content .graph-content .css3 {
@@ -745,61 +765,68 @@ button {
 }
 
 #engineer-content .graph-content .css3 .bg {
-  background: rgba(0, 150, 150, 0.7);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(38, 77, 228, 0.8)), to(rgba(1, 3, 10, 0.8)));
+  background: linear-gradient(rgba(38, 77, 228, 0.8), rgba(1, 3, 10, 0.8));
 }
 
 #engineer-content .graph-content .sass {
-  left: calc(50% - 375px);
-  top: calc(60% - 375px);
-}
-
-#engineer-content .graph-content .sass .bg {
-  background: rgba(150, 50, 200, 0.7);
-}
-
-#engineer-content .graph-content .microchip {
-  left: calc(40% - 375px);
-  top: calc(70% - 375px);
-}
-
-#engineer-content .graph-content .microchip .bg {
-  background: rgba(150, 0, 100, 0.7);
-}
-
-#engineer-content .graph-content .pcb {
-  left: calc(60% - 375px);
-  top: calc(70% - 375px);
-}
-
-#engineer-content .graph-content .pcb .bg {
-  background: rgba(0, 220, 100, 0.7);
-}
-
-#engineer-content .graph-content .c-plus {
-  left: calc(30% - 375px);
+  left: calc(80% - 375px);
   top: calc(20% - 375px);
 }
 
+#engineer-content .graph-content .sass .bg {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(206, 103, 154, 0.8)), to(rgba(41, 13, 27, 0.8)));
+  background: linear-gradient(rgba(206, 103, 154, 0.8), rgba(41, 13, 27, 0.8));
+}
+
+#engineer-content .graph-content .microchip {
+  left: calc(65% - 375px);
+  top: calc(80% - 375px);
+}
+
+#engineer-content .graph-content .microchip .bg {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(238, 58, 37, 0.8)), to(rgba(0, 0, 0, 0.8)));
+  background: linear-gradient(rgba(238, 58, 37, 0.8), rgba(0, 0, 0, 0.8));
+}
+
+#engineer-content .graph-content .pcb {
+  left: calc(80% - 375px);
+  top: calc(90% - 375px);
+}
+
+#engineer-content .graph-content .pcb .bg {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(73, 196, 56, 0.8)), to(rgba(0, 0, 0, 0.8)));
+  background: linear-gradient(rgba(73, 196, 56, 0.8), rgba(0, 0, 0, 0.8));
+}
+
+#engineer-content .graph-content .c-plus {
+  left: calc(20% - 375px);
+  top: calc(80% - 375px);
+}
+
 #engineer-content .graph-content .c-plus .bg {
-  background: rgba(0, 100, 220, 0.7);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 86, 151, 0.8)), to(rgba(0, 0, 0, 0.8)));
+  background: linear-gradient(rgba(0, 86, 151, 0.8), rgba(0, 0, 0, 0.8));
 }
 
 #engineer-content .graph-content .arduino {
-  left: calc(10% - 375px);
+  left: calc(80% - 375px);
   top: calc(70% - 375px);
 }
 
 #engineer-content .graph-content .arduino .bg {
-  background: rgba(100, 0, 220, 0.7);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 146, 151, 0.8)), to(rgba(0, 0, 0, 0.8)));
+  background: linear-gradient(rgba(0, 146, 151, 0.8), rgba(0, 0, 0, 0.8));
 }
 
 #engineer-content .graph-content .matlab {
   left: calc(40% - 375px);
-  top: calc(40% - 375px);
+  top: calc(60% - 375px);
 }
 
 #engineer-content .graph-content .matlab .bg {
-  background: rgba(250, 100, 0, 0.7);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(115, 25, 15, 0.8)), to(rgba(84, 166, 187, 0.8)));
+  background: linear-gradient(rgba(115, 25, 15, 0.8), rgba(84, 166, 187, 0.8));
 }
 
 #engineer-content .graph-content .right-arrow {
@@ -937,31 +964,31 @@ button {
   font-size: 4rem !important;
 }
 
-.musician-full {
-  -webkit-transform: translateY(260vh) translateX(-40vw) !important;
-          transform: translateY(260vh) translateX(-40vw) !important;
+.developer-full {
+  -webkit-transform: translateY(235vh) !important;
+          transform: translateY(235vh) !important;
   -webkit-transform-origin: center;
           transform-origin: center;
   font-size: 4rem !important;
 }
 
 .services-full {
-  -webkit-transform: translateY(200vh) !important;
-          transform: translateY(200vh) !important;
+  -webkit-transform: translateY(300vh) !important;
+          transform: translateY(300vh) !important;
   -webkit-transform-origin: center;
           transform-origin: center;
 }
 
 .work-full {
-  -webkit-transform: translateY(240vh) !important;
-          transform: translateY(240vh) !important;
+  -webkit-transform: translateY(300vh) !important;
+          transform: translateY(300vh) !important;
   -webkit-transform-origin: center;
           transform-origin: center;
 }
 
 .cv-full {
-  -webkit-transform: translateY(280vh) !important;
-          transform: translateY(280vh) !important;
+  -webkit-transform: translateY(300vh) !important;
+          transform: translateY(300vh) !important;
   -webkit-transform-origin: center;
           transform-origin: center;
 }
