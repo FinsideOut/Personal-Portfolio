@@ -16,6 +16,11 @@ $arrow-size: 10px;
       "y-axis x-axis" 1fr/
       1fr 9fr;
   }
+  .x-label,
+  .y-label,
+  .graph-title {
+    transition: opacity $transit-time ease-in-out;
+  }
   .x-label {
     grid-area: x-axis;
     text-align: center;
@@ -35,6 +40,7 @@ $arrow-size: 10px;
     border-bottom: 3px solid white;
     position: relative;
     color: white;
+    transition: border-color $transit-time ease-in-out;
 
     img,
     i {
@@ -174,6 +180,7 @@ $arrow-size: 10px;
       position: absolute;
       bottom: -$arrow-size;
       right: -$arrow-size;
+      transition: border-color $transit-time ease-in-out;
     }
     .up-arrow {
       width: 0;
@@ -184,6 +191,7 @@ $arrow-size: 10px;
       position: absolute;
       top: -$arrow-size;
       left: -$arrow-size;
+      transition: border-color $transit-time ease-in-out;
     }
   }
 }

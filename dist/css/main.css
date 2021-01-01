@@ -604,6 +604,13 @@ button {
   grid-template: "y-axis title" 1fr "y-axis graph" 8fr "y-axis x-axis" 1fr/ 1fr 9fr;
 }
 
+#engineer-content .x-label,
+#engineer-content .y-label,
+#engineer-content .graph-title {
+  -webkit-transition: opacity 300ms ease-in-out;
+  transition: opacity 300ms ease-in-out;
+}
+
 #engineer-content .x-label {
   grid-area: x-axis;
   text-align: center;
@@ -629,6 +636,8 @@ button {
   border-bottom: 3px solid white;
   position: relative;
   color: white;
+  -webkit-transition: border-color 300ms ease-in-out;
+  transition: border-color 300ms ease-in-out;
 }
 
 #engineer-content .graph-content img,
@@ -802,6 +811,8 @@ button {
   position: absolute;
   bottom: -10px;
   right: -10px;
+  -webkit-transition: border-color 300ms ease-in-out;
+  transition: border-color 300ms ease-in-out;
 }
 
 #engineer-content .graph-content .up-arrow {
@@ -813,6 +824,8 @@ button {
   position: absolute;
   top: -10px;
   left: -10px;
+  -webkit-transition: border-color 300ms ease-in-out;
+  transition: border-color 300ms ease-in-out;
 }
 
 #social {
@@ -966,6 +979,18 @@ button {
 .obscure {
   opacity: 0.1 !important;
   z-index: 0;
+}
+
+.obscure-borders {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.obscure-arrow-up {
+  border-bottom: 10px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.obscure-arrow-right {
+  border-left: 10px solid rgba(255, 255, 255, 0.1) !important;
 }
 
 .normalize {

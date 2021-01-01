@@ -255,13 +255,23 @@ educatorIconCenter.addEventListener("mouseout", (e) => {
 const graphIcons = document.querySelectorAll(".graph-icon");
 const graphTexts = document.querySelectorAll(".graph-icon-text");
 const graphBgs = document.querySelectorAll(".graph-icon-bg");
-
+const graphTitle = document.querySelector(".graph-title");
+const LabelX = document.querySelector(".x-label");
+const LabelY = document.querySelector(".y-label");
+const graphContent = document.querySelector(".graph-content");
+const graphArrowUp = document.querySelector(".up-arrow");
+const graphArrowRight = document.querySelector(".right-arrow");
 console.log(graphIcons);
 
 graphIcons.forEach((icon) => {
   icon.addEventListener("mouseenter", (e) => {
     e.target.classList.remove("obscure");
-
+    graphTitle.classList.add("obscure");
+    LabelX.classList.add("obscure");
+    LabelY.classList.add("obscure");
+    graphContent.classList.add("obscure-borders");
+    graphArrowUp.classList.add("obscure-arrow-up");
+    graphArrowRight.classList.add("obscure-arrow-right");
     e.target.parentElement.childNodes[1].classList.add("normalize");
     e.target.parentElement.childNodes[3].classList.add("shown");
     e.target.parentElement.childNodes[7].classList.add("shown");
@@ -275,9 +285,14 @@ graphIcons.forEach((icon) => {
     });
   });
 });
-graphBgs.forEach((icon) => {
+graphIcons.forEach((icon) => {
   icon.addEventListener("mouseout", (e) => {
-    console.log("leave");
+    graphTitle.classList.remove("obscure");
+    LabelX.classList.remove("obscure");
+    LabelY.classList.remove("obscure");
+    graphContent.classList.remove("obscure-borders");
+    graphArrowUp.classList.remove("obscure-arrow-up");
+    graphArrowRight.classList.remove("obscure-arrow-right");
     e.target.parentElement.childNodes[1].classList.remove("normalize");
     e.target.parentElement.childNodes[3].classList.remove("shown");
     e.target.parentElement.childNodes[7].classList.remove("shown");

@@ -77,6 +77,15 @@
   z-index: 0;
   // color: darken(white, 60%);
 }
+.obscure-borders {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+.obscure-arrow-up {
+  border-bottom: $arrow-size solid rgba(255, 255, 255, 0.1) !important;
+}
+.obscure-arrow-right {
+  border-left: $arrow-size solid rgba(255, 255, 255, 0.1) !important;
+}
 .normalize {
   transform: none !important;
   // visibility: visible !important;
