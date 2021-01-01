@@ -1,5 +1,5 @@
-$bg-size: 500px;
-$bg-half: 250px;
+$bg-size: 750px;
+$bg-half: 375px;
 $icon-size: 46px;
 $icon-half: 23px;
 $arrow-size: 10px;
@@ -48,7 +48,7 @@ $arrow-size: 10px;
       width: $icon-size;
       height: auto;
     }
-    .graph-icon {
+    .graph-icons {
       position: absolute;
       width: $bg-size;
       height: $bg-size;
@@ -68,27 +68,19 @@ $arrow-size: 10px;
         width: 100%;
         top: calc(50% - 100px);
       }
-      .img,
+      img,
       i {
         top: calc(50% - #{$icon-half});
         left: calc(50% - #{$icon-half});
+        transition: opacity $transit-time ease-in-out;
       }
       .bg {
-        width: 100%;
-        height: 100%;
+        width: $bg-size;
+        height: $bg-size;
         background: rgba(120, 0, 120, 0.5);
         border-radius: 50%;
         transform: scale(0);
         transition: transform $transit-time ease-in-out;
-      }
-      &:hover {
-        .bg {
-          transform: none;
-        }
-        p,
-        h3 {
-          opacity: 1;
-        }
       }
     }
     .python {
@@ -97,9 +89,12 @@ $arrow-size: 10px;
       .bg {
         background: rgba(0, 120, 120, 0.7);
       }
+      #python-bg {
+        border: 1px solid white;
+      }
     }
     .github {
-      left: calc(60% - #{$bg-half});
+      left: calc(20% - #{$bg-half});
       top: calc(40% - #{$bg-half});
       .bg {
         background: rgba(0, 120, 20, 0.7);

@@ -251,3 +251,34 @@ educatorIconCenter.addEventListener("mouseout", (e) => {
   moreInfoCenterLeft.classList.remove("normalize");
   moreInfoCenterRight.classList.remove("normalize");
 });
+
+const graphIcons = document.querySelectorAll(".graph-icon");
+const graphTexts = document.querySelectorAll(".graph-icon-text");
+const graphBgs = document.querySelectorAll(".graph-icon-bg");
+
+console.log(graphIcons);
+console.log(graphTexts);
+console.log(graphBgs);
+
+graphIcons.forEach((icon) => {
+  icon.addEventListener("mouseenter", (e) => {
+    e.target.parentElement.childNodes[1].classList.add("normalize");
+    e.target.parentElement.childNodes[3].classList.add("shown");
+    e.target.parentElement.childNodes[7].classList.add("shown");
+    graphIcons.forEach((icon) => {
+      if (e.target.classList !== icon.classList) {
+        icon.classList.add("obscure");
+      }
+    });
+  });
+});
+graphBgs.forEach((icon) => {
+  icon.addEventListener("mouseout", (e) => {
+    e.target.parentElement.childNodes[1].classList.remove("normalize");
+    e.target.parentElement.childNodes[3].classList.remove("shown");
+    e.target.parentElement.childNodes[7].classList.remove("shown");
+    graphIcons.forEach((icon) => {
+      icon.classList.remove("obscure");
+    });
+  });
+});
