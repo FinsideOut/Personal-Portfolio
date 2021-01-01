@@ -11,7 +11,8 @@ $python-color-1: rgb(52, 116, 168);
 $python-color-2: rgb(255, 212, 65);
 $pcb-color: rgb(73, 196, 56);
 $c-plus-color: rgb(0, 86, 151);
-$trans: 0.8;
+$trans: 0.95;
+$darken: 60%;
 $c-plus-color-trans: rgba(0, 86, 151, $trans);
 
 $arduino-color-trans: rgba(0, 146, 151, $trans);

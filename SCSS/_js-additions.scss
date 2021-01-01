@@ -47,12 +47,12 @@
   font-size: 4rem !important;
 }
 .developer-full {
-  transform: translateY(235vh) !important;
+  transform: translateY(500vh) !important;
   transform-origin: center;
   font-size: 4rem !important;
 }
 .services-full {
-  transform: translateY(300vh) !important;
+  transform: translateY(500vh) !important;
   transform-origin: center;
 }
 .work-full {
@@ -91,6 +91,46 @@
   // visibility: visible !important;
   opacity: 1 !important;
 }
+
 .book-bg-revert {
   transform: none !important;
+}
+.disc-enlarge {
+  transform: scale(8) !important;
+}
+.disc-color-0 {
+  opacity: 0.5;
+}
+.disc-color-1 {
+  opacity: 0.45;
+}
+.disc-color-2 {
+  opacity: 0.4;
+}
+.disc-color-3 {
+  opacity: 0.35;
+}
+.disc-color-4 {
+  opacity: 0.3;
+}
+.disc-color-5 {
+  opacity: 0.25;
+}
+.disc-color-6 {
+  opacity: 0.2;
+}
+.disc-color-7 {
+  opacity: 0.65;
+}
+.disc-color-8 {
+  opacity: 0.6;
+}
+.disc-color-9 {
+  opacity: 0.55;
+}
+.disc-color-10 {
+  opacity: 0.5;
+}
+.disc-color-11 {
+  opacity: 0.45;
 }

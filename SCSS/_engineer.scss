@@ -5,235 +5,288 @@ $icon-half: 23px;
 $arrow-size: 10px;
 #engineer-content {
   top: 215vh;
-  @include flex(row, space-between);
-  #skills-graph {
-    min-width: 70vw;
-    min-height: 80vh;
-    display: grid;
-    grid-template:
-      "y-axis title" 1fr
-      "y-axis graph" 8fr
-      "y-axis x-axis" 1fr/
-      1fr 9fr;
-  }
-  .x-label,
-  .y-label,
-  .graph-title {
-    transition: opacity $transit-time ease-in-out;
-  }
-  .x-label {
-    grid-area: x-axis;
-    text-align: center;
-  }
-  .y-label {
-    grid-area: y-axis;
-    align-self: center;
-    transform: rotateZ(-90deg) translateY(150%);
-  }
-  .graph-title {
-    grid-area: title;
-    text-align: center;
-  }
-  .graph-content {
-    grid-area: graph;
-    border-left: 3px solid white;
-    border-bottom: 3px solid white;
-    position: relative;
-    color: white;
-    transition: border-color $transit-time ease-in-out;
+  @include flex(column, space-between);
+  .technical-skills {
+    @include flex(row, space-between);
 
-    img,
-    i {
-      font-size: $icon-size;
-      position: absolute;
-      top: 0;
-      left: 0;
-      padding: 0;
-      display: block;
-    }
-    img {
-      width: $icon-size;
-      height: auto;
-    }
-    .graph-icons {
-      position: absolute;
-      width: $bg-size;
-      height: $bg-size;
-
+    #skills-graph {
       // border: 1px solid white;
+      min-width: 70vw;
+      min-height: 80vh;
+      display: grid;
+      grid-template:
+        "y-axis title" 1fr
+        "y-axis graph" 8fr
+        "y-axis x-axis" 1fr/
+        1fr 9fr;
+    }
+    .x-label,
+    .y-label,
+    .graph-title {
+      transition: opacity $transit-time ease-in-out;
+    }
+    .x-label {
+      grid-area: x-axis;
+      text-align: center;
+    }
+    .y-label {
+      grid-area: y-axis;
+      align-self: center;
+      transform: rotateZ(-90deg) translateY(150%);
+    }
+    .graph-title {
+      grid-area: title;
+      text-align: center;
+    }
+    .graph-content {
+      grid-area: graph;
+      border-left: 3px solid white;
+      border-bottom: 3px solid white;
+      position: relative;
+      color: white;
+      transition: border-color $transit-time ease-in-out;
 
-      h3,
-      p {
-        position: absolute;
-        text-align: center;
-        opacity: 0;
-        transition: opacity $transit-time ease-in-out;
-      }
-      p {
-        width: 80%;
-        left: 10%;
-        top: calc(50% + 75px);
-      }
-      h3 {
-        width: 100%;
-        top: calc(50% - 150px);
-        font-size: 3.5rem;
-      }
       img,
       i {
-        top: calc(50% - #{$icon-half});
-        left: calc(50% - #{$icon-half});
-        transition-property: opacity, transform;
-        transition-duration: $transit-time;
-        transition-timing-function: ease-in-out;
-        z-index: 5;
-        transform: scale(1);
-        &:hover {
-          transform: scale(2);
-        }
+        font-size: $icon-size;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 0;
+        display: block;
       }
-      .bg {
+      img {
+        width: $icon-size;
+        height: auto;
+      }
+      .graph-icons {
+        position: absolute;
         width: $bg-size;
         height: $bg-size;
-        background: rgba(120, 0, 120, 0.5);
-        border-radius: 50%;
-        z-index: 1;
-        transform: scale(0);
-        transition: transform $transit-time ease-in-out;
-      }
-    }
-    .python {
-      left: calc(40% - #{$bg-half});
-      top: calc(20% - #{$bg-half});
-      .bg {
-        background: linear-gradient(
-          $python-color-1-trans,
-          $python-color-2-trans
-        );
-      }
-    }
-    .github {
-      left: calc(60% - #{$bg-half});
-      top: calc(10% - #{$bg-half});
-      .bg {
-        background: linear-gradient(
-          $github-color-trans,
-          darken($github-color-trans, 50%)
-        );
-      }
-    }
-    .javascript {
-      left: calc(50% - #{$bg-half});
-      top: calc(50% - #{$bg-half});
-      .bg {
-        background: linear-gradient(
-          $js-color-trans,
-          darken($js-color-trans, 50%)
-        );
-      }
-    }
-    .html5 {
-      left: calc(60% - #{$bg-half});
-      top: calc(40% - #{$bg-half});
-      .bg {
-        background: linear-gradient(
-          $html-color-trans,
-          darken($html-color-trans, 50%)
-        );
-      }
-    }
-    .css3 {
-      left: calc(70% - #{$bg-half});
-      top: calc(30% - #{$bg-half});
-      .bg {
-        background: linear-gradient(
-          $css-color-trans,
-          darken($css-color-trans, 50%)
-        );
-      }
-    }
-    .sass {
-      left: calc(80% - #{$bg-half});
-      top: calc(20% - #{$bg-half});
-      .bg {
-        background: linear-gradient(
-          $sass-color-trans,
-          darken($sass-color-trans, 50%)
-        );
-      }
-    }
-    .microchip {
-      left: calc(65% - #{$bg-half});
-      top: calc(80% - #{$bg-half});
-      .bg {
-        background: linear-gradient(
-          $xillinx-color-trans,
-          darken($github-color-trans, 50%)
-        );
-      }
-    }
-    .pcb {
-      left: calc(80% - #{$bg-half});
-      top: calc(90% - #{$bg-half});
-      .bg {
-        background: linear-gradient(
-          $pcb-color-trans,
-          darken($pcb-color-trans, 50%)
-        );
-      }
-    }
-    .c-plus {
-      left: calc(20% - #{$bg-half});
-      top: calc(80% - #{$bg-half});
-      .bg {
-        background: linear-gradient(
-          $c-plus-color-trans,
-          darken($c-plus-color-trans, 50%)
-        );
-      }
-    }
-    .arduino {
-      left: calc(80% - #{$bg-half});
-      top: calc(70% - #{$bg-half});
-      .bg {
-        background: linear-gradient(
-          $arduino-color-trans,
-          darken($github-color-trans, 50%)
-        );
-      }
-    }
-    .matlab {
-      left: calc(40% - #{$bg-half});
-      top: calc(60% - #{$bg-half});
-      .bg {
-        background: linear-gradient(
-          $matlab-color-1-trans,
-          $matlab-color-2-trans
-        );
-      }
-    }
 
-    .right-arrow {
-      width: 0;
-      height: 0;
-      border-top: $arrow-size solid transparent;
-      border-bottom: $arrow-size solid transparent;
-      border-left: $arrow-size solid white;
-      position: absolute;
-      bottom: -$arrow-size;
-      right: -$arrow-size;
-      transition: border-color $transit-time ease-in-out;
+        // border: 1px solid white;
+
+        h3,
+        p {
+          position: absolute;
+          text-align: center;
+          opacity: 0;
+          transition: opacity $transit-time ease-in-out;
+        }
+        p {
+          width: 80%;
+          left: 10%;
+          top: calc(50% + 75px);
+        }
+        h3 {
+          width: 100%;
+          top: calc(50% - 150px);
+          font-size: 3.5rem;
+        }
+        img,
+        i {
+          top: calc(50% - #{$icon-half});
+          left: calc(50% - #{$icon-half});
+          transition-property: opacity, transform;
+          transition-duration: $transit-time;
+          transition-timing-function: ease-in-out;
+          z-index: 5;
+          transform: scale(1);
+          &:hover {
+            transform: scale(2);
+          }
+        }
+        .bg {
+          width: $bg-size;
+          height: $bg-size;
+          border-radius: 50%;
+          z-index: 1;
+          transform: scale(0);
+
+          transition: transform $transit-time ease-in-out;
+        }
+      }
+      .python {
+        left: calc(40% - #{$bg-half});
+        top: calc(20% - #{$bg-half});
+        .bg {
+          background: linear-gradient(
+            $python-color-1-trans,
+            $python-color-2-trans
+          );
+        }
+      }
+      .github {
+        left: calc(60% - #{$bg-half});
+        top: calc(10% - #{$bg-half});
+        .bg {
+          background: linear-gradient(
+            #{random(360)}deg,
+            $github-color-trans,
+            darken($github-color-trans, $darken)
+          );
+        }
+      }
+      .javascript {
+        left: calc(50% - #{$bg-half});
+        top: calc(50% - #{$bg-half});
+        .bg {
+          background: linear-gradient(
+            #{random(360)}deg,
+            $js-color-trans,
+            darken($js-color-trans, $darken)
+          );
+        }
+      }
+      .html5 {
+        left: calc(60% - #{$bg-half});
+        top: calc(40% - #{$bg-half});
+        .bg {
+          background: linear-gradient(
+            #{random(360)}deg,
+            $html-color-trans,
+            darken($html-color-trans, $darken)
+          );
+        }
+      }
+      .css3 {
+        left: calc(70% - #{$bg-half});
+        top: calc(30% - #{$bg-half});
+        .bg {
+          background: linear-gradient(
+            #{random(360)}deg,
+            $css-color-trans,
+            darken($css-color-trans, $darken)
+          );
+        }
+      }
+      .sass {
+        left: calc(80% - #{$bg-half});
+        top: calc(20% - #{$bg-half});
+        .bg {
+          background: linear-gradient(
+            #{random(360)}deg,
+            $sass-color-trans,
+            darken($sass-color-trans, $darken)
+          );
+        }
+      }
+      .microchip {
+        left: calc(65% - #{$bg-half});
+        top: calc(80% - #{$bg-half});
+        .bg {
+          background: linear-gradient(
+            #{random(360)}deg,
+            $xillinx-color-trans,
+            darken($github-color-trans, $darken)
+          );
+        }
+      }
+      .pcb {
+        left: calc(80% - #{$bg-half});
+        top: calc(90% - #{$bg-half});
+        .bg {
+          background: linear-gradient(
+            #{random(360)}deg,
+            $pcb-color-trans,
+            darken($pcb-color-trans, $darken)
+          );
+        }
+      }
+      .c-plus {
+        left: calc(20% - #{$bg-half});
+        top: calc(80% - #{$bg-half});
+        .bg {
+          background: linear-gradient(
+            #{random(360)}deg,
+            $c-plus-color-trans,
+            darken($c-plus-color-trans, $darken)
+          );
+        }
+      }
+      .arduino {
+        left: calc(80% - #{$bg-half});
+        top: calc(70% - #{$bg-half});
+        .bg {
+          background: linear-gradient(
+            #{random(360)}deg,
+            $arduino-color-trans,
+            darken($github-color-trans, $darken)
+          );
+        }
+      }
+      .matlab {
+        left: calc(40% - #{$bg-half});
+        top: calc(60% - #{$bg-half});
+        .bg {
+          background: linear-gradient(
+            #{random(360)}deg,
+            $matlab-color-1-trans,
+            $matlab-color-2-trans
+          );
+        }
+      }
+
+      .right-arrow {
+        width: 0;
+        height: 0;
+        border-top: $arrow-size solid transparent;
+        border-bottom: $arrow-size solid transparent;
+        border-left: $arrow-size solid white;
+        position: absolute;
+        bottom: -$arrow-size;
+        right: -$arrow-size;
+        transition: border-color $transit-time ease-in-out;
+      }
+      .up-arrow {
+        width: 0;
+        height: 0;
+        border-left: $arrow-size solid transparent;
+        border-right: $arrow-size solid transparent;
+        border-bottom: $arrow-size solid white;
+        position: absolute;
+        top: -$arrow-size;
+        left: -$arrow-size;
+        transition: border-color $transit-time ease-in-out;
+      }
     }
-    .up-arrow {
-      width: 0;
-      height: 0;
-      border-left: $arrow-size solid transparent;
-      border-right: $arrow-size solid transparent;
-      border-bottom: $arrow-size solid white;
-      position: absolute;
-      top: -$arrow-size;
-      left: -$arrow-size;
-      transition: border-color $transit-time ease-in-out;
+  }
+}
+.soft-skills {
+  margin-top: 20vh;
+  .cards {
+    position: relative;
+    z-index: 3;
+    @include flex(row, space-between);
+    .card {
+      z-index: 3;
+
+      @include flex(column, space-between);
+      text-align: center;
+      margin: 0.5rem 1rem;
+    }
+  }
+  .discs {
+    $disc-size: 50px;
+    $disc-half-size: 25px;
+    width: 100%;
+    position: absolute;
+    top: calc(35%-#{$disc-half-size});
+    left: 0;
+    @include flex(row, space-between);
+    overflow: none;
+    z-index: 1;
+    .disc {
+      width: $disc-size;
+      z-index: 1;
+
+      height: $disc-size;
+      border-radius: 50%;
+      background: rgba(150, 20, 200, $trans);
+      transform: scale(0);
+      transition-property: transform;
+      transition-duration: $transit-time;
+      transition-timing-function: ease-in-out;
     }
   }
 }

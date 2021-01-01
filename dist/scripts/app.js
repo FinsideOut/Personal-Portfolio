@@ -192,7 +192,7 @@ const isInViewport = (el) => {
     rect.top >= 0 &&
     rect.left >= 0 &&
     rect.bottom <=
-      (window.innerHeight || document.documentElement.clientHeight) &&
+      (window.innerHeight * 2 || document.documentElement.clientHeight * 2) &&
     rect.right <= (window.innerWidth || document.documentElement.clientWidth)
   );
 };
@@ -300,4 +300,24 @@ graphIcons.forEach((icon) => {
       icon.classList.remove("obscure");
     });
   });
+});
+const softSkills = document.querySelector(".soft-skills");
+const discs = document.querySelectorAll(".disc");
+softSkills.addEventListener("mouseover", (e) => {
+  // console.log(discs);
+  discs.forEach((disc) => {
+    disc.classList.add("disc-enlarge");
+  });
+});
+softSkills.addEventListener("mouseout", (e) => {
+  discs.forEach((disc) => {
+    disc.classList.remove("disc-enlarge");
+  });
+});
+softSkills.addEventListener("mousemove", (e) => {
+  let incriment = window.offsetWidth / 12;
+  for (let i = 0; i < discs.length; i++) {
+    discs[i].classList.add("disc-color-" + i);
+    console.log(discs[i]);
+  }
 });
