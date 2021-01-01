@@ -677,6 +677,7 @@ button {
   left: calc(50% - 23px);
   -webkit-transition: opacity 300ms ease-in-out;
   transition: opacity 300ms ease-in-out;
+  z-index: 5;
 }
 
 #engineer-content .graph-content .graph-icons .bg {
@@ -684,6 +685,7 @@ button {
   height: 750px;
   background: rgba(120, 0, 120, 0.5);
   border-radius: 50%;
+  z-index: 1;
   -webkit-transform: scale(0);
           transform: scale(0);
   -webkit-transition: -webkit-transform 300ms ease-in-out;
@@ -701,10 +703,6 @@ button {
   background: rgba(0, 120, 120, 0.7);
 }
 
-#engineer-content .graph-content .python #python-bg {
-  border: 1px solid white;
-}
-
 #engineer-content .graph-content .github {
   left: calc(20% - 375px);
   top: calc(40% - 375px);
@@ -714,49 +712,85 @@ button {
   background: rgba(0, 120, 20, 0.7);
 }
 
-#engineer-content .graph-content .fa-html5 {
-  left: 90%;
-  top: 20%;
+#engineer-content .graph-content .javascript {
+  left: calc(50% - 375px);
+  top: calc(50% - 375px);
 }
 
-#engineer-content .graph-content .fa-css3 {
-  left: 70%;
-  top: 30%;
+#engineer-content .graph-content .javascript .bg {
+  background: rgba(150, 100, 0, 0.7);
 }
 
-#engineer-content .graph-content .fa-js-square {
-  left: 50%;
-  top: 50%;
+#engineer-content .graph-content .html5 {
+  left: calc(90% - 375px);
+  top: calc(20% - 375px);
 }
 
-#engineer-content .graph-content .fa-sass {
-  left: 50%;
-  top: 60%;
+#engineer-content .graph-content .html5 .bg {
+  background: rgba(150, 0, 0, 0.7);
 }
 
-#engineer-content .graph-content .fa-microchip {
-  left: 40%;
-  top: 70%;
+#engineer-content .graph-content .css3 {
+  left: calc(70% - 375px);
+  top: calc(30% - 375px);
 }
 
-#engineer-content .graph-content .c-plus {
-  left: 30%;
-  top: 20%;
+#engineer-content .graph-content .css3 .bg {
+  background: rgba(0, 150, 150, 0.7);
 }
 
-#engineer-content .graph-content .matlab {
-  left: 10%;
-  top: 70%;
+#engineer-content .graph-content .sass {
+  left: calc(50% - 375px);
+  top: calc(60% - 375px);
+}
+
+#engineer-content .graph-content .sass .bg {
+  background: rgba(150, 50, 200, 0.7);
+}
+
+#engineer-content .graph-content .microchip {
+  left: calc(40% - 375px);
+  top: calc(70% - 375px);
+}
+
+#engineer-content .graph-content .microchip .bg {
+  background: rgba(150, 0, 100, 0.7);
 }
 
 #engineer-content .graph-content .pcb {
-  left: 60%;
-  top: 70%;
+  left: calc(60% - 375px);
+  top: calc(70% - 375px);
+}
+
+#engineer-content .graph-content .pcb .bg {
+  background: rgba(0, 220, 100, 0.7);
+}
+
+#engineer-content .graph-content .c-plus {
+  left: calc(30% - 375px);
+  top: calc(20% - 375px);
+}
+
+#engineer-content .graph-content .c-plus .bg {
+  background: rgba(0, 100, 220, 0.7);
 }
 
 #engineer-content .graph-content .arduino {
-  left: 40%;
-  top: 40%;
+  left: calc(10% - 375px);
+  top: calc(70% - 375px);
+}
+
+#engineer-content .graph-content .arduino .bg {
+  background: rgba(100, 0, 220, 0.7);
+}
+
+#engineer-content .graph-content .matlab {
+  left: calc(40% - 375px);
+  top: calc(40% - 375px);
+}
+
+#engineer-content .graph-content .matlab .bg {
+  background: rgba(250, 100, 0, 0.7);
 }
 
 #engineer-content .graph-content .right-arrow {
@@ -931,6 +965,7 @@ button {
 
 .obscure {
   opacity: 0.1 !important;
+  z-index: 0;
 }
 
 .normalize {

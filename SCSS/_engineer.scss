@@ -52,6 +52,8 @@ $arrow-size: 10px;
       position: absolute;
       width: $bg-size;
       height: $bg-size;
+      // border: 1px solid white;
+
       h3,
       p {
         position: absolute;
@@ -73,12 +75,14 @@ $arrow-size: 10px;
         top: calc(50% - #{$icon-half});
         left: calc(50% - #{$icon-half});
         transition: opacity $transit-time ease-in-out;
+        z-index: 5;
       }
       .bg {
         width: $bg-size;
         height: $bg-size;
         background: rgba(120, 0, 120, 0.5);
         border-radius: 50%;
+        z-index: 1;
         transform: scale(0);
         transition: transform $transit-time ease-in-out;
       }
@@ -89,9 +93,6 @@ $arrow-size: 10px;
       .bg {
         background: rgba(0, 120, 120, 0.7);
       }
-      #python-bg {
-        border: 1px solid white;
-      }
     }
     .github {
       left: calc(20% - #{$bg-half});
@@ -100,43 +101,70 @@ $arrow-size: 10px;
         background: rgba(0, 120, 20, 0.7);
       }
     }
-    .fa-html5 {
-      left: 90%;
-      top: 20%;
+    .javascript {
+      left: calc(50% - #{$bg-half});
+      top: calc(50% - #{$bg-half});
+      .bg {
+        background: rgba(150, 100, 0, 0.7);
+      }
     }
-    .fa-css3 {
-      left: 70%;
-      top: 30%;
+    .html5 {
+      left: calc(90% - #{$bg-half});
+      top: calc(20% - #{$bg-half});
+      .bg {
+        background: rgba(150, 0, 0, 0.7);
+      }
     }
-
-    .fa-js-square {
-      left: 50%;
-      top: 50%;
+    .css3 {
+      left: calc(70% - #{$bg-half});
+      top: calc(30% - #{$bg-half});
+      .bg {
+        background: rgba(0, 150, 150, 0.7);
+      }
     }
-    .fa-sass {
-      left: 50%;
-      top: 60%;
+    .sass {
+      left: calc(50% - #{$bg-half});
+      top: calc(60% - #{$bg-half});
+      .bg {
+        background: rgba(150, 50, 200, 0.7);
+      }
     }
-    .fa-microchip {
-      left: 40%;
-      top: 70%;
-    }
-    .c-plus {
-      left: 30%;
-      top: 20%;
-    }
-    .matlab {
-      left: 10%;
-      top: 70%;
+    .microchip {
+      left: calc(40% - #{$bg-half});
+      top: calc(70% - #{$bg-half});
+      .bg {
+        background: rgba(150, 0, 100, 0.7);
+      }
     }
     .pcb {
-      left: 60%;
-      top: 70%;
+      left: calc(60% - #{$bg-half});
+      top: calc(70% - #{$bg-half});
+      .bg {
+        background: rgba(0, 220, 100, 0.7);
+      }
+    }
+    .c-plus {
+      left: calc(30% - #{$bg-half});
+      top: calc(20% - #{$bg-half});
+      .bg {
+        background: rgba(0, 100, 220, 0.7);
+      }
     }
     .arduino {
-      left: 40%;
-      top: 40%;
+      left: calc(10% - #{$bg-half});
+      top: calc(70% - #{$bg-half});
+      .bg {
+        background: rgba(100, 0, 220, 0.7);
+      }
     }
+    .matlab {
+      left: calc(40% - #{$bg-half});
+      top: calc(40% - #{$bg-half});
+      .bg {
+        background: rgba(250, 100, 0, 0.7);
+      }
+    }
+
     .right-arrow {
       width: 0;
       height: 0;

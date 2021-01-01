@@ -74,6 +74,7 @@
 }
 .obscure {
   opacity: 0.1 !important;
+  z-index: 0;
   // color: darken(white, 60%);
 }
 .normalize {

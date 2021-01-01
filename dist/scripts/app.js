@@ -257,23 +257,27 @@ const graphTexts = document.querySelectorAll(".graph-icon-text");
 const graphBgs = document.querySelectorAll(".graph-icon-bg");
 
 console.log(graphIcons);
-console.log(graphTexts);
-console.log(graphBgs);
 
 graphIcons.forEach((icon) => {
   icon.addEventListener("mouseenter", (e) => {
+    e.target.classList.remove("obscure");
+
     e.target.parentElement.childNodes[1].classList.add("normalize");
     e.target.parentElement.childNodes[3].classList.add("shown");
     e.target.parentElement.childNodes[7].classList.add("shown");
     graphIcons.forEach((icon) => {
       if (e.target.classList !== icon.classList) {
         icon.classList.add("obscure");
+        icon.parentElement.childNodes[1].classList.remove("normalize");
+        icon.parentElement.childNodes[3].classList.remove("shown");
+        icon.parentElement.childNodes[7].classList.remove("shown");
       }
     });
   });
 });
 graphBgs.forEach((icon) => {
   icon.addEventListener("mouseout", (e) => {
+    console.log("leave");
     e.target.parentElement.childNodes[1].classList.remove("normalize");
     e.target.parentElement.childNodes[3].classList.remove("shown");
     e.target.parentElement.childNodes[7].classList.remove("shown");
