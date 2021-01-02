@@ -1,0 +1,22 @@
+#developer-content {
+  border: 1px solid white;
+  top: 385vh;
+  @include flex(column, space-between);
+  h3 {
+    align-self: flex-start;
+  }
+  .developer-card {
+    position: relative;
+    .card-title {
+      margin: 1.5rem 1rem;
+    }
+    .card-subtitle {
+      margin-bottom: 1.5rem;
+      text-align: center;
+      align-self: center;
+    }
+    i {
+      font-size: 4rem;
+    }
+  }
+}

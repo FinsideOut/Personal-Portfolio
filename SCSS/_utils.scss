@@ -53,6 +53,9 @@ p {
   font-size: 1.3rem;
   line-height: 1.3;
 }
+.lead {
+  margin: 2rem 0rem;
+}
 
 i {
   font-size: 2rem;
@@ -136,4 +139,15 @@ button {
   font-size: 2rem;
   padding: 0.5rem 1rem;
   border: 2px solid black;
+}
+.cards {
+  position: relative;
+  z-index: 3;
+  @include flex(row, space-between);
+  .card {
+    z-index: 3;
+    @include flex(column, space-between);
+    text-align: center;
+    margin: 0.5rem 1rem;
+  }
 }

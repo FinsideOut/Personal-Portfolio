@@ -96,15 +96,6 @@ $arrow-size: 10px;
             transform: scale(2);
           }
         }
-        .bg {
-          width: $bg-size;
-          height: $bg-size;
-          border-radius: 50%;
-          z-index: 1;
-          transform: scale(0);
-
-          transition: transform $transit-time ease-in-out;
-        }
       }
       .python {
         left: calc(40% - #{$bg-half});
@@ -254,38 +245,35 @@ $arrow-size: 10px;
 }
 .soft-skills {
   margin-top: 20vh;
-  .cards {
-    position: relative;
-    z-index: 3;
-    @include flex(row, space-between);
-    .card {
-      z-index: 3;
-
-      @include flex(column, space-between);
-      text-align: center;
-      margin: 0.5rem 1rem;
-    }
-  }
-  .discs {
-    $disc-size: 50px;
-    $disc-half-size: 25px;
-    width: 100%;
-    position: absolute;
-    top: calc(35%-#{$disc-half-size});
-    left: 0;
-    @include flex(row, space-between);
-    overflow: none;
+}
+.discs {
+  border: 1px solid white;
+  $disc-size: 50px;
+  $disc-half-size: 25px;
+  width: 100%;
+  position: absolute;
+  top: calc(35%-#{$disc-half-size});
+  left: 0;
+  @include flex(row, space-between);
+  overflow: none;
+  z-index: 1;
+  .disc {
+    width: $disc-size;
     z-index: 1;
-    .disc {
-      width: $disc-size;
-      z-index: 1;
-
-      height: $disc-size;
-      border-radius: 50%;
-      transform: scale(0);
-      transition-property: transform, opacity, background-color;
-      transition-duration: $transit-time;
-      transition-timing-function: ease-in-out;
-    }
+    background: green;
+    height: $disc-size;
+    border-radius: 50%;
+    transform: scale(0);
+    transition-property: transform, opacity, background-color;
+    transition-duration: $transit-time;
+    transition-timing-function: ease-in-out;
   }
+}
+.bg {
+  width: $bg-size;
+  height: $bg-size;
+  border-radius: 50%;
+  z-index: 1;
+  transform: scale(0);
+  transition: transform $transit-time ease-in-out;
 }

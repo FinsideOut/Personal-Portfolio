@@ -302,7 +302,7 @@ graphIcons.forEach((icon) => {
   });
 });
 const softSkills = document.querySelector(".soft-skills");
-const discs = document.querySelectorAll(".disc");
+const discs = document.querySelectorAll(".soft-skills-disc");
 softSkills.addEventListener("mouseover", (e) => {
   // console.log(discs);
   discs.forEach((disc) => {
@@ -351,12 +351,10 @@ softSkills.addEventListener("mousemove", (e) => {
       discStyles[i] = discStyles[i + 1] - 1;
     }
   }
-  console.log(discStyles);
   for (let i = 0; i < discStyles.length; i++) {
     for (let j = 0; j < discStyles.length; j++) {
       discs[i].classList.remove("disc-opacity-" + discStyles[j]);
     }
     discs[i].classList.add("disc-opacity-" + discStyles[i]);
   }
-  console.log(discs[3].classList);
 });
