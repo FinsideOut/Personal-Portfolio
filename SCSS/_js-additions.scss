@@ -98,39 +98,75 @@
 .disc-enlarge {
   transform: scale(8) !important;
 }
-.disc-color-0 {
-  opacity: 0.5;
+.disc-opacity-1 {
+  opacity: 0.05;
 }
-.disc-color-1 {
-  opacity: 0.45;
+.disc-opacity-2 {
+  opacity: 0.1;
 }
-.disc-color-2 {
-  opacity: 0.4;
+.disc-opacity-3 {
+  opacity: 0.15;
 }
-.disc-color-3 {
-  opacity: 0.35;
-}
-.disc-color-4 {
-  opacity: 0.3;
-}
-.disc-color-5 {
-  opacity: 0.25;
-}
-.disc-color-6 {
+.disc-opacity-4 {
   opacity: 0.2;
 }
-.disc-color-7 {
-  opacity: 0.65;
+.disc-opacity-5 {
+  opacity: 0.25;
 }
-.disc-color-8 {
-  opacity: 0.6;
+.disc-opacity-6 {
+  opacity: 0.3;
 }
-.disc-color-9 {
-  opacity: 0.55;
+.disc-opacity-7 {
+  opacity: 0.35;
 }
-.disc-color-10 {
+.disc-opacity-8 {
+  opacity: 0.4;
+}
+.disc-opacity-9 {
+  opacity: 0.45;
+}
+.disc-opacity-10 {
   opacity: 0.5;
 }
+.disc-opacity-11 {
+  opacity: 0.55;
+}
+.disc-opacity-12 {
+  opacity: 0.6;
+}
+.disc-color-1 {
+  background-color: rgb(210, 30, 100) !important;
+}
+.disc-color-2 {
+  background-color: rgb(190, 30, 120) !important;
+}
+.disc-color-3 {
+  background-color: rgb(170, 30, 140) !important;
+}
+.disc-color-4 {
+  background-color: rgb(150, 30, 160) !important;
+}
+.disc-color-5 {
+  background-color: rgb(130, 30, 180) !important;
+}
+.disc-color-6 {
+  background-color: rgb(110, 30, 200) !important;
+}
+.disc-color-7 {
+  background-color: rgb(90, 30, 210) !important;
+}
+.disc-color-8 {
+  background-color: rgb(70, 30, 220) !important;
+}
+.disc-color-9 {
+  background-color: rgb(50, 30, 230) !important;
+}
+.disc-color-10 {
+  background-color: rgb(20, 30, 240) !important;
+}
 .disc-color-11 {
-  opacity: 0.45;
+  background-color: rgb(0, 30, 255) !important;
+}
+.disc-color-12 {
+  background-color: rgb(0, 100, 255) !important;
 }

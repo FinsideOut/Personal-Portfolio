@@ -315,9 +315,48 @@ softSkills.addEventListener("mouseout", (e) => {
   });
 });
 softSkills.addEventListener("mousemove", (e) => {
-  let incriment = window.offsetWidth / 12;
+  let incriments = [];
+  let discStyles = [];
+  let foundCenterDisc = false;
+
   for (let i = 0; i < discs.length; i++) {
-    discs[i].classList.add("disc-color-" + i);
-    console.log(discs[i]);
+    incriments.push(
+      (document.documentElement.clientWidth / discs.length) * (i + 1)
+    );
+    if (e.clientX <= incriments[i]) {
+      discStyles.push(true);
+      if (e.clientX >= incriments[i - 1]) {
+        discs.forEach((disc) => {
+          for (let j = 0; j < discs.length; j++) {
+            disc.classList.remove("disc-color-" + j);
+          }
+          disc.classList.add("disc-color-" + i);
+        });
+      }
+    } else {
+      discStyles.push(false);
+    }
   }
+  for (let i = 0; i < discs.length; i++) {
+    if (foundCenterDisc === true) {
+      discStyles[i] = discStyles[i - 1] - 1;
+    }
+    if (discStyles[i] === true) {
+      foundCenterDisc = true;
+      discStyles[i] = 12;
+    }
+  }
+  for (let i = discStyles.length - 1; i > -1; i--) {
+    if (discStyles[i] === false) {
+      discStyles[i] = discStyles[i + 1] - 1;
+    }
+  }
+  console.log(discStyles);
+  for (let i = 0; i < discStyles.length; i++) {
+    for (let j = 0; j < discStyles.length; j++) {
+      discs[i].classList.remove("disc-opacity-" + discStyles[j]);
+    }
+    discs[i].classList.add("disc-opacity-" + discStyles[i]);
+  }
+  console.log(discs[3].classList);
 });
