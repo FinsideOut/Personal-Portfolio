@@ -779,7 +779,7 @@ button {
 }
 
 #engineer-content .technical-skills .graph-content .github .bg {
-  background: linear-gradient(217deg, rgba(68, 170, 0, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(125deg, rgba(68, 170, 0, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .javascript {
@@ -788,7 +788,7 @@ button {
 }
 
 #engineer-content .technical-skills .graph-content .javascript .bg {
-  background: linear-gradient(321deg, rgba(250, 213, 0, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(288deg, rgba(250, 213, 0, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .html5 {
@@ -797,7 +797,7 @@ button {
 }
 
 #engineer-content .technical-skills .graph-content .html5 .bg {
-  background: linear-gradient(127deg, rgba(228, 77, 38, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(359deg, rgba(228, 77, 38, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .css3 {
@@ -806,7 +806,7 @@ button {
 }
 
 #engineer-content .technical-skills .graph-content .css3 .bg {
-  background: linear-gradient(34deg, rgba(38, 77, 228, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(328deg, rgba(38, 77, 228, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .sass {
@@ -815,7 +815,7 @@ button {
 }
 
 #engineer-content .technical-skills .graph-content .sass .bg {
-  background: linear-gradient(74deg, rgba(206, 103, 154, 0.95), rgba(2, 1, 1, 0.95));
+  background: linear-gradient(282deg, rgba(206, 103, 154, 0.95), rgba(2, 1, 1, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .microchip {
@@ -824,7 +824,7 @@ button {
 }
 
 #engineer-content .technical-skills .graph-content .microchip .bg {
-  background: linear-gradient(294deg, rgba(238, 58, 37, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(260deg, rgba(238, 58, 37, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .pcb {
@@ -833,7 +833,7 @@ button {
 }
 
 #engineer-content .technical-skills .graph-content .pcb .bg {
-  background: linear-gradient(275deg, rgba(73, 196, 56, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(249deg, rgba(73, 196, 56, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .c-plus {
@@ -842,7 +842,7 @@ button {
 }
 
 #engineer-content .technical-skills .graph-content .c-plus .bg {
-  background: linear-gradient(273deg, rgba(0, 86, 151, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(275deg, rgba(0, 86, 151, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .arduino {
@@ -851,7 +851,7 @@ button {
 }
 
 #engineer-content .technical-skills .graph-content .arduino .bg {
-  background: linear-gradient(261deg, rgba(0, 146, 151, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(86deg, rgba(0, 146, 151, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .matlab {
@@ -860,7 +860,7 @@ button {
 }
 
 #engineer-content .technical-skills .graph-content .matlab .bg {
-  background: linear-gradient(37deg, rgba(115, 25, 15, 0.95), rgba(84, 166, 187, 0.95));
+  background: linear-gradient(102deg, rgba(115, 25, 15, 0.95), rgba(84, 166, 187, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .right-arrow {
@@ -970,7 +970,6 @@ button {
 }
 
 #developer-content .developer-card {
-  border: 1px solid white;
   position: relative;
   z-index: 5;
 }
@@ -1003,6 +1002,10 @@ button {
   z-index: 2;
   -webkit-transform-origin: center;
           transform-origin: center;
+  -webkit-transition: -webkit-transform 50ms ease-in-out;
+  transition: -webkit-transform 50ms ease-in-out;
+  transition: transform 50ms ease-in-out;
+  transition: transform 50ms ease-in-out, -webkit-transform 50ms ease-in-out;
 }
 
 #developer-content .dbg-1 {

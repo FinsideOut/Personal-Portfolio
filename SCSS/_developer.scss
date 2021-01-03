@@ -6,7 +6,7 @@
     z-index: 4;
   }
   .developer-card {
-    border: 1px solid white;
+    // border: 1px solid white;
     position: relative;
     z-index: 5;
     .card-title {
@@ -36,6 +36,7 @@
     position: absolute;
     z-index: 2;
     transform-origin: center;
+    transition: transform 50ms ease-in-out;
   }
   .dbg-1 {
     width: $dbg-size;

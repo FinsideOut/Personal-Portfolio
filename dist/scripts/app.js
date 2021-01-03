@@ -364,8 +364,8 @@ developerCards.forEach((card) => {
   card.addEventListener("mouseover", (e) => {
     card.children[0].classList.add("normalize");
     // card.children[1].classList.add("normalize");
-    card.children[1].style.transform = "scale(1)";
-    card.children[2].style.transform = "scale(1)";
+    // card.children[1].style.transform = "scale(1)";
+    // card.children[2].style.transform = "scale(1)";
   });
   card.addEventListener("mouseout", (e) => {
     card.children[0].classList.remove("normalize");
