@@ -1,12 +1,15 @@
 #developer-content {
-  border: 1px solid white;
   top: 385vh;
   @include flex(column, space-between);
   h3 {
     align-self: flex-start;
+    z-index: 4;
   }
   .developer-card {
+    border: 1px solid white;
+
     position: relative;
+    z-index: 5;
     .card-title {
       margin: 1.5rem 1rem;
     }
@@ -16,7 +19,43 @@
       align-self: center;
     }
     i {
+      z-index: 4;
       font-size: 4rem;
     }
+    .card-text {
+      z-index: 4;
+    }
+  }
+  $dbg-size: 500px;
+  $dbg-size-half: 250px;
+  $incriment: 50px;
+  // .bg {
+  //   border: 1px solid white;
+  // }
+  .developer-bg {
+    transform: scale(0);
+    position: absolute;
+    z-index: 2;
+  }
+  .dbg-1 {
+    width: $dbg-size;
+    height: $dbg-size;
+    background: rgba(255, 70, 10, 0.3);
+    top: calc(50% - #{$dbg-size}/ 2);
+    left: calc(50% - #{$dbg-size}/ 2);
+  }
+  .dbg-2 {
+    width: calc(#{$dbg-size} - #{$incriment});
+    height: calc(#{$dbg-size} - #{$incriment});
+    background: rgba(255, 70, 10, 0.3);
+    top: calc(50% - (#{$dbg-size}/ 2) + (#{$incriment}/ 2));
+    left: calc(50% - #{$dbg-size}/ 2) + (#{$incriment}/ 2);
+  }
+  .dbg-3 {
+    width: calc(#{$dbg-size} - #{$incriment}* 2);
+    height: calc(#{$dbg-size} - #{$incriment}* 2);
+    background: rgba(255, 70, 10, 0.3);
+    top: calc(50% - (#{$dbg-size}/ 2) + (#{$incriment}));
+    left: calc(50% - #{$dbg-size}/ 2) + (#{$incriment});
   }
 }

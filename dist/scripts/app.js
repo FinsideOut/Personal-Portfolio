@@ -261,7 +261,6 @@ const LabelY = document.querySelector(".y-label");
 const graphContent = document.querySelector(".graph-content");
 const graphArrowUp = document.querySelector(".up-arrow");
 const graphArrowRight = document.querySelector(".right-arrow");
-console.log(graphIcons);
 
 graphIcons.forEach((icon) => {
   icon.addEventListener("mouseenter", (e) => {
@@ -357,4 +356,40 @@ softSkills.addEventListener("mousemove", (e) => {
     }
     discs[i].classList.add("disc-opacity-" + discStyles[i]);
   }
+});
+const developerCards = document.querySelectorAll(".developer-card");
+const developerBgs = document.querySelectorAll(".developer-bg");
+console.log(developerBgs);
+developerCards.forEach((card) => {
+  card.addEventListener("mouseover", (e) => {
+    card.childNodes[1].classList.add("normalize");
+    card.childNodes[3].classList.add("normalize");
+    card.childNodes[5].classList.add("normalize");
+    // e.target.childNodes[3].classList.add("normalize");
+    // e.target.childNodes[5].classList.add("normalize");
+  });
+});
+// developerCards[0].addEventListener("mouseover", (e) => {
+//   developerBgs[0].classList.add("normalize");
+//   developerBgs[1].classList.add("normalize");
+//   developerBgs[2].classList.add("normalize");
+// });
+
+// developerCards[1].addEventListener("mouseover", (e) => {
+//   developerBgs[3].classList.add("normalize");
+//   developerBgs[4].classList.add("normalize");
+//   developerBgs[5].classList.add("normalize");
+// });
+// developerCards[2].addEventListener("mouseover", (e) => {
+//   developerBgs[6].classList.add("normalize");
+//   developerBgs[7].classList.add("normalize");
+//   developerBgs[8].classList.add("normalize");
+// });
+
+developerCards.forEach((card) => {
+  card.addEventListener("mouseout", (e) => {
+    developerBgs.forEach((bg) => {
+      bg.classList.remove("normalize");
+    });
+  });
 });
