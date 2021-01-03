@@ -362,34 +362,25 @@ const developerBgs = document.querySelectorAll(".developer-bg");
 console.log(developerBgs);
 developerCards.forEach((card) => {
   card.addEventListener("mouseover", (e) => {
-    card.childNodes[1].classList.add("normalize");
-    card.childNodes[3].classList.add("normalize");
-    card.childNodes[5].classList.add("normalize");
-    // e.target.childNodes[3].classList.add("normalize");
-    // e.target.childNodes[5].classList.add("normalize");
+    let rect = card.children[0].getBoundingClientRect();
+    let x = e.clientX - rect.left; //x position within the element.
+    let y = e.clientY - rect.top; //y position within the element.
+
+    card.children[0].style.transform = "scale(1)";
+    card.children[1].style.transform = "scale(1)";
+    card.children[1].style.transform +=
+      "translate(" + x / 10 + "px," + y / 10 + "px)";
+
+    card.children[2].style.transform = "scale(1)";
+    card.children[2].style.transform +=
+      "translate(" + x / 10 + "px," + y / 10 + "px)";
   });
 });
-// developerCards[0].addEventListener("mouseover", (e) => {
-//   developerBgs[0].classList.add("normalize");
-//   developerBgs[1].classList.add("normalize");
-//   developerBgs[2].classList.add("normalize");
-// });
-
-// developerCards[1].addEventListener("mouseover", (e) => {
-//   developerBgs[3].classList.add("normalize");
-//   developerBgs[4].classList.add("normalize");
-//   developerBgs[5].classList.add("normalize");
-// });
-// developerCards[2].addEventListener("mouseover", (e) => {
-//   developerBgs[6].classList.add("normalize");
-//   developerBgs[7].classList.add("normalize");
-//   developerBgs[8].classList.add("normalize");
-// });
 
 developerCards.forEach((card) => {
   card.addEventListener("mouseout", (e) => {
     developerBgs.forEach((bg) => {
-      bg.classList.remove("normalize");
+      bg.style.transform = "scale(0)";
     });
   });
 });
