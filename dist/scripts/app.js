@@ -360,27 +360,30 @@ softSkills.addEventListener("mousemove", (e) => {
 const developerCards = document.querySelectorAll(".developer-card");
 const developerBgs = document.querySelectorAll(".developer-bg");
 console.log(developerBgs);
+const shiftDiv = 5;
 developerCards.forEach((card) => {
+  let rect = card.getBoundingClientRect();
+  let x = rect.width / 2; //x position within the element.
+  let y = rect.height / 2; //y position within the element.
   card.addEventListener("mouseover", (e) => {
-    let rect = card.children[0].getBoundingClientRect();
+    let rect = card.getBoundingClientRect();
     let x = e.clientX - rect.left; //x position within the element.
     let y = e.clientY - rect.top; //y position within the element.
+    console.log(x, y);
 
     card.children[0].style.transform = "scale(1)";
     card.children[1].style.transform = "scale(1)";
     card.children[1].style.transform +=
-      "translate(" + x / 10 + "px," + y / 10 + "px)";
+      "translate(" + x / shiftDiv + "px," + y / shiftDiv + "px)";
 
     card.children[2].style.transform = "scale(1)";
     card.children[2].style.transform +=
-      "translate(" + x / 10 + "px," + y / 10 + "px)";
+      "translate(" + x / shiftDiv + "px," + y / shiftDiv + "px)";
   });
-});
-
-developerCards.forEach((card) => {
-  card.addEventListener("mouseout", (e) => {
-    developerBgs.forEach((bg) => {
-      bg.style.transform = "scale(0)";
-    });
-  });
+  // card.addEventListener("mouseout", (e) => {
+  //   window.clearInterval();
+  //   developerBgs.forEach((bg) => {
+  //     bg.style.transform = "scale(0)";
+  //   });
+  // });
 });
