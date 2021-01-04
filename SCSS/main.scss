@@ -65,7 +65,8 @@
 
 #educator-content,
 #engineer-content,
-#developer-content {
+#developer-content,
+#services-content {
   position: absolute;
   top: 143vh;
 
@@ -141,6 +142,7 @@
 }
 @import "engineer";
 @import "developer";
+@import "services";
 #social {
   position: fixed;
   bottom: 0;

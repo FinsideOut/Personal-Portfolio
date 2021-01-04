@@ -359,7 +359,8 @@ softSkills.addEventListener("mousemove", (e) => {
 });
 const developerCards = document.querySelectorAll(".developer-card");
 const developerBgs = document.querySelectorAll(".developer-bg");
-
+const dbgSize = 700;
+const incriment = 100;
 developerCards.forEach((card) => {
   card.addEventListener("mouseover", (e) => {
     card.children[0].classList.add("normalize");
@@ -375,12 +376,26 @@ developerCards.forEach((card) => {
   });
   card.addEventListener("mousemove", (e) => {
     let rect = card.children[0].getBoundingClientRect();
-    let mouseX = e.clientX - rect.left - 250;
-    let mouseY = e.clientY - rect.top - 250;
+    let mouseX = e.clientX - rect.left - 350;
+    let mouseY = e.clientY - rect.top - 350;
+    if (mouseX / 2 >= incriment) {
+      shiftX = incriment;
+    } else if (mouseX / 2 <= -incriment) {
+      shiftX = -incriment;
+    } else {
+      shiftX = mouseX / 2;
+    }
+    if (mouseY / 2 >= incriment) {
+      shiftY = incriment;
+    } else if (mouseY / 2 <= -incriment) {
+      shiftY = -incriment;
+    } else {
+      shiftY = mouseY / 2;
+    }
     card.children[1].style.transform =
-      "translate(" + mouseX / 2 + "px," + mouseY / 2 + "px)";
+      "translate(" + shiftX + "px," + shiftY + "px)";
     console.log(mouseX, mouseY);
     card.children[2].style.transform =
-      "translate(" + mouseX + "px," + mouseY + "px)";
+      "translate(" + shiftX + "px," + shiftY + "px)";
   });
 });
