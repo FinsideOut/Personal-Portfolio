@@ -394,8 +394,69 @@ developerCards.forEach((card) => {
     }
     card.children[1].style.transform =
       "translate(" + shiftX + "px," + shiftY + "px)";
-    console.log(mouseX, mouseY);
+    // console.log(mouseX, mouseY);
     card.children[2].style.transform =
       "translate(" + shiftX + "px," + shiftY + "px)";
   });
+});
+
+const servicesContent = document.getElementById("services-content");
+const servicesBg = document.getElementById("services-bg");
+const serviceCards = document.querySelectorAll(".service-card");
+const servicesBgs = document.querySelectorAll(".services-bg");
+
+servicesContent.addEventListener("mouseover", (e) => {
+  servicesBg.classList.add("normalize");
+});
+servicesContent.addEventListener("mouseout", (e) => {
+  servicesBg.classList.remove("normalize");
+});
+
+serviceCards[0].addEventListener("mouseover", () => {
+  servicesBgs[0].classList.add("service-top");
+  servicesBgs[1].classList.add("service-right");
+  servicesBgs[2].classList.add("service-left");
+  for (let i = 0; i < servicesBgs.length; i++) {
+    servicesBgs[i].classList.add("services-blue-" + [i]);
+  }
+});
+serviceCards[0].addEventListener("mouseout", () => {
+  servicesBgs[0].classList.remove("service-top");
+  servicesBgs[1].classList.remove("service-right");
+  servicesBgs[2].classList.remove("service-left");
+  for (let i = 0; i < servicesBgs.length; i++) {
+    servicesBgs[i].classList.remove("services-blue-" + [i]);
+  }
+});
+serviceCards[1].addEventListener("mouseover", () => {
+  servicesBgs[1].classList.add("service-top");
+  servicesBgs[2].classList.add("service-right");
+  servicesBgs[0].classList.add("service-left");
+  for (let i = 0; i < servicesBgs.length; i++) {
+    servicesBgs[i].classList.add("services-green-" + [i]);
+  }
+});
+serviceCards[1].addEventListener("mouseout", () => {
+  servicesBgs[1].classList.remove("service-top");
+  servicesBgs[2].classList.remove("service-right");
+  servicesBgs[0].classList.remove("service-left");
+  for (let i = 0; i < servicesBgs.length; i++) {
+    servicesBgs[i].classList.remove("services-green-" + [i]);
+  }
+});
+serviceCards[2].addEventListener("mouseover", () => {
+  servicesBgs[2].classList.add("service-top");
+  servicesBgs[0].classList.add("service-right");
+  servicesBgs[1].classList.add("service-left");
+  for (let i = 0; i < servicesBgs.length; i++) {
+    servicesBgs[i].classList.add("services-red-" + [i]);
+  }
+});
+serviceCards[2].addEventListener("mouseout", () => {
+  servicesBgs[2].classList.remove("service-top");
+  servicesBgs[0].classList.remove("service-right");
+  servicesBgs[1].classList.remove("service-left");
+  for (let i = 0; i < servicesBgs.length; i++) {
+    servicesBgs[i].classList.remove("services-red-" + [i]);
+  }
 });

@@ -170,3 +170,41 @@
 .disc-color-12 {
   background-color: rgb(0, 100, 255) !important;
 }
+
+.service-right {
+  transform: translateY($height) translateX($half-side-length) !important;
+}
+.service-left {
+  transform: translateY($height) translateX(calc(#{$half-side-length} * -1)) !important;
+}
+.service-top {
+  transform: scale(1) !important;
+}
+
+.services-red-0 {
+  background-color: rgba(255, 50, 150, 0.5) !important;
+}
+.services-red-1 {
+  background-color: rgba(255, 0, 50, 0.5) !important;
+}
+.services-red-2 {
+  background-color: rgba(255, 0, 0, 0.5) !important;
+}
+.services-green-0 {
+  background-color: rgba(50, 250, 150, 0.5) !important;
+}
+.services-green-1 {
+  background-color: rgba(0, 250, 50, 0.5) !important;
+}
+.services-green-2 {
+  background-color: rgba(0, 255, 0, 0.5) !important;
+}
+.services-blue-0 {
+  background-color: rgba(50, 150, 250, 0.5) !important;
+}
+.services-blue-1 {
+  background-color: rgba(0, 50, 250, 0.5) !important;
+}
+.services-blue-2 {
+  background-color: rgba(0, 0, 255, 0.5) !important;
+}
