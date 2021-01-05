@@ -1,5 +1,5 @@
 @use 'sass:math';
-$height: 350px;
+$height: 60vh;
 $half-side-length: calc(#{$height} / 1.73205);
 
 #services-content {
@@ -22,18 +22,25 @@ $half-side-length: calc(#{$height} / 1.73205);
       height: 40%;
       top: -55%;
       left: 30%;
-      &:first-child {
-        transform: translateY($height) translateX($half-side-length);
-      }
       &:nth-child(3) {
         transform: translateY($height)
-          translateX(calc(#{$half-side-length} * -1));
+          translateX(calc(#{$half-side-length} + 20%));
+        .card-text {
+          text-align: right;
+        }
+      }
+      &:nth-child(2) {
+        transform: translateY($height)
+          translateX(calc((#{$half-side-length} * -1) - 20%));
+        .card-text {
+          text-align: left;
+        }
       }
     }
     .bgs {
       transition: transform $transit-time ease-in-out;
       transform: scale(0) rotate(180deg);
-      $services-bg-size: 500px;
+      $services-bg-size: 700px;
       position: relative;
       width: calc(#{$half-side-length} * 2);
       height: 100%;
