@@ -460,3 +460,41 @@ serviceCards[2].addEventListener("mouseout", () => {
     servicesBgs[i].classList.remove("services-red-" + [i]);
   }
 });
+
+const workBgs = document.querySelectorAll(".work-bg");
+const workBg = document.querySelectorAll(".work-bg-container");
+const workTexts = document.querySelectorAll(".work-piece-text");
+const workImgs = document.querySelectorAll(".work-piece-img");
+console.log(workImgs[0].parentElement.children[1].children[1]);
+workTexts.forEach((text) => {
+  text.addEventListener("mouseover", (e) => {
+    text.parentElement.children[1].children[1].classList.add("normalize");
+    for (let i = 0; i < workBgs.length; i++) {
+      workBgs[i].classList.add("work-text-hover-" + [i]);
+    }
+  });
+});
+workTexts.forEach((text) => {
+  text.addEventListener("mouseout", (e) => {
+    text.parentElement.children[1].children[1].classList.remove("normalize");
+    for (let i = 0; i < workBgs.length; i++) {
+      workBgs[i].classList.remove("work-text-hover-" + [i]);
+    }
+  });
+});
+workImgs.forEach((img) => {
+  img.addEventListener("mouseover", (e) => {
+    img.parentElement.children[1].children[1].classList.add("normalize");
+    for (let i = 0; i < workBgs.length; i++) {
+      workBgs[i].classList.add("work-img-hover-" + [i]);
+    }
+  });
+});
+workImgs.forEach((img) => {
+  img.addEventListener("mouseout", (e) => {
+    img.parentElement.children[1].children[1].classList.remove("normalize");
+    for (let i = 0; i < workBgs.length; i++) {
+      workBgs[i].classList.remove("work-img-hover-" + [i]);
+    }
+  });
+});

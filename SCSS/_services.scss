@@ -24,17 +24,11 @@ $half-side-length: calc(#{$height} / 1.73205);
       left: 30%;
       &:nth-child(3) {
         transform: translateY($height)
-          translateX(calc(#{$half-side-length} + 20%));
-        .card-text {
-          text-align: right;
-        }
+          translateX(calc(#{$half-side-length} + 10%));
       }
       &:nth-child(2) {
         transform: translateY($height)
-          translateX(calc((#{$half-side-length} * -1) - 20%));
-        .card-text {
-          text-align: left;
-        }
+          translateX(calc((#{$half-side-length} * -1) - 10%));
       }
     }
     .bgs {
