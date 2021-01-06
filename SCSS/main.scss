@@ -29,6 +29,7 @@
 }
 #left-page,
 #right-page {
+  // border: 1px solid white;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -102,8 +103,21 @@
     font-size: 0.8rem;
   }
 }
+#logo-home,
 #aspiring {
-  white-space: nowrap;
+  transition-property: font-size, transform;
+  transition-duration: $transit-time;
+  transition-timing-function: ease-in-out;
+}
+
+#lead,
+#educator,
+#engineer,
+#developer,
+#services,
+#work,
+#cv {
+  transition: transform $transit-time ease-in-out;
 }
 
 @import "js-additions";

@@ -2,24 +2,27 @@
   display: inline-block;
   white-space: nowrap;
 }
-.book-bg-zoom {
+.book-bg-full {
   transform: scaleX(1.5) scaleY(1.5);
 }
-.body-zoomed {
+.body-full {
   background: black !important;
   transition: background-color $transit-time ease-in-out;
 }
 .page-to-center {
   transform: translate(-50%, -50%) !important;
-  width: 100% !important;
+  // width: 100% !important;
 }
 .page-to-down {
   transform: translateX(-50%) !important;
-  width: 100% !important;
+  // width: 100% !important;
 }
 .full-width {
   width: 100% !important;
-  text-align: center !important;
+}
+.right-nav-full {
+  align-items: center;
+  text-align: center;
 }
 .left-page-revert {
   transform: translate(-50%, -50%) !important;
@@ -53,26 +56,31 @@
 
   transform: translateY(140vh) !important;
   transform-origin: center;
-  font-size: 4rem !important;
 }
 .developer-full {
   transform: translateY(300vh) !important;
   transform-origin: center;
-  font-size: 4rem !important;
   width: 100%;
 }
 .services-full {
-  transform: translateY(450vh) !important;
+  transform: translateY(470vh) !important;
   transform-origin: center;
   width: 100%;
+  // text-align: center;
 }
 .work-full {
+  // border: 1px solid white;
   transform: translateY(590vh) !important;
-  transform-origin: center;
+  // text-align: center;
+
   width: 100%;
+  transform-origin: center;
 }
 .cv-full {
   transform: translateY(700vh) !important;
+  // text-align: center;
+
+  width: 100%;
   transform-origin: center;
 }
 

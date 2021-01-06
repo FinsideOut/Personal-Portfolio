@@ -783,7 +783,7 @@ button {
 }
 
 #engineer-content .technical-skills .graph-content .github .bg {
-  background: linear-gradient(218deg, rgba(68, 170, 0, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(253deg, rgba(68, 170, 0, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .javascript {
@@ -792,7 +792,7 @@ button {
 }
 
 #engineer-content .technical-skills .graph-content .javascript .bg {
-  background: linear-gradient(235deg, rgba(250, 213, 0, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(352deg, rgba(250, 213, 0, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .html5 {
@@ -801,7 +801,7 @@ button {
 }
 
 #engineer-content .technical-skills .graph-content .html5 .bg {
-  background: linear-gradient(317deg, rgba(228, 77, 38, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(335deg, rgba(228, 77, 38, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .css3 {
@@ -810,7 +810,7 @@ button {
 }
 
 #engineer-content .technical-skills .graph-content .css3 .bg {
-  background: linear-gradient(145deg, rgba(38, 77, 228, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(271deg, rgba(38, 77, 228, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .sass {
@@ -819,7 +819,7 @@ button {
 }
 
 #engineer-content .technical-skills .graph-content .sass .bg {
-  background: linear-gradient(44deg, rgba(206, 103, 154, 0.95), rgba(2, 1, 1, 0.95));
+  background: linear-gradient(343deg, rgba(206, 103, 154, 0.95), rgba(2, 1, 1, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .microchip {
@@ -828,7 +828,7 @@ button {
 }
 
 #engineer-content .technical-skills .graph-content .microchip .bg {
-  background: linear-gradient(149deg, rgba(238, 58, 37, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(95deg, rgba(238, 58, 37, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .pcb {
@@ -837,7 +837,7 @@ button {
 }
 
 #engineer-content .technical-skills .graph-content .pcb .bg {
-  background: linear-gradient(79deg, rgba(73, 196, 56, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(86deg, rgba(73, 196, 56, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .c-plus {
@@ -846,7 +846,7 @@ button {
 }
 
 #engineer-content .technical-skills .graph-content .c-plus .bg {
-  background: linear-gradient(263deg, rgba(0, 86, 151, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(296deg, rgba(0, 86, 151, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .arduino {
@@ -855,7 +855,7 @@ button {
 }
 
 #engineer-content .technical-skills .graph-content .arduino .bg {
-  background: linear-gradient(85deg, rgba(0, 146, 151, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(254deg, rgba(0, 146, 151, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .matlab {
@@ -864,7 +864,7 @@ button {
 }
 
 #engineer-content .technical-skills .graph-content .matlab .bg {
-  background: linear-gradient(156deg, rgba(115, 25, 15, 0.95), rgba(84, 166, 187, 0.95));
+  background: linear-gradient(176deg, rgba(115, 25, 15, 0.95), rgba(84, 166, 187, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .right-arrow {
@@ -1234,8 +1234,29 @@ button {
   font-size: 0.8rem;
 }
 
+#logo-home,
 #aspiring {
-  white-space: nowrap;
+  -webkit-transition-property: font-size, -webkit-transform;
+  transition-property: font-size, -webkit-transform;
+  transition-property: font-size, transform;
+  transition-property: font-size, transform, -webkit-transform;
+  -webkit-transition-duration: 1000ms;
+          transition-duration: 1000ms;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+}
+
+#lead,
+#educator,
+#engineer,
+#developer,
+#services,
+#work,
+#cv {
+  -webkit-transition: -webkit-transform 1000ms ease-in-out;
+  transition: -webkit-transform 1000ms ease-in-out;
+  transition: transform 1000ms ease-in-out;
+  transition: transform 1000ms ease-in-out, -webkit-transform 1000ms ease-in-out;
 }
 
 .word {
@@ -1243,12 +1264,12 @@ button {
   white-space: nowrap;
 }
 
-.book-bg-zoom {
+.book-bg-full {
   -webkit-transform: scaleX(1.5) scaleY(1.5);
           transform: scaleX(1.5) scaleY(1.5);
 }
 
-.body-zoomed {
+.body-full {
   background: black !important;
   -webkit-transition: background-color 1000ms ease-in-out;
   transition: background-color 1000ms ease-in-out;
@@ -1257,18 +1278,22 @@ button {
 .page-to-center {
   -webkit-transform: translate(-50%, -50%) !important;
           transform: translate(-50%, -50%) !important;
-  width: 100% !important;
 }
 
 .page-to-down {
   -webkit-transform: translateX(-50%) !important;
           transform: translateX(-50%) !important;
-  width: 100% !important;
 }
 
 .full-width {
   width: 100% !important;
-  text-align: center !important;
+}
+
+.right-nav-full {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
 }
 
 .left-page-revert {
@@ -1319,7 +1344,6 @@ button {
           transform: translateY(140vh) !important;
   -webkit-transform-origin: center;
           transform-origin: center;
-  font-size: 4rem !important;
 }
 
 .developer-full {
@@ -1327,13 +1351,12 @@ button {
           transform: translateY(300vh) !important;
   -webkit-transform-origin: center;
           transform-origin: center;
-  font-size: 4rem !important;
   width: 100%;
 }
 
 .services-full {
-  -webkit-transform: translateY(450vh) !important;
-          transform: translateY(450vh) !important;
+  -webkit-transform: translateY(470vh) !important;
+          transform: translateY(470vh) !important;
   -webkit-transform-origin: center;
           transform-origin: center;
   width: 100%;
@@ -1342,14 +1365,15 @@ button {
 .work-full {
   -webkit-transform: translateY(590vh) !important;
           transform: translateY(590vh) !important;
+  width: 100%;
   -webkit-transform-origin: center;
           transform-origin: center;
-  width: 100%;
 }
 
 .cv-full {
   -webkit-transform: translateY(700vh) !important;
           transform: translateY(700vh) !important;
+  width: 100%;
   -webkit-transform-origin: center;
           transform-origin: center;
 }
