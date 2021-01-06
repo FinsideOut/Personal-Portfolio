@@ -17,10 +17,10 @@ body {
 
 span {
   display: inline-block;
-  -webkit-transition: -webkit-transform 300ms ease-in-out !important;
-  transition: -webkit-transform 300ms ease-in-out !important;
-  transition: transform 300ms ease-in-out !important;
-  transition: transform 300ms ease-in-out, -webkit-transform 300ms ease-in-out !important;
+  -webkit-transition: -webkit-transform 1000ms ease-in-out !important;
+  transition: -webkit-transform 1000ms ease-in-out !important;
+  transition: transform 1000ms ease-in-out !important;
+  transition: transform 1000ms ease-in-out, -webkit-transform 1000ms ease-in-out !important;
 }
 
 a {
@@ -62,6 +62,10 @@ p {
   margin: 2rem 0rem;
 }
 
+#lead {
+  max-width: 40vw;
+}
+
 i {
   font-size: 2rem;
   padding: 1rem;
@@ -92,7 +96,7 @@ nav {
   height: 100%;
 }
 
-nav ul {
+ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -111,7 +115,7 @@ nav ul {
           align-items: flex-start;
 }
 
-nav ul li {
+ul li {
   padding: 1rem;
   margin: 0;
 }
@@ -440,10 +444,10 @@ button {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transition: -webkit-transform 300ms ease-in-out;
-  transition: -webkit-transform 300ms ease-in-out;
-  transition: transform 300ms ease-in-out;
-  transition: transform 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
+  -webkit-transition: -webkit-transform 1000ms ease-in-out;
+  transition: -webkit-transform 1000ms ease-in-out;
+  transition: transform 1000ms ease-in-out;
+  transition: transform 1000ms ease-in-out, -webkit-transform 1000ms ease-in-out;
   width: 40%;
   height: 85%;
   z-index: 3;
@@ -497,7 +501,6 @@ button {
 #services-content,
 #work-content {
   position: absolute;
-  top: 143vh;
   color: white;
   z-index: 100;
   width: inherit;
@@ -528,8 +531,8 @@ button {
 #educator-content .hover-icons-wrapper .educator-icons-container > div {
   -webkit-transition-property: opacity, color;
   transition-property: opacity, color;
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms;
+  -webkit-transition-duration: 1000ms;
+          transition-duration: 1000ms;
   -webkit-transition-timing-function: ease-in-out;
           transition-timing-function: ease-in-out;
 }
@@ -583,8 +586,8 @@ button {
   transition-property: -webkit-transform;
   transition-property: transform;
   transition-property: transform, -webkit-transform;
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms;
+  -webkit-transition-duration: 1000ms;
+          transition-duration: 1000ms;
   -webkit-transition-timing-function: ease-in-out;
           transition-timing-function: ease-in-out;
   position: absolute;
@@ -624,7 +627,6 @@ button {
 }
 
 #engineer-content {
-  top: 215vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -667,8 +669,8 @@ button {
 #engineer-content .technical-skills .x-label,
 #engineer-content .technical-skills .y-label,
 #engineer-content .technical-skills .graph-title {
-  -webkit-transition: opacity 300ms ease-in-out;
-  transition: opacity 300ms ease-in-out;
+  -webkit-transition: opacity 1000ms ease-in-out;
+  transition: opacity 1000ms ease-in-out;
 }
 
 #engineer-content .technical-skills .x-label {
@@ -696,8 +698,8 @@ button {
   border-bottom: 3px solid white;
   position: relative;
   color: white;
-  -webkit-transition: border-color 300ms ease-in-out;
-  transition: border-color 300ms ease-in-out;
+  -webkit-transition: border-color 1000ms ease-in-out;
+  transition: border-color 1000ms ease-in-out;
 }
 
 #engineer-content .technical-skills .graph-content img,
@@ -726,8 +728,8 @@ button {
   position: absolute;
   text-align: center;
   opacity: 0;
-  -webkit-transition: opacity 300ms ease-in-out;
-  transition: opacity 300ms ease-in-out;
+  -webkit-transition: opacity 1000ms ease-in-out;
+  transition: opacity 1000ms ease-in-out;
 }
 
 #engineer-content .technical-skills .graph-content .graph-icons p {
@@ -750,8 +752,8 @@ button {
   transition-property: opacity, -webkit-transform;
   transition-property: opacity, transform;
   transition-property: opacity, transform, -webkit-transform;
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms;
+  -webkit-transition-duration: 1000ms;
+          transition-duration: 1000ms;
   -webkit-transition-timing-function: ease-in-out;
           transition-timing-function: ease-in-out;
   z-index: 5;
@@ -781,7 +783,7 @@ button {
 }
 
 #engineer-content .technical-skills .graph-content .github .bg {
-  background: linear-gradient(53deg, rgba(68, 170, 0, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(218deg, rgba(68, 170, 0, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .javascript {
@@ -790,7 +792,7 @@ button {
 }
 
 #engineer-content .technical-skills .graph-content .javascript .bg {
-  background: linear-gradient(273deg, rgba(250, 213, 0, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(235deg, rgba(250, 213, 0, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .html5 {
@@ -799,7 +801,7 @@ button {
 }
 
 #engineer-content .technical-skills .graph-content .html5 .bg {
-  background: linear-gradient(13deg, rgba(228, 77, 38, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(317deg, rgba(228, 77, 38, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .css3 {
@@ -808,7 +810,7 @@ button {
 }
 
 #engineer-content .technical-skills .graph-content .css3 .bg {
-  background: linear-gradient(295deg, rgba(38, 77, 228, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(145deg, rgba(38, 77, 228, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .sass {
@@ -817,7 +819,7 @@ button {
 }
 
 #engineer-content .technical-skills .graph-content .sass .bg {
-  background: linear-gradient(283deg, rgba(206, 103, 154, 0.95), rgba(2, 1, 1, 0.95));
+  background: linear-gradient(44deg, rgba(206, 103, 154, 0.95), rgba(2, 1, 1, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .microchip {
@@ -826,7 +828,7 @@ button {
 }
 
 #engineer-content .technical-skills .graph-content .microchip .bg {
-  background: linear-gradient(231deg, rgba(238, 58, 37, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(149deg, rgba(238, 58, 37, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .pcb {
@@ -835,7 +837,7 @@ button {
 }
 
 #engineer-content .technical-skills .graph-content .pcb .bg {
-  background: linear-gradient(314deg, rgba(73, 196, 56, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(79deg, rgba(73, 196, 56, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .c-plus {
@@ -844,7 +846,7 @@ button {
 }
 
 #engineer-content .technical-skills .graph-content .c-plus .bg {
-  background: linear-gradient(318deg, rgba(0, 86, 151, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(263deg, rgba(0, 86, 151, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .arduino {
@@ -853,7 +855,7 @@ button {
 }
 
 #engineer-content .technical-skills .graph-content .arduino .bg {
-  background: linear-gradient(148deg, rgba(0, 146, 151, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(85deg, rgba(0, 146, 151, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .matlab {
@@ -862,7 +864,7 @@ button {
 }
 
 #engineer-content .technical-skills .graph-content .matlab .bg {
-  background: linear-gradient(73deg, rgba(115, 25, 15, 0.95), rgba(84, 166, 187, 0.95));
+  background: linear-gradient(156deg, rgba(115, 25, 15, 0.95), rgba(84, 166, 187, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .right-arrow {
@@ -874,8 +876,8 @@ button {
   position: absolute;
   bottom: -10px;
   right: -10px;
-  -webkit-transition: border-color 300ms ease-in-out;
-  transition: border-color 300ms ease-in-out;
+  -webkit-transition: border-color 1000ms ease-in-out;
+  transition: border-color 1000ms ease-in-out;
 }
 
 #engineer-content .technical-skills .graph-content .up-arrow {
@@ -887,8 +889,8 @@ button {
   position: absolute;
   top: -10px;
   left: -10px;
-  -webkit-transition: border-color 300ms ease-in-out;
-  transition: border-color 300ms ease-in-out;
+  -webkit-transition: border-color 1000ms ease-in-out;
+  transition: border-color 1000ms ease-in-out;
 }
 
 .soft-skills {
@@ -929,8 +931,8 @@ button {
   transition-property: opacity, background-color, -webkit-transform;
   transition-property: transform, opacity, background-color;
   transition-property: transform, opacity, background-color, -webkit-transform;
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms;
+  -webkit-transition-duration: 1000ms;
+          transition-duration: 1000ms;
   -webkit-transition-timing-function: ease-in-out;
           transition-timing-function: ease-in-out;
 }
@@ -942,14 +944,13 @@ button {
   z-index: 1;
   -webkit-transform: scale(0);
           transform: scale(0);
-  -webkit-transition: -webkit-transform 300ms ease-in-out;
-  transition: -webkit-transform 300ms ease-in-out;
-  transition: transform 300ms ease-in-out;
-  transition: transform 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
+  -webkit-transition: -webkit-transform 1000ms ease-in-out;
+  transition: -webkit-transform 1000ms ease-in-out;
+  transition: transform 1000ms ease-in-out;
+  transition: transform 1000ms ease-in-out, -webkit-transform 1000ms ease-in-out;
 }
 
 #developer-content {
-  top: 385vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1044,7 +1045,6 @@ button {
 
 @use 'sass:math';
 #services-content {
-  top: 500vh;
   color: white;
 }
 
@@ -1076,10 +1076,10 @@ button {
 }
 
 #services-content .cards .bgs {
-  -webkit-transition: -webkit-transform 300ms ease-in-out;
-  transition: -webkit-transform 300ms ease-in-out;
-  transition: transform 300ms ease-in-out;
-  transition: transform 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
+  -webkit-transition: -webkit-transform 1000ms ease-in-out;
+  transition: -webkit-transform 1000ms ease-in-out;
+  transition: transform 1000ms ease-in-out;
+  transition: transform 1000ms ease-in-out, -webkit-transform 1000ms ease-in-out;
   -webkit-transform: scale(0) rotate(180deg);
           transform: scale(0) rotate(180deg);
   position: relative;
@@ -1089,12 +1089,12 @@ button {
 }
 
 #services-content .cards .bgs .services-bg {
-  -webkit-transition-property: background, -webkit-transform;
-  transition-property: background, -webkit-transform;
-  transition-property: background, transform;
-  transition-property: background, transform, -webkit-transform;
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms;
+  -webkit-transition-property: background-color, -webkit-transform;
+  transition-property: background-color, -webkit-transform;
+  transition-property: background-color, transform;
+  transition-property: background-color, transform, -webkit-transform;
+  -webkit-transition-duration: 1000ms;
+          transition-duration: 1000ms;
   -webkit-transition-timing-function: ease-in-out;
           transition-timing-function: ease-in-out;
   position: absolute;
@@ -1119,10 +1119,6 @@ button {
   background: rgba(250, 0, 250, 0.5);
   -webkit-transform: translateY(60vh) translateX(calc(calc(60vh / 1.73205) * -1));
           transform: translateY(60vh) translateX(calc(calc(60vh / 1.73205) * -1));
-}
-
-#work-content {
-  top: 650vh;
 }
 
 .work-piece {
@@ -1165,8 +1161,8 @@ button {
   transition-property: opacity, -webkit-transform;
   transition-property: transform, opacity;
   transition-property: transform, opacity, -webkit-transform;
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms;
+  -webkit-transition-duration: 1000ms;
+          transition-duration: 1000ms;
   -webkit-transition-timing-function: ease-in-out;
           transition-timing-function: ease-in-out;
   -webkit-transform: scale(0);
@@ -1185,8 +1181,8 @@ button {
   transition-property: opacity, -webkit-transform;
   transition-property: opacity, transform;
   transition-property: opacity, transform, -webkit-transform;
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms;
+  -webkit-transition-duration: 1000ms;
+          transition-duration: 1000ms;
   -webkit-transition-timing-function: ease-in-out;
           transition-timing-function: ease-in-out;
   position: absolute;
@@ -1254,18 +1250,25 @@ button {
 
 .body-zoomed {
   background: black !important;
-  -webkit-transition: background-color 300ms ease-in-out;
-  transition: background-color 300ms ease-in-out;
+  -webkit-transition: background-color 1000ms ease-in-out;
+  transition: background-color 1000ms ease-in-out;
 }
 
 .page-to-center {
   -webkit-transform: translate(-50%, -50%) !important;
           transform: translate(-50%, -50%) !important;
+  width: 100% !important;
 }
 
 .page-to-down {
-  -webkit-transform: translate(-50%, 100%) !important;
-          transform: translate(-50%, 100%) !important;
+  -webkit-transform: translateX(-50%) !important;
+          transform: translateX(-50%) !important;
+  width: 100% !important;
+}
+
+.full-width {
+  width: 100% !important;
+  text-align: center !important;
 }
 
 .left-page-revert {
@@ -1278,8 +1281,8 @@ button {
   transition-property: font-size, -webkit-transform;
   transition-property: transform, font-size;
   transition-property: transform, font-size, -webkit-transform;
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms;
+  -webkit-transition-duration: 1000ms;
+          transition-duration: 1000ms;
   -webkit-transition-timing-function: ease-in-out;
           transition-timing-function: ease-in-out;
 }
@@ -1291,8 +1294,8 @@ button {
 }
 
 .lead-full {
-  -webkit-transform: translateY(55vh) !important;
-          transform: translateY(55vh) !important;
+  -webkit-transform: translateY(50vh) !important;
+          transform: translateY(50vh) !important;
 }
 
 .aspiring-full {
@@ -1302,16 +1305,18 @@ button {
 }
 
 .educator-full {
-  -webkit-transform: translateY(80vh) translateX(-40vw) !important;
-          transform: translateY(80vh) translateX(-40vw) !important;
+  -webkit-transform: translateY(80vh) !important;
+          transform: translateY(80vh) !important;
   -webkit-transform-origin: center;
           transform-origin: center;
+  width: 100%;
   font-size: 4rem !important;
 }
 
 .engineer-full {
-  -webkit-transform: translateY(140vh) translateX(40vw) !important;
-          transform: translateY(140vh) translateX(40vw) !important;
+  width: 100%;
+  -webkit-transform: translateY(140vh) !important;
+          transform: translateY(140vh) !important;
   -webkit-transform-origin: center;
           transform-origin: center;
   font-size: 4rem !important;
@@ -1323,25 +1328,28 @@ button {
   -webkit-transform-origin: center;
           transform-origin: center;
   font-size: 4rem !important;
+  width: 100%;
 }
 
 .services-full {
-  -webkit-transform: translateY(350vh) !important;
-          transform: translateY(350vh) !important;
+  -webkit-transform: translateY(450vh) !important;
+          transform: translateY(450vh) !important;
   -webkit-transform-origin: center;
           transform-origin: center;
+  width: 100%;
 }
 
 .work-full {
-  -webkit-transform: translateY(490vh) !important;
-          transform: translateY(490vh) !important;
+  -webkit-transform: translateY(590vh) !important;
+          transform: translateY(590vh) !important;
   -webkit-transform-origin: center;
           transform-origin: center;
+  width: 100%;
 }
 
 .cv-full {
-  -webkit-transform: translateY(600vh) !important;
-          transform: translateY(600vh) !important;
+  -webkit-transform: translateY(700vh) !important;
+          transform: translateY(700vh) !important;
   -webkit-transform-origin: center;
           transform-origin: center;
 }

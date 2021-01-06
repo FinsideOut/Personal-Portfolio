@@ -4,7 +4,8 @@ $icon-size: 46px;
 $icon-half: 23px;
 $arrow-size: 10px;
 #engineer-content {
-  top: 215vh;
+  // top: 215vh;
+
   @include flex(column, space-between);
   .technical-skills {
     @include flex(row, space-between);

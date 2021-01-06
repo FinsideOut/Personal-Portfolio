@@ -11,11 +11,16 @@
 }
 .page-to-center {
   transform: translate(-50%, -50%) !important;
+  width: 100% !important;
 }
 .page-to-down {
-  transform: translate(-50%, 100%) !important;
+  transform: translateX(-50%) !important;
+  width: 100% !important;
 }
-
+.full-width {
+  width: 100% !important;
+  text-align: center !important;
+}
 .left-page-revert {
   transform: translate(-50%, -50%) !important;
 }
@@ -30,19 +35,23 @@
   font-size: 5rem;
 }
 .lead-full {
-  transform: translateY(55vh) !important;
+  transform: translateY(50vh) !important;
 }
 .aspiring-full {
   transform: translateY(80vh) !important;
   font-size: 4rem !important;
 }
 .educator-full {
-  transform: translateY(80vh) translateX(-40vw) !important;
+  transform: translateY(80vh) !important;
   transform-origin: center;
+  width: 100%;
+
   font-size: 4rem !important;
 }
 .engineer-full {
-  transform: translateY(140vh) translateX(40vw) !important;
+  width: 100%;
+
+  transform: translateY(140vh) !important;
   transform-origin: center;
   font-size: 4rem !important;
 }
@@ -50,17 +59,20 @@
   transform: translateY(300vh) !important;
   transform-origin: center;
   font-size: 4rem !important;
+  width: 100%;
 }
 .services-full {
-  transform: translateY(350vh) !important;
+  transform: translateY(450vh) !important;
   transform-origin: center;
+  width: 100%;
 }
 .work-full {
-  transform: translateY(490vh) !important;
+  transform: translateY(590vh) !important;
   transform-origin: center;
+  width: 100%;
 }
 .cv-full {
-  transform: translateY(600vh) !important;
+  transform: translateY(700vh) !important;
   transform-origin: center;
 }
 

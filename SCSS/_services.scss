@@ -3,7 +3,7 @@ $height: 60vh;
 $half-side-length: calc(#{$height} / 1.73205);
 
 #services-content {
-  top: 500vh;
+  // top: 500vh;
   color: white;
   .cards {
     position: relative;
@@ -41,7 +41,7 @@ $half-side-length: calc(#{$height} / 1.73205);
       margin: auto;
       // border: 1px solid white;
       .services-bg {
-        transition-property: background, transform;
+        transition-property: background-color, transform;
         transition-duration: $transit-time;
         transition-timing-function: ease-in-out;
         position: absolute;
