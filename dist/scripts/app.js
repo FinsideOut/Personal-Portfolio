@@ -505,32 +505,46 @@ workImgs.forEach((img) => {
 });
 
 const heroContainer = document.querySelector(".hero-container");
-let R = 0;
-let ratio = 0.6180339;
-let theta = 360 * ratio;
-let x;
-let y;
+
 let heroNum = 500;
-let opac = 1;
 for (let i = 0; i < heroNum; i++) {
   let newDisc = document.createElement("div");
   newDisc.classList.add("hero-disc");
   heroContainer.appendChild(newDisc);
 }
 const heroDiscs = document.querySelectorAll(".hero-disc");
-for (let i = 0; i < heroDiscs.length; i++) {
-  x = R * Math.cos(theta * (Math.PI / 180));
-  // x = 400;
-  y = R * Math.sin(theta * (Math.PI / 180));
-  console.log(x, y, theta);
-  heroDiscs[i].style.transform = "translateX(" + x + "px)";
-  heroDiscs[i].style.transform += "translateY(" + y + "px)";
-  // heroDiscs[i].style.transform += "translatey(x)";
-  heroDiscs[i].style.opacity = opac;
-  R += 1;
-  if (theta > 360) {
-    theta -= 360;
+bookPageRight.addEventListener("mousemove", (e) => {
+  // console.log("move");
+  var rect = e.target.getBoundingClientRect();
+  var x = e.clientX - rect.left; //x position within the element.
+  var y = e.clientY - rect.top; //y position within the element.
+  // console.log(x, y);
+  makeFlower(x / 20000);
+});
+// makeFlower();
+// makeFlower();
+function makeFlower(modifier) {
+  console.log(modifier);
+  let opac = 1;
+  let R = 0;
+  let ratio = 0.6180339;
+  let theta = 360 * ratio;
+  let x;
+  let y;
+  ratio = ratio + modifier;
+  for (let i = 0; i < heroDiscs.length; i++) {
+    x = R * Math.cos(theta * (Math.PI / 180));
+    // x = 400;
+    y = R * Math.sin(theta * (Math.PI / 180));
+    heroDiscs[i].style.transform = "translateX(" + x + "px)";
+    heroDiscs[i].style.transform += "translateY(" + y + "px)";
+    // heroDiscs[i].style.transform += "translatey(x)";
+    heroDiscs[i].style.opacity = opac;
+    R += 1;
+    if (theta > 360) {
+      theta -= 360;
+    }
+    theta += 360 * ratio;
+    opac -= 0.002;
   }
-  theta += 360 * ratio;
-  opac -= 0.002;
 }
