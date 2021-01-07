@@ -410,6 +410,25 @@ button {
   color: yellow;
 }
 
+.hero-container {
+  border: 1px solid white;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.hero-container .hero-disc {
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  position: absolute;
+  top: calc(50% - 20px/ 2);
+  left: calc(50% - 20px/ 2);
+  background: rgba(200, 250, 0, 0.5);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
 #book-screen,
 #social,
 #sub-screen {
@@ -784,7 +803,7 @@ button {
 }
 
 #engineer-content .technical-skills .graph-content .github .bg {
-  background: linear-gradient(63deg, rgba(68, 170, 0, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(84deg, rgba(68, 170, 0, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .javascript {
@@ -793,7 +812,7 @@ button {
 }
 
 #engineer-content .technical-skills .graph-content .javascript .bg {
-  background: linear-gradient(277deg, rgba(250, 213, 0, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(268deg, rgba(250, 213, 0, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .html5 {
@@ -802,7 +821,7 @@ button {
 }
 
 #engineer-content .technical-skills .graph-content .html5 .bg {
-  background: linear-gradient(327deg, rgba(228, 77, 38, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(182deg, rgba(228, 77, 38, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .css3 {
@@ -811,7 +830,7 @@ button {
 }
 
 #engineer-content .technical-skills .graph-content .css3 .bg {
-  background: linear-gradient(113deg, rgba(38, 77, 228, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(284deg, rgba(38, 77, 228, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .sass {
@@ -820,7 +839,7 @@ button {
 }
 
 #engineer-content .technical-skills .graph-content .sass .bg {
-  background: linear-gradient(36deg, rgba(206, 103, 154, 0.95), rgba(2, 1, 1, 0.95));
+  background: linear-gradient(235deg, rgba(206, 103, 154, 0.95), rgba(2, 1, 1, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .microchip {
@@ -829,7 +848,7 @@ button {
 }
 
 #engineer-content .technical-skills .graph-content .microchip .bg {
-  background: linear-gradient(1deg, rgba(238, 58, 37, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(238deg, rgba(238, 58, 37, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .pcb {
@@ -838,7 +857,7 @@ button {
 }
 
 #engineer-content .technical-skills .graph-content .pcb .bg {
-  background: linear-gradient(9deg, rgba(73, 196, 56, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(307deg, rgba(73, 196, 56, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .c-plus {
@@ -847,7 +866,7 @@ button {
 }
 
 #engineer-content .technical-skills .graph-content .c-plus .bg {
-  background: linear-gradient(318deg, rgba(0, 86, 151, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(161deg, rgba(0, 86, 151, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .arduino {
@@ -856,7 +875,7 @@ button {
 }
 
 #engineer-content .technical-skills .graph-content .arduino .bg {
-  background: linear-gradient(132deg, rgba(0, 146, 151, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(96deg, rgba(0, 146, 151, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .matlab {
@@ -865,7 +884,7 @@ button {
 }
 
 #engineer-content .technical-skills .graph-content .matlab .bg {
-  background: linear-gradient(39deg, rgba(115, 25, 15, 0.95), rgba(84, 166, 187, 0.95));
+  background: linear-gradient(261deg, rgba(115, 25, 15, 0.95), rgba(84, 166, 187, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .right-arrow {
@@ -1314,8 +1333,8 @@ button {
 }
 
 .logo-full {
-  -webkit-transform: translateY(-8vh);
-          transform: translateY(-8vh);
+  -webkit-transform: translateY(-12vh);
+          transform: translateY(-12vh);
   font-size: 5rem;
 }
 
