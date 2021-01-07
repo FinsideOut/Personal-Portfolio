@@ -29,7 +29,6 @@
 }
 #left-page,
 #right-page {
-  // border: 1px solid white;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -45,6 +44,7 @@
 }
 #right-page {
   transform: translateY(-50%);
+  // border: 1px solid white;
   // color: yellow;
 }
 

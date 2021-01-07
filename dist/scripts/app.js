@@ -147,15 +147,20 @@ function shiftHeadersToFull() {
   logo.addEventListener("transitionend", addFullWidth);
 }
 const rightNav = document.getElementById("right-nav");
+const heroContainer = document.querySelector(".hero-container");
+
 function addFullWidth(e) {
   if (e.propertyName == "font-size") {
     logo.removeEventListener("transitionend", addFullWidth);
     bookPageLeft.classList.add("full-width");
     rightNav.classList.add("right-nav-full");
     bookPageRight.classList.add("full-width");
+    heroContainer.classList.add("shown");
   }
 }
 function toHomeScreen() {
+  heroContainer.classList.remove("shown");
+
   educatorContent.classList.remove("shown");
   engineerContent.classList.remove("shown");
   developerContent.classList.remove("shown");
@@ -504,8 +509,6 @@ workImgs.forEach((img) => {
   });
 });
 
-const heroContainer = document.querySelector(".hero-container");
-
 let heroNum = 500;
 for (let i = 0; i < heroNum; i++) {
   let newDisc = document.createElement("div");
@@ -513,18 +516,18 @@ for (let i = 0; i < heroNum; i++) {
   heroContainer.appendChild(newDisc);
 }
 const heroDiscs = document.querySelectorAll(".hero-disc");
-bookPageRight.addEventListener("mousemove", (e) => {
+window.addEventListener("mousemove", (e) => {
   // console.log("move");
   var rect = e.target.getBoundingClientRect();
-  var x = e.clientX - rect.left; //x position within the element.
+  var x = e.clientX - rect.left - rect.width / 2; //x position within the element.
   var y = e.clientY - rect.top; //y position within the element.
-  // console.log(x, y);
-  makeFlower(x / 20000);
+  console.log(x, y);
+  makeFlower(x / 100000, y / 2);
 });
 // makeFlower();
 // makeFlower();
-function makeFlower(modifier) {
-  console.log(modifier);
+function makeFlower(modifier, color) {
+  // console.log(modifier);
   let opac = 1;
   let R = 0;
   let ratio = 0.6180339;
@@ -540,6 +543,8 @@ function makeFlower(modifier) {
     heroDiscs[i].style.transform += "translateY(" + y + "px)";
     // heroDiscs[i].style.transform += "translatey(x)";
     heroDiscs[i].style.opacity = opac;
+    heroDiscs[i].style.backgroundColor =
+      "rgba(" + [i] + "," + color + "," + (255 - color) + ",0.5)";
     R += 1;
     if (theta > 360) {
       theta -= 360;

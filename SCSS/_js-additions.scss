@@ -11,10 +11,15 @@
 }
 .page-to-center {
   transform: translate(-50%, -50%) !important;
+
+  // min-height: 110vh;
+  // margin-top: 0;
+
   // width: 100% !important;
 }
 .page-to-down {
   transform: translateX(-50%) !important;
+  margin-top: 0;
   // width: 100% !important;
 }
 .full-width {
@@ -85,11 +90,12 @@
 }
 
 .hidden {
-  visibility: hidden;
+  // visibility: hidden;
   opacity: 0;
+  transition: opacity $transit-time ease-in-out !important;
 }
 .shown {
-  visibility: visible !important;
+  // visibility: visible !important;
   opacity: 1 !important;
 }
 .obscure {

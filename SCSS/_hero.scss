@@ -1,13 +1,15 @@
 $hero-disc-size: 20px;
 .hero-container {
-  border: 1px solid white;
+  //   border: 1px solid white;
   width: 100%;
   height: 100%;
   position: absolute;
+  z-index: 2;
   top: 0;
   left: 0;
-
+  opacity: 0;
   .hero-disc {
+    z-index: 2;
     // transition: transform 100ms linear;
     transform-origin: center;
     position: absolute;
