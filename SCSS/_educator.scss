@@ -26,7 +26,7 @@
       height: 100%;
       div,
       p {
-        transition-property: transform;
+        transition-property: opacity;
         transition-duration: $transit-time;
         transition-timing-function: ease-in-out;
         position: absolute;
@@ -36,25 +36,25 @@
       #more-info-right {
         left: 0;
         max-width: 66%;
-        transform: translateX(-100vw);
+        opacity: 0;
       }
       #more-info-left {
         right: 0;
         max-width: 66%;
         text-align: right;
-        transform: translateX(100vw);
+        opacity: 0;
       }
       #more-info-center-left {
         right: 0;
         max-width: 33%;
         text-align: right;
-        transform: translateX(100vw);
+        opacity: 0;
       }
       #more-info-center-right {
         left: 0;
         max-width: 33%;
         text-align: left;
-        transform: translateX(-100vw);
+        opacity: 0;
       }
     }
   }
