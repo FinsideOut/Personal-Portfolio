@@ -1,6 +1,11 @@
 #educator-content {
   @include flex(column, space-between);
+  margin-top: 2rem;
+  .educator-text-container p {
+    margin: 1rem 0rem;
+  }
   .hover-icons-wrapper {
+    margin-top: 1rem;
     position: relative;
     .educator-icons-container > div {
       transition-property: opacity, color;
@@ -15,6 +20,9 @@
         @include flex(column, space-between);
         text-align: center;
         padding: 0.5rem 1rem;
+        .icon-title {
+          margin-bottom: 1rem;
+        }
       }
     }
     .more-info-container {
@@ -31,7 +39,8 @@
         transition-timing-function: ease-in-out;
         position: absolute;
         width: 100%;
-        top: 0;
+        height: 100%;
+        @include flex(column, space-around);
       }
       #more-info-right {
         left: 0;

@@ -5,7 +5,7 @@ $icon-half: 23px;
 $arrow-size: 10px;
 #engineer-content {
   // top: 215vh;
-
+  margin-top: 3rem;
   @include flex(column, space-between);
   .technical-skills {
     @include flex(row, space-between);
@@ -245,7 +245,7 @@ $arrow-size: 10px;
   }
 }
 .soft-skills {
-  margin-top: 20vh;
+  margin-top: 10vh;
 }
 .discs {
   // border: 1px solid white;

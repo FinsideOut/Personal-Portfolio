@@ -1,4 +1,5 @@
 #developer-content {
+  margin-top: 1rem;
   @include flex(column, space-between);
   h3 {
     align-self: flex-start;

@@ -7,29 +7,17 @@ $half-side-length: calc(#{$height} / 1.73205);
   color: white;
   .cards {
     position: relative;
-    width: 80%;
-    margin: 20% auto 0%;
-
-    height: $height;
+    width: 100%;
+    // height: $height;
     // border: 1px solid white;
+    @include flex(row, space-around);
+    align-items: flex-start;
     .card {
-      margin: 0;
-      // padding: 5rem;
-      // border: 1px solid white;
-      position: absolute;
+      .card-title {
+        margin-bottom: 1rem;
+      }
       text-align: center;
       width: 40%;
-      height: 40%;
-      top: -55%;
-      left: 30%;
-      &:nth-child(3) {
-        transform: translateY($height)
-          translateX(calc(#{$half-side-length} + 10%));
-      }
-      &:nth-child(2) {
-        transform: translateY($height)
-          translateX(calc((#{$half-side-length} * -1) - 10%));
-      }
     }
     .bgs {
       transition: transform $transit-time ease-in-out;

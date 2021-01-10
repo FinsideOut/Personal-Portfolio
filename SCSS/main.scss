@@ -69,7 +69,8 @@
 #engineer-content,
 #developer-content,
 #services-content,
-#work-content {
+#work-content,
+#cv-content {
   position: absolute;
   // top: 143vh;
 
@@ -97,6 +98,9 @@
 }
 
 #main-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
   margin-top: 5vh;
   padding: 1rem;
   text-align: center;

@@ -11,11 +11,17 @@ const logo = document.getElementById("logo-home");
 const lead = document.getElementById("lead");
 const aspiring = document.getElementById("aspiring");
 const educator = document.getElementById("educator");
+const educatorTitle = document.getElementById("educator-title");
 const engineer = document.getElementById("engineer");
+const engineerTitle = document.getElementById("engineer-title");
 const developer = document.getElementById("developer");
+const developerTitle = document.getElementById("developer-title");
 const services = document.getElementById("services");
+const servicesTitle = document.getElementById("services-title");
 const work = document.getElementById("work");
+const workTitle = document.getElementById("work-title");
 const cv = document.getElementById("cv");
+// const cvTitle = document.getElementById("cv-title");
 
 const educatorContent = document.getElementById("educator-content");
 const engineerContent = document.getElementById("engineer-content");
@@ -136,12 +142,23 @@ function shiftHeadersToFull() {
   lead.classList.add("lead-full");
   aspiring.classList.add("aspiring-full");
   educator.classList.add("educator-full");
+  educatorTitle.classList.add("enlarge-title");
+  // educator.classList.add("enlarge-title");
+  console.log(educatorTitle);
   engineer.classList.add("engineer-full");
-  educator.classList.add("educator-full");
+  engineerTitle.classList.add("enlarge-title");
   developer.classList.add("developer-full");
+  developerTitle.classList.add("enlarge-title");
+
   services.classList.add("services-full");
+  servicesTitle.classList.add("enlarge-title");
+
   work.classList.add("work-full");
+  workTitle.classList.add("enlarge-title");
+
   cv.classList.add("cv-full");
+  // cvTitle.classList.add("elarge-title");
+
   bookPageLeft.classList.add("page-to-center");
   bookPageRight.classList.add("page-to-center");
   logo.addEventListener("transitionend", addFullWidth);
@@ -518,11 +535,18 @@ for (let i = 0; i < heroNum; i++) {
 const heroDiscs = document.querySelectorAll(".hero-disc");
 window.addEventListener("mousemove", (e) => {
   // console.log("move");
-  var rect = e.target.getBoundingClientRect();
-  var x = e.clientX - rect.left - rect.width / 2; //x position within the element.
-  var y = e.clientY - rect.top; //y position within the element.
-  console.log(x, y);
-  makeFlower(x / 100000, y / 2);
+  if (window.scrollY < 500) {
+    var rect = e.target.getBoundingClientRect();
+    var x = e.clientX - rect.left - rect.width / 2; //x position within the element.
+    var y = e.clientY - rect.top;
+    // console.log(x, y);
+    makeFlower(x / 100000, y / 2);
+  } //y position within the element.
+});
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 50) {
+    heroContainer.classList.remove("shown");
+  }
 });
 // makeFlower();
 // makeFlower();

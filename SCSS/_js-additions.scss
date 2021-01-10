@@ -26,7 +26,7 @@
   width: 100% !important;
 }
 .right-nav-full {
-  align-items: center;
+  // align-items: center;
   text-align: center;
 }
 .left-page-revert {
@@ -50,32 +50,34 @@
   font-size: 4rem !important;
 }
 .educator-full {
-  transform: translateY(80vh) !important;
+  transform: translateY(90vh) !important;
+
   transform-origin: center;
   width: 100%;
-
+}
+.enlarge-title {
   font-size: 4rem !important;
 }
 .engineer-full {
   width: 100%;
 
-  transform: translateY(140vh) !important;
+  transform: translateY(170vh) !important;
   transform-origin: center;
 }
 .developer-full {
-  transform: translateY(300vh) !important;
+  transform: translateY(330vh) !important;
   transform-origin: center;
   width: 100%;
 }
 .services-full {
-  transform: translateY(470vh) !important;
+  transform: translateY(530vh) !important;
   transform-origin: center;
   width: 100%;
   // text-align: center;
 }
 .work-full {
   // border: 1px solid white;
-  transform: translateY(590vh) !important;
+  transform: translateY(600vh) !important;
   // text-align: center;
 
   width: 100%;
