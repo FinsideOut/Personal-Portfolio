@@ -463,7 +463,7 @@ serviceCards[0].addEventListener("mouseout", () => {
   }
 });
 serviceCards[1].addEventListener("mouseover", () => {
-  servicesBg.classList.add("normalize");
+  servicesBg.classList.add("service-wrapper-center");
 
   servicesBgs[1].classList.add("service-top");
   servicesBgs[2].classList.add("service-right");
@@ -473,7 +473,7 @@ serviceCards[1].addEventListener("mouseover", () => {
   }
 });
 serviceCards[1].addEventListener("mouseout", () => {
-  servicesBg.classList.remove("normalize");
+  servicesBg.classList.remove("service-wrapper-center");
 
   servicesBgs[1].classList.remove("service-top");
   servicesBgs[2].classList.remove("service-right");

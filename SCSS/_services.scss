@@ -2,7 +2,7 @@
 $height: 60vh;
 $bg-height: 30vh;
 $half-side-length: calc(#{$bg-height} / 1.73205);
-$service-bg-size: 400px;
+$service-bg-size: 600px;
 #services-content {
   // top: 500vh;
   .services-wrapper {
@@ -32,7 +32,10 @@ $service-bg-size: 400px;
     width: 40%;
     // border: 3px solid white;
     transform: scale(0) rotate(180deg);
-    transition: transform $transit-time ease-in-out;
+    transition-property: transform, background-color;
+    transition-duration: $transit-time;
+    transition-timing-function: ease-in-out;
+    // transform-origin: center;
     .services-bg {
       position: absolute;
       top: calc(-#{$service-bg-size}/ 2);
@@ -40,7 +43,10 @@ $service-bg-size: 400px;
       width: $service-bg-size;
       height: $service-bg-size;
       border-radius: 50%;
-      transition: transform $transit-time ease-in-out;
+      background: rgba(0, 0, 0, 0);
+      transition-property: transform, background-color;
+      transition-duration: $transit-time;
+      transition-timing-function: ease-in-out;
     }
     // .sbg-2 {
     //   transform: translateY(calc(#{$bg-height} - (#{$service-bg-size}/ 2)))

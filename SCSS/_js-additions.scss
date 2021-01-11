@@ -212,7 +212,7 @@
   transform: scale(1) rotate(0deg) translateX(80%) !important;
 }
 .service-wrapper-center {
-  transform: none !important;
+  transform: scale(1) rotate(0deg) translateX(0%) !important;
 }
 // .service-right {
 //   transform: translateY(calc(#{$bg-height} - (#{$service-bg-size}/ 2)))
@@ -259,31 +259,31 @@
   opacity: 1;
 }
 .work-text-hover-1 {
-  transform: translateX(-100px) scale(0.9);
+  transform: translateX(calc((#{$work-bg-size} / 4) * -1)) scale(0.9);
   opacity: 0.9;
 }
 .work-text-hover-2 {
-  transform: translateX(-200px) scale(0.8);
+  transform: translateX(calc((#{$work-bg-size} / 4) * -2)) scale(0.8);
   opacity: 0.8;
 }
 .work-text-hover-3 {
-  transform: translateX(-300px) scale(0.7);
+  transform: translateX(calc((#{$work-bg-size} / 4) * -3)) scale(0.7);
   opacity: 0.7;
 }
 .work-text-hover-4 {
-  transform: translateX(-400px) scale(0.6);
+  transform: translateX(calc((#{$work-bg-size} / 4) * -4)) scale(0.6);
   opacity: 0.6;
 }
 .work-text-hover-5 {
-  transform: translateX(-500px) scale(0.5);
+  transform: translateX(calc((#{$work-bg-size} / 4) * -5)) scale(0.5);
   opacity: 0.5;
 }
 .work-text-hover-6 {
-  transform: translateX(-600px) scale(0.4);
+  transform: translateX(calc((#{$work-bg-size} / 4) * -6)) scale(0.4);
   opacity: 0.4;
 }
 .work-text-hover-7 {
-  transform: translateX(-700px) scale(0.3);
+  transform: translateX(calc((#{$work-bg-size} / 4) * -7)) scale(0.3);
   opacity: 0.3;
 }
 

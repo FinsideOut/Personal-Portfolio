@@ -1,3 +1,4 @@
+$work-bg-size: 500px;
 .work-piece {
   //   border: 1px solid white;
   @include flex(row, space-between);
@@ -38,10 +39,10 @@
         transition-timing-function: ease-in-out;
         position: absolute;
         z-index: 1;
-        top: calc(50% - 200px);
-        left: calc(50% - 200px);
-        width: 400px;
-        height: 400px;
+        top: calc(50% - calc(#{$work-bg-size}/ 2));
+        left: calc(50% - calc(#{$work-bg-size}/ 2));
+        width: $work-bg-size;
+        height: $work-bg-size;
         background: rgba(250, 0, 180, 0.5);
         border-radius: 50%;
       }

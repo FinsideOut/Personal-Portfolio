@@ -826,7 +826,7 @@ button {
 }
 
 #engineer-content .technical-skills .graph-content .github .bg {
-  background: linear-gradient(247deg, rgba(68, 170, 0, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(285deg, rgba(68, 170, 0, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .javascript {
@@ -835,7 +835,7 @@ button {
 }
 
 #engineer-content .technical-skills .graph-content .javascript .bg {
-  background: linear-gradient(173deg, rgba(250, 213, 0, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(18deg, rgba(250, 213, 0, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .html5 {
@@ -844,7 +844,7 @@ button {
 }
 
 #engineer-content .technical-skills .graph-content .html5 .bg {
-  background: linear-gradient(72deg, rgba(228, 77, 38, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(168deg, rgba(228, 77, 38, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .css3 {
@@ -853,7 +853,7 @@ button {
 }
 
 #engineer-content .technical-skills .graph-content .css3 .bg {
-  background: linear-gradient(283deg, rgba(38, 77, 228, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(23deg, rgba(38, 77, 228, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .sass {
@@ -862,7 +862,7 @@ button {
 }
 
 #engineer-content .technical-skills .graph-content .sass .bg {
-  background: linear-gradient(346deg, rgba(206, 103, 154, 0.95), rgba(2, 1, 1, 0.95));
+  background: linear-gradient(84deg, rgba(206, 103, 154, 0.95), rgba(2, 1, 1, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .microchip {
@@ -871,7 +871,7 @@ button {
 }
 
 #engineer-content .technical-skills .graph-content .microchip .bg {
-  background: linear-gradient(44deg, rgba(238, 58, 37, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(33deg, rgba(238, 58, 37, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .pcb {
@@ -880,7 +880,7 @@ button {
 }
 
 #engineer-content .technical-skills .graph-content .pcb .bg {
-  background: linear-gradient(164deg, rgba(73, 196, 56, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(194deg, rgba(73, 196, 56, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .c-plus {
@@ -889,7 +889,7 @@ button {
 }
 
 #engineer-content .technical-skills .graph-content .c-plus .bg {
-  background: linear-gradient(29deg, rgba(0, 86, 151, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(236deg, rgba(0, 86, 151, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .arduino {
@@ -898,7 +898,7 @@ button {
 }
 
 #engineer-content .technical-skills .graph-content .arduino .bg {
-  background: linear-gradient(18deg, rgba(0, 146, 151, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(259deg, rgba(0, 146, 151, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .matlab {
@@ -907,7 +907,7 @@ button {
 }
 
 #engineer-content .technical-skills .graph-content .matlab .bg {
-  background: linear-gradient(232deg, rgba(115, 25, 15, 0.95), rgba(84, 166, 187, 0.95));
+  background: linear-gradient(3deg, rgba(115, 25, 15, 0.95), rgba(84, 166, 187, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .right-arrow {
@@ -1134,23 +1134,32 @@ button {
   width: 40%;
   -webkit-transform: scale(0) rotate(180deg);
           transform: scale(0) rotate(180deg);
-  -webkit-transition: -webkit-transform 200ms ease-in-out;
-  transition: -webkit-transform 200ms ease-in-out;
-  transition: transform 200ms ease-in-out;
-  transition: transform 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
+  -webkit-transition-property: background-color, -webkit-transform;
+  transition-property: background-color, -webkit-transform;
+  transition-property: transform, background-color;
+  transition-property: transform, background-color, -webkit-transform;
+  -webkit-transition-duration: 200ms;
+          transition-duration: 200ms;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
 }
 
 #services-content .bgs .services-bg {
   position: absolute;
-  top: calc(-400px/ 2);
-  left: calc(50% - 400px/ 2);
-  width: 400px;
-  height: 400px;
+  top: calc(-600px/ 2);
+  left: calc(50% - 600px/ 2);
+  width: 600px;
+  height: 600px;
   border-radius: 50%;
-  -webkit-transition: -webkit-transform 200ms ease-in-out;
-  transition: -webkit-transform 200ms ease-in-out;
-  transition: transform 200ms ease-in-out;
-  transition: transform 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
+  background: rgba(0, 0, 0, 0);
+  -webkit-transition-property: background-color, -webkit-transform;
+  transition-property: background-color, -webkit-transform;
+  transition-property: transform, background-color;
+  transition-property: transform, background-color, -webkit-transform;
+  -webkit-transition-duration: 200ms;
+          transition-duration: 200ms;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
 }
 
 .work-piece {
@@ -1219,10 +1228,10 @@ button {
           transition-timing-function: ease-in-out;
   position: absolute;
   z-index: 1;
-  top: calc(50% - 200px);
-  left: calc(50% - 200px);
-  width: 400px;
-  height: 400px;
+  top: calc(50% - calc(500px/ 2));
+  left: calc(50% - calc(500px/ 2));
+  width: 500px;
+  height: 500px;
   background: rgba(250, 0, 180, 0.5);
   border-radius: 50%;
 }
@@ -1574,8 +1583,8 @@ button {
 }
 
 .service-wrapper-center {
-  -webkit-transform: none !important;
-          transform: none !important;
+  -webkit-transform: scale(1) rotate(0deg) translateX(0%) !important;
+          transform: scale(1) rotate(0deg) translateX(0%) !important;
 }
 
 .service-top {
@@ -1626,44 +1635,44 @@ button {
 }
 
 .work-text-hover-1 {
-  -webkit-transform: translateX(-100px) scale(0.9);
-          transform: translateX(-100px) scale(0.9);
+  -webkit-transform: translateX(calc((500px / 4) * -1)) scale(0.9);
+          transform: translateX(calc((500px / 4) * -1)) scale(0.9);
   opacity: 0.9;
 }
 
 .work-text-hover-2 {
-  -webkit-transform: translateX(-200px) scale(0.8);
-          transform: translateX(-200px) scale(0.8);
+  -webkit-transform: translateX(calc((500px / 4) * -2)) scale(0.8);
+          transform: translateX(calc((500px / 4) * -2)) scale(0.8);
   opacity: 0.8;
 }
 
 .work-text-hover-3 {
-  -webkit-transform: translateX(-300px) scale(0.7);
-          transform: translateX(-300px) scale(0.7);
+  -webkit-transform: translateX(calc((500px / 4) * -3)) scale(0.7);
+          transform: translateX(calc((500px / 4) * -3)) scale(0.7);
   opacity: 0.7;
 }
 
 .work-text-hover-4 {
-  -webkit-transform: translateX(-400px) scale(0.6);
-          transform: translateX(-400px) scale(0.6);
+  -webkit-transform: translateX(calc((500px / 4) * -4)) scale(0.6);
+          transform: translateX(calc((500px / 4) * -4)) scale(0.6);
   opacity: 0.6;
 }
 
 .work-text-hover-5 {
-  -webkit-transform: translateX(-500px) scale(0.5);
-          transform: translateX(-500px) scale(0.5);
+  -webkit-transform: translateX(calc((500px / 4) * -5)) scale(0.5);
+          transform: translateX(calc((500px / 4) * -5)) scale(0.5);
   opacity: 0.5;
 }
 
 .work-text-hover-6 {
-  -webkit-transform: translateX(-600px) scale(0.4);
-          transform: translateX(-600px) scale(0.4);
+  -webkit-transform: translateX(calc((500px / 4) * -6)) scale(0.4);
+          transform: translateX(calc((500px / 4) * -6)) scale(0.4);
   opacity: 0.4;
 }
 
 .work-text-hover-7 {
-  -webkit-transform: translateX(-700px) scale(0.3);
-          transform: translateX(-700px) scale(0.3);
+  -webkit-transform: translateX(calc((500px / 4) * -7)) scale(0.3);
+          transform: translateX(calc((500px / 4) * -7)) scale(0.3);
   opacity: 0.3;
 }
 
