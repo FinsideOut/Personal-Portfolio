@@ -15,6 +15,9 @@
     // border: 1px solid white;
     position: relative;
     z-index: 5;
+    height: 55vh;
+    // border: 1px solid white;
+
     .card-title {
       margin: 1.5rem 1rem;
     }
@@ -65,4 +68,14 @@
     top: calc(50% - (#{$dbg-size}/ 2) + (#{$incriment}));
     left: calc(50% - #{$dbg-size}/ 2) + (#{$incriment});
   }
+}
+.developer-bg-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 1px solid white;
+  transform: scale(0);
 }

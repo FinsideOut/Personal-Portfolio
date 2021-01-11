@@ -124,5 +124,14 @@
 #cv {
   transition: transform $transit-time ease-in-out;
 }
-
+#sub-screen {
+  // position: relative;
+  // z-index: 100;
+  header {
+    // position: relative;
+    // z-index: 100;
+    color: black;
+    pointer-events: none;
+  }
+}
 @import "js-additions";

@@ -143,18 +143,18 @@ function shiftHeadersToFull() {
   aspiring.classList.add("aspiring-full");
   educator.classList.add("educator-full");
   educatorTitle.classList.add("enlarge-title");
+  engineerTitle.classList.add("enlarge-title");
+  developerTitle.classList.add("enlarge-title");
+  workTitle.classList.add("enlarge-title");
+  servicesTitle.classList.add("enlarge-title");
   // educator.classList.add("enlarge-title");
   console.log(educatorTitle);
   engineer.classList.add("engineer-full");
-  engineerTitle.classList.add("enlarge-title");
   developer.classList.add("developer-full");
-  developerTitle.classList.add("enlarge-title");
 
   services.classList.add("services-full");
-  servicesTitle.classList.add("enlarge-title");
 
   work.classList.add("work-full");
-  workTitle.classList.add("enlarge-title");
 
   cv.classList.add("cv-full");
   // cvTitle.classList.add("elarge-title");
@@ -176,6 +176,12 @@ function addFullWidth(e) {
   }
 }
 function toHomeScreen() {
+  educatorTitle.classList.remove("enlarge-title");
+  engineerTitle.classList.remove("enlarge-title");
+  developerTitle.classList.remove("enlarge-title");
+  workTitle.classList.remove("enlarge-title");
+  servicesTitle.classList.remove("enlarge-title");
+
   heroContainer.classList.remove("shown");
 
   educatorContent.classList.remove("shown");
@@ -412,6 +418,7 @@ softSkills.addEventListener("mousemove", (e) => {
 });
 const developerCards = document.querySelectorAll(".developer-card");
 const developerBgs = document.querySelectorAll(".developer-bg");
+// const devBgWrapper = document.querySelector()
 const dbgSize = 700;
 const incriment = 100;
 developerCards.forEach((card) => {
@@ -423,6 +430,8 @@ developerCards.forEach((card) => {
   });
   card.addEventListener("mouseout", (e) => {
     card.children[0].classList.remove("normalize");
+    // card.children[1].classList.remove("normalize");
+    // card.children[2].classList.remove("normalize");
 
     card.children[1].style.transform = "scale(0)";
     card.children[2].style.transform = "scale(0)";

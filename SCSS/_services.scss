@@ -44,6 +44,7 @@ $service-bg-size: 600px;
       height: $service-bg-size;
       border-radius: 50%;
       background: rgba(0, 0, 0, 0);
+      // transform: scale(0);
       transition-property: transform, background-color;
       transition-duration: $transit-time;
       transition-timing-function: ease-in-out;
