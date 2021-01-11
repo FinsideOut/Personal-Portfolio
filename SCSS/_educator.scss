@@ -7,6 +7,7 @@
   .hover-icons-wrapper {
     margin-top: 1rem;
     position: relative;
+    height: 50vh;
     .educator-icons-container > div {
       transition-property: opacity, color;
       transition-duration: $transit-time;
@@ -15,6 +16,8 @@
 
     .educator-icons-container {
       @include flex(row, space-around);
+      position: relative;
+      z-index: 5;
       .icon-container {
         max-width: 33%;
         @include flex(column, space-between);
@@ -26,10 +29,12 @@
       }
     }
     .more-info-container {
+      position: relative;
       position: absolute;
       top: 0;
       left: 0;
-      z-index: -2;
+      z-index: 5;
+      pointer-events: none;
       width: 100%;
       height: 100%;
       div,
@@ -66,5 +71,32 @@
         opacity: 0;
       }
     }
+  }
+}
+$educator-bg-size: 500px;
+.educator-bg-container {
+  transform: scale(0);
+  opacity: 0;
+  transition-property: opacity, transform;
+  transition-duration: $transit-time;
+  transition-timing-function: ease-in-out;
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  // border: 1px solid white;
+  .educator-bg {
+    transition-property: background-color, transform;
+    transition-duration: $transit-time;
+    transition-timing-function: ease-in-out;
+    height: $educator-bg-size;
+    width: $educator-bg-size;
+    border-radius: 50%;
+    position: absolute;
+    top: calc(50% - (#{$educator-bg-size}/ 2));
+    left: calc(50% - (#{$educator-bg-size}/ 2));
+    background-color: rgba(150, 200, 0, 0.5);
   }
 }

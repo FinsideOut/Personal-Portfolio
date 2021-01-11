@@ -237,46 +237,72 @@ window.addEventListener("load", run);
 window.addEventListener("resize", run);
 window.addEventListener("scroll", run);
 
-educatorIconRight = document.getElementById("educator-icon-right");
-educatorIconCenter = document.getElementById("educator-icon-center");
-educatorIconLeft = document.getElementById("educator-icon-left");
-moreInfoRight = document.getElementById("more-info-right");
-moreInfoLeft = document.getElementById("more-info-left");
-moreInfoCenterLeft = document.getElementById("more-info-center-left");
-moreInfoCenterRight = document.getElementById("more-info-center-right");
+const educatorIconRight = document.getElementById("educator-icon-right");
+const educatorIconCenter = document.getElementById("educator-icon-center");
+const educatorIconLeft = document.getElementById("educator-icon-left");
+const moreInfoRight = document.getElementById("more-info-right");
+const moreInfoLeft = document.getElementById("more-info-left");
+const moreInfoCenterLeft = document.getElementById("more-info-center-left");
+const moreInfoCenterRight = document.getElementById("more-info-center-right");
+const educatorBgContainer = document.querySelector(".educator-bg-container");
+const educatorBgs = document.querySelectorAll(".educator-bg");
 
 educatorIconRight.addEventListener("mouseover", (e) => {
   educatorIconCenter.classList.add("obscure");
   educatorIconLeft.classList.add("obscure");
   moreInfoRight.classList.add("normalize");
+  educatorBgContainer.classList.add("normalize");
+  for (let i = 0; i < educatorBgs.length; i++) {
+    educatorBgs[i].classList.add("educator-bg-right-" + [i]);
+  }
 });
 educatorIconRight.addEventListener("mouseout", (e) => {
   educatorIconCenter.classList.remove("obscure");
   educatorIconLeft.classList.remove("obscure");
   moreInfoRight.classList.remove("normalize");
+  educatorBgContainer.classList.remove("normalize");
+  for (let i = 0; i < educatorBgs.length; i++) {
+    educatorBgs[i].classList.remove("educator-bg-right-" + [i]);
+  }
 });
 
 educatorIconLeft.addEventListener("mouseover", (e) => {
   educatorIconCenter.classList.add("obscure");
   educatorIconRight.classList.add("obscure");
   moreInfoLeft.classList.add("normalize");
+  educatorBgContainer.classList.add("normalize");
+  for (let i = 0; i < educatorBgs.length; i++) {
+    educatorBgs[i].classList.add("educator-bg-left-" + [i]);
+  }
 });
 educatorIconLeft.addEventListener("mouseout", (e) => {
   educatorIconCenter.classList.remove("obscure");
   educatorIconRight.classList.remove("obscure");
   moreInfoLeft.classList.remove("normalize");
+  educatorBgContainer.classList.remove("normalize");
+  for (let i = 0; i < educatorBgs.length; i++) {
+    educatorBgs[i].classList.remove("educator-bg-left-" + [i]);
+  }
 });
 educatorIconCenter.addEventListener("mouseover", (e) => {
   educatorIconLeft.classList.add("obscure");
   educatorIconRight.classList.add("obscure");
   moreInfoCenterLeft.classList.add("normalize");
   moreInfoCenterRight.classList.add("normalize");
+  educatorBgContainer.classList.add("normalize");
+  for (let i = 0; i < educatorBgs.length; i++) {
+    educatorBgs[i].classList.add("educator-bg-center-" + [i]);
+  }
 });
 educatorIconCenter.addEventListener("mouseout", (e) => {
   educatorIconLeft.classList.remove("obscure");
   educatorIconRight.classList.remove("obscure");
   moreInfoCenterLeft.classList.remove("normalize");
   moreInfoCenterRight.classList.remove("normalize");
+  educatorBgContainer.classList.remove("normalize");
+  for (let i = 0; i < educatorBgs.length; i++) {
+    educatorBgs[i].classList.remove("educator-bg-center-" + [i]);
+  }
 });
 
 const graphIcons = document.querySelectorAll(".graph-icon");
@@ -405,22 +431,22 @@ developerCards.forEach((card) => {
     let rect = card.children[0].getBoundingClientRect();
     let mouseX = e.clientX - rect.left - 350;
     let mouseY = e.clientY - rect.top - 350;
-    if (mouseX / 2 >= incriment) {
-      shiftX = incriment;
-    } else if (mouseX / 2 <= -incriment) {
-      shiftX = -incriment;
+    if (mouseX / 2 >= incriment - 40) {
+      shiftX = incriment - 40;
+    } else if (mouseX / 2 <= -incriment + 40) {
+      shiftX = -incriment + 40;
     } else {
       shiftX = mouseX / 2;
     }
-    if (mouseY / 2 >= incriment) {
-      shiftY = incriment;
-    } else if (mouseY / 2 <= -incriment) {
-      shiftY = -incriment;
+    if (mouseY / 2 >= incriment - 40) {
+      shiftY = incriment - 40;
+    } else if (mouseY / 2 <= -incriment + 40) {
+      shiftY = -incriment + 40;
     } else {
       shiftY = mouseY / 2;
     }
     card.children[1].style.transform =
-      "translate(" + shiftX + "px," + shiftY + "px)";
+      "translate(" + shiftX / 2 + "px," + shiftY / 2 + "px)";
     // console.log(mouseX, mouseY);
     card.children[2].style.transform =
       "translate(" + shiftX + "px," + shiftY + "px)";
