@@ -428,18 +428,23 @@ developerCards.forEach((card) => {
 });
 
 const servicesContent = document.getElementById("services-content");
+const servicesCardsContainer = document.getElementById("service-cards");
 const servicesBg = document.getElementById("services-bg");
 const serviceCards = document.querySelectorAll(".service-card");
 const servicesBgs = document.querySelectorAll(".services-bg");
 
-servicesContent.addEventListener("mouseover", (e) => {
-  servicesBg.classList.add("normalize");
-});
-servicesContent.addEventListener("mouseout", (e) => {
-  servicesBg.classList.remove("normalize");
-});
+// servicesCardsContainer.addEventListener("mouseover", (e) => {
+//   console.log("service!!!");
+//   servicesBg.classList.add("normalize");
+// });
+// servicesCardsContainer.addEventListener("mouseout", (e) => {
+//   console.log("nope service!!!");
+//   servicesBg.classList.remove("normalize");
+// });
 
 serviceCards[0].addEventListener("mouseover", () => {
+  servicesBg.classList.add("service-wrapper-left");
+
   servicesBgs[0].classList.add("service-top");
   servicesBgs[1].classList.add("service-right");
   servicesBgs[2].classList.add("service-left");
@@ -448,6 +453,8 @@ serviceCards[0].addEventListener("mouseover", () => {
   }
 });
 serviceCards[0].addEventListener("mouseout", () => {
+  servicesBg.classList.remove("service-wrapper-left");
+
   servicesBgs[0].classList.remove("service-top");
   servicesBgs[1].classList.remove("service-right");
   servicesBgs[2].classList.remove("service-left");
@@ -456,6 +463,8 @@ serviceCards[0].addEventListener("mouseout", () => {
   }
 });
 serviceCards[1].addEventListener("mouseover", () => {
+  servicesBg.classList.add("normalize");
+
   servicesBgs[1].classList.add("service-top");
   servicesBgs[2].classList.add("service-right");
   servicesBgs[0].classList.add("service-left");
@@ -464,6 +473,8 @@ serviceCards[1].addEventListener("mouseover", () => {
   }
 });
 serviceCards[1].addEventListener("mouseout", () => {
+  servicesBg.classList.remove("normalize");
+
   servicesBgs[1].classList.remove("service-top");
   servicesBgs[2].classList.remove("service-right");
   servicesBgs[0].classList.remove("service-left");
@@ -472,6 +483,8 @@ serviceCards[1].addEventListener("mouseout", () => {
   }
 });
 serviceCards[2].addEventListener("mouseover", () => {
+  servicesBg.classList.add("service-wrapper-right");
+
   servicesBgs[2].classList.add("service-top");
   servicesBgs[0].classList.add("service-right");
   servicesBgs[1].classList.add("service-left");
@@ -480,6 +493,8 @@ serviceCards[2].addEventListener("mouseover", () => {
   }
 });
 serviceCards[2].addEventListener("mouseout", () => {
+  servicesBg.classList.remove("service-wrapper-right");
+
   servicesBgs[2].classList.remove("service-top");
   servicesBgs[0].classList.remove("service-right");
   servicesBgs[1].classList.remove("service-left");

@@ -1,14 +1,18 @@
 @use 'sass:math';
 $height: 60vh;
-$half-side-length: calc(#{$height} / 1.73205);
-
+$bg-height: 30vh;
+$half-side-length: calc(#{$bg-height} / 1.73205);
+$service-bg-size: 400px;
 #services-content {
   // top: 500vh;
+  .services-wrapper {
+    position: relative;
+  }
   color: white;
   .cards {
     position: relative;
     width: 100%;
-    // height: $height;
+    height: $height;
     // border: 1px solid white;
     @include flex(row, space-around);
     align-items: flex-start;
@@ -19,39 +23,32 @@ $half-side-length: calc(#{$height} / 1.73205);
       text-align: center;
       width: 40%;
     }
-    .bgs {
+  }
+  .bgs {
+    position: absolute;
+    top: 0;
+    left: 30%;
+    height: $bg-height;
+    width: 40%;
+    // border: 3px solid white;
+    transform: scale(0) rotate(180deg);
+    transition: transform $transit-time ease-in-out;
+    .services-bg {
+      position: absolute;
+      top: calc(-#{$service-bg-size}/ 2);
+      left: calc(50% - #{$service-bg-size}/ 2);
+      width: $service-bg-size;
+      height: $service-bg-size;
+      border-radius: 50%;
       transition: transform $transit-time ease-in-out;
-      transform: scale(0) rotate(180deg);
-      $services-bg-size: 700px;
-      position: relative;
-      width: calc(#{$half-side-length} * 2);
-      height: 100%;
-      margin: auto;
-      // border: 1px solid white;
-      .services-bg {
-        transition-property: background-color, transform;
-        transition-duration: $transit-time;
-        transition-timing-function: ease-in-out;
-        position: absolute;
-        top: calc(0% - #{$services-bg-size}/ 2);
-        left: calc(50% - #{$services-bg-size}/ 2);
-        width: $services-bg-size;
-        height: $services-bg-size;
-        border-radius: 50%;
-      }
-      .sbg-1 {
-        background: rgba(150, 0, 250, 0.5);
-      }
-      .sbg-2 {
-        background: rgba(0, 150, 250, 0.5);
-        transform: translateY($height) translateX($half-side-length);
-        // transform: translateY($height) transformX($half-side-length);
-      }
-      .sbg-3 {
-        background: rgba(250, 0, 250, 0.5);
-        transform: translateY($height)
-          translateX(calc(#{$half-side-length} * -1));
-      }
     }
+    // .sbg-2 {
+    //   transform: translateY(calc(#{$bg-height} - (#{$service-bg-size}/ 2)))
+    //     translateX($half-side-length);
+    // }
+    // .sbg-3 {
+    //   transform:  translateY(calc(#{$bg-height} - (#{$service-bg-size}/ 2)))
+    //     translateX(calc(#{$half-side-length} * -1));
+    // }
   }
 }

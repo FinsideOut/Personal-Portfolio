@@ -200,11 +200,28 @@
 }
 
 .service-right {
-  transform: translateY($height) translateX($half-side-length) !important;
+  transform: translateY($bg-height) translateX($half-side-length) !important;
 }
 .service-left {
-  transform: translateY($height) translateX(calc(#{$half-side-length} * -1)) !important;
+  transform: translateY($bg-height) translateX(calc(#{$half-side-length} * -1)) !important;
 }
+.service-wrapper-left {
+  transform: scale(1) rotate(0deg) translateX(-80%) !important;
+}
+.service-wrapper-right {
+  transform: scale(1) rotate(0deg) translateX(80%) !important;
+}
+.service-wrapper-center {
+  transform: none !important;
+}
+// .service-right {
+//   transform: translateY(calc(#{$bg-height} - (#{$service-bg-size}/ 2)))
+//     translateX($half-side-length) !important;
+// }
+// .service-left {
+//   transform: translateY(calc(#{$bg-height} - (#{$service-bg-size}/ 2)))
+//     translateX(calc(#{$half-side-length} * -1)) !important;
+// }
 .service-top {
   transform: scale(1) !important;
 }
