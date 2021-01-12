@@ -16,6 +16,7 @@
     position: relative;
     z-index: 5;
     height: 55vh;
+    // width: 30vw;
     // border: 1px solid white;
 
     .card-title {
@@ -37,15 +38,15 @@
   $dbg-size: 700px;
   $dbg-size-half: 350px;
   $incriment: 100px;
-  // .bg {
-  //   border: 1px solid white;
-  // }
   .developer-bg {
-    transform: scale(0);
+    // transform: scale(0);
+    border-radius: 50%;
     position: absolute;
     z-index: 2;
     transform-origin: center;
     transition: transform 50ms ease-in-out;
+    // top: 0;
+    // left: 0;
   }
   .dbg-1 {
     width: $dbg-size;
@@ -58,24 +59,30 @@
     width: calc(#{$dbg-size} - #{$incriment});
     height: calc(#{$dbg-size} - #{$incriment});
     background: rgba(255, 70, 10, 0.3);
-    top: calc(50% - (#{$dbg-size}/ 2) + (#{$incriment}/ 2));
-    left: calc(50% - #{$dbg-size}/ 2) + (#{$incriment}/ 2);
+
+    top: calc((50% - (#{$dbg-size}/ 2)) + (#{$incriment}/ 2));
+    left: calc((50% - #{$dbg-size}/ 2) + (#{$incriment} / 2));
+
+    // left: calc(50% - #{$dbg-size}/ 2) + (#{$incriment}/ 2);
+    // top: calc(50% - (#{$dbg-size}/ 2) + (#{$incriment}/ 2));
+    // left: calc(50% - #{$dbg-size}/ 2) + (#{$incriment}/ 2);
   }
   .dbg-3 {
     width: calc(#{$dbg-size} - #{$incriment}* 2);
     height: calc(#{$dbg-size} - #{$incriment}* 2);
     background: rgba(255, 70, 10, 0.3);
-    top: calc(50% - (#{$dbg-size}/ 2) + (#{$incriment}));
-    left: calc(50% - #{$dbg-size}/ 2) + (#{$incriment});
+    top: calc((50% - (#{$dbg-size}/ 2)) + (#{$incriment}));
+    left: calc((50% - #{$dbg-size}/ 2) + (#{$incriment}));
   }
 }
-.developer-bg-wrapper {
+.developer-wrapper {
   position: absolute;
   top: 0;
   left: 0;
   display: block;
   width: 100%;
   height: 100%;
-  border: 1px solid white;
+  // border: 1px solid white;
   transform: scale(0);
+  transition: transform $transit-time ease-in-out;
 }

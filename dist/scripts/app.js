@@ -148,7 +148,7 @@ function shiftHeadersToFull() {
   workTitle.classList.add("enlarge-title");
   servicesTitle.classList.add("enlarge-title");
   // educator.classList.add("enlarge-title");
-  console.log(educatorTitle);
+  // console.log(educatorTitle);
   engineer.classList.add("engineer-full");
   developer.classList.add("developer-full");
 
@@ -252,12 +252,29 @@ const moreInfoCenterLeft = document.getElementById("more-info-center-left");
 const moreInfoCenterRight = document.getElementById("more-info-center-right");
 const educatorBgContainer = document.querySelector(".educator-bg-container");
 const educatorBgs = document.querySelectorAll(".educator-bg");
+const educatorText = document.querySelector(".educator-text-container");
+const educatorWrapper = document.querySelector(".educator-icons-container");
+educatorWrapper.addEventListener("mouseover", (e) => {
+  educatorText.classList.add("obscure");
+  educatorTitle.classList.add("obscure");
+  engineerTitle.classList.add("obscure");
+  engineerContent.classList.add("obscure");
+  aspiring.classList.add("obscure");
+  educatorBgContainer.classList.add("normalize");
+});
+educatorWrapper.addEventListener("mouseout", (e) => {
+  educatorText.classList.remove("obscure");
+  educatorTitle.classList.remove("obscure");
+  engineerTitle.classList.remove("obscure");
+  engineerContent.classList.remove("obscure");
 
+  aspiring.classList.remove("obscure");
+  educatorBgContainer.classList.remove("normalize");
+});
 educatorIconRight.addEventListener("mouseover", (e) => {
   educatorIconCenter.classList.add("obscure");
   educatorIconLeft.classList.add("obscure");
   moreInfoRight.classList.add("normalize");
-  educatorBgContainer.classList.add("normalize");
   for (let i = 0; i < educatorBgs.length; i++) {
     educatorBgs[i].classList.add("educator-bg-right-" + [i]);
   }
@@ -266,7 +283,7 @@ educatorIconRight.addEventListener("mouseout", (e) => {
   educatorIconCenter.classList.remove("obscure");
   educatorIconLeft.classList.remove("obscure");
   moreInfoRight.classList.remove("normalize");
-  educatorBgContainer.classList.remove("normalize");
+
   for (let i = 0; i < educatorBgs.length; i++) {
     educatorBgs[i].classList.remove("educator-bg-right-" + [i]);
   }
@@ -276,7 +293,6 @@ educatorIconLeft.addEventListener("mouseover", (e) => {
   educatorIconCenter.classList.add("obscure");
   educatorIconRight.classList.add("obscure");
   moreInfoLeft.classList.add("normalize");
-  educatorBgContainer.classList.add("normalize");
   for (let i = 0; i < educatorBgs.length; i++) {
     educatorBgs[i].classList.add("educator-bg-left-" + [i]);
   }
@@ -285,7 +301,6 @@ educatorIconLeft.addEventListener("mouseout", (e) => {
   educatorIconCenter.classList.remove("obscure");
   educatorIconRight.classList.remove("obscure");
   moreInfoLeft.classList.remove("normalize");
-  educatorBgContainer.classList.remove("normalize");
   for (let i = 0; i < educatorBgs.length; i++) {
     educatorBgs[i].classList.remove("educator-bg-left-" + [i]);
   }
@@ -295,7 +310,6 @@ educatorIconCenter.addEventListener("mouseover", (e) => {
   educatorIconRight.classList.add("obscure");
   moreInfoCenterLeft.classList.add("normalize");
   moreInfoCenterRight.classList.add("normalize");
-  educatorBgContainer.classList.add("normalize");
   for (let i = 0; i < educatorBgs.length; i++) {
     educatorBgs[i].classList.add("educator-bg-center-" + [i]);
   }
@@ -305,7 +319,6 @@ educatorIconCenter.addEventListener("mouseout", (e) => {
   educatorIconRight.classList.remove("obscure");
   moreInfoCenterLeft.classList.remove("normalize");
   moreInfoCenterRight.classList.remove("normalize");
-  educatorBgContainer.classList.remove("normalize");
   for (let i = 0; i < educatorBgs.length; i++) {
     educatorBgs[i].classList.remove("educator-bg-center-" + [i]);
   }
@@ -418,26 +431,19 @@ softSkills.addEventListener("mousemove", (e) => {
 });
 const developerCards = document.querySelectorAll(".developer-card");
 const developerBgs = document.querySelectorAll(".developer-bg");
-// const devBgWrapper = document.querySelector()
+const devWrapper = document.querySelector(".developer-wrapper");
 const dbgSize = 700;
 const incriment = 100;
+// console.log(devWrapper.children);
 developerCards.forEach((card) => {
   card.addEventListener("mouseover", (e) => {
     card.children[0].classList.add("normalize");
-    // card.children[1].classList.add("normalize");
-    // card.children[1].style.transform = "scale(1)";
-    // card.children[2].style.transform = "scale(1)";
   });
   card.addEventListener("mouseout", (e) => {
     card.children[0].classList.remove("normalize");
-    // card.children[1].classList.remove("normalize");
-    // card.children[2].classList.remove("normalize");
-
-    card.children[1].style.transform = "scale(0)";
-    card.children[2].style.transform = "scale(0)";
   });
   card.addEventListener("mousemove", (e) => {
-    let rect = card.children[0].getBoundingClientRect();
+    let rect = card.children[0].children[0].getBoundingClientRect();
     let mouseX = e.clientX - rect.left - 350;
     let mouseY = e.clientY - rect.top - 350;
     if (mouseX / 2 >= incriment - 40) {
@@ -454,11 +460,18 @@ developerCards.forEach((card) => {
     } else {
       shiftY = mouseY / 2;
     }
-    card.children[1].style.transform =
+    card.children[0].children[1].style.transform =
       "translate(" + shiftX / 2 + "px," + shiftY / 2 + "px)";
     // console.log(mouseX, mouseY);
-    card.children[2].style.transform =
+    card.children[0].children[2].style.transform =
       "translate(" + shiftX + "px," + shiftY + "px)";
+    card.children[2].style.transform =
+      "translate(" + shiftX / 8 + "px," + shiftY / 8 + "px)";
+    // console.log(mouseX, mouseY);
+    card.children[3].style.transform =
+      "translate(" + shiftX / 8 + "px," + shiftY / 8 + "px)";
+    card.children[4].style.transform =
+      "translate(" + shiftX / 8 + "px," + shiftY / 8 + "px)";
   });
 });
 
@@ -542,7 +555,7 @@ const workBgs = document.querySelectorAll(".work-bg");
 const workBg = document.querySelectorAll(".work-bg-container");
 const workTexts = document.querySelectorAll(".work-piece-text");
 const workImgs = document.querySelectorAll(".work-piece-img");
-console.log(workImgs[0].parentElement.children[1].children[1]);
+// console.log(workImgs[0].parentElement.children[1].children[1]);
 workTexts.forEach((text) => {
   text.addEventListener("mouseover", (e) => {
     text.parentElement.children[1].children[1].classList.add("normalize");
