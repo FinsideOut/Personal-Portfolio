@@ -109,21 +109,41 @@
   }
 }
 #logo-home,
-#aspiring {
-  transition-property: font-size, transform;
-  transition-duration: $transit-time;
+#lead,
+#aspiring,
+#educator,
+#educator-title,
+.educator-text-container,
+#engineer,
+#engineer-title,
+// #engineer-content,
+#engineer-text,
+.technical-skills,
+.soft-skills,
+#developer,
+#developer-title,
+#developer-text,
+#developer-content,
+.dev-left,
+.dev-center,
+.dev-right,
+#services,
+#services-title,
+#services-text,
+#services-content,
+.services-left,
+.services-center,
+.services-right,
+#work,
+#work-text,
+#work-title,
+#work-content,
+#cv {
+  transition-property: font-size, transform, opacity;
+  transition-duration: $transit-time !important;
   transition-timing-function: ease-in-out;
 }
 
-#lead,
-#educator,
-#engineer,
-#developer,
-#services,
-#work,
-#cv {
-  transition: transform $transit-time ease-in-out;
-}
 #sub-screen {
   // position: relative;
   // z-index: 100;

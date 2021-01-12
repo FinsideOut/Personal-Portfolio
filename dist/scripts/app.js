@@ -112,9 +112,9 @@ function calcWidth() {
 }
 
 // state transition
-bookPageRight.onclick = () => {
-  changeState();
-};
+// bookPageRight.onclick = () => {
+//   changeState();
+// };
 logo.onclick = () => {
   changeState();
 };
@@ -478,7 +478,9 @@ developerCards.forEach((card) => {
     servicesTitle.classList.remove("obscure");
     servicesContent.classList.remove("obscure");
     engineerContent.classList.remove("obscure");
-
+    card.children[0].children[1].style.transform = "none";
+    // console.log(mouseX, mouseY);
+    card.children[0].children[2].style.transform = "none";
     card.parentElement.children[0].classList.remove("obscure");
     card.parentElement.children[1].classList.remove("obscure");
     card.parentElement.children[2].classList.remove("obscure");
@@ -507,14 +509,14 @@ developerCards.forEach((card) => {
     card.children[0].children[2].style.transform =
       "translate(" + shiftX + "px," + shiftY + "px)";
     card.children[1].style.transform =
-      "translate(" + shiftX / 8 + "px," + shiftY / 8 + "px)";
+      "translate(" + shiftX / 3 + "px," + shiftY / 3 + "px)";
     card.children[2].style.transform =
-      "translate(" + shiftX / 8 + "px," + shiftY / 8 + "px)";
+      "translate(" + shiftX / 3 + "px," + shiftY / 3 + "px)";
     // console.log(mouseX, mouseY);
     card.children[3].style.transform =
-      "translate(" + shiftX / 8 + "px," + shiftY / 8 + "px)";
+      "translate(" + shiftX / 3 + "px," + shiftY / 3 + "px)";
     card.children[4].style.transform =
-      "translate(" + shiftX / 8 + "px," + shiftY / 8 + "px)";
+      "translate(" + shiftX / 3 + "px," + shiftY / 3 + "px)";
   });
 });
 
@@ -721,3 +723,22 @@ function makeFlower(modifier, color) {
     opac -= 0.002;
   }
 }
+$(".nav-link").on("click", function (e) {
+  if (this.hash !== "" && isFull === false) {
+    changeState();
+    e.preventDefault();
+    const hash = this.hash;
+    setTimeout(function () {
+      console.log(hash);
+      console.log(hash, $(hash).offset().top - 100);
+      $("html, body").animate(
+        {
+          scrollTop: $(hash).offset().top - 100,
+        },
+        800
+      );
+    }, 1500);
+    // console.log(hash, $(hash).offset().top - 100);
+  }
+  // window.scrollBy(0, window.innerHeight / 2);
+});
