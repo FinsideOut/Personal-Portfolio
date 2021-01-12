@@ -93,12 +93,14 @@
 
 .hidden {
   // visibility: hidden;
-  // pointer-events: none;
+  pointer-events: none;
   opacity: 0;
   transition: opacity $transit-time ease-in-out !important;
 }
 .shown {
   // visibility: visible !important;
+  pointer-events: all !important;
+
   opacity: 1 !important;
 }
 .obscure {

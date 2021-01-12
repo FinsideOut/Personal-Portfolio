@@ -333,13 +333,19 @@ const LabelY = document.querySelector(".y-label");
 const graphContent = document.querySelector(".graph-content");
 const graphArrowUp = document.querySelector(".up-arrow");
 const graphArrowRight = document.querySelector(".right-arrow");
-
+const engineerText = document.getElementById("engineer-text");
+const softSkills = document.querySelector(".soft-skills");
+const technicalSkills = document.querySelector(".technical-skills");
 graphIcons.forEach((icon) => {
   icon.addEventListener("mouseenter", (e) => {
     e.target.classList.remove("obscure");
     graphTitle.classList.add("obscure");
     LabelX.classList.add("obscure");
     LabelY.classList.add("obscure");
+    engineerTitle.classList.add("obscure");
+    engineerText.classList.add("obscure");
+    educatorContent.classList.add("obscure");
+    softSkills.classList.add("obscure");
     graphContent.classList.add("obscure-borders");
     graphArrowUp.classList.add("obscure-arrow-up");
     graphArrowRight.classList.add("obscure-arrow-right");
@@ -361,6 +367,10 @@ graphIcons.forEach((icon) => {
     graphTitle.classList.remove("obscure");
     LabelX.classList.remove("obscure");
     LabelY.classList.remove("obscure");
+    engineerTitle.classList.remove("obscure");
+    engineerText.classList.remove("obscure");
+    educatorContent.classList.remove("obscure");
+    softSkills.classList.remove("obscure");
     graphContent.classList.remove("obscure-borders");
     graphArrowUp.classList.remove("obscure-arrow-up");
     graphArrowRight.classList.remove("obscure-arrow-right");
@@ -372,15 +382,20 @@ graphIcons.forEach((icon) => {
     });
   });
 });
-const softSkills = document.querySelector(".soft-skills");
 const discs = document.querySelectorAll(".soft-skills-disc");
 softSkills.addEventListener("mouseover", (e) => {
   // console.log(discs);
+  technicalSkills.classList.add("obscure");
+  developerTitle.classList.add("obscure");
+  developerContent.classList.add("obscure");
   discs.forEach((disc) => {
     disc.classList.add("disc-enlarge");
   });
 });
 softSkills.addEventListener("mouseout", (e) => {
+  technicalSkills.classList.remove("obscure");
+  developerTitle.classList.remove("obscure");
+  developerContent.classList.remove("obscure");
   discs.forEach((disc) => {
     disc.classList.remove("disc-enlarge");
   });
@@ -432,15 +447,41 @@ softSkills.addEventListener("mousemove", (e) => {
 const developerCards = document.querySelectorAll(".developer-card");
 const developerBgs = document.querySelectorAll(".developer-bg");
 const devWrapper = document.querySelector(".developer-wrapper");
+const developerText = document.getElementById("developer-text");
+const servicesContent = document.getElementById("services-content");
 const dbgSize = 700;
 const incriment = 100;
 // console.log(devWrapper.children);
 developerCards.forEach((card) => {
   card.addEventListener("mouseover", (e) => {
     card.children[0].classList.add("normalize");
+    developerText.classList.add("obscure");
+    developerTitle.classList.add("obscure");
+    servicesTitle.classList.add("obscure");
+    servicesContent.classList.add("obscure");
+    engineerContent.classList.add("obscure");
+    if (card.classList.contains("dev-left")) {
+      card.parentElement.children[1].classList.add("obscure");
+      card.parentElement.children[2].classList.add("obscure");
+    } else if (card.classList.contains("dev-center")) {
+      card.parentElement.children[0].classList.add("obscure");
+      card.parentElement.children[2].classList.add("obscure");
+    } else if (card.classList.contains("dev-right")) {
+      card.parentElement.children[0].classList.add("obscure");
+      card.parentElement.children[1].classList.add("obscure");
+    }
   });
   card.addEventListener("mouseout", (e) => {
     card.children[0].classList.remove("normalize");
+    developerText.classList.remove("obscure");
+    developerTitle.classList.remove("obscure");
+    servicesTitle.classList.remove("obscure");
+    servicesContent.classList.remove("obscure");
+    engineerContent.classList.remove("obscure");
+
+    card.parentElement.children[0].classList.remove("obscure");
+    card.parentElement.children[1].classList.remove("obscure");
+    card.parentElement.children[2].classList.remove("obscure");
   });
   card.addEventListener("mousemove", (e) => {
     let rect = card.children[0].children[0].getBoundingClientRect();
@@ -465,6 +506,8 @@ developerCards.forEach((card) => {
     // console.log(mouseX, mouseY);
     card.children[0].children[2].style.transform =
       "translate(" + shiftX + "px," + shiftY + "px)";
+    card.children[1].style.transform =
+      "translate(" + shiftX / 8 + "px," + shiftY / 8 + "px)";
     card.children[2].style.transform =
       "translate(" + shiftX / 8 + "px," + shiftY / 8 + "px)";
     // console.log(mouseX, mouseY);
@@ -475,24 +518,44 @@ developerCards.forEach((card) => {
   });
 });
 
-const servicesContent = document.getElementById("services-content");
 const servicesCardsContainer = document.getElementById("service-cards");
 const servicesBg = document.getElementById("services-bg");
+const servicesText = document.getElementById("services-text");
 const serviceCards = document.querySelectorAll(".service-card");
 const servicesBgs = document.querySelectorAll(".services-bg");
-
-// servicesCardsContainer.addEventListener("mouseover", (e) => {
-//   console.log("service!!!");
-//   servicesBg.classList.add("normalize");
-// });
-// servicesCardsContainer.addEventListener("mouseout", (e) => {
-//   console.log("nope service!!!");
-//   servicesBg.classList.remove("normalize");
-// });
-
+serviceCards.forEach((card) => {
+  card.addEventListener("mouseover", (e) => {
+    servicesTitle.classList.add("obscure");
+    servicesText.classList.add("obscure");
+    workContent.classList.add("obscure");
+    workTitle.classList.add("obscure");
+    developerContent.classList.add("obscure");
+    if (card.classList.contains("services-left")) {
+      serviceCards[1].classList.add("obscure");
+      serviceCards[2].classList.add("obscure");
+    } else if (card.classList.contains("services-center")) {
+      serviceCards[0].classList.add("obscure");
+      serviceCards[2].classList.add("obscure");
+    } else if (card.classList.contains("services-right")) {
+      serviceCards[0].classList.add("obscure");
+      serviceCards[1].classList.add("obscure");
+    }
+  });
+});
+serviceCards.forEach((card) => {
+  card.addEventListener("mouseout", (e) => {
+    servicesTitle.classList.remove("obscure");
+    servicesText.classList.remove("obscure");
+    workContent.classList.remove("obscure");
+    workTitle.classList.remove("obscure");
+    developerContent.classList.remove("obscure");
+    serviceCards[0].classList.remove("obscure");
+    serviceCards[1].classList.remove("obscure");
+    serviceCards[2].classList.remove("obscure");
+  });
+});
 serviceCards[0].addEventListener("mouseover", () => {
   servicesBg.classList.add("service-wrapper-left");
-
   servicesBgs[0].classList.add("service-top");
   servicesBgs[1].classList.add("service-right");
   servicesBgs[2].classList.add("service-left");
@@ -555,6 +618,24 @@ const workBgs = document.querySelectorAll(".work-bg");
 const workBg = document.querySelectorAll(".work-bg-container");
 const workTexts = document.querySelectorAll(".work-piece-text");
 const workImgs = document.querySelectorAll(".work-piece-img");
+const workItems = document.querySelectorAll(".work-piece");
+const workText = document.getElementById("work-text");
+workItems.forEach((item) => {
+  item.addEventListener("mouseover", (e) => {
+    workTitle.classList.add("obscure");
+    // cvTitle.classList.add("obscure");
+    workText.classList.add("obscure");
+    servicesContent.classList.add("obscure");
+  });
+});
+workItems.forEach((item) => {
+  item.addEventListener("mouseout", (e) => {
+    workTitle.classList.remove("obscure");
+    // cvTitle.classList.remove("obscure");
+    workText.classList.remove("obscure");
+    servicesContent.classList.remove("obscure");
+  });
+});
 // console.log(workImgs[0].parentElement.children[1].children[1]);
 workTexts.forEach((text) => {
   text.addEventListener("mouseover", (e) => {
