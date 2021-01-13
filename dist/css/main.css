@@ -699,7 +699,7 @@ button {
 }
 
 #engineer-content .technical-skills .graph-content .github .bg {
-  background: linear-gradient(317deg, rgba(68, 170, 0, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(288deg, rgba(68, 170, 0, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .javascript {
@@ -708,7 +708,7 @@ button {
 }
 
 #engineer-content .technical-skills .graph-content .javascript .bg {
-  background: linear-gradient(205deg, rgba(250, 213, 0, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(165deg, rgba(250, 213, 0, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .html5 {
@@ -717,7 +717,7 @@ button {
 }
 
 #engineer-content .technical-skills .graph-content .html5 .bg {
-  background: linear-gradient(91deg, rgba(228, 77, 38, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(282deg, rgba(228, 77, 38, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .css3 {
@@ -726,7 +726,7 @@ button {
 }
 
 #engineer-content .technical-skills .graph-content .css3 .bg {
-  background: linear-gradient(353deg, rgba(38, 77, 228, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(201deg, rgba(38, 77, 228, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .sass {
@@ -735,7 +735,7 @@ button {
 }
 
 #engineer-content .technical-skills .graph-content .sass .bg {
-  background: linear-gradient(128deg, rgba(206, 103, 154, 0.95), rgba(2, 1, 1, 0.95));
+  background: linear-gradient(226deg, rgba(206, 103, 154, 0.95), rgba(2, 1, 1, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .microchip {
@@ -744,7 +744,7 @@ button {
 }
 
 #engineer-content .technical-skills .graph-content .microchip .bg {
-  background: linear-gradient(300deg, rgba(238, 58, 37, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(62deg, rgba(238, 58, 37, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .pcb {
@@ -753,7 +753,7 @@ button {
 }
 
 #engineer-content .technical-skills .graph-content .pcb .bg {
-  background: linear-gradient(139deg, rgba(73, 196, 56, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(231deg, rgba(73, 196, 56, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .c-plus {
@@ -762,7 +762,7 @@ button {
 }
 
 #engineer-content .technical-skills .graph-content .c-plus .bg {
-  background: linear-gradient(69deg, rgba(0, 86, 151, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(155deg, rgba(0, 86, 151, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .arduino {
@@ -771,7 +771,7 @@ button {
 }
 
 #engineer-content .technical-skills .graph-content .arduino .bg {
-  background: linear-gradient(194deg, rgba(0, 146, 151, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(73deg, rgba(0, 146, 151, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .matlab {
@@ -780,7 +780,7 @@ button {
 }
 
 #engineer-content .technical-skills .graph-content .matlab .bg {
-  background: linear-gradient(144deg, rgba(115, 25, 15, 0.95), rgba(84, 166, 187, 0.95));
+  background: linear-gradient(337deg, rgba(115, 25, 15, 0.95), rgba(84, 166, 187, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .right-arrow {
@@ -841,6 +841,9 @@ button {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   overflow: none;
   z-index: 1;
 }
@@ -848,7 +851,6 @@ button {
 .discs .disc {
   width: 60px;
   z-index: 1;
-  background: green;
   height: 60px;
   border-radius: 50%;
   -webkit-transform: scale(0);
@@ -1543,51 +1545,51 @@ button {
 }
 
 .disc-color-1 {
-  background-color: #d21e64 !important;
+  background-color: rgba(210, 30, 100, 0.7) !important;
 }
 
 .disc-color-2 {
-  background-color: #be1e78 !important;
+  background-color: rgba(190, 30, 120, 0.7) !important;
 }
 
 .disc-color-3 {
-  background-color: #aa1e8c !important;
+  background-color: rgba(170, 30, 140, 0.7) !important;
 }
 
 .disc-color-4 {
-  background-color: #961ea0 !important;
+  background-color: rgba(150, 30, 160, 0.7) !important;
 }
 
 .disc-color-5 {
-  background-color: #821eb4 !important;
+  background-color: rgba(130, 30, 180, 0.7) !important;
 }
 
 .disc-color-6 {
-  background-color: #6e1ec8 !important;
+  background-color: rgba(110, 30, 200, 0.7) !important;
 }
 
 .disc-color-7 {
-  background-color: #5a1ed2 !important;
+  background-color: rgba(90, 30, 210, 0.7) !important;
 }
 
 .disc-color-8 {
-  background-color: #461edc !important;
+  background-color: rgba(70, 30, 220, 0.7) !important;
 }
 
 .disc-color-9 {
-  background-color: #321ee6 !important;
+  background-color: rgba(50, 30, 230, 0.7) !important;
 }
 
 .disc-color-10 {
-  background-color: #141ef0 !important;
+  background-color: rgba(20, 30, 240, 0.7) !important;
 }
 
 .disc-color-11 {
-  background-color: #001eff !important;
+  background-color: rgba(0, 30, 255, 0.7) !important;
 }
 
 .disc-color-12 {
-  background-color: #0064ff !important;
+  background-color: rgba(0, 100, 255, 0.7) !important;
 }
 
 .service-right {

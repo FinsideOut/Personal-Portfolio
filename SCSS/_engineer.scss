@@ -264,12 +264,13 @@ $arrow-size: 10px;
   top: calc(35%-#{$disc-half-size});
   left: 0;
   @include flex(row, space-between);
+  align-items: flex-start;
   overflow: none;
   z-index: 1;
   .disc {
     width: $disc-size;
     z-index: 1;
-    background: green;
+    // background: green;
     height: $disc-size;
     border-radius: 50%;
     transform: scale(0);
