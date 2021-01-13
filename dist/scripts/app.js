@@ -676,6 +676,28 @@ const workTexts = document.querySelectorAll(".work-piece-text");
 const workImgs = document.querySelectorAll(".work-piece-img");
 const workItems = document.querySelectorAll(".work-piece");
 const workText = document.getElementById("work-text");
+const judeImg = document.getElementById("jude-img");
+const johnImg = document.getElementById("john-img");
+const newsImg = document.getElementById("news-img");
+judeImg.addEventListener("click", () => {
+  var strWindowFeatures = "location=yes,scrollbars=yes,status=yes";
+  var URL = "https://condescending-chandrasekhar-4d7ab6.netlify.app/";
+  // var win = window.open(URL, "_blank", strWindowFeatures);
+  window.open(URL, "_blank", strWindowFeatures);
+});
+johnImg.addEventListener("click", () => {
+  var strWindowFeatures = "location=yes,scrollbars=yes,status=yes";
+  var URL = "https://sharp-minsky-00b8d2.netlify.app/";
+  // var win = window.open(URL, "_blank", strWindowFeatures);
+  window.open(URL, "_blank", strWindowFeatures);
+});
+newsImg.addEventListener("click", () => {
+  var strWindowFeatures = "location=yes,scrollbars=yes,status=yes";
+  var URL = "https://clever-albattani-a31680.netlify.app/";
+  // var win = window.open(URL, "_blank", strWindowFeatures);
+  window.open(URL, "_blank", strWindowFeatures);
+});
+
 workItems.forEach((item) => {
   item.addEventListener("mouseover", (e) => {
     item.classList.add("target");
