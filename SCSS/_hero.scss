@@ -8,6 +8,7 @@ $hero-disc-size: 20px;
   top: 0;
   left: 0;
   opacity: 0;
+  transition: opacity 2000ms ease-in-out !important;
   .hero-disc {
     z-index: 2;
     // transition: transform 100ms linear;

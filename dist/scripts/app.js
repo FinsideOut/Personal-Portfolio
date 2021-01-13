@@ -1,4 +1,6 @@
 const bookText = document.querySelectorAll(".book-text-right, .book-text-left");
+homeButton = document.getElementById("go-home");
+
 // const bookTextRight = document.querySelectorAll(".book-text-right");
 // const bookTextLeft = document.querySelectorAll(".book-text-left");
 const bookPageRight = document.getElementById("right-page");
@@ -145,6 +147,7 @@ function toFullScreen() {
   bookBg.addEventListener("transitionend", shiftHeadersToFull);
 }
 function shiftHeadersToFull() {
+  homeButton.classList.add("obscure");
   bookBg.removeEventListener("transitionend", shiftHeadersToFull);
   logo.classList.add("logo-full");
   lead.classList.add("lead-full");
@@ -185,6 +188,8 @@ function addFullWidth(e) {
   }
 }
 function toHomeScreen() {
+  homeButton.classList.remove("obscure");
+
   educatorTitle.classList.remove("enlarge-title");
   engineerTitle.classList.remove("enlarge-title");
   developerTitle.classList.remove("enlarge-title");
@@ -783,7 +788,6 @@ $(".nav-link").on("click", function (e) {
   }
   // window.scrollBy(0, window.innerHeight / 2);
 });
-homeButton = document.getElementById("go-home");
 homeButton.addEventListener("mouseover", () => {
   homeButton.classList.add("normalize");
 });

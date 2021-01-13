@@ -104,7 +104,8 @@
     font-size: 3rem;
     color: white;
   }
-  opacity: 0.3;
+  opacity: 0;
+  transition: opacity $transit-time ease-in-out;
   z-index: 200;
   // border: 1px solid white;
   @include flex(column, center);
