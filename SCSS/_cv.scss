@@ -1,0 +1,4 @@
+#cv-content {
+  height: 50vh;
+  @include flex(column, space-evenly);
+}

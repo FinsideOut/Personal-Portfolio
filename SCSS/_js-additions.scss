@@ -85,7 +85,7 @@
   transform-origin: center;
 }
 .cv-full {
-  transform: translateY(700vh) !important;
+  transform: translateY(820vh) !important;
   // text-align: center;
 
   width: 100%;
@@ -288,6 +288,34 @@
 }
 .work-text-hover-7 {
   transform: translateX(calc((#{$work-bg-size} / 4) * -7)) scale(0.3);
+  opacity: 0.3;
+}
+.reverse-work-text-hover-1 {
+  transform: translateX(calc((#{$work-bg-size} / 4) * 1)) scale(0.9);
+  opacity: 0.9;
+}
+.reverse-work-text-hover-2 {
+  transform: translateX(calc((#{$work-bg-size} / 4) * 2)) scale(0.8);
+  opacity: 0.8;
+}
+.reverse-work-text-hover-3 {
+  transform: translateX(calc((#{$work-bg-size} / 4) * 3)) scale(0.7);
+  opacity: 0.7;
+}
+.reverse-work-text-hover-4 {
+  transform: translateX(calc((#{$work-bg-size} / 4) * 4)) scale(0.6);
+  opacity: 0.6;
+}
+.reverse-work-text-hover-5 {
+  transform: translateX(calc((#{$work-bg-size} / 4) * 5)) scale(0.5);
+  opacity: 0.5;
+}
+.reverse-work-text-hover-6 {
+  transform: translateX(calc((#{$work-bg-size} / 4) * 6)) scale(0.4);
+  opacity: 0.4;
+}
+.reverse-work-text-hover-7 {
+  transform: translateX(calc((#{$work-bg-size} / 4) * 7)) scale(0.3);
   opacity: 0.3;
 }
 

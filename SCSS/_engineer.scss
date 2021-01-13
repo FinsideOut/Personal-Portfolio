@@ -75,8 +75,10 @@ $arrow-size: 10px;
           transition: opacity $transit-time ease-in-out;
         }
         p {
-          width: 80%;
-          left: 10%;
+          width: 70%;
+          margin: auto;
+          // border: 1px solid white;
+          left: 15%;
           top: calc(50% + 75px);
         }
         h3 {
@@ -99,7 +101,7 @@ $arrow-size: 10px;
         }
       }
       .python {
-        left: calc(40% - #{$bg-half});
+        left: calc(30% - #{$bg-half});
         top: calc(20% - #{$bg-half});
         .bg {
           background: linear-gradient(
@@ -109,7 +111,7 @@ $arrow-size: 10px;
         }
       }
       .github {
-        left: calc(60% - #{$bg-half});
+        left: calc(50% - #{$bg-half});
         top: calc(10% - #{$bg-half});
         .bg {
           background: linear-gradient(
@@ -120,7 +122,7 @@ $arrow-size: 10px;
         }
       }
       .javascript {
-        left: calc(50% - #{$bg-half});
+        left: calc(40% - #{$bg-half});
         top: calc(50% - #{$bg-half});
         .bg {
           background: linear-gradient(
@@ -131,7 +133,7 @@ $arrow-size: 10px;
         }
       }
       .html5 {
-        left: calc(60% - #{$bg-half});
+        left: calc(50% - #{$bg-half});
         top: calc(40% - #{$bg-half});
         .bg {
           background: linear-gradient(
@@ -142,7 +144,7 @@ $arrow-size: 10px;
         }
       }
       .css3 {
-        left: calc(70% - #{$bg-half});
+        left: calc(60% - #{$bg-half});
         top: calc(30% - #{$bg-half});
         .bg {
           background: linear-gradient(
@@ -153,7 +155,7 @@ $arrow-size: 10px;
         }
       }
       .sass {
-        left: calc(80% - #{$bg-half});
+        left: calc(70% - #{$bg-half});
         top: calc(20% - #{$bg-half});
         .bg {
           background: linear-gradient(
@@ -164,7 +166,7 @@ $arrow-size: 10px;
         }
       }
       .microchip {
-        left: calc(65% - #{$bg-half});
+        left: calc(55% - #{$bg-half});
         top: calc(80% - #{$bg-half});
         .bg {
           background: linear-gradient(
@@ -175,7 +177,7 @@ $arrow-size: 10px;
         }
       }
       .pcb {
-        left: calc(80% - #{$bg-half});
+        left: calc(70% - #{$bg-half});
         top: calc(90% - #{$bg-half});
         .bg {
           background: linear-gradient(
@@ -197,7 +199,7 @@ $arrow-size: 10px;
         }
       }
       .arduino {
-        left: calc(80% - #{$bg-half});
+        left: calc(70% - #{$bg-half});
         top: calc(70% - #{$bg-half});
         .bg {
           background: linear-gradient(
@@ -208,7 +210,7 @@ $arrow-size: 10px;
         }
       }
       .matlab {
-        left: calc(40% - #{$bg-half});
+        left: calc(30% - #{$bg-half});
         top: calc(60% - #{$bg-half});
         .bg {
           background: linear-gradient(
@@ -246,11 +248,17 @@ $arrow-size: 10px;
 }
 .soft-skills {
   margin-top: 10vh;
+  height: 40vh;
+  .card {
+    height: 100%;
+    flex: 1;
+    align-self: flex-start;
+  }
 }
 .discs {
   // border: 1px solid white;
-  $disc-size: 50px;
-  $disc-half-size: 25px;
+  $disc-size: 60px;
+  $disc-half-size: 30px;
   width: 100%;
   position: absolute;
   top: calc(35%-#{$disc-half-size});

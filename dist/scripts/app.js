@@ -21,7 +21,7 @@ const servicesTitle = document.getElementById("services-title");
 const work = document.getElementById("work");
 const workTitle = document.getElementById("work-title");
 const cv = document.getElementById("cv");
-// const cvTitle = document.getElementById("cv-title");
+const cvTitle = document.getElementById("cv-title");
 
 const educatorContent = document.getElementById("educator-content");
 const engineerContent = document.getElementById("engineer-content");
@@ -112,7 +112,7 @@ function calcWidth() {
 }
 
 // state transition
-// bookPageRight.onclick = () => {
+// cvTitle.onclick = () => {
 //   changeState();
 // };
 logo.onclick = () => {
@@ -130,6 +130,14 @@ function changeState() {
 }
 
 function toFullScreen() {
+  if (document.body.scrollTop > 0) {
+    $("html, body").animate(
+      {
+        scrollTop: $("body").offset().top,
+      },
+      800
+    );
+  }
   removeCurve();
   contact.classList.add("hidden");
   body.classList.add("body-full");
@@ -157,7 +165,7 @@ function shiftHeadersToFull() {
   work.classList.add("work-full");
 
   cv.classList.add("cv-full");
-  // cvTitle.classList.add("elarge-title");
+  cvTitle.classList.add("enlarge-title");
 
   bookPageLeft.classList.add("page-to-center");
   bookPageRight.classList.add("page-to-center");
@@ -165,6 +173,7 @@ function shiftHeadersToFull() {
 }
 const rightNav = document.getElementById("right-nav");
 const heroContainer = document.querySelector(".hero-container");
+const items = document.querySelectorAll(".hidden");
 
 function addFullWidth(e) {
   if (e.propertyName == "font-size") {
@@ -181,14 +190,17 @@ function toHomeScreen() {
   developerTitle.classList.remove("enlarge-title");
   workTitle.classList.remove("enlarge-title");
   servicesTitle.classList.remove("enlarge-title");
+  cvTitle.classList.remove("enlarge-title");
 
   heroContainer.classList.remove("shown");
-
-  educatorContent.classList.remove("shown");
-  engineerContent.classList.remove("shown");
-  developerContent.classList.remove("shown");
-  servicesContent.classList.remove("shown");
-  workContent.classList.remove("shown");
+  items.forEach((item) => {
+    item.classList.remove("shown");
+  });
+  // educatorContent.classList.remove("shown");
+  // engineerContent.classList.remove("shown");
+  // developerContent.classList.remove("shown");
+  // servicesContent.classList.remove("shown");
+  // workContent.classList.remove("shown");
   // cvContent.classList.remove("shown");
   bookPageLeft.classList.remove("full-width");
   bookPageRight.classList.remove("full-width");
@@ -217,7 +229,6 @@ function revertBook() {
 }
 
 //from traversy mdeia
-const items = document.querySelectorAll(".hidden");
 
 const isInViewport = (el) => {
   const rect = el.getBoundingClientRect();
@@ -225,7 +236,7 @@ const isInViewport = (el) => {
     rect.top >= 0 &&
     rect.left >= 0 &&
     rect.bottom <=
-      (window.innerHeight * 2 || document.documentElement.clientHeight * 2) &&
+      (window.innerHeight * 4 || document.documentElement.clientHeight * 4) &&
     rect.right <= (window.innerWidth || document.documentElement.clientWidth)
   );
 };
@@ -640,34 +651,64 @@ workItems.forEach((item) => {
 });
 // console.log(workImgs[0].parentElement.children[1].children[1]);
 workTexts.forEach((text) => {
+  const bgContainer = text.parentElement.children[1].children[1];
   text.addEventListener("mouseover", (e) => {
-    text.parentElement.children[1].children[1].classList.add("normalize");
-    for (let i = 0; i < workBgs.length; i++) {
-      workBgs[i].classList.add("work-text-hover-" + [i]);
+    bgContainer.classList.add("normalize");
+    if (text.parentElement.classList.contains("reverse")) {
+      for (let i = 0; i < bgContainer.childElementCount; i++) {
+        bgContainer.children[i].classList.add("reverse-work-text-hover-" + [i]);
+      }
+    } else {
+      for (let i = 0; i < bgContainer.childElementCount; i++) {
+        bgContainer.children[i].classList.add("work-text-hover-" + [i]);
+      }
     }
   });
 });
 workTexts.forEach((text) => {
+  const bgContainer = text.parentElement.children[1].children[1];
   text.addEventListener("mouseout", (e) => {
-    text.parentElement.children[1].children[1].classList.remove("normalize");
-    for (let i = 0; i < workBgs.length; i++) {
-      workBgs[i].classList.remove("work-text-hover-" + [i]);
+    bgContainer.classList.remove("normalize");
+    if (text.parentElement.classList.contains("reverse")) {
+      for (let i = 0; i < bgContainer.childElementCount; i++) {
+        bgContainer.children[i].classList.remove(
+          "reverse-work-text-hover-" + [i]
+        );
+      }
+    } else {
+      for (let i = 0; i < bgContainer.childElementCount; i++) {
+        bgContainer.children[i].classList.remove("work-text-hover-" + [i]);
+      }
     }
   });
 });
 workImgs.forEach((img) => {
+  const bgContainer = img.parentElement.children[1].children[1];
   img.addEventListener("mouseover", (e) => {
-    img.parentElement.children[1].children[1].classList.add("normalize");
-    for (let i = 0; i < workBgs.length; i++) {
-      workBgs[i].classList.add("work-img-hover-" + [i]);
+    bgContainer.classList.add("normalize");
+    if (img.parentElement.classList.contains("reverse")) {
+      for (let i = 0; i < bgContainer.childElementCount; i++) {
+        bgContainer.children[i].classList.add("work-img-hover-" + [i]);
+      }
+    } else {
+      for (let i = 0; i < bgContainer.childElementCount; i++) {
+        bgContainer.children[i].classList.add("work-img-hover-" + [i]);
+      }
     }
   });
 });
 workImgs.forEach((img) => {
+  const bgContainer = img.parentElement.children[1].children[1];
   img.addEventListener("mouseout", (e) => {
-    img.parentElement.children[1].children[1].classList.remove("normalize");
-    for (let i = 0; i < workBgs.length; i++) {
-      workBgs[i].classList.remove("work-img-hover-" + [i]);
+    bgContainer.classList.remove("normalize");
+    if (img.parentElement.classList.contains("reverse")) {
+      for (let i = 0; i < bgContainer.childElementCount; i++) {
+        bgContainer.children[i].classList.remove("work-img-hover-" + [i]);
+      }
+    } else {
+      for (let i = 0; i < bgContainer.childElementCount; i++) {
+        bgContainer.children[i].classList.remove("work-img-hover-" + [i]);
+      }
     }
   });
 });
@@ -735,10 +776,51 @@ $(".nav-link").on("click", function (e) {
         {
           scrollTop: $(hash).offset().top - 100,
         },
-        800
+        1000
       );
     }, 1500);
     // console.log(hash, $(hash).offset().top - 100);
   }
   // window.scrollBy(0, window.innerHeight / 2);
 });
+homeButton = document.getElementById("go-home");
+homeButton.addEventListener("mouseover", () => {
+  homeButton.classList.add("normalize");
+});
+homeButton.addEventListener("mouseout", () => {
+  homeButton.classList.remove("normalize");
+});
+$("#go-home").click(function () {
+  if (isFull) {
+    $("html").animate(
+      {
+        scrollTop: 0,
+      },
+      1000,
+      function () {
+        console.log("wtf");
+        setTimeout(function () {
+          changeState();
+        }, 200);
+      }
+    );
+  }
+});
+// homeButton.addEventListener("click", () => {
+//   // $("html, body").animate(
+//   //   { scrollTop: 0 },
+//   //   { duration: 1000, complete: changeState() }
+//   // );
+// });
+// $("html, body")
+//   .animate(
+//     {
+//       scrollTop: 0,
+//     },
+//     {
+//       easing: alert("start ani"),
+//     },
+//     duration
+//   )
+//   .promise()
+//   .done(changeState());

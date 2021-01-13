@@ -2,7 +2,6 @@
 @import "vars";
 @import "funcs";
 @import "utils";
-@import "menu";
 @import "hero";
 #book-screen,
 #social,
@@ -89,12 +88,28 @@
 @import "developer";
 @import "services";
 @import "work";
+@import "cv";
 #social {
   position: fixed;
   bottom: 0;
   right: 0;
   @include flex(column, flex-end);
   width: 5vw;
+}
+#go-home {
+  position: fixed;
+  top: 0;
+  left: 0;
+  i {
+    font-size: 3rem;
+    color: white;
+  }
+  opacity: 0.3;
+  z-index: 200;
+  // border: 1px solid white;
+  @include flex(column, center);
+  width: 100px;
+  height: 100px;
 }
 
 #main-footer {
@@ -138,7 +153,8 @@
 #work-text,
 #work-title,
 #work-content,
-#cv {
+#cv, 
+#cv-content {
   transition-property: font-size, transform, opacity;
   transition-duration: $transit-time !important;
   transition-timing-function: ease-in-out;

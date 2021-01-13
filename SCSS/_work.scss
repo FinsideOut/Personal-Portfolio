@@ -1,6 +1,8 @@
 $work-bg-size: 500px;
+
 .work-piece {
   //   border: 1px solid white;
+  margin: 8rem 0rem;
   @include flex(row, space-between);
   width: 100%;
   position: relative;
@@ -56,4 +58,7 @@ $work-bg-size: 500px;
     position: relative;
     z-index: 5;
   }
+}
+.reverse {
+  flex-direction: row-reverse;
 }

@@ -22,25 +22,8 @@
             <i class="fab fa-twitter"></i>
             <i class="fab fa-instagram"></i>
         </aside>
-        <aside id='menu-alt'>
-            <div class="menu-wrap">
-                <input type="checkbox" class='toggler'>
-                <div class="hamburger">
-                    <div></div>
-                </div>
-                <div class="menu">
-                    <div>
-                        <div>
-                            <ul>
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">About</a></li>
-                                <li><a href="#">Services</a></li>
-                                <li><a href="#">Contact</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <aside id="go-home">
+            <i class="fas fa-home"></i>
         </aside>
         <main id="book-screen">
             <!-- <svg src="./svg/basic_book_opto.svg"></svg> -->
@@ -297,20 +280,20 @@
                                         <div class="cards">
 
                                             <div class="card">
-                                                <h3 class="card-title">Team Work</h3>
+                                                <h3 class="card-title">Team <br />Work</h3>
                                                 <p class="card-text">Communication, sticking to deadlines and personal
                                                     accountability have been essential skills developed during my many
                                                     group projects and reports at University</p>
                                             </div>
                                             <div class="card">
-                                                <h3 class="card-title">Project Management</h3>
+                                                <h3 class="card-title">Project <br />Management</h3>
                                                 <p class="card-text">For larger projects it was often necessary to
                                                     collate the progress of the group and present to our mentor weekly.
                                                     This meant ensuring each member of the group kept appropriate
                                                     documentation and completed tasks on schedule.</p>
                                             </div>
                                             <div class="card">
-                                                <h3 class="card-title">Project Planning</h3>
+                                                <h3 class="card-title">Project <br />Planning</h3>
                                                 <p class="card-text">Setting success criteria, prioritizing features,
                                                     envisioning deadlines that account for inevitable delays. Many
                                                     projects fail before they have even begun due to inadequate
@@ -318,7 +301,7 @@
                                                     feverishly</p>
                                             </div>
                                             <div class="card">
-                                                <h3 class="card-title">Quick Learning</h3>
+                                                <h3 class="card-title">Quick <br /> Learning</h3>
                                                 <p class="card-text">I sometimes felt overwhelmed with the rate at which
                                                     University threw new technologies and languages at us. However this
                                                     trial by fire has meant that learning new technologies has become a
@@ -474,12 +457,59 @@
                                     Portfolio</a>
                             </h2>
                             <div class="container">
-                                <section id="work-content" class="hidden">
-                                    <p class="lead" id='work-text'>My best and most recent work, limited to my recent
+                                <section id="work-content" class='hidden'>
+                                    <p class="lead hidden" id='work-text'>My best and most recent work, limited to my
+                                        recent
                                         ventures in web
                                         development. Websites are way more fun to look at than schematics and
                                         algorithms, after all!</p>
-                                    <div class="work-piece">
+                                    <div class="work-piece hidden">
+                                        <div class="work-piece-text">
+                                            <h3 class="work-piece-title">PikaJude</h3>
+                                            <p class="work-piece-info">PikaJude is a Twitch streamer and gamer from
+                                                Glasgow, specializing in first person shooters and boutique booze.
+                                            </p>
+                                            <a href="" class="work-piece-link"><i class="fab fa-github"></i>View Source
+                                                Code</a>
+                                        </div>
+                                        <div class='work-piece-img' id="jude-shot">
+                                            <img src="./img/Jude_shot.PNG" alt="PikaJude Not Found">
+                                            <div class="work-bg-container">
+                                                <div class="work-bg"></div>
+                                                <div class="work-bg"></div>
+                                                <div class="work-bg"></div>
+                                                <div class="work-bg"></div>
+                                                <div class="work-bg"></div>
+                                                <div class="work-bg"></div>
+                                                <div class="work-bg"></div>
+                                                <div class="work-bg"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="work-piece reverse hidden">
+                                        <div class="work-piece-text">
+                                            <h3 class="work-piece-title">PikaJude</h3>
+                                            <p class="work-piece-info">PikaJude is a Twitch streamer and gamer from
+                                                Glasgow, specializing in first person shooters and boutique booze.
+                                            </p>
+                                            <a href="" class="work-piece-link"><i class="fab fa-github"></i>View Source
+                                                Code</a>
+                                        </div>
+                                        <div class='work-piece-img' id="jude-shot">
+                                            <img src="./img/Jude_shot.PNG" alt="PikaJude Not Found">
+                                            <div class="work-bg-container">
+                                                <div class="work-bg"></div>
+                                                <div class="work-bg"></div>
+                                                <div class="work-bg"></div>
+                                                <div class="work-bg"></div>
+                                                <div class="work-bg"></div>
+                                                <div class="work-bg"></div>
+                                                <div class="work-bg"></div>
+                                                <div class="work-bg"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="work-piece hidden">
                                         <div class="work-piece-text">
                                             <h3 class="work-piece-title">PikaJude</h3>
                                             <p class="work-piece-info">PikaJude is a Twitch streamer and gamer from
@@ -508,8 +538,15 @@
                         </li>
                         <li id='cv'>
                             <h2>
-                                <a href="#" class='book-text-right '>My Curriculum Vitae</a>
+                                <a href="#cv-content" id='cv-title' class='book-text-right nav-link'>My Curriculum
+                                    Vitae</a>
                             </h2>
+                            <div class="container">
+                                <section id="cv-content" class='hidden'>
+                                    <p>For your records a downloadable version of my CV is available here</p>
+                                    <h3>Download My CV</h3>
+                                </section>
+                            </div>
 
                         </li>
                     </ul>
