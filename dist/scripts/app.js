@@ -24,6 +24,7 @@ const work = document.getElementById("work");
 const workTitle = document.getElementById("work-title");
 const cv = document.getElementById("cv");
 const cvTitle = document.getElementById("cv-title");
+const cvContent = document.getElementById("cv-content");
 
 const educatorContent = document.getElementById("educator-content");
 const engineerContent = document.getElementById("engineer-content");
@@ -524,15 +525,15 @@ developerCards.forEach((card) => {
     // console.log(mouseX, mouseY);
     card.children[0].children[2].style.transform =
       "translate(" + shiftX + "px," + shiftY + "px)";
-    card.children[1].style.transform =
-      "translate(" + shiftX / 3 + "px," + shiftY / 3 + "px)";
-    card.children[2].style.transform =
-      "translate(" + shiftX / 3 + "px," + shiftY / 3 + "px)";
-    // console.log(mouseX, mouseY);
-    card.children[3].style.transform =
-      "translate(" + shiftX / 3 + "px," + shiftY / 3 + "px)";
-    card.children[4].style.transform =
-      "translate(" + shiftX / 3 + "px," + shiftY / 3 + "px)";
+    // card.children[1].style.transform =
+    //   "translate(" + shiftX / 3 + "px," + shiftY / 3 + "px)";
+    // card.children[2].style.transform =
+    //   "translate(" + shiftX / 3 + "px," + shiftY / 3 + "px)";
+    // // console.log(mouseX, mouseY);
+    // card.children[3].style.transform =
+    //   "translate(" + shiftX / 3 + "px," + shiftY / 3 + "px)";
+    // card.children[4].style.transform =
+    //   "translate(" + shiftX / 3 + "px," + shiftY / 3 + "px)";
   });
 });
 
@@ -541,8 +542,10 @@ const servicesBg = document.getElementById("services-bg");
 const servicesText = document.getElementById("services-text");
 const serviceCards = document.querySelectorAll(".service-card");
 const servicesBgs = document.querySelectorAll(".services-bg");
+const enquire = document.querySelector(".enquire-link");
 serviceCards.forEach((card) => {
   card.addEventListener("mouseover", (e) => {
+    enquire.classList.add("obscure");
     servicesTitle.classList.add("obscure");
     servicesText.classList.add("obscure");
     workContent.classList.add("obscure");
@@ -562,6 +565,7 @@ serviceCards.forEach((card) => {
 });
 serviceCards.forEach((card) => {
   card.addEventListener("mouseout", (e) => {
+    enquire.classList.remove("obscure");
     servicesTitle.classList.remove("obscure");
     servicesText.classList.remove("obscure");
     workContent.classList.remove("obscure");
@@ -631,6 +635,40 @@ serviceCards[2].addEventListener("mouseout", () => {
     servicesBgs[i].classList.remove("services-red-" + [i]);
   }
 });
+enquire.addEventListener("mouseover", () => {
+  servicesTitle.classList.add("obscure");
+  servicesText.classList.add("obscure");
+  workContent.classList.add("obscure");
+  workTitle.classList.add("obscure");
+  serviceCards.forEach((card) => {
+    card.classList.add("obscure");
+  });
+  servicesBg.classList.add("service-wrapper-bottom");
+  servicesBgs[2].classList.add("service-top");
+  servicesBgs[0].classList.add("service-right");
+  servicesBgs[1].classList.add("service-left");
+  servicesBgs[0].classList.add("services-red-" + [0]);
+  servicesBgs[1].classList.add("services-green-" + [0]);
+  servicesBgs[2].classList.add("services-blue-" + [0]);
+});
+enquire.addEventListener("mouseout", () => {
+  serviceCards.forEach((card) => {
+    card.classList.remove("obscure");
+  });
+  servicesTitle.classList.remove("obscure");
+  servicesText.classList.remove("obscure");
+  workContent.classList.remove("obscure");
+  workTitle.classList.remove("obscure");
+
+  servicesBg.classList.remove("service-wrapper-bottom");
+  servicesBgs[2].classList.remove("service-top");
+  servicesBgs[0].classList.remove("service-right");
+  servicesBgs[1].classList.remove("service-left");
+
+  servicesBgs[0].classList.remove("services-red-" + [0]);
+  servicesBgs[1].classList.remove("services-green-" + [0]);
+  servicesBgs[2].classList.remove("services-blue-" + [0]);
+});
 
 const workBgs = document.querySelectorAll(".work-bg");
 const workBg = document.querySelectorAll(".work-bg-container");
@@ -640,18 +678,33 @@ const workItems = document.querySelectorAll(".work-piece");
 const workText = document.getElementById("work-text");
 workItems.forEach((item) => {
   item.addEventListener("mouseover", (e) => {
+    item.classList.add("target");
     workTitle.classList.add("obscure");
-    // cvTitle.classList.add("obscure");
+    cvTitle.classList.add("obscure");
+    cvContent.classList.add("obscure");
     workText.classList.add("obscure");
     servicesContent.classList.add("obscure");
+    console.log(e.target);
+    for (let i = 0; i < workItems.length; i++) {
+      if (!workItems[i].classList.contains("target")) {
+        workItems[i].classList.add("obscure");
+      }
+    }
   });
 });
 workItems.forEach((item) => {
   item.addEventListener("mouseout", (e) => {
+    item.classList.remove("target");
+    cvTitle.classList.remove("obscure");
+    cvContent.classList.remove("obscure");
     workTitle.classList.remove("obscure");
     // cvTitle.classList.remove("obscure");
     workText.classList.remove("obscure");
     servicesContent.classList.remove("obscure");
+    for (let i = 0; i < workItems.length; i++) {
+      // if (!workItems[i].classList.contains("target")) {
+      workItems[i].classList.remove("obscure");
+    }
   });
 });
 // console.log(workImgs[0].parentElement.children[1].children[1]);
@@ -794,7 +847,7 @@ homeButton.addEventListener("mouseover", () => {
 homeButton.addEventListener("mouseout", () => {
   homeButton.classList.remove("normalize");
 });
-$("#go-home").click(function () {
+$("#go-home, .nav-link-full").click(function () {
   if (isFull && window.scrollY > 0) {
     $("html").animate(
       {
@@ -812,6 +865,7 @@ $("#go-home").click(function () {
     changeState();
   }
 });
+
 // homeButton.addEventListener("click", () => {
 //   // $("html, body").animate(
 //   //   { scrollTop: 0 },

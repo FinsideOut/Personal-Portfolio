@@ -17,10 +17,10 @@ body {
 
 span {
   display: inline-block;
-  -webkit-transition: -webkit-transform 500ms ease-in-out !important;
-  transition: -webkit-transform 500ms ease-in-out !important;
-  transition: transform 500ms ease-in-out !important;
-  transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out !important;
+  -webkit-transition: -webkit-transform 300ms ease-in-out !important;
+  transition: -webkit-transform 300ms ease-in-out !important;
+  transition: transform 300ms ease-in-out !important;
+  transition: transform 300ms ease-in-out, -webkit-transform 300ms ease-in-out !important;
 }
 
 a {
@@ -231,6 +231,12 @@ button {
   margin: 0.5rem 1rem;
 }
 
+.nav-link-full {
+  -webkit-transition: opacity 300ms ease-in-out;
+  transition: opacity 300ms ease-in-out;
+  cursor: pointer;
+}
+
 .hero-container {
   width: 100%;
   height: 100%;
@@ -290,10 +296,10 @@ button {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transition: -webkit-transform 500ms ease-in-out;
-  transition: -webkit-transform 500ms ease-in-out;
-  transition: transform 500ms ease-in-out;
-  transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
+  -webkit-transition: -webkit-transform 300ms ease-in-out;
+  transition: -webkit-transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
   width: 40%;
   height: 85%;
   z-index: 3;
@@ -386,8 +392,8 @@ button {
 #educator-content .hover-icons-wrapper .educator-icons-container > div {
   -webkit-transition-property: opacity, color;
   transition-property: opacity, color;
-  -webkit-transition-duration: 500ms;
-          transition-duration: 500ms;
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
   -webkit-transition-timing-function: ease-in-out;
           transition-timing-function: ease-in-out;
 }
@@ -448,8 +454,8 @@ button {
 #educator-content .hover-icons-wrapper .more-info-container p {
   -webkit-transition-property: opacity;
   transition-property: opacity;
-  -webkit-transition-duration: 500ms;
-          transition-duration: 500ms;
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
   -webkit-transition-timing-function: ease-in-out;
           transition-timing-function: ease-in-out;
   position: absolute;
@@ -504,8 +510,8 @@ button {
   transition-property: opacity, -webkit-transform;
   transition-property: opacity, transform;
   transition-property: opacity, transform, -webkit-transform;
-  -webkit-transition-duration: 500ms;
-          transition-duration: 500ms;
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
   -webkit-transition-timing-function: ease-in-out;
           transition-timing-function: ease-in-out;
   position: absolute;
@@ -521,8 +527,8 @@ button {
   transition-property: background-color, -webkit-transform;
   transition-property: background-color, transform;
   transition-property: background-color, transform, -webkit-transform;
-  -webkit-transition-duration: 500ms;
-          transition-duration: 500ms;
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
   -webkit-transition-timing-function: ease-in-out;
           transition-timing-function: ease-in-out;
   height: 500px;
@@ -578,8 +584,8 @@ button {
 #engineer-content .technical-skills .x-label,
 #engineer-content .technical-skills .y-label,
 #engineer-content .technical-skills .graph-title {
-  -webkit-transition: opacity 500ms ease-in-out;
-  transition: opacity 500ms ease-in-out;
+  -webkit-transition: opacity 300ms ease-in-out;
+  transition: opacity 300ms ease-in-out;
 }
 
 #engineer-content .technical-skills .x-label {
@@ -607,8 +613,8 @@ button {
   border-bottom: 3px solid white;
   position: relative;
   color: white;
-  -webkit-transition: border-color 500ms ease-in-out;
-  transition: border-color 500ms ease-in-out;
+  -webkit-transition: border-color 300ms ease-in-out;
+  transition: border-color 300ms ease-in-out;
 }
 
 #engineer-content .technical-skills .graph-content img,
@@ -637,8 +643,8 @@ button {
   position: absolute;
   text-align: center;
   opacity: 0;
-  -webkit-transition: opacity 500ms ease-in-out;
-  transition: opacity 500ms ease-in-out;
+  -webkit-transition: opacity 300ms ease-in-out;
+  transition: opacity 300ms ease-in-out;
 }
 
 #engineer-content .technical-skills .graph-content .graph-icons p {
@@ -662,8 +668,8 @@ button {
   transition-property: opacity, -webkit-transform;
   transition-property: opacity, transform;
   transition-property: opacity, transform, -webkit-transform;
-  -webkit-transition-duration: 500ms;
-          transition-duration: 500ms;
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
   -webkit-transition-timing-function: ease-in-out;
           transition-timing-function: ease-in-out;
   z-index: 5;
@@ -693,7 +699,7 @@ button {
 }
 
 #engineer-content .technical-skills .graph-content .github .bg {
-  background: linear-gradient(73deg, rgba(68, 170, 0, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(317deg, rgba(68, 170, 0, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .javascript {
@@ -702,7 +708,7 @@ button {
 }
 
 #engineer-content .technical-skills .graph-content .javascript .bg {
-  background: linear-gradient(48deg, rgba(250, 213, 0, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(205deg, rgba(250, 213, 0, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .html5 {
@@ -711,7 +717,7 @@ button {
 }
 
 #engineer-content .technical-skills .graph-content .html5 .bg {
-  background: linear-gradient(60deg, rgba(228, 77, 38, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(91deg, rgba(228, 77, 38, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .css3 {
@@ -720,7 +726,7 @@ button {
 }
 
 #engineer-content .technical-skills .graph-content .css3 .bg {
-  background: linear-gradient(198deg, rgba(38, 77, 228, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(353deg, rgba(38, 77, 228, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .sass {
@@ -729,7 +735,7 @@ button {
 }
 
 #engineer-content .technical-skills .graph-content .sass .bg {
-  background: linear-gradient(230deg, rgba(206, 103, 154, 0.95), rgba(2, 1, 1, 0.95));
+  background: linear-gradient(128deg, rgba(206, 103, 154, 0.95), rgba(2, 1, 1, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .microchip {
@@ -738,7 +744,7 @@ button {
 }
 
 #engineer-content .technical-skills .graph-content .microchip .bg {
-  background: linear-gradient(169deg, rgba(238, 58, 37, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(300deg, rgba(238, 58, 37, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .pcb {
@@ -747,7 +753,7 @@ button {
 }
 
 #engineer-content .technical-skills .graph-content .pcb .bg {
-  background: linear-gradient(86deg, rgba(73, 196, 56, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(139deg, rgba(73, 196, 56, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .c-plus {
@@ -756,7 +762,7 @@ button {
 }
 
 #engineer-content .technical-skills .graph-content .c-plus .bg {
-  background: linear-gradient(102deg, rgba(0, 86, 151, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(69deg, rgba(0, 86, 151, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .arduino {
@@ -765,7 +771,7 @@ button {
 }
 
 #engineer-content .technical-skills .graph-content .arduino .bg {
-  background: linear-gradient(328deg, rgba(0, 146, 151, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(194deg, rgba(0, 146, 151, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .matlab {
@@ -774,7 +780,7 @@ button {
 }
 
 #engineer-content .technical-skills .graph-content .matlab .bg {
-  background: linear-gradient(142deg, rgba(115, 25, 15, 0.95), rgba(84, 166, 187, 0.95));
+  background: linear-gradient(144deg, rgba(115, 25, 15, 0.95), rgba(84, 166, 187, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .right-arrow {
@@ -786,8 +792,8 @@ button {
   position: absolute;
   bottom: -10px;
   right: -10px;
-  -webkit-transition: border-color 500ms ease-in-out;
-  transition: border-color 500ms ease-in-out;
+  -webkit-transition: border-color 300ms ease-in-out;
+  transition: border-color 300ms ease-in-out;
 }
 
 #engineer-content .technical-skills .graph-content .up-arrow {
@@ -799,8 +805,8 @@ button {
   position: absolute;
   top: -10px;
   left: -10px;
-  -webkit-transition: border-color 500ms ease-in-out;
-  transition: border-color 500ms ease-in-out;
+  -webkit-transition: border-color 300ms ease-in-out;
+  transition: border-color 300ms ease-in-out;
 }
 
 .soft-skills {
@@ -851,8 +857,8 @@ button {
   transition-property: opacity, background-color, -webkit-transform;
   transition-property: transform, opacity, background-color;
   transition-property: transform, opacity, background-color, -webkit-transform;
-  -webkit-transition-duration: 500ms;
-          transition-duration: 500ms;
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
   -webkit-transition-timing-function: ease-in-out;
           transition-timing-function: ease-in-out;
 }
@@ -864,10 +870,10 @@ button {
   z-index: 1;
   -webkit-transform: scale(0);
           transform: scale(0);
-  -webkit-transition: -webkit-transform 500ms ease-in-out;
-  transition: -webkit-transform 500ms ease-in-out;
-  transition: transform 500ms ease-in-out;
-  transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
+  -webkit-transition: -webkit-transform 300ms ease-in-out;
+  transition: -webkit-transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
 }
 
 #developer-content {
@@ -940,10 +946,21 @@ button {
   transition: transform 50ms ease-in-out, -webkit-transform 50ms ease-in-out;
 }
 
+#developer-content .wrap-center {
+  background: rgba(94, 211, 243, 0.3);
+}
+
+#developer-content .wrap-left {
+  background: rgba(250, 213, 0, 0.3);
+}
+
+#developer-content .wrap-right {
+  background: rgba(0, 255, 150, 0.3);
+}
+
 #developer-content .dbg-1 {
   width: 700px;
   height: 700px;
-  background: rgba(255, 70, 10, 0.3);
   top: calc(50% - 700px/ 2);
   left: calc(50% - 700px/ 2);
 }
@@ -951,7 +968,6 @@ button {
 #developer-content .dbg-2 {
   width: calc(700px - 100px);
   height: calc(700px - 100px);
-  background: rgba(255, 70, 10, 0.3);
   top: calc((50% - (700px/ 2)) + (100px/ 2));
   left: calc((50% - 700px/ 2) + (100px / 2));
 }
@@ -959,7 +975,6 @@ button {
 #developer-content .dbg-3 {
   width: calc(700px - 100px* 2);
   height: calc(700px - 100px* 2);
-  background: rgba(255, 70, 10, 0.3);
   top: calc((50% - (700px/ 2)) + (100px));
   left: calc((50% - 700px/ 2) + (100px));
 }
@@ -973,10 +988,10 @@ button {
   height: 100%;
   -webkit-transform: scale(0);
           transform: scale(0);
-  -webkit-transition: -webkit-transform 500ms ease-in-out;
-  transition: -webkit-transform 500ms ease-in-out;
-  transition: transform 500ms ease-in-out;
-  transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
+  -webkit-transition: -webkit-transform 300ms ease-in-out;
+  transition: -webkit-transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
 }
 
 @use 'sass:math';
@@ -986,6 +1001,7 @@ button {
 
 #services-content .services-wrapper {
   position: relative;
+  z-index: 80;
 }
 
 #services-content .cards {
@@ -1010,12 +1026,26 @@ button {
 }
 
 #services-content .cards .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  height: 100%;
   text-align: center;
   width: 40%;
 }
 
 #services-content .cards .card .card-title {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 #services-content .bgs {
@@ -1030,8 +1060,8 @@ button {
   transition-property: background-color, -webkit-transform;
   transition-property: transform, background-color;
   transition-property: transform, background-color, -webkit-transform;
-  -webkit-transition-duration: 500ms;
-          transition-duration: 500ms;
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
   -webkit-transition-timing-function: ease-in-out;
           transition-timing-function: ease-in-out;
 }
@@ -1048,10 +1078,20 @@ button {
   transition-property: background-color, -webkit-transform;
   transition-property: transform, background-color;
   transition-property: transform, background-color, -webkit-transform;
-  -webkit-transition-duration: 500ms;
-          transition-duration: 500ms;
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
   -webkit-transition-timing-function: ease-in-out;
           transition-timing-function: ease-in-out;
+}
+
+.enquire-link {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+  padding-bottom: 0 3rem 6rem;
+  z-index: 100;
 }
 
 .work-piece {
@@ -1095,8 +1135,8 @@ button {
   transition-property: opacity, -webkit-transform;
   transition-property: transform, opacity;
   transition-property: transform, opacity, -webkit-transform;
-  -webkit-transition-duration: 500ms;
-          transition-duration: 500ms;
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
   -webkit-transition-timing-function: ease-in-out;
           transition-timing-function: ease-in-out;
   -webkit-transform: scale(0);
@@ -1115,8 +1155,8 @@ button {
   transition-property: opacity, -webkit-transform;
   transition-property: opacity, transform;
   transition-property: opacity, transform, -webkit-transform;
-  -webkit-transition-duration: 500ms;
-          transition-duration: 500ms;
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
   -webkit-transition-timing-function: ease-in-out;
           transition-timing-function: ease-in-out;
   position: absolute;
@@ -1131,6 +1171,22 @@ button {
 
 .work-piece .work-piece-img .work-bg:nth-child(odd) {
   background: rgba(0, 180, 250, 0.5) !important;
+}
+
+.work-piece .work-piece-img .john-shot .work-bg {
+  background: rgba(250, 213, 0, 0.5);
+}
+
+.work-piece .work-piece-img .john-shot .work-bg:nth-child(odd) {
+  background: rgba(0, 180, 150, 0.5) !important;
+}
+
+.work-piece .work-piece-img .news-shot .work-bg {
+  background: rgba(250, 0, 255, 0.5);
+}
+
+.work-piece .work-piece-img .news-shot .work-bg:nth-child(odd) {
+  background: rgba(255, 50, 0, 0.5) !important;
 }
 
 .work-piece .work-piece-text {
@@ -1187,8 +1243,8 @@ button {
   top: 0;
   left: 0;
   opacity: 0;
-  -webkit-transition: opacity 500ms ease-in-out;
-  transition: opacity 500ms ease-in-out;
+  -webkit-transition: opacity 300ms ease-in-out;
+  transition: opacity 300ms ease-in-out;
   z-index: 200;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1255,13 +1311,14 @@ button {
 #work-title,
 #work-content,
 #cv,
+#cv-title,
 #cv-content {
   -webkit-transition-property: font-size, opacity, -webkit-transform;
   transition-property: font-size, opacity, -webkit-transform;
   transition-property: font-size, transform, opacity;
   transition-property: font-size, transform, opacity, -webkit-transform;
-  -webkit-transition-duration: 500ms !important;
-          transition-duration: 500ms !important;
+  -webkit-transition-duration: 300ms !important;
+          transition-duration: 300ms !important;
   -webkit-transition-timing-function: ease-in-out;
           transition-timing-function: ease-in-out;
 }
@@ -1283,8 +1340,8 @@ button {
 
 .body-full {
   background: black !important;
-  -webkit-transition: background-color 500ms ease-in-out;
-  transition: background-color 500ms ease-in-out;
+  -webkit-transition: background-color 300ms ease-in-out;
+  transition: background-color 300ms ease-in-out;
 }
 
 .page-to-center {
@@ -1316,8 +1373,8 @@ button {
   transition-property: font-size, -webkit-transform;
   transition-property: transform, font-size;
   transition-property: transform, font-size, -webkit-transform;
-  -webkit-transition-duration: 500ms;
-          transition-duration: 500ms;
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
   -webkit-transition-timing-function: ease-in-out;
           transition-timing-function: ease-in-out;
 }
@@ -1377,16 +1434,16 @@ button {
 }
 
 .work-full {
-  -webkit-transform: translateY(600vh) !important;
-          transform: translateY(600vh) !important;
+  -webkit-transform: translateY(630vh) !important;
+          transform: translateY(630vh) !important;
   width: 100%;
   -webkit-transform-origin: center;
           transform-origin: center;
 }
 
 .cv-full {
-  -webkit-transform: translateY(820vh) !important;
-          transform: translateY(820vh) !important;
+  -webkit-transform: translateY(840vh) !important;
+          transform: translateY(840vh) !important;
   width: 100%;
   -webkit-transform-origin: center;
           transform-origin: center;
@@ -1395,8 +1452,8 @@ button {
 .hidden {
   pointer-events: none;
   opacity: 0;
-  -webkit-transition: opacity 500ms ease-in-out;
-  transition: opacity 500ms ease-in-out;
+  -webkit-transition: opacity 300ms ease-in-out;
+  transition: opacity 300ms ease-in-out;
 }
 
 .shown {
@@ -1556,6 +1613,11 @@ button {
 .service-wrapper-center {
   -webkit-transform: scale(1) rotate(0deg) translateX(0%) !important;
           transform: scale(1) rotate(0deg) translateX(0%) !important;
+}
+
+.service-wrapper-bottom {
+  -webkit-transform: scale(1) translateY(60vh) rotate(180deg) !important;
+          transform: scale(1) translateY(60vh) rotate(180deg) !important;
 }
 
 .service-top {
@@ -1799,5 +1861,9 @@ button {
   -webkit-transform: translateX(calc((500px/ 3) * -3));
           transform: translateX(calc((500px/ 3) * -3));
   background-color: rgba(0, 250, 200, 0.5) !important;
+}
+
+#cv-content h3 {
+  cursor: pointer;
 }
 /*# sourceMappingURL=main.css.map */

@@ -52,6 +52,22 @@ $work-bg-size: 500px;
     .work-bg:nth-child(odd) {
       background: rgba(0, 180, 250, 0.5) !important;
     }
+    .john-shot {
+      .work-bg {
+        background: rgba(250, 213, 0, 0.5);
+      }
+      .work-bg:nth-child(odd) {
+        background: rgba(0, 180, 150, 0.5) !important;
+      }
+    }
+    .news-shot {
+      .work-bg {
+        background: rgba(250, 0, 255, 0.5);
+      }
+      .work-bg:nth-child(odd) {
+        background: rgba(255, 50, 0, 0.5) !important;
+      }
+    }
   }
   .work-piece-text {
     // width: 50%;

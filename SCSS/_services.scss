@@ -7,18 +7,22 @@ $service-bg-size: 600px;
   // top: 500vh;
   .services-wrapper {
     position: relative;
+    z-index: 80;
   }
   color: white;
   .cards {
     position: relative;
     width: 100%;
     height: $height;
-    // border: 1px solid white;
     @include flex(row, space-around);
     align-items: flex-start;
     .card {
+      @include flex(column, flex-start);
+
+      // border: 1px solid white
+      height: 100%;
       .card-title {
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
       }
       text-align: center;
       width: 40%;
@@ -58,4 +62,11 @@ $service-bg-size: 600px;
     //     translateX(calc(#{$half-side-length} * -1));
     // }
   }
+}
+.enquire-link {
+  position: relative;
+  width: fit-content;
+  margin: auto;
+  padding-bottom: 0 3rem 6rem;
+  z-index: 100;
 }

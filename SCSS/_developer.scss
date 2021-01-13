@@ -48,17 +48,26 @@
     // top: 0;
     // left: 0;
   }
+  .wrap-center {
+    background: rgba(94, 211, 243, 0.3);
+  }
+  .wrap-left {
+    background: rgba(250, 213, 0, 0.3);
+  }
+  .wrap-right {
+    background: rgba(0, 255, 150, 0.3);
+  }
   .dbg-1 {
     width: $dbg-size;
     height: $dbg-size;
-    background: rgba(255, 70, 10, 0.3);
+    // background: rgba(255, 70, 10, 0.3);
     top: calc(50% - #{$dbg-size}/ 2);
     left: calc(50% - #{$dbg-size}/ 2);
   }
   .dbg-2 {
     width: calc(#{$dbg-size} - #{$incriment});
     height: calc(#{$dbg-size} - #{$incriment});
-    background: rgba(255, 70, 10, 0.3);
+    // background: rgba(255, 70, 10, 0.3);
 
     top: calc((50% - (#{$dbg-size}/ 2)) + (#{$incriment}/ 2));
     left: calc((50% - #{$dbg-size}/ 2) + (#{$incriment} / 2));
@@ -70,7 +79,7 @@
   .dbg-3 {
     width: calc(#{$dbg-size} - #{$incriment}* 2);
     height: calc(#{$dbg-size} - #{$incriment}* 2);
-    background: rgba(255, 70, 10, 0.3);
+    // background: rgba(255, 70, 10, 0.3);
     top: calc((50% - (#{$dbg-size}/ 2)) + (#{$incriment}));
     left: calc((50% - #{$dbg-size}/ 2) + (#{$incriment}));
   }

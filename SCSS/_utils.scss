@@ -157,3 +157,7 @@ button {
     margin: 0.5rem 1rem;
   }
 }
+.nav-link-full {
+  transition: opacity $transit-time ease-in-out;
+  cursor: pointer;
+}

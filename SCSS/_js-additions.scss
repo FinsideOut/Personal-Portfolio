@@ -78,14 +78,14 @@
 }
 .work-full {
   // border: 1px solid white;
-  transform: translateY(600vh) !important;
+  transform: translateY(630vh) !important;
   // text-align: center;
 
   width: 100%;
   transform-origin: center;
 }
 .cv-full {
-  transform: translateY(820vh) !important;
+  transform: translateY(840vh) !important;
   // text-align: center;
 
   width: 100%;
@@ -217,6 +217,9 @@
 }
 .service-wrapper-center {
   transform: scale(1) rotate(0deg) translateX(0%) !important;
+}
+.service-wrapper-bottom {
+  transform: scale(1) translateY(60vh) rotate(180deg) !important;
 }
 // .service-right {
 //   transform: translateY(calc(#{$bg-height} - (#{$service-bg-size}/ 2)))
