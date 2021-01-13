@@ -197,7 +197,6 @@ function toHomeScreen() {
   servicesTitle.classList.remove("enlarge-title");
   cvTitle.classList.remove("enlarge-title");
 
-  heroContainer.classList.remove("shown");
   items.forEach((item) => {
     item.classList.remove("shown");
   });
@@ -231,6 +230,7 @@ function revertBook() {
   contact.classList.remove("hidden");
   body.classList.remove("body-full");
   bookBg.classList.remove("book-bg-full");
+  // heroContainer.classList.remove("shown");
 }
 
 //from traversy mdeia
@@ -795,7 +795,7 @@ homeButton.addEventListener("mouseout", () => {
   homeButton.classList.remove("normalize");
 });
 $("#go-home").click(function () {
-  if (isFull) {
+  if (isFull && window.scrollY > 0) {
     $("html").animate(
       {
         scrollTop: 0,
@@ -808,6 +808,8 @@ $("#go-home").click(function () {
         }, 200);
       }
     );
+  } else if (isFull && window.scrollY === 0) {
+    changeState();
   }
 });
 // homeButton.addEventListener("click", () => {
