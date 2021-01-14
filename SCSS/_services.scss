@@ -1,28 +1,32 @@
 @use 'sass:math';
-$height: 60vh;
-$bg-height: 30vh;
+$height: 40vh;
+$bg-height: 20vh;
 $half-side-length: calc(#{$bg-height} / 1.73205);
 $service-bg-size: 600px;
 #services-content {
   // top: 500vh;
+  margin-top: 3rem;
   .services-wrapper {
     position: relative;
     z-index: 80;
   }
   color: white;
   .cards {
+    // border: 1px solid white;
+    margin-top: 3rem;
     position: relative;
     width: 100%;
     height: $height;
     @include flex(row, space-around);
     align-items: flex-start;
     .card {
-      @include flex(column, flex-start);
+      // @include flex(column, flex-start);
 
-      // border: 1px solid white
+      // border: 1px solid white;
       height: 100%;
+      display: initial;
       .card-title {
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
       }
       text-align: center;
       width: 40%;
@@ -34,7 +38,7 @@ $service-bg-size: 600px;
     left: 30%;
     height: $bg-height;
     width: 40%;
-    // border: 3px solid white;
+    // border: 1px solid yellow;
     transform: scale(0) rotate(180deg);
     transition-property: transform, background-color;
     transition-duration: $transit-time;
@@ -67,6 +71,6 @@ $service-bg-size: 600px;
   position: relative;
   width: fit-content;
   margin: auto;
-  padding-bottom: 0 3rem 6rem;
+  padding: 3rem 6rem 6rem;
   z-index: 100;
 }

@@ -1,8 +1,14 @@
 $work-bg-size: 500px;
+#work-content {
+  margin-top: 3rem;
+  .lead {
+    margin-bottom: 5rem;
+  }
+}
 
 .work-piece {
   //   border: 1px solid white;
-  margin: 8rem 0rem;
+  margin-bottom: 8rem;
   @include flex(row, space-between);
   width: 100%;
   position: relative;
@@ -78,3 +84,6 @@ $work-bg-size: 500px;
 .reverse {
   flex-direction: row-reverse;
 }
+// .work-piece:first-child {
+//   margin: 0rem 0 8rem;
+// }

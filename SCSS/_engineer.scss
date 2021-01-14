@@ -29,6 +29,7 @@ $arrow-size: 10px;
     .x-label {
       grid-area: x-axis;
       text-align: center;
+      margin-top: 0.5rem;
     }
     .y-label {
       grid-area: y-axis;
@@ -38,6 +39,7 @@ $arrow-size: 10px;
     .graph-title {
       grid-area: title;
       text-align: center;
+      margin-bottom: 1rem;
     }
     .graph-content {
       grid-area: graph;
@@ -67,7 +69,7 @@ $arrow-size: 10px;
 
         // border: 1px solid white;
 
-        h3,
+        h4,
         p {
           position: absolute;
           text-align: center;
@@ -81,10 +83,10 @@ $arrow-size: 10px;
           left: 15%;
           top: calc(50% + 75px);
         }
-        h3 {
+        h4 {
           width: 100%;
           top: calc(50% - 150px);
-          font-size: 3.5rem;
+          // font-size: 3.5rem;
         }
         img,
         i {

@@ -40,23 +40,20 @@
 }
 .logo-full {
   transform: translateY(-12vh);
-  font-size: 5rem;
 }
 .lead-full {
   transform: translateY(50vh) !important;
 }
 .aspiring-full {
   transform: translateY(80vh) !important;
-  font-size: 4rem !important;
 }
 .educator-full {
   transform: translateY(90vh) !important;
-
   transform-origin: center;
   width: 100%;
 }
 .enlarge-title {
-  font-size: 4rem !important;
+  // font-size: 4rem !important;
   pointer-events: none;
 }
 .engineer-full {
@@ -219,7 +216,7 @@
   transform: scale(1) rotate(0deg) translateX(0%) !important;
 }
 .service-wrapper-bottom {
-  transform: scale(1) translateY(60vh) rotate(180deg) !important;
+  transform: scale(1) translateY(40vh) rotate(180deg) !important;
 }
 // .service-right {
 //   transform: translateY(calc(#{$bg-height} - (#{$service-bg-size}/ 2)))

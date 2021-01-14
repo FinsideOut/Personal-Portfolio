@@ -11,6 +11,7 @@
 body {
   font-family: "Lato", sans-serif;
   overflow-x: hidden;
+  font-size: 18px;
 }
 .container {
   width: 90%;
@@ -32,29 +33,36 @@ ul {
 
 h1,
 h2,
-h3,
-h4,
-h5,
-h6 {
+h3 {
   font-family: "Sansita Swashed", cursive;
 }
+h4,
+h5 {
+  font-weight: bold;
+}
 h1 {
-  font-size: 3.5rem;
+  font-size: 5rem;
 }
 h2 {
-  font-size: 2.5rem;
+  font-size: 4.5rem;
 }
 h3 {
+  font-size: 3rem;
+}
+h4 {
   font-size: 2rem;
+}
+h5 {
+  font-size: 1.5rem;
 }
 
 p {
-  // margin: 0 1rem 0rem;
-  font-size: 1.3rem;
   line-height: 1.3;
 }
 .lead {
   margin: 2rem 0rem;
+  width: 80%;
+  margin: auto;
 }
 #lead {
   max-width: 40vw;
@@ -74,7 +82,7 @@ i {
   text-align: center;
   margin-bottom: 6vh;
   .section-title {
-    font-size: 3rem;
+    // font-size: 3rem;
     margin-bottom: 1rem;
   }
   .lead {
@@ -114,14 +122,14 @@ form {
 }
 label {
   margin-bottom: 1rem;
-  font-size: 1.5rem;
+  // font-size: 1.5rem;
 }
 input,
 textarea {
   font-family: "Lato", sans-serif;
 
   width: 100%;
-  font-size: 1.5rem;
+  // font-size: 1.5rem;
   padding: 0.5rem;
 }
 input {
@@ -142,7 +150,7 @@ button {
 }
 .btn {
   max-width: fit-content;
-  font-size: 2rem;
+  // font-size: 2rem;
   padding: 0.5rem 1rem;
   border: 2px solid black;
 }
@@ -155,6 +163,9 @@ button {
     @include flex(column, space-between);
     text-align: center;
     margin: 0.5rem 1rem;
+    .card-title {
+      margin-bottom: 1rem;
+    }
   }
 }
 .nav-link-full {

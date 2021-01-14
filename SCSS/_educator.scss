@@ -2,10 +2,10 @@
   @include flex(column, space-between);
   margin-top: 2rem;
   .educator-text-container p {
-    margin: 1rem 0rem;
+    margin: 1rem auto;
   }
   .hover-icons-wrapper {
-    margin-top: 1rem;
+    margin-top: 2rem;
     position: relative;
     height: 50vh;
     .educator-icons-container > div {

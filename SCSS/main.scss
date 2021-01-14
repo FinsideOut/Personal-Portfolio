@@ -95,6 +95,9 @@
   right: 0;
   @include flex(column, flex-end);
   width: 5vw;
+  i {
+    font-size: 2rem;
+  }
 }
 #go-home {
   position: fixed;
@@ -114,9 +117,9 @@
 }
 
 #main-footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
+  // position: absolute;
+  // bottom: 0;
+  // left: 0;
   margin-top: 5vh;
   padding: 1rem;
   text-align: center;

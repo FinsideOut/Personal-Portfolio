@@ -173,6 +173,7 @@ function shiftHeadersToFull() {
 
   bookPageLeft.classList.add("page-to-center");
   bookPageRight.classList.add("page-to-center");
+
   logo.addEventListener("transitionend", addFullWidth);
 }
 const rightNav = document.getElementById("right-nav");
@@ -180,7 +181,7 @@ const heroContainer = document.querySelector(".hero-container");
 const items = document.querySelectorAll(".hidden");
 
 function addFullWidth(e) {
-  if (e.propertyName == "font-size") {
+  if (e.propertyName == "transform") {
     logo.removeEventListener("transitionend", addFullWidth);
     bookPageLeft.classList.add("full-width");
     rightNav.classList.add("right-nav-full");
