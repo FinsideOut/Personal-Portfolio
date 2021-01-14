@@ -1,4 +1,5 @@
 @use 'sass:math';
+
 $height: 40vh;
 $bg-height: 20vh;
 $half-side-length: calc(#{$bg-height} / 1.73205);
@@ -73,7 +74,7 @@ $service-bg-size: 600px;
 }
 .enquire-link {
   width: fit-content;
-  padding: 3rem 6rem 6rem;
+  padding: 5rem 6rem 6rem;
   z-index: 100;
   // border: 1px solid white;
   margin: auto;

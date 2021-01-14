@@ -36,20 +36,27 @@
   height: 85%;
   z-index: 3;
   // border: 1px solid white;
-  @include flex(column, space-between);
+  @include flex(column, space-around);
   align-items: center;
   padding: 0.25rem;
-  margin-top: 3rem;
+  // margin-top: 3rem;
 }
 #right-page {
+  padding: 3rem 2rem;
+
   transform: translateY(-50%);
+  @include flex(column, flex-start);
+  align-items: flex-start;
   // border: 1px solid white;
   // color: yellow;
 }
 
 #left-page {
+  padding: 2rem;
   transform: translate(-100%, -50%);
   text-align: center;
+  @include flex(column, flex-start);
+
   p {
     text-align: center;
   }
@@ -99,7 +106,7 @@
     font-size: 2rem;
   }
 }
-#go-home {
+#go-contact {
   position: fixed;
   top: 0;
   left: 0;
@@ -114,6 +121,12 @@
   @include flex(column, center);
   width: 100px;
   height: 100px;
+  cursor: pointer;
+}
+#go-home {
+  @extend #go-contact;
+  left: 90%;
+  // opacity: 1;
 }
 
 #main-footer {
@@ -180,4 +193,8 @@
   h3 {
     cursor: pointer;
   }
+}
+#aspiring {
+  width: 100%;
+  // border: 1px solid white;
 }

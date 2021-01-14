@@ -91,14 +91,20 @@ i {
 }
 nav {
   width: 100%;
-  margin-bottom: 5vh;
-  height: 100%;
+  // margin-bottom: 5vh;
+  // height: 100%;
 }
 ul {
-  @include flex(column, space-between);
+  @include flex(column, flex-start);
   align-items: flex-start;
+  h2,
+  h3 {
+    padding: 0;
+    margin: 0;
+  }
   li {
-    padding: 1rem;
+    // padding: 1rem;
+    padding: 0;
     margin: 0;
   }
 }

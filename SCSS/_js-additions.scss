@@ -24,6 +24,8 @@
 }
 .full-width {
   width: 100% !important;
+  text-align: center;
+  justify-items: center;
 }
 .right-nav-full {
   // align-items: center;
@@ -42,46 +44,54 @@
   transform: translateY(-12vh);
 }
 .lead-full {
-  transform: translateY(50vh) !important;
+  transform: translateY(55vh) !important;
 }
 .aspiring-full {
-  transform: translateY(80vh) !important;
+  transform: translateY(100vh) !important;
+  // border: 1px solid white;
 }
 .educator-full {
-  transform: translateY(90vh) !important;
+  transform: translateY(110vh) !important;
   transform-origin: center;
   width: 100%;
 }
-.enlarge-title {
+.enlarge-title-small {
   pointer-events: none;
+  text-align: center !important;
 }
+.enlarge-title-large {
+  pointer-events: none;
+  text-align: center !important;
+  font-size: 4.5rem !important;
+}
+
 .engineer-full {
   width: 100%;
 
-  transform: translateY(180vh) !important;
+  transform: translateY(200vh) !important;
   transform-origin: center;
 }
 .developer-full {
-  transform: translateY(350vh) !important;
+  transform: translateY(375vh) !important;
   transform-origin: center;
   width: 100%;
 }
 .services-full {
-  transform: translateY(550vh) !important;
+  transform: translateY(495vh) !important;
   transform-origin: center;
   width: 100%;
   // text-align: center;
 }
 .work-full {
   // border: 1px solid white;
-  transform: translateY(645vh) !important;
+  transform: translateY(605vh) !important;
   // text-align: center;
 
   width: 100%;
   transform-origin: center;
 }
 .cv-full {
-  transform: translateY(860vh) !important;
+  transform: translateY(845vh) !important;
   // text-align: center;
 
   width: 100%;
@@ -390,18 +400,23 @@
   transform: translateX(calc((#{$educator-bg-size}/ 3) * -3));
   background-color: rgba(0, 250, 200, 0.5) !important;
 }
-.aspiring-home {
-  font-size: 2.5rem !important;
-}
+
 .logo-home {
-  font-size: 3.5rem !important;
+  font-size: 4rem !important;
 }
 .lead-home {
   font-size: 1.5rem !important;
 }
+.aspiring-home {
+  font-size: 3rem !important;
+  justify-self: left !important;
+  text-align: left !important;
+}
 .left-list-home {
-  font-size: 2rem !important;
+  font-size: 1.5rem !important;
+  margin-left: 3rem;
 }
 .right-list-home {
-  font-size: 2rem !important;
+  font-size: 2.5rem !important;
+  // margin-left: 6rem;
 }

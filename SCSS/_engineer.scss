@@ -253,8 +253,12 @@ $arrow-size: 10px;
   height: 40vh;
   .card {
     height: 100%;
+
     flex: 1;
     align-self: flex-start;
+    .card-text {
+      width: 90%;
+    }
   }
 }
 .discs {

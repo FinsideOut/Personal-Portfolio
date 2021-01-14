@@ -1,5 +1,6 @@
 const bookText = document.querySelectorAll(".book-text-right, .book-text-left");
-homeButton = document.getElementById("go-home");
+const contactButton = document.getElementById("go-contact");
+const menuButton = document.getElementById("go-home");
 
 // const bookTextRight = document.querySelectorAll(".book-text-right");
 // const bookTextLeft = document.querySelectorAll(".book-text-left");
@@ -45,8 +46,8 @@ for (let i = 0; i < num; i++) {
   let shiftLeft = Math.cos(i * 0.05) * 1.5 + "rem";
   let tiltLeft = Math.sin(i * 0.05) * -15 + "deg";
 
-  let shiftRight = Math.cos(i * 0.05 - 180) * 1.5 + "rem";
-  let tiltRight = Math.sin(i * 0.05 - 180) * -15 + "deg";
+  let shiftRight = Math.cos(i * 0.05 + 90) * 1.5 + "rem";
+  let tiltRight = Math.sin(i * 0.05 + 90) * -15 + "deg";
   elementLeft.innerHTML =
     ".left-curve" +
     i +
@@ -148,7 +149,8 @@ function toFullScreen() {
   bookBg.addEventListener("transitionend", shiftHeadersToFull);
 }
 function shiftHeadersToFull() {
-  homeButton.classList.add("obscure");
+  contactButton.classList.add("obscure");
+  menuButton.classList.add("obscure");
   bookBg.removeEventListener("transitionend", shiftHeadersToFull);
   logo.classList.remove("logo-home");
   lead.classList.remove("lead-home");
@@ -162,13 +164,14 @@ function shiftHeadersToFull() {
   logo.classList.add("logo-full");
   lead.classList.add("lead-full");
   aspiring.classList.add("aspiring-full");
+  aspiring.classList.add("enlarge-title-small");
   educator.classList.add("educator-full");
-  educatorTitle.classList.add("enlarge-title");
-  engineerTitle.classList.add("enlarge-title");
-  developerTitle.classList.add("enlarge-title");
-  workTitle.classList.add("enlarge-title");
-  servicesTitle.classList.add("enlarge-title");
-  // educator.classList.add("enlarge-title");
+  educatorTitle.classList.add("enlarge-title-small");
+  engineerTitle.classList.add("enlarge-title-small");
+  developerTitle.classList.add("enlarge-title-small");
+  workTitle.classList.add("enlarge-title-large");
+  servicesTitle.classList.add("enlarge-title-large");
+  // educator.classList.add("enlarge-title-small");
   // console.log(educatorTitle);
   engineer.classList.add("engineer-full");
   developer.classList.add("developer-full");
@@ -178,7 +181,7 @@ function shiftHeadersToFull() {
   work.classList.add("work-full");
 
   cv.classList.add("cv-full");
-  cvTitle.classList.add("enlarge-title");
+  cvTitle.classList.add("enlarge-title-large");
 
   bookPageLeft.classList.add("page-to-center");
   bookPageRight.classList.add("page-to-center");
@@ -192,21 +195,22 @@ const items = document.querySelectorAll(".hidden");
 function addFullWidth(e) {
   if (e.propertyName == "transform") {
     logo.removeEventListener("transitionend", addFullWidth);
-    bookPageLeft.classList.add("full-width");
-    rightNav.classList.add("right-nav-full");
+    aspiring.classList.add("full-width");
+    // rightNav.classList.add("right-nav-full");
     bookPageRight.classList.add("full-width");
     heroContainer.classList.add("shown");
   }
 }
 function toHomeScreen() {
-  homeButton.classList.remove("obscure");
+  contactButton.classList.remove("obscure");
+  menuButton.classList.remove("obscure");
 
-  educatorTitle.classList.remove("enlarge-title");
-  engineerTitle.classList.remove("enlarge-title");
-  developerTitle.classList.remove("enlarge-title");
-  workTitle.classList.remove("enlarge-title");
-  servicesTitle.classList.remove("enlarge-title");
-  cvTitle.classList.remove("enlarge-title");
+  educatorTitle.classList.remove("enlarge-title-small");
+  engineerTitle.classList.remove("enlarge-title-small");
+  developerTitle.classList.remove("enlarge-title-small");
+  workTitle.classList.remove("enlarge-title-large");
+  servicesTitle.classList.remove("enlarge-title-large");
+  cvTitle.classList.remove("enlarge-title-large");
 
   items.forEach((item) => {
     item.classList.remove("shown");
@@ -882,13 +886,55 @@ $(".nav-link").on("click", function (e) {
   }
   // window.scrollBy(0, window.innerHeight / 2);
 });
-homeButton.addEventListener("mouseover", () => {
-  homeButton.classList.add("normalize");
+contactButton.addEventListener("mouseover", () => {
+  contactButton.classList.add("normalize");
 });
-homeButton.addEventListener("mouseout", () => {
-  homeButton.classList.remove("normalize");
+contactButton.addEventListener("mouseout", () => {
+  contactButton.classList.remove("normalize");
 });
-$("#go-home, .nav-link-full").click(function () {
+menuButton.addEventListener("mouseover", () => {
+  menuButton.classList.add("normalize");
+});
+menuButton.addEventListener("mouseout", () => {
+  menuButton.classList.remove("normalize");
+});
+$(".nav-link-full").click(function () {
+  if (isFull && window.scrollY > 0) {
+    $("html").animate(
+      {
+        scrollTop: 0,
+      },
+      1000,
+      function () {
+        console.log("wtf");
+        setTimeout(function () {
+          changeState();
+        }, 200);
+      }
+    );
+  } else if (isFull && window.scrollY === 0) {
+    changeState();
+  }
+});
+$("#go-contact").click(function () {
+  if (isFull && window.scrollY > 0) {
+    $("html").animate(
+      {
+        scrollTop: 0,
+      },
+      1000,
+      function () {
+        console.log("wtf");
+        setTimeout(function () {
+          changeState();
+        }, 200);
+      }
+    );
+  } else if (isFull && window.scrollY === 0) {
+    changeState();
+  }
+});
+$("#go-home").click(function () {
   if (isFull && window.scrollY > 0) {
     $("html").animate(
       {
@@ -907,7 +953,7 @@ $("#go-home, .nav-link-full").click(function () {
   }
 });
 
-// homeButton.addEventListener("click", () => {
+// contactButton.addEventListener("click", () => {
 //   // $("html, body").animate(
 //   //   { scrollTop: 0 },
 //   //   { duration: 1000, complete: changeState() }
@@ -930,23 +976,24 @@ contact.classList.add("hidden");
 body.classList.add("body-full");
 bookBg.classList.add("book-bg-full");
 // bookBg.addEventListener("transitionend", shiftHeadersToFull);
-homeButton.classList.add("obscure");
+contactButton.classList.add("obscure");
+menuButton.classList.add("obscure");
 // bookBg.removeEventListener("transitionend", shiftHeadersToFull);
 logo.classList.add("logo-full");
 lead.classList.add("lead-full");
 aspiring.classList.add("aspiring-full");
 educator.classList.add("educator-full");
-educatorTitle.classList.add("enlarge-title");
-engineerTitle.classList.add("enlarge-title");
-developerTitle.classList.add("enlarge-title");
-workTitle.classList.add("enlarge-title");
-servicesTitle.classList.add("enlarge-title");
+educatorTitle.classList.add("enlarge-title-small");
+engineerTitle.classList.add("enlarge-title-small");
+developerTitle.classList.add("enlarge-title-small");
+workTitle.classList.add("enlarge-title-large");
+servicesTitle.classList.add("enlarge-title-large");
 engineer.classList.add("engineer-full");
 developer.classList.add("developer-full");
 services.classList.add("services-full");
 work.classList.add("work-full");
 cv.classList.add("cv-full");
-cvTitle.classList.add("enlarge-title");
+cvTitle.classList.add("enlarge-title-large");
 bookPageLeft.classList.add("page-to-center");
 bookPageRight.classList.add("page-to-center");
 
