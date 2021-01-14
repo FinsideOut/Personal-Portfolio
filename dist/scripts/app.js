@@ -32,7 +32,7 @@ const developerContent = document.getElementById("developer-content");
 // const servicesContent = document.getElementById("services-content");
 const workContent = document.getElementById("work-content");
 const content = document.querySelectorAll(".hidden");
-
+// bookPageLefts.addEventListener("load", changeState);
 // global vars
 let percent = [];
 const num = 100;
@@ -82,8 +82,8 @@ function addCurve() {
     words.forEach((word) => {
       letters = word.childNodes;
       for (let i = 0; i < letters.length; i++) {
-        letterPosRel = letters[i].offsetLeft + letters[i].offsetWidth / 2;
-        letterPosAbso = letters[i].getBoundingClientRect().left;
+        let letterPosRel = letters[i].offsetLeft + letters[i].offsetWidth / 2;
+        // let letterPosAbso = letters[i].getBoundingClientRect().left;
         for (let j = 0; j < percent.length; j++) {
           if (letterPosRel >= percent[j] && letterPosRel <= percent[j + 1]) {
             if (line.classList.contains("book-text-left")) {
@@ -121,8 +121,8 @@ function calcWidth() {
 logo.onclick = () => {
   changeState();
 };
-addCurve();
-let isFull = false;
+
+let isFull = true;
 function changeState() {
   if (!isFull) {
     toFullScreen();
@@ -150,6 +150,15 @@ function toFullScreen() {
 function shiftHeadersToFull() {
   homeButton.classList.add("obscure");
   bookBg.removeEventListener("transitionend", shiftHeadersToFull);
+  logo.classList.remove("logo-home");
+  lead.classList.remove("lead-home");
+  aspiring.classList.remove("aspiring-home");
+  educatorTitle.classList.remove("left-list-home");
+  engineerTitle.classList.remove("left-list-home");
+  developerTitle.classList.remove("left-list-home");
+  servicesTitle.classList.remove("right-list-home");
+  workTitle.classList.remove("right-list-home");
+  cvTitle.classList.remove("right-list-home");
   logo.classList.add("logo-full");
   lead.classList.add("lead-full");
   aspiring.classList.add("aspiring-full");
@@ -224,6 +233,15 @@ function toHomeScreen() {
   services.classList.remove("services-full");
   work.classList.remove("work-full");
   cv.classList.remove("cv-full");
+  logo.classList.add("logo-home");
+  lead.classList.add("lead-home");
+  aspiring.classList.add("aspiring-home");
+  educatorTitle.classList.add("left-list-home");
+  engineerTitle.classList.add("left-list-home");
+  developerTitle.classList.add("left-list-home");
+  servicesTitle.classList.add("right-list-home");
+  workTitle.classList.add("right-list-home");
+  cvTitle.classList.add("right-list-home");
   aspiring.addEventListener("transitionend", revertBook);
 }
 function revertBook() {
@@ -907,3 +925,30 @@ $("#go-home, .nav-link-full").click(function () {
 //   )
 //   .promise()
 //   .done(changeState());
+// changeState();
+contact.classList.add("hidden");
+body.classList.add("body-full");
+bookBg.classList.add("book-bg-full");
+// bookBg.addEventListener("transitionend", shiftHeadersToFull);
+homeButton.classList.add("obscure");
+// bookBg.removeEventListener("transitionend", shiftHeadersToFull);
+logo.classList.add("logo-full");
+lead.classList.add("lead-full");
+aspiring.classList.add("aspiring-full");
+educator.classList.add("educator-full");
+educatorTitle.classList.add("enlarge-title");
+engineerTitle.classList.add("enlarge-title");
+developerTitle.classList.add("enlarge-title");
+workTitle.classList.add("enlarge-title");
+servicesTitle.classList.add("enlarge-title");
+engineer.classList.add("engineer-full");
+developer.classList.add("developer-full");
+services.classList.add("services-full");
+work.classList.add("work-full");
+cv.classList.add("cv-full");
+cvTitle.classList.add("enlarge-title");
+bookPageLeft.classList.add("page-to-center");
+bookPageRight.classList.add("page-to-center");
+
+logo.addEventListener("transitionend", addFullWidth);
+makeFlower(0, 0);

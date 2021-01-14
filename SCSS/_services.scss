@@ -75,11 +75,15 @@ $service-bg-size: 600px;
   width: fit-content;
   padding: 3rem 6rem 6rem;
   z-index: 100;
+  // border: 1px solid white;
+  margin: auto;
+  position: relative;
+  z-index: 100;
 }
 .btn-full {
-  position: relative;
-  margin: auto;
+  // @include flex(row, center);
+  // position: relative;
   padding: 10px;
-  transition: border $transit-time ease-in-out, color $transit-time ease-in-out,
-    opacity $transit-time ease-in-out;
+  // transition: border $transit-time ease-in-out, color $transit-time ease-in-out,
+  //   opacity $transit-time ease-in-out;
 }

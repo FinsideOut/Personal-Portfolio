@@ -88,6 +88,9 @@ $work-bg-size: 500px;
     }
   }
 }
+.last {
+  margin-bottom: 3rem;
+}
 .reverse {
   flex-direction: row-reverse;
 }
@@ -111,4 +114,7 @@ $work-bg-size: 500px;
   .reverse {
     flex-direction: row-reverse;
   }
+}
+.btn-full {
+  padding: 15px;
 }
