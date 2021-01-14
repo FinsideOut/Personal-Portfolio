@@ -14,6 +14,7 @@ $service-bg-size: 600px;
   .cards {
     // border: 1px solid white;
     margin-top: 3rem;
+    z-index: 90;
     position: relative;
     width: 100%;
     height: $height;
@@ -38,6 +39,7 @@ $service-bg-size: 600px;
     left: 30%;
     height: $bg-height;
     width: 40%;
+    z-index: 50;
     // border: 1px solid yellow;
     transform: scale(0) rotate(180deg);
     transition-property: transform, background-color;
@@ -46,6 +48,8 @@ $service-bg-size: 600px;
     // transform-origin: center;
     .services-bg {
       position: absolute;
+      z-index: 50;
+
       top: calc(-#{$service-bg-size}/ 2);
       left: calc(50% - #{$service-bg-size}/ 2);
       width: $service-bg-size;
@@ -68,9 +72,14 @@ $service-bg-size: 600px;
   }
 }
 .enquire-link {
-  position: relative;
   width: fit-content;
-  margin: auto;
   padding: 3rem 6rem 6rem;
   z-index: 100;
+}
+.btn-full {
+  position: relative;
+  margin: auto;
+  padding: 10px;
+  transition: border $transit-time ease-in-out, color $transit-time ease-in-out,
+    opacity $transit-time ease-in-out;
 }

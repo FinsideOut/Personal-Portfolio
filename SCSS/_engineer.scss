@@ -17,7 +17,7 @@ $arrow-size: 10px;
       display: grid;
       grid-template:
         "y-axis title" 1fr
-        "y-axis graph" 8fr
+        "y-axis graph" 5fr
         "y-axis x-axis" 1fr/
         1fr 9fr;
     }

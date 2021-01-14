@@ -154,6 +154,22 @@ button {
   padding: 0.5rem 1rem;
   border: 2px solid black;
 }
+.btn-full {
+  // width: fit-content;
+  // height: fit-content;
+  border: 2px solid;
+  border-color: rgba(255, 255, 255, 0);
+  color: rgba(255, 255, 255, 1);
+  display: block;
+  border-radius: 10px;
+  // padding: 10px;
+  transition: border $transit-time ease-in-out, color $transit-time ease-in-out;
+  &:hover {
+    cursor: pointer;
+    border-color: rgba(255, 255, 255, 1);
+    color: rgba(255, 255, 255, 0.5);
+  }
+}
 .cards {
   position: relative;
   z-index: 3;

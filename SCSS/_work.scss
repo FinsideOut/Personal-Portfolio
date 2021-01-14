@@ -79,6 +79,13 @@ $work-bg-size: 500px;
     // width: 50%;
     position: relative;
     z-index: 5;
+    .work-piece-title {
+      margin-bottom: 1rem;
+    }
+    .work-piece-info {
+      width: 80%;
+      margin: auto;
+    }
   }
 }
 .reverse {
@@ -87,3 +94,21 @@ $work-bg-size: 500px;
 // .work-piece:first-child {
 //   margin: 0rem 0 8rem;
 // }
+.work-links-container {
+  // margin-top: 1rem;
+  @include flex(row, center);
+  height: fit-content;
+  .btn-full {
+    margin: 1rem 1rem 0rem;
+    height: fit-content;
+    @include flex(row, center);
+
+    i,
+    a {
+      padding: 10px;
+    }
+  }
+  .reverse {
+    flex-direction: row-reverse;
+  }
+}
