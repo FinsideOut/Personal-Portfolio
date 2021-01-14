@@ -3,6 +3,26 @@
 @import "funcs";
 @import "utils";
 @import "hero";
+
+// #preloader {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   width: 100vw;
+//   height: 100vh;
+//   background: black;
+//   opacity: 1;
+//   z-index: 300;
+// }
+.fade-out {
+  animation: fadeout $transit-time ease-in-out forwards;
+  pointer-events: none;
+}
+@keyframes fadeout {
+  to {
+    opacity: 0;
+  }
+}
 #book-screen,
 #social,
 #sub-screen {

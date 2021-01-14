@@ -8,6 +8,7 @@
 .body-full {
   background: black !important;
   transition: background-color $transit-time ease-in-out;
+  height: fit-content;
 }
 .page-to-center {
   transform: translate(-50%, -50%) !important;
@@ -99,12 +100,15 @@
 }
 
 .hidden {
-  // visibility: hidden;
+  // display: none;
+  // transform: translateY(-200vh);
   pointer-events: none;
   opacity: 0;
   transition: opacity $transit-time ease-in-out;
 }
 .shown {
+  // max-height: 100%;
+  // display: initial;
   // visibility: visible !important;
   pointer-events: all !important;
 

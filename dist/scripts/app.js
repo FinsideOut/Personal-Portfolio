@@ -996,6 +996,9 @@ cv.classList.add("cv-full");
 cvTitle.classList.add("enlarge-title-large");
 bookPageLeft.classList.add("page-to-center");
 bookPageRight.classList.add("page-to-center");
-
+const preloader = document.getElementById("preloader");
 logo.addEventListener("transitionend", addFullWidth);
+logo.addEventListener("transitionend", () => {
+  preloader.classList.add("fade-out");
+});
 makeFlower(0, 0);
