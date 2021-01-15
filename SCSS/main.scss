@@ -50,18 +50,18 @@
   margin: 3rem auto;
   text-align: center;
 }
-// #preloader {
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   width: 100vw;
-//   height: 100vh;
-//   background: black;
-//   opacity: 1;
-//   z-index: 300;
-// }
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: black;
+  opacity: 1;
+  z-index: 300;
+}
 .fade-out {
-  animation: fadeout $transit-time ease-in-out forwards;
+  animation: fadeout 500ms ease-in-out forwards;
   pointer-events: none;
 }
 @keyframes fadeout {

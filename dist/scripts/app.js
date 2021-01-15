@@ -1,5 +1,8 @@
 // //from traversy mdeia
-
+const preloader = document.getElementById("preloader");
+window.onload = () => {
+  preloader.classList.add("fade-out");
+};
 // const isInViewport = (el) => {
 //   const rect = el.getBoundingClientRect();
 //   return (

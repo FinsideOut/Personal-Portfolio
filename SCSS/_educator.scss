@@ -60,6 +60,7 @@
         @include flex(column, space-around);
       }
       #more-info-right {
+        // border: 1px solid white;
         left: 0;
         max-width: 66%;
         opacity: 0;

@@ -12,7 +12,7 @@ $service-bg-size: 600px;
   }
   color: white;
   .cards {
-    border: 1px solid white;
+    // border: 1px solid white;
     margin-top: 2rem;
     z-index: 90;
     position: relative;
@@ -34,10 +34,10 @@ $service-bg-size: 600px;
     }
   }
   .bgs {
-    border: 1px solid white;
+    // border: 1px solid white;
 
     position: absolute;
-    top: calc(50% - (#{$bg-height}/ 2));
+    top: calc(50% - (#{$bg-height}));
     left: 30%;
     height: $bg-height;
     width: 40%;
@@ -77,7 +77,7 @@ $service-bg-size: 600px;
   width: fit-content;
   padding: 0rem 6rem 0rem;
   z-index: 100;
-  border: 1px solid white;
+  // border: 1px solid white;
   margin: auto;
   position: relative;
   z-index: 100;
