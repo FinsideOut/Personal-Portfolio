@@ -17,7 +17,7 @@ $service-bg-size: 600px;
     z-index: 90;
     position: relative;
     width: 100%;
-    min-height: $height;
+    height: $height;
     @include flex(row, space-around);
     align-items: flex-start;
     .card {
@@ -34,8 +34,10 @@ $service-bg-size: 600px;
     }
   }
   .bgs {
+    // border: 1px solid white;
+
     position: absolute;
-    top: 0;
+    top: 10%;
     left: 30%;
     height: $bg-height;
     width: 40%;
