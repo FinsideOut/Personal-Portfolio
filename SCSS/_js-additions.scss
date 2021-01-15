@@ -361,15 +361,17 @@
   background-color: rgba(255, 0, 50, 0.5) !important;
 }
 .educator-bg-right-1 {
-  transform: translateX(calc((#{$educator-bg-size}/ 3) * -1));
+  transform: translateX(-30%);
   background-color: rgba(255, 0, 100, 0.5) !important;
 }
 .educator-bg-right-2 {
-  transform: translateX(calc((#{$educator-bg-size}/ 3) * -2));
+  transform: translateX(-60%);
+
   background-color: rgba(255, 0, 150, 0.5) !important;
 }
 .educator-bg-right-3 {
-  transform: translateX(calc((#{$educator-bg-size}/ 3) * -3));
+  transform: translateX(-90%);
+
   background-color: rgba(255, 0, 200, 0.5) !important;
 }
 .educator-bg-left-0 {
@@ -377,31 +379,33 @@
   background-color: rgba(50, 0, 255, 0.5) !important;
 }
 .educator-bg-left-1 {
-  transform: translateX(calc((#{$educator-bg-size}/ 3)));
+  transform: translateX(30%);
   background-color: rgba(100, 0, 255, 0.5) !important;
 }
 .educator-bg-left-2 {
-  transform: translateX(calc((#{$educator-bg-size}/ 3) * 2));
+  transform: translateX(60%);
+
   background-color: rgba(150, 0, 255, 0.5) !important;
 }
 .educator-bg-left-3 {
-  transform: translateX(calc((#{$educator-bg-size}/ 3) * 3));
+  transform: translateX(90%);
+
   background-color: rgba(200, 0, 255, 0.5) !important;
 }
 .educator-bg-center-2 {
-  transform: translateX(calc((#{$educator-bg-size}/ 3) * 2));
+  transform: translateX(110%);
   background-color: rgba(0, 250, 50, 0.5) !important;
 }
 .educator-bg-center-3 {
-  transform: translateX(calc((#{$educator-bg-size}/ 3) * 3));
+  transform: translateX(80%);
   background-color: rgba(0, 250, 100, 0.5) !important;
 }
 .educator-bg-center-0 {
-  transform: translateX(calc((#{$educator-bg-size}/ 3) * -2));
+  transform: translateX(-110%);
   background-color: rgba(0, 250, 150, 0.5) !important;
 }
 .educator-bg-center-1 {
-  transform: translateX(calc((#{$educator-bg-size}/ 3) * -3));
+  transform: translateX(-80%);
   background-color: rgba(0, 250, 200, 0.5) !important;
 }
 

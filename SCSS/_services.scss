@@ -1,7 +1,7 @@
 @use 'sass:math';
 
-$height: 40vh;
-$bg-height: 20vh;
+$height: 18rem;
+$bg-height: 9rem;
 $half-side-length: calc(#{$bg-height} / 1.73205);
 $service-bg-size: 600px;
 #services-content {
@@ -12,7 +12,7 @@ $service-bg-size: 600px;
   }
   color: white;
   .cards {
-    // border: 1px solid white;
+    border: 1px solid white;
     margin-top: 2rem;
     z-index: 90;
     position: relative;
@@ -21,7 +21,7 @@ $service-bg-size: 600px;
     @include flex(row, space-around);
     align-items: flex-start;
     .card {
-      // @include flex(column, flex-start);
+      @include flex(column, flex-start);
 
       // border: 1px solid white;
       height: 100%;
@@ -34,7 +34,7 @@ $service-bg-size: 600px;
     }
   }
   .bgs {
-    // border: 1px solid white;
+    border: 1px solid white;
 
     position: absolute;
     top: calc(50% - (#{$bg-height}/ 2));
@@ -75,9 +75,9 @@ $service-bg-size: 600px;
 }
 .enquire-link {
   width: fit-content;
-  padding: 2rem 6rem 0rem;
+  padding: 0rem 6rem 0rem;
   z-index: 100;
-  // border: 1px solid white;
+  border: 1px solid white;
   margin: auto;
   position: relative;
   z-index: 100;
