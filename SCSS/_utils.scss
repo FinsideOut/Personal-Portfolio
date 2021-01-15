@@ -4,18 +4,23 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
-  // border: 1px solid black;
 }
 
 body {
   font-family: "Lato", sans-serif;
+  max-width: 100vw;
   overflow-x: hidden;
   font-size: 18px;
+  background: black;
+
+  color: white;
 }
 .container {
+  // display: block;
+  // height: fit-content;
   width: 90%;
-  margin: auto;
+  margin: 6rem auto;
+  // border: 1px solid white;
 }
 span {
   display: inline-block;
@@ -78,6 +83,16 @@ i {
   white-space: nowrap;
   cursor: pointer;
 }
+.section-title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.section-lead {
+  text-align: center;
+  // margin: 2rem 0rem;
+  width: 80%;
+  margin: auto;
+}
 .section-header {
   text-align: center;
   margin-bottom: 6vh;
@@ -108,58 +123,7 @@ ul {
     margin: 0;
   }
 }
-form {
-  color: black;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  align-items: center;
-  justify-content: center;
-  grid-gap: 5vh;
-  width: 80%;
-  margin: 0 auto;
-  .subject,
-  .message,
-  .submit {
-    // position: relative;
-    // z-index: 100;
-    grid-column: 1 / span 2;
-    width: 100%;
-  }
-}
-label {
-  margin-bottom: 1rem;
-  font-size: 2rem;
-}
-input,
-textarea {
-  font-family: "Lato", sans-serif;
 
-  width: 100%;
-  // font-size: 1.5rem;
-  padding: 0.5rem;
-}
-input {
-  text-align: center;
-}
-
-.input-wrapper {
-  @include flex(column, space-between);
-}
-// .subject {
-//   width: 50%;
-//   margin: 0 auto;
-// }
-
-button {
-  outline: none;
-  border: none;
-}
-.btn {
-  max-width: fit-content;
-  // font-size: 2rem;
-  padding: 0.5rem 1rem;
-  border: 2px solid black;
-}
 .btn-full {
   // width: fit-content;
   // height: fit-content;
@@ -169,11 +133,13 @@ button {
   display: block;
   border-radius: 10px;
   // padding: 10px;
-  transition: border $transit-time ease-in-out;
+  transition: border $transit-time ease-in-out,
+    box-shadow $transit-time ease-in-out, color $transit-time ease-in-out;
   &:hover {
     cursor: pointer;
     border-color: rgba(255, 255, 255, 0.5);
-    box-shadow: inset 0 0 10px #fff;
+    box-shadow: inset 0 0 5px #fff;
+    color: rgba(255, 255, 255, 0.7);
   }
 }
 .cards {

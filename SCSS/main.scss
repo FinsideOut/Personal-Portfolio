@@ -3,7 +3,25 @@
 @import "funcs";
 @import "utils";
 @import "hero";
-
+#main-header {
+  // border: 1px solid white;
+  @extend .container;
+  margin-top: 0;
+  height: 100vh;
+  @include flex(column, space-between);
+  #logo-home,
+  #lead {
+    margin: 3rem auto;
+    text-align: center;
+  }
+  #logo-home {
+    margin-top: 2rem;
+  }
+}
+#aspiring {
+  margin: 3rem auto;
+  text-align: center;
+}
 // #preloader {
 //   position: fixed;
 //   top: 0;
@@ -71,45 +89,6 @@
   // color: yellow;
 }
 
-#left-page {
-  padding: 2rem;
-  transform: translate(-100%, -50%);
-  text-align: center;
-  @include flex(column, flex-start);
-
-  p {
-    text-align: center;
-  }
-  nav {
-    align-self: center;
-    ul {
-      align-items: center;
-    }
-    // h2 {
-    //   font-size: 2.5rem;
-    // }
-  }
-}
-
-#educator-content,
-#engineer-content,
-#developer-content,
-#services-content,
-#work-content,
-#cv-content {
-  position: absolute;
-  // top: 143vh;
-
-  color: white;
-  // border: 1px solid white;
-  z-index: 100;
-  width: inherit;
-  transition: opacity 500ms ease-in-out;
-  // position: absolute;
-  // transform: scale(0);
-  // display: none;
-}
-
 @import "educator";
 @import "engineer";
 @import "developer";
@@ -160,54 +139,7 @@
     font-size: 0.8rem;
   }
 }
-#logo-home,
-#lead,
-#aspiring,
-#educator,
-#educator-title,
-.educator-text-container,
-#engineer,
-#engineer-title,
-// #engineer-content,
-#engineer-text,
-.technical-skills,
-.soft-skills,
-#developer,
-#developer-title,
-#developer-text,
-#developer-content,
-.dev-left,
-.dev-center,
-.dev-right,
-#services,
-#services-title,
-#services-text,
-#services-content,
-.services-left,
-.services-center,
-.services-right,
-#work,
-#work-text,
-#work-title,
-#work-content,
-#cv, 
-#cv-title, 
-#cv-content {
-  transition-property: font-size, transform, opacity;
-  transition-duration: $transit-time !important;
-  transition-timing-function: ease-in-out;
-}
-
-#sub-screen {
-  // position: relative;
-  // z-index: 100;
-  header {
-    // position: relative;
-    // z-index: 100;
-    color: black;
-    pointer-events: none;
-  }
-}
+@import "contact";
 @import "js-additions";
 #cv-content {
   h3 {
@@ -215,6 +147,6 @@
   }
 }
 #aspiring {
-  width: 100%;
+  @extend .container;
   // border: 1px solid white;
 }

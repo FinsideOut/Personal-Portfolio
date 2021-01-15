@@ -4,16 +4,17 @@ $icon-size: 46px;
 $icon-half: 23px;
 $arrow-size: 10px;
 #engineer-content {
-  // top: 215vh;
-  margin-top: 3rem;
+  @extend .container;
   @include flex(column, space-between);
   .technical-skills {
     @include flex(row, space-between);
-
+    #engineer-text {
+      text-align: center;
+    }
     #skills-graph {
       // border: 1px solid white;
-      min-width: 70vw;
-      min-height: 80vh;
+      min-width: 60vw;
+      // min-height: 80vh;
       display: grid;
       grid-template:
         "y-axis title" 1fr
@@ -249,8 +250,7 @@ $arrow-size: 10px;
   }
 }
 .soft-skills {
-  margin-top: 10vh;
-  height: 40vh;
+  // height: 40vh;
   .card {
     height: 100%;
 

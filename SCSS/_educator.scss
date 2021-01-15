@@ -1,13 +1,15 @@
 #educator-content {
+  @extend .container;
   @include flex(column, space-between);
-  margin-top: 2rem;
+  text-align: center;
   .educator-text-container p {
-    margin: 1rem auto;
+    margin-bottom: 1rem;
   }
   .hover-icons-wrapper {
-    margin-top: 1rem;
     position: relative;
-    height: 50vh;
+    // min-height: 6rem;
+    // border: 1px solid white;
+    margin-top: 1rem;
     .educator-icons-container > div {
       transition-property: opacity, color;
       transition-duration: $transit-time;
@@ -15,12 +17,17 @@
     }
 
     .educator-icons-container {
+      height: 100%;
       @include flex(row, space-around);
+      align-items: flex-start;
       position: relative;
       z-index: 5;
       .icon-container {
+        // border: 1px solid white;
+        height: 100%;
         max-width: 33%;
-        @include flex(column, space-between);
+        @include flex(column, flex-start);
+
         text-align: center;
         padding: 0.5rem 1rem;
         .icon-title {

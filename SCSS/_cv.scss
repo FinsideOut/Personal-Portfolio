@@ -1,9 +1,8 @@
 #cv-content {
+  @extend .container;
   @include flex(column, space-evenly);
   height: fit-content;
-  margin-top: 3rem;
-  .btn-full {
-    margin: 3rem 0rem;
-    padding: 10px;
+  .section-lead {
+    margin: 1rem;
   }
 }
