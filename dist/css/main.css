@@ -817,7 +817,7 @@ ul li {
 }
 
 #engineer-content .technical-skills .graph-content .github .bg {
-  background: linear-gradient(287deg, rgba(68, 170, 0, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(245deg, rgba(68, 170, 0, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .javascript {
@@ -826,7 +826,7 @@ ul li {
 }
 
 #engineer-content .technical-skills .graph-content .javascript .bg {
-  background: linear-gradient(194deg, rgba(250, 213, 0, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(107deg, rgba(250, 213, 0, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .html5 {
@@ -835,7 +835,7 @@ ul li {
 }
 
 #engineer-content .technical-skills .graph-content .html5 .bg {
-  background: linear-gradient(22deg, rgba(228, 77, 38, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(87deg, rgba(228, 77, 38, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .css3 {
@@ -844,7 +844,7 @@ ul li {
 }
 
 #engineer-content .technical-skills .graph-content .css3 .bg {
-  background: linear-gradient(75deg, rgba(38, 77, 228, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(309deg, rgba(38, 77, 228, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .sass {
@@ -853,7 +853,7 @@ ul li {
 }
 
 #engineer-content .technical-skills .graph-content .sass .bg {
-  background: linear-gradient(165deg, rgba(206, 103, 154, 0.95), rgba(2, 1, 1, 0.95));
+  background: linear-gradient(5deg, rgba(206, 103, 154, 0.95), rgba(2, 1, 1, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .microchip {
@@ -862,7 +862,7 @@ ul li {
 }
 
 #engineer-content .technical-skills .graph-content .microchip .bg {
-  background: linear-gradient(210deg, rgba(238, 58, 37, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(121deg, rgba(238, 58, 37, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .pcb {
@@ -871,7 +871,7 @@ ul li {
 }
 
 #engineer-content .technical-skills .graph-content .pcb .bg {
-  background: linear-gradient(171deg, rgba(73, 196, 56, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(274deg, rgba(73, 196, 56, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .c-plus {
@@ -880,7 +880,7 @@ ul li {
 }
 
 #engineer-content .technical-skills .graph-content .c-plus .bg {
-  background: linear-gradient(249deg, rgba(0, 86, 151, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(167deg, rgba(0, 86, 151, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .arduino {
@@ -889,7 +889,7 @@ ul li {
 }
 
 #engineer-content .technical-skills .graph-content .arduino .bg {
-  background: linear-gradient(74deg, rgba(0, 146, 151, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(202deg, rgba(0, 146, 151, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .matlab {
@@ -898,7 +898,7 @@ ul li {
 }
 
 #engineer-content .technical-skills .graph-content .matlab .bg {
-  background: linear-gradient(288deg, rgba(115, 25, 15, 0.95), rgba(84, 166, 187, 0.95));
+  background: linear-gradient(310deg, rgba(115, 25, 15, 0.95), rgba(84, 166, 187, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .right-arrow {
@@ -1303,10 +1303,10 @@ ul li {
           transition-timing-function: ease-in-out;
   position: absolute;
   z-index: 1;
-  top: calc(50% - calc(35vw/ 2));
-  left: calc(50% - calc(35vw/ 2));
-  width: 35vw;
-  height: 35vw;
+  top: calc(50% - calc(30vw/ 2));
+  left: calc(50% - calc(30vw/ 2));
+  width: 30vw;
+  height: 30vw;
   background: rgba(250, 0, 180, 0.5);
   border-radius: 50%;
 }
@@ -1955,86 +1955,86 @@ button {
 }
 
 .work-text-hover-1 {
-  -webkit-transform: translateX(calc((35vw / 4) * -1)) scale(0.9);
-          transform: translateX(calc((35vw / 4) * -1)) scale(0.9);
+  -webkit-transform: translateX(calc((30vw / 4) * -1)) scale(0.9);
+          transform: translateX(calc((30vw / 4) * -1)) scale(0.9);
   opacity: 0.9;
 }
 
 .work-text-hover-2 {
-  -webkit-transform: translateX(calc((35vw / 4) * -2)) scale(0.8);
-          transform: translateX(calc((35vw / 4) * -2)) scale(0.8);
+  -webkit-transform: translateX(calc((30vw / 4) * -2)) scale(0.8);
+          transform: translateX(calc((30vw / 4) * -2)) scale(0.8);
   opacity: 0.8;
 }
 
 .work-text-hover-3 {
-  -webkit-transform: translateX(calc((35vw / 4) * -3)) scale(0.7);
-          transform: translateX(calc((35vw / 4) * -3)) scale(0.7);
+  -webkit-transform: translateX(calc((30vw / 4) * -3)) scale(0.7);
+          transform: translateX(calc((30vw / 4) * -3)) scale(0.7);
   opacity: 0.7;
 }
 
 .work-text-hover-4 {
-  -webkit-transform: translateX(calc((35vw / 4) * -4)) scale(0.6);
-          transform: translateX(calc((35vw / 4) * -4)) scale(0.6);
+  -webkit-transform: translateX(calc((30vw / 4) * -4)) scale(0.6);
+          transform: translateX(calc((30vw / 4) * -4)) scale(0.6);
   opacity: 0.6;
 }
 
 .work-text-hover-5 {
-  -webkit-transform: translateX(calc((35vw / 4) * -5)) scale(0.5);
-          transform: translateX(calc((35vw / 4) * -5)) scale(0.5);
+  -webkit-transform: translateX(calc((30vw / 4) * -5)) scale(0.5);
+          transform: translateX(calc((30vw / 4) * -5)) scale(0.5);
   opacity: 0.5;
 }
 
 .work-text-hover-6 {
-  -webkit-transform: translateX(calc((35vw / 4) * -6)) scale(0.4);
-          transform: translateX(calc((35vw / 4) * -6)) scale(0.4);
+  -webkit-transform: translateX(calc((30vw / 4) * -6)) scale(0.4);
+          transform: translateX(calc((30vw / 4) * -6)) scale(0.4);
   opacity: 0.4;
 }
 
 .work-text-hover-7 {
-  -webkit-transform: translateX(calc((35vw / 4) * -7)) scale(0.3);
-          transform: translateX(calc((35vw / 4) * -7)) scale(0.3);
+  -webkit-transform: translateX(calc((30vw / 4) * -7)) scale(0.3);
+          transform: translateX(calc((30vw / 4) * -7)) scale(0.3);
   opacity: 0.3;
 }
 
 .reverse-work-text-hover-1 {
-  -webkit-transform: translateX(calc((35vw / 4) * 1)) scale(0.9);
-          transform: translateX(calc((35vw / 4) * 1)) scale(0.9);
+  -webkit-transform: translateX(calc((30vw / 4) * 1)) scale(0.9);
+          transform: translateX(calc((30vw / 4) * 1)) scale(0.9);
   opacity: 0.9;
 }
 
 .reverse-work-text-hover-2 {
-  -webkit-transform: translateX(calc((35vw / 4) * 2)) scale(0.8);
-          transform: translateX(calc((35vw / 4) * 2)) scale(0.8);
+  -webkit-transform: translateX(calc((30vw / 4) * 2)) scale(0.8);
+          transform: translateX(calc((30vw / 4) * 2)) scale(0.8);
   opacity: 0.8;
 }
 
 .reverse-work-text-hover-3 {
-  -webkit-transform: translateX(calc((35vw / 4) * 3)) scale(0.7);
-          transform: translateX(calc((35vw / 4) * 3)) scale(0.7);
+  -webkit-transform: translateX(calc((30vw / 4) * 3)) scale(0.7);
+          transform: translateX(calc((30vw / 4) * 3)) scale(0.7);
   opacity: 0.7;
 }
 
 .reverse-work-text-hover-4 {
-  -webkit-transform: translateX(calc((35vw / 4) * 4)) scale(0.6);
-          transform: translateX(calc((35vw / 4) * 4)) scale(0.6);
+  -webkit-transform: translateX(calc((30vw / 4) * 4)) scale(0.6);
+          transform: translateX(calc((30vw / 4) * 4)) scale(0.6);
   opacity: 0.6;
 }
 
 .reverse-work-text-hover-5 {
-  -webkit-transform: translateX(calc((35vw / 4) * 5)) scale(0.5);
-          transform: translateX(calc((35vw / 4) * 5)) scale(0.5);
+  -webkit-transform: translateX(calc((30vw / 4) * 5)) scale(0.5);
+          transform: translateX(calc((30vw / 4) * 5)) scale(0.5);
   opacity: 0.5;
 }
 
 .reverse-work-text-hover-6 {
-  -webkit-transform: translateX(calc((35vw / 4) * 6)) scale(0.4);
-          transform: translateX(calc((35vw / 4) * 6)) scale(0.4);
+  -webkit-transform: translateX(calc((30vw / 4) * 6)) scale(0.4);
+          transform: translateX(calc((30vw / 4) * 6)) scale(0.4);
   opacity: 0.4;
 }
 
 .reverse-work-text-hover-7 {
-  -webkit-transform: translateX(calc((35vw / 4) * 7)) scale(0.3);
-          transform: translateX(calc((35vw / 4) * 7)) scale(0.3);
+  -webkit-transform: translateX(calc((30vw / 4) * 7)) scale(0.3);
+          transform: translateX(calc((30vw / 4) * 7)) scale(0.3);
   opacity: 0.3;
 }
 
@@ -2127,26 +2127,26 @@ button {
 }
 
 .educator-bg-center-2 {
-  -webkit-transform: translateX(-30vw);
-          transform: translateX(-30vw);
+  -webkit-transform: translateX(-25vw);
+          transform: translateX(-25vw);
   background-color: rgba(0, 250, 50, 0.5) !important;
 }
 
 .educator-bg-center-3 {
-  -webkit-transform: translateX(-20vw);
-          transform: translateX(-20vw);
+  -webkit-transform: translateX(-35vw);
+          transform: translateX(-35vw);
   background-color: rgba(0, 250, 100, 0.5) !important;
 }
 
 .educator-bg-center-0 {
-  -webkit-transform: translateX(20vw);
-          transform: translateX(20vw);
+  -webkit-transform: translateX(25vw);
+          transform: translateX(25vw);
   background-color: rgba(0, 250, 150, 0.5) !important;
 }
 
 .educator-bg-center-1 {
-  -webkit-transform: translateX(30vw);
-          transform: translateX(30vw);
+  -webkit-transform: translateX(35vw);
+          transform: translateX(35vw);
   background-color: rgba(0, 250, 200, 0.5) !important;
 }
 
