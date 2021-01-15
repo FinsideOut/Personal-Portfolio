@@ -40,6 +40,9 @@ $arrow-size: 10px;
     .graph-title {
       grid-area: title;
       text-align: center;
+      // h4 {
+      //   margin-bottom: 0.5rem;
+      // }
       margin-bottom: 1rem;
     }
     .graph-content {
@@ -78,10 +81,10 @@ $arrow-size: 10px;
           transition: opacity $transit-time ease-in-out;
         }
         p {
-          width: 70%;
+          width: 50%;
           margin: auto;
           // border: 1px solid white;
-          left: 15%;
+          left: 25%;
           top: calc(50% + 75px);
         }
         h4 {

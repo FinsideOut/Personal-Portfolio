@@ -226,7 +226,7 @@ const discs = document.querySelectorAll(".soft-skills-disc");
 softSkills.addEventListener("mouseover", (e) => {
   // console.log(discs);
   technicalSkills.classList.add("obscure");
-  titles[2].classList.add("obscure");
+  titles[1].classList.add("obscure");
   developerContent.classList.add("obscure");
   discs.forEach((disc) => {
     disc.classList.add("disc-enlarge");
@@ -234,7 +234,7 @@ softSkills.addEventListener("mouseover", (e) => {
 });
 softSkills.addEventListener("mouseout", (e) => {
   technicalSkills.classList.remove("obscure");
-  titles[2].classList.remove("obscure");
+  titles[1].classList.remove("obscure");
   developerContent.classList.remove("obscure");
   discs.forEach((disc) => {
     disc.classList.remove("disc-enlarge");
@@ -288,6 +288,7 @@ const developerCards = document.querySelectorAll(".developer-card");
 const developerBgs = document.querySelectorAll(".developer-bg");
 const devWrapper = document.querySelector(".developer-wrapper");
 const developerText = document.getElementById("developer-text");
+const scrollFromDeveloper = document.getElementById("scroll-from-developer");
 const dbgSize = 700;
 const incriment = 100;
 // console.log(devWrapper.children);
@@ -295,6 +296,7 @@ developerCards.forEach((card) => {
   card.addEventListener("mouseover", (e) => {
     card.children[0].classList.add("normalize");
     developerText.classList.add("obscure");
+    scrollFromDeveloper.classList.add("obscure");
     titles[2].classList.add("obscure");
     // titles[3].classList.add("obscure");
     servicesContent.classList.add("obscure");
@@ -314,6 +316,8 @@ developerCards.forEach((card) => {
     card.children[0].classList.remove("normalize");
     developerText.classList.remove("obscure");
     titles[2].classList.remove("obscure");
+    scrollFromDeveloper.classList.remove("obscure");
+
     // titles[3].classList.remove("obscure");
     servicesContent.classList.remove("obscure");
     engineerContent.classList.remove("obscure");
@@ -364,10 +368,10 @@ const servicesBg = document.getElementById("services-bg");
 const servicesText = document.getElementById("services-text");
 const serviceCards = document.querySelectorAll(".service-card");
 const servicesBgs = document.querySelectorAll(".services-bg");
-const enquire = document.getElementById("enquire-services");
+const scrollFromServices = document.getElementById("scroll-from-services");
 serviceCards.forEach((card) => {
   card.addEventListener("mouseover", (e) => {
-    enquire.classList.add("obscure");
+    scrollFromServices.classList.add("obscure");
     titles[3].classList.add("obscure");
     servicesText.classList.add("obscure");
     workContent.classList.add("obscure");
@@ -386,7 +390,7 @@ serviceCards.forEach((card) => {
 });
 serviceCards.forEach((card) => {
   card.addEventListener("mouseout", (e) => {
-    enquire.classList.remove("obscure");
+    scrollFromServices.classList.remove("obscure");
     titles[3].classList.remove("obscure");
     servicesText.classList.remove("obscure");
     workContent.classList.remove("obscure");
@@ -456,7 +460,7 @@ serviceCards[2].addEventListener("mouseout", () => {
     servicesBgs[i].classList.remove("services-red-" + [i]);
   }
 });
-enquire.addEventListener("mouseover", () => {
+scrollFromServices.addEventListener("mouseover", () => {
   titles[3].classList.add("obscure");
   servicesText.classList.add("obscure");
   workContent.classList.add("obscure");
@@ -471,7 +475,7 @@ enquire.addEventListener("mouseover", () => {
   servicesBgs[1].classList.add("services-green-" + [0]);
   servicesBgs[2].classList.add("services-blue-" + [0]);
 });
-enquire.addEventListener("mouseout", () => {
+scrollFromServices.addEventListener("mouseout", () => {
   serviceCards.forEach((card) => {
     card.classList.remove("obscure");
   });
@@ -498,24 +502,22 @@ const workText = document.getElementById("work-text");
 const judeImg = document.getElementById("jude-img");
 const johnImg = document.getElementById("john-img");
 const newsImg = document.getElementById("news-img");
-judeImg.addEventListener("click", () => {
-  var strWindowFeatures = "location=yes,scrollbars=yes,status=yes";
-  var URL = "https://condescending-chandrasekhar-4d7ab6.netlify.app/";
-  // var win = window.open(URL, "_blank", strWindowFeatures);
-  window.open(URL, "_blank", strWindowFeatures);
-});
-johnImg.addEventListener("click", () => {
-  var strWindowFeatures = "location=yes,scrollbars=yes,status=yes";
-  var URL = "https://sharp-minsky-00b8d2.netlify.app/";
-  // var win = window.open(URL, "_blank", strWindowFeatures);
-  window.open(URL, "_blank", strWindowFeatures);
-});
-newsImg.addEventListener("click", () => {
-  var strWindowFeatures = "location=yes,scrollbars=yes,status=yes";
-  var URL = "https://clever-albattani-a31680.netlify.app/";
-  // var win = window.open(URL, "_blank", strWindowFeatures);
-  window.open(URL, "_blank", strWindowFeatures);
-});
+// judeImg.addEventListener("click", () => {
+//   var strWindowFeatures = "location=yes,scrollbars=yes,status=yes";
+//   var URL = "https://condescending-chandrasekhar-4d7ab6.netlify.app/";
+//   window.open(URL, "_blank", strWindowFeatures);
+// });
+
+// johnImg.addEventListener("click", () => {
+//   var strWindowFeatures = "location=yes,scrollbars=yes,status=yes";
+//   var URL = "https://sharp-minsky-00b8d2.netlify.app/";
+//   window.open(URL, "_blank", strWindowFeatures);
+// });
+// newsImg.addEventListener("click", () => {
+//   var strWindowFeatures = "location=yes,scrollbars=yes,status=yes";
+//   var URL = "https://clever-albattani-a31680.netlify.app/";
+//   window.open(URL, "_blank", strWindowFeatures);
+// });
 
 workItems.forEach((item) => {
   item.addEventListener("mouseover", (e) => {
@@ -612,139 +614,56 @@ workImgs.forEach((img) => {
     }
   });
 });
+$(".nav-link").on("click", function (e) {
+  if (this.hash !== "") {
+    e.preventDefault();
+    const hash = this.hash;
+    $("html, body").animate(
+      {
+        scrollTop: $(hash).offset().top - 100,
+      },
+      800
+    );
+  }
+});
+$(".main-nav-link").on("click", function (e) {
+  if (this.hash !== "") {
+    e.preventDefault();
+    const hash = this.hash;
+    $("html, body").animate(
+      {
+        scrollTop: $(hash).offset().top - 100,
+      },
+      800
+    );
+  }
+});
+const mainNav = document.getElementById("main-nav");
+const contactContent = document.getElementById("contact-content");
+mainNav.addEventListener("mouseover", () => {
+  aspiring.classList.add("obscure");
+  educatorContent.classList.add("obscure");
+  engineerContent.classList.add("obscure");
+  developerContent.classList.add("obscure");
+  servicesContent.classList.add("obscure");
+  workContent.classList.add("obscure");
+  cvContent.classList.add("obscure");
+  contactContent.classList.add("obscure");
+});
+mainNav.addEventListener("mouseout", () => {
+  aspiring.classList.remove("obscure");
+  educatorContent.classList.remove("obscure");
+  engineerContent.classList.remove("obscure");
+  developerContent.classList.remove("obscure");
+  servicesContent.classList.remove("obscure");
+  workContent.classList.remove("obscure");
+  cvContent.classList.remove("obscure");
+  contactContent.classList.remove("obscure");
+});
 
-// $(".nav-link").on("click", function (e) {
-//   if (this.hash !== "" && isFull === false) {
-//     changeState();
-//     e.preventDefault();
-//     const hash = this.hash;
-//     setTimeout(function () {
-//       console.log(hash);
-//       console.log(hash, $(hash).offset().top - 100);
-//       $("html, body").animate(
-//         {
-//           scrollTop: $(hash).offset().top - 100,
-//         },
-//         1000
-//       );
-//     }, 1500);
-//     // console.log(hash, $(hash).offset().top - 100);
-//   }
-//   // window.scrollBy(0, window.innerHeight / 2);
-// });
-// contactButton.addEventListener("mouseover", () => {
-//   contactButton.classList.add("normalize");
-// });
-// contactButton.addEventListener("mouseout", () => {
-//   contactButton.classList.remove("normalize");
-// });
-// menuButton.addEventListener("mouseover", () => {
-//   menuButton.classList.add("normalize");
-// });
-// menuButton.addEventListener("mouseout", () => {
-//   menuButton.classList.remove("normalize");
-// });
-// $(".nav-link-full").click(function () {
-//   if (isFull && window.scrollY > 0) {
-//     $("html").animate(
-//       {
-//         scrollTop: 0,
-//       },
-//       1000,
-//       function () {
-//         console.log("wtf");
-//         setTimeout(function () {
-//           changeState();
-//         }, 200);
-//       }
-//     );
-//   } else if (isFull && window.scrollY === 0) {
-//     changeState();
-//   }
-// });
-// $("#go-contact").click(function () {
-//   if (isFull && window.scrollY > 0) {
-//     $("html").animate(
-//       {
-//         scrollTop: 0,
-//       },
-//       1000,
-//       function () {
-//         console.log("wtf");
-//         setTimeout(function () {
-//           changeState();
-//         }, 200);
-//       }
-//     );
-//   } else if (isFull && window.scrollY === 0) {
-//     changeState();
-//   }
-// });
-// $("#go-home").click(function () {
-//   if (isFull && window.scrollY > 0) {
-//     $("html").animate(
-//       {
-//         scrollTop: 0,
-//       },
-//       1000,
-//       function () {
-//         console.log("wtf");
-//         setTimeout(function () {
-//           changeState();
-//         }, 200);
-//       }
-//     );
-//   } else if (isFull && window.scrollY === 0) {
-//     changeState();
-//   }
-// });
-
-// // contactButton.addEventListener("click", () => {
-// //   // $("html, body").animate(
-// //   //   { scrollTop: 0 },
-// //   //   { duration: 1000, complete: changeState() }
-// //   // );
-// // });
-// // $("html, body")
-// //   .animate(
-// //     {
-// //       scrollTop: 0,
-// //     },
-// //     {
-// //       easing: alert("start ani"),
-// //     },
-// //     duration
-// //   )
-// //   .promise()
-// //   .done(changeState());
-// // changeState();
-// // contact.classList.add("hidden");
-// // body.classList.add("body-full");
-// // bookBg.classList.add("book-bg-full");
-// // // bookBg.addEventListener("transitionend", shiftHeadersToFull);
-// // contactButton.classList.add("obscure");
-// // menuButton.classList.add("obscure");
-// // // bookBg.removeEventListener("transitionend", shiftHeadersToFull);
-// // logo.classList.add("logo-full");
-// // lead.classList.add("lead-full");
-// // aspiring.classList.add("aspiring-full");
-// // educator.classList.add("educator-full");
-// // educatorTitle.classList.add("enlarge-title-small");
-// // engineerTitle.classList.add("enlarge-title-small");
-// // developerTitle.classList.add("enlarge-title-small");
-// // titles[4].classList.add("enlarge-title-large");
-// // titles[3].classList.add("enlarge-title-large");
-// // engineer.classList.add("engineer-full");
-// // developer.classList.add("developer-full");
-// // services.classList.add("services-full");
-// // work.classList.add("work-full");
-// // cv.classList.add("cv-full");
-// // cvTitle.classList.add("enlarge-title-large");
-// // bookPageLeft.classList.add("page-to-center");
-// // bookPageRight.classList.add("page-to-center");
-// // const preloader = document.getElementById("preloader");
-// // logo.addEventListener("transitionend", addFullWidth);
-// // logo.addEventListener("transitionend", () => {
-// //   preloader.classList.add("fade-out");
-// // });
-// makeFlower(0, 0);
+const stickyElm = document.querySelector("#main-nav");
+const observer = new IntersectionObserver(
+  ([e]) => e.target.classList.toggle("isSticky", e.intersectionRatio < 1),
+  { threshold: [1] }
+);
+observer.observe(stickyElm);

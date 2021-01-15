@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -103,6 +104,24 @@ i {
   margin: auto;
 }
 
+.section-lead,
+.section-title,
+#aspiring,
+#educator-content,
+.educator-text-container,
+#engineer-content,
+#engineer-text,
+.soft-skills,
+.card,
+.work-piece,
+#developer-content,
+#services-content,
+#work-content,
+#cv-content {
+  -webkit-transition: opacity 300ms ease-in-out;
+  transition: opacity 300ms ease-in-out;
+}
+
 .section-header {
   text-align: center;
   margin-bottom: 6vh;
@@ -150,7 +169,7 @@ ul li {
   margin: 0;
 }
 
-.btn-full {
+.btn-full, .work-piece-link {
   border: 2px solid;
   border-color: rgba(255, 255, 255, 0);
   color: white;
@@ -162,12 +181,27 @@ ul li {
   transition: border 300ms ease-in-out, box-shadow 300ms ease-in-out, color 300ms ease-in-out, -webkit-box-shadow 300ms ease-in-out;
 }
 
-.btn-full:hover {
+.btn-full:hover, .work-piece-link:hover {
   cursor: pointer;
   border-color: rgba(255, 255, 255, 0.5);
   -webkit-box-shadow: inset 0 0 5px #fff;
           box-shadow: inset 0 0 5px #fff;
   color: rgba(255, 255, 255, 0.7);
+}
+
+.work-piece-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .cards {
@@ -250,6 +284,9 @@ ul li {
 #main-header {
   margin-top: 0;
   height: 100vh;
+  position: relative;
+  z-index: 100;
+  pointer-events: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -273,6 +310,49 @@ ul li {
 
 #main-header #logo-home {
   margin-top: 2rem;
+}
+
+#main-nav {
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  top: -1px;
+  z-index: 200;
+  position: -webkit-sticky;
+  position: sticky;
+  opacity: 1;
+  -webkit-transition: opacity 300ms ease-in-out;
+  transition: opacity 300ms ease-in-out;
+}
+
+#main-nav .main-nav-link {
+  font-size: 2rem;
+  margin: 2rem;
+  -webkit-transition: opacity 300ms ease-in-out;
+  transition: opacity 300ms ease-in-out;
+}
+
+#main-nav .main-nav-link:hover {
+  opacity: 0.6;
+}
+
+#main-nav.isSticky {
+  opacity: 0.1;
+}
+
+#main-nav.isSticky:hover {
+  opacity: 1;
 }
 
 #aspiring {
@@ -503,6 +583,7 @@ ul li {
   left: 0;
   max-width: 66%;
   opacity: 0;
+  text-align: left;
 }
 
 #educator-content .hover-icons-wrapper .more-info-container #more-info-left {
@@ -676,9 +757,9 @@ ul li {
 }
 
 #engineer-content .technical-skills .graph-content .graph-icons p {
-  width: 70%;
+  width: 50%;
   margin: auto;
-  left: 15%;
+  left: 25%;
   top: calc(50% + 75px);
 }
 
@@ -726,7 +807,7 @@ ul li {
 }
 
 #engineer-content .technical-skills .graph-content .github .bg {
-  background: linear-gradient(55deg, rgba(68, 170, 0, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(186deg, rgba(68, 170, 0, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .javascript {
@@ -735,7 +816,7 @@ ul li {
 }
 
 #engineer-content .technical-skills .graph-content .javascript .bg {
-  background: linear-gradient(54deg, rgba(250, 213, 0, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(320deg, rgba(250, 213, 0, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .html5 {
@@ -744,7 +825,7 @@ ul li {
 }
 
 #engineer-content .technical-skills .graph-content .html5 .bg {
-  background: linear-gradient(221deg, rgba(228, 77, 38, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(157deg, rgba(228, 77, 38, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .css3 {
@@ -753,7 +834,7 @@ ul li {
 }
 
 #engineer-content .technical-skills .graph-content .css3 .bg {
-  background: linear-gradient(1deg, rgba(38, 77, 228, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(29deg, rgba(38, 77, 228, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .sass {
@@ -762,7 +843,7 @@ ul li {
 }
 
 #engineer-content .technical-skills .graph-content .sass .bg {
-  background: linear-gradient(139deg, rgba(206, 103, 154, 0.95), rgba(2, 1, 1, 0.95));
+  background: linear-gradient(134deg, rgba(206, 103, 154, 0.95), rgba(2, 1, 1, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .microchip {
@@ -771,7 +852,7 @@ ul li {
 }
 
 #engineer-content .technical-skills .graph-content .microchip .bg {
-  background: linear-gradient(1deg, rgba(238, 58, 37, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(215deg, rgba(238, 58, 37, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .pcb {
@@ -780,7 +861,7 @@ ul li {
 }
 
 #engineer-content .technical-skills .graph-content .pcb .bg {
-  background: linear-gradient(316deg, rgba(73, 196, 56, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(302deg, rgba(73, 196, 56, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .c-plus {
@@ -789,7 +870,7 @@ ul li {
 }
 
 #engineer-content .technical-skills .graph-content .c-plus .bg {
-  background: linear-gradient(153deg, rgba(0, 86, 151, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(64deg, rgba(0, 86, 151, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .arduino {
@@ -798,7 +879,7 @@ ul li {
 }
 
 #engineer-content .technical-skills .graph-content .arduino .bg {
-  background: linear-gradient(173deg, rgba(0, 146, 151, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(95deg, rgba(0, 146, 151, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .matlab {
@@ -807,7 +888,7 @@ ul li {
 }
 
 #engineer-content .technical-skills .graph-content .matlab .bg {
-  background: linear-gradient(331deg, rgba(115, 25, 15, 0.95), rgba(84, 166, 187, 0.95));
+  background: linear-gradient(238deg, rgba(115, 25, 15, 0.95), rgba(84, 166, 187, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .right-arrow {
@@ -1077,7 +1158,7 @@ ul li {
 
 #services-content .bgs {
   position: absolute;
-  top: 10%;
+  top: calc(50% - (20vh/ 2));
   left: 30%;
   height: 20vh;
   width: 40%;
@@ -1124,7 +1205,7 @@ ul li {
   z-index: 100;
 }
 
-.btn-full {
+.btn-full, .work-piece-link {
   padding: 10px;
 }
 
@@ -1158,7 +1239,6 @@ ul li {
   max-width: 45%;
   position: relative;
   z-index: 3;
-  cursor: pointer;
 }
 
 .work-piece .work-piece-img img {
@@ -1234,7 +1314,7 @@ ul li {
 }
 
 .work-piece .work-piece-text .work-piece-title {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .work-piece .work-piece-text .work-piece-info {
@@ -1272,7 +1352,7 @@ ul li {
   height: fit-content;
 }
 
-.work-links-container .btn-full {
+.work-links-container .btn-full, .work-links-container .work-piece-link {
   margin: 1rem 1rem 0rem;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -1292,8 +1372,9 @@ ul li {
           justify-content: center;
 }
 
-.work-links-container .btn-full i,
-.work-links-container .btn-full a {
+.work-links-container .btn-full i, .work-links-container .work-piece-link i,
+.work-links-container .btn-full a,
+.work-links-container .work-piece-link a {
   padding: 10px;
 }
 
@@ -1304,7 +1385,7 @@ ul li {
           flex-direction: row-reverse;
 }
 
-.btn-full {
+.btn-full, .work-piece-link {
   padding: 15px;
 }
 
@@ -1799,8 +1880,8 @@ button {
 }
 
 .service-wrapper-bottom {
-  -webkit-transform: scale(1) translateY(40vh) rotate(180deg) !important;
-          transform: scale(1) translateY(40vh) rotate(180deg) !important;
+  -webkit-transform: scale(1) translateY(30vh) rotate(180deg) !important;
+          transform: scale(1) translateY(30vh) rotate(180deg) !important;
 }
 
 .service-top {

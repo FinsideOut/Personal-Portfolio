@@ -22,7 +22,7 @@ $work-bg-size: 500px;
     max-width: 45%;
     position: relative;
     z-index: 3;
-    cursor: pointer;
+    // cursor: pointer;
     img {
       border-radius: 20px;
       position: relative;
@@ -81,7 +81,7 @@ $work-bg-size: 500px;
     position: relative;
     z-index: 5;
     .work-piece-title {
-      margin-bottom: 1rem;
+      margin-bottom: 2rem;
     }
     .work-piece-info {
       width: 80%;

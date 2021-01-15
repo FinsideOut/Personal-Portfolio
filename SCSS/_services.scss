@@ -37,7 +37,7 @@ $service-bg-size: 600px;
     // border: 1px solid white;
 
     position: absolute;
-    top: 10%;
+    top: calc(50% - (#{$bg-height}/ 2));
     left: 30%;
     height: $bg-height;
     width: 40%;

@@ -8,6 +8,9 @@
   @extend .container;
   margin-top: 0;
   height: 100vh;
+  position: relative;
+  z-index: 100;
+  pointer-events: none;
   @include flex(column, space-between);
   #logo-home,
   #lead {
@@ -16,6 +19,31 @@
   }
   #logo-home {
     margin-top: 2rem;
+  }
+}
+#main-nav {
+  color: white;
+  // border: 1px solid white;
+  @include flex(row, space-evenly);
+  top: -1px;
+  z-index: 200;
+  position: sticky;
+  opacity: 1;
+  transition: opacity $transit-time ease-in-out;
+
+  .main-nav-link {
+    font-size: 2rem;
+    margin: 2rem;
+    transition: opacity $transit-time ease-in-out;
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}
+#main-nav.isSticky {
+  opacity: 0.1;
+  &:hover {
+    opacity: 1;
   }
 }
 #aspiring {

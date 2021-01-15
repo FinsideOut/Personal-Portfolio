@@ -93,6 +93,22 @@ i {
   width: 80%;
   margin: auto;
 }
+.section-lead,
+.section-title,
+#aspiring,
+#educator-content,
+.educator-text-container,
+#engineer-content,
+#engineer-text,
+.soft-skills,
+.card,
+.work-piece,
+#developer-content,
+#services-content,
+#work-content,
+#cv-content {
+  transition: opacity $transit-time ease-in-out;
+}
 .section-header {
   text-align: center;
   margin-bottom: 6vh;
@@ -141,6 +157,10 @@ ul {
     box-shadow: inset 0 0 5px #fff;
     color: rgba(255, 255, 255, 0.7);
   }
+}
+.work-piece-link {
+  @extend .btn-full;
+  @include flex(row, space-around);
 }
 .cards {
   position: relative;

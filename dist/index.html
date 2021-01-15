@@ -9,6 +9,7 @@
         <link
             href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Sansita+Swashed:wght@300;600;800&display=swap"
             rel="stylesheet">
+
         <link rel="stylesheet" href="./css/main.css">
         <title>Finlay Williamson</title>
     </head>
@@ -25,7 +26,12 @@
                 I
                 specialize in unique interactive design and sleek web design</p>
         </header>
-
+        <nav id="main-nav" class='container'>
+            <a href="#aspiring" class="main-nav-link">About</a>
+            <a href="#services-content" class="main-nav-link">Services</a>
+            <a href="#work-content" class="main-nav-link">Portfolio</a>
+            <a href="#contact-content" class="main-nav-link">Contact</a>
+        </nav>
         <h2 id='aspiring'>I am an Aspiring...</h2>
 
         <section id="educator-content">
@@ -95,22 +101,14 @@
                     <div id='more-info-left' class="more-info">
                         <p> In particular the talks on "Life as a Teacher" and "Progression
                             in
-                            Teaching" are appealing to me, though I haven't begun my career
+                            Teaching" are appealing to me. Though I haven't begun my career
                             yet
                             I've no lack of ambition! The event should provide another
-                            opportunityu to ask questions to newly qualified and more
+                            opportunity to ask questions to newly qualified and more
                             experienced teachers.</p>
                     </div>
 
-                    <p id='more-info-center-left' class="more-info">As is customary for one
-                        at
-                        the start of a new road I have spent no short time daydreaming and
-                        imagining what kind of teacher I will be. I'm looking forward to
-                        experiencing a wide variety of teaching styles and philosophies such
-                        that
-                        my own can be challenged, refined and matured prior to placements.
-                    </p>
-                    <p id='more-info-center-right' class="more-info">I would hoep to chat
+                    <p id='more-info-center-left' class="more-info">I also hope to chat
                         with a
                         number of experienced teachers about the job, speciffically elements
                         of
@@ -119,7 +117,15 @@
                         in the best way for the coming PGDE, pointing me towards the set of
                         administrative and perhaps beuarocratic skills I should develope in
                         the
-                        meantime.</p>
+                        meantime.
+                    </p>
+                    <p id='more-info-center-right' class="more-info">As is customary for one
+                        at
+                        the start of a new road I have spent no short time daydreaming and
+                        imagining what kind of teacher I will be. I'm looking forward to
+                        experiencing a wide variety of teaching styles and philosophies such
+                        that
+                        my own can be challenged, refined and matured prior to placements.</p>
                 </div>
                 <div class="educator-bg-container">
                     <div class="educator-bg ebg-1"></div>
@@ -431,8 +437,9 @@
                         dev services to a wider and more professional clientele </p>
                 </div>
             </div>
-            <div class="enquire-link nav-link-full">
-                <h5 class=" btn-full">View my Portfolio
+            <div id='scroll-from-developer' class="enquire-link enquire nav-link-full">
+                <h5><a href='#work-content' class="btn-full nav-link">View my Portfolio</a>
+                </h5>
             </div>
         </section>
 
@@ -504,10 +511,10 @@
                     <div class="services-bg sbg-3"></div>
                 </div>
             </div>
-            <div id='enquire-services' class="enquire-link nav-link-full">
-                <h5 class=" btn-full">Enquire about my services
+            <div id='scroll-from-services' class="enquire enquire-link nav-link-full">
+                <h5><a href='#contact-content' class="btn-full nav-link">Enquire about my services</a>
+                </h5>
             </div>
-            </h5>
 
         </section>
 
@@ -531,16 +538,12 @@
                         booze. My first true solo mission in web dev!
                     </p>
                     <div class="work-links-container">
-                        <div class="btn-full">
-                            <a href="" class="work-piece-link">View Website</a>
-                            <i class="fas fa-search"></i>
-                        </div>
+                        <a href="https://condescending-chandrasekhar-4d7ab6.netlify.app/" target="_blank"
+                            class="work-piece-link">View Website <i class="fas fa-search"></i></a>
 
-                        <div class="btn-full reverse">
-                            <a href="" class="work-piece-link">View Source
-                                Code</a>
-                            <i class="fab fa-github"></i>
-                        </div>
+                        <a href="https://github.com/finsignificant/Twitch-Portfolio" target="_blank"
+                            class="work-piece-link reverse">View Source
+                            Code <i class="fab fa-github"></i></a>
                     </div>
                 </div>
                 <div class='work-piece-img' id="jude-shot">
@@ -564,17 +567,12 @@
                         character whose portfolio site I used to practice with CSS and JS
                     </p>
                     <div class="work-links-container">
-                        <div class="btn-full">
-                            <a href="" class="work-piece-link">View Website</a>
-                            <i class="fas fa-search"></i>
-                        </div>
+                        <a href="https://sharp-minsky-00b8d2.netlify.app/" target="_blank" class="work-piece-link">View
+                            Website <i class="fas fa-search"></i></a>
 
-                        <div class="btn-full reverse">
-                            <a href="" class="work-piece-link">View Source
-                                Code</a>
-                            <i class="fab fa-github"></i>
-                        </div>
-
+                        <a href="https://github.com/finsignificant/JD-Portfolio" class="work-piece-link reverse"
+                            target="_blank">View Source
+                            Code <i class="fab fa-github"></i></a>
                     </div>
                 </div>
                 <div class='work-piece-img' id="jude-shot">
@@ -598,17 +596,13 @@
                         and tech. News Grid is another practice site for CSS3 and HTML5
                     </p>
                     <div class="work-links-container">
-                        <div class="btn-full">
-                            <a href="" class="work-piece-link">View Website</a>
-                            <i class="fas fa-search"></i>
-                        </div>
+                        <a href="https://clever-albattani-a31680.netlify.app/" target="_blank"
+                            class="work-piece-link">View
+                            Website <i class="fas fa-search"></i></a>
 
-                        <div class="btn-full reverse">
-                            <a href="" class="work-piece-link">View Source
-                                Code</a>
-                            <i class="fab fa-github"></i>
-                        </div>
-
+                        <a href="https://github.com/finsignificant/NewsGrid" class="work-piece-link reverse"
+                            target="_blank">View Source
+                            Code <i class="fab fa-github"></i></a>
                     </div>
                 </div>
                 <div class='work-piece-img' id="jude-shot">
@@ -625,19 +619,19 @@
                     </div>
                 </div>
             </div>
-            <div class="enquire-link nav-link-full">
-                <h5 class=" btn-full">Get Your Website Started
+            <div id='scroll-from-work' class="enquire enquire-link nav-link-full">
+                <h5><a href='#contact-content' class="btn-full nav-link">Get your website started</a>
+                </h5>
             </div>
         </section>
 
         <section id="cv-content">
             <h2 class="section-title">My CV</h2>
             <p class='section-lead'>For your records a downloadable version of my CV is available here</p>
-            <div class="enquire-link nav-link-full">
-                <h5 class=" btn-full">Download My CV
+            <div id='cv-download' class="enquire-link nav-link-full">
+                <h5><a class="btn-full nav-link">Download my CV</a>
+                </h5>
             </div>
-
-
         </section>
 
 
