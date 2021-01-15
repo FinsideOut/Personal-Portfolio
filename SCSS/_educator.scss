@@ -87,7 +87,7 @@
     }
   }
 }
-$educator-bg-size: 500px;
+$educator-bg-size: 35vw;
 .educator-bg-container {
   transform: scale(0);
   opacity: 0;
@@ -107,10 +107,10 @@ $educator-bg-size: 500px;
     transition-timing-function: ease-in-out;
     height: $educator-bg-size;
     width: $educator-bg-size;
-    border-radius: 50%;
-    position: absolute;
     top: calc(50% - (#{$educator-bg-size}/ 2));
     left: calc(50% - (#{$educator-bg-size}/ 2));
+    border-radius: 50%;
+    position: absolute;
     background-color: rgba(150, 200, 0, 0.5);
   }
 }
