@@ -33,13 +33,13 @@ const workContent = document.getElementById("work-content");
 const cvContent = document.getElementById("cv-content");
 
 let heroNum = 500;
-
 for (let i = 0; i < heroNum; i++) {
   let newDisc = document.createElement("div");
   newDisc.classList.add("hero-disc");
   heroContainer.appendChild(newDisc);
 }
 const heroDiscs = document.querySelectorAll(".hero-disc");
+
 heroContainer.addEventListener("mousemove", (e) => {
   if (window.scrollY < 500) {
     let rect = heroContainer.getBoundingClientRect();
@@ -63,6 +63,8 @@ window.addEventListener("scroll", () => {
 // makeFlower();
 // makeFlower();
 function makeFlower(modifier, color) {
+  console.log(modifier, color);
+
   let opac = 1;
   let R = 0;
   let ratio = 0.6180339;
@@ -523,6 +525,7 @@ const newsImg = document.getElementById("news-img");
 // });
 
 workItems.forEach((item) => {
+  const bgContainer = item.children[4].children[1];
   item.addEventListener("mouseover", (e) => {
     item.classList.add("target");
     titles[4].classList.add("obscure");
@@ -533,6 +536,18 @@ workItems.forEach((item) => {
     for (let i = 0; i < workItems.length; i++) {
       if (!workItems[i].classList.contains("target")) {
         workItems[i].classList.add("obscure");
+      }
+    }
+    bgContainer.classList.add("normalize");
+
+    if (item.classList.contains("reverse-piece")) {
+      console.log("oi");
+      for (let i = 0; i < bgContainer.childElementCount; i++) {
+        bgContainer.children[i].classList.add("reverse-work-text-hover-" + [i]);
+      }
+    } else {
+      for (let i = 0; i < bgContainer.childElementCount; i++) {
+        bgContainer.children[i].classList.add("work-text-hover-" + [i]);
       }
     }
   });
@@ -550,21 +565,6 @@ workItems.forEach((item) => {
   });
 });
 
-workItems.forEach((text) => {
-  const bgContainer = text.children[4].children[1];
-  text.addEventListener("mouseover", (e) => {
-    bgContainer.classList.add("normalize");
-    if (text.parentElement.classList.contains("reverse")) {
-      for (let i = 0; i < bgContainer.childElementCount; i++) {
-        bgContainer.children[i].classList.add("reverse-work-text-hover-" + [i]);
-      }
-    } else {
-      for (let i = 0; i < bgContainer.childElementCount; i++) {
-        bgContainer.children[i].classList.add("work-text-hover-" + [i]);
-      }
-    }
-  });
-});
 workItems.forEach((text) => {
   const bgContainer = text.children[4].children[1];
   text.addEventListener("mouseout", (e) => {
@@ -660,8 +660,13 @@ mainNav.addEventListener("mouseout", () => {
 });
 
 const stickyElm = document.querySelector("#main-nav");
-const observer = new IntersectionObserver(
-  ([e]) => e.target.classList.toggle("isSticky", e.intersectionRatio < 1),
-  { threshold: [1] }
-);
-observer.observe(stickyElm);
+const navLocation = document.querySelector("#nav-location");
+window.onscroll = () => {
+  if (window.scrollY > navLocation.offsetTop) {
+    stickyElm.classList.add("fixed-nav");
+    aspiring.classList.add("nav-compensate");
+  } else {
+    stickyElm.classList.remove("fixed-nav");
+    aspiring.classList.remove("nav-compensate");
+  }
+};

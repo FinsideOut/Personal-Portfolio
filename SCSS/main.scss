@@ -25,12 +25,11 @@
   color: white;
   // border: 1px solid white;
   @include flex(row, space-evenly);
-  top: -1px;
   z-index: 200;
-  position: sticky;
   opacity: 1;
   transition: opacity $transit-time ease-in-out;
-
+  width: 100vw;
+  height: 5rem;
   .main-nav-link {
     font-size: 2rem;
     margin: 2rem;
@@ -39,6 +38,19 @@
       opacity: 0.6;
     }
   }
+}
+.fixed-nav {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  opacity: 0.3 !important;
+  transition: opacity $transit-time ease-in-out;
+  &:hover {
+    opacity: 1 !important;
+  }
+}
+.nav-compensate {
+  padding-top: 8rem;
 }
 #main-nav.isSticky {
   opacity: 0.3;

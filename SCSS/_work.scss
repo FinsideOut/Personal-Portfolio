@@ -27,9 +27,13 @@ $work-bg-size: 30vw;
   //   height: 20vh;
   .site-link {
     grid-area: site-link;
+    position: relative;
+    z-index: 5;
   }
   .code-link {
     grid-area: code-link;
+    position: relative;
+    z-index: 5;
   }
   .work-piece-img {
     // border: 1px solid white;
@@ -48,6 +52,7 @@ $work-bg-size: 30vw;
       height: auto;
     }
     .work-bg-container {
+      pointer-events: none;
       transition-property: transform, opacity;
       transition-duration: $transit-time;
       transition-timing-function: ease-in-out;
@@ -96,17 +101,20 @@ $work-bg-size: 30vw;
 
   .work-piece-title {
     grid-area: title;
-
+    position: relative;
+    z-index: 5;
     margin-bottom: 2rem;
   }
   .work-piece-info {
     grid-area: info;
     width: 80%;
     margin: auto;
+    position: relative;
+    z-index: 5;
   }
 }
 .last {
-  margin-bottom: 3rem;
+  margin-bottom: 8rem;
 }
 .reverse {
   flex-direction: row-reverse;

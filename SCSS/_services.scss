@@ -1,10 +1,16 @@
 @use 'sass:math';
 
-$height: 20rem;
-$bg-height: 10rem;
+$height: 18rem;
+$bg-height: 9rem;
 $half-side-length: calc(#{$bg-height} / 1.73205);
 $service-bg-size: 600px;
 #services-content {
+  .btn-full {
+    margin-top: 0;
+  }
+  .enquire-link {
+    margin-top: 0;
+  }
   @extend .container;
   .services-wrapper {
     position: relative;
@@ -13,7 +19,7 @@ $service-bg-size: 600px;
   color: white;
   .cards {
     // border: 1px solid white;
-    margin: 2rem 0rem;
+    margin: 2rem 0rem 0rem;
     z-index: 90;
     position: relative;
     width: 100%;
@@ -78,7 +84,7 @@ $service-bg-size: 600px;
   padding: 0rem 6rem 0rem;
   z-index: 100;
   // border: 1px solid white;
-  margin: auto;
+  margin: 3rem auto 0rem;
   position: relative;
   z-index: 100;
 }

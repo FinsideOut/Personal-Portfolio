@@ -82,6 +82,17 @@
   }
 }
 @media (max-width: 640px) {
+  form {
+    grid-template-columns: repeat(1, 1fr) !important;
+    .subject,
+    .message,
+    .submit {
+      // position: relative;
+      // z-index: 100;
+      grid-column: 1;
+      width: 100%;
+    }
+  }
   #aspiring {
     font-size: 3rem;
   }
@@ -101,9 +112,10 @@
     width: 85vw !important;
   }
   #main-nav {
-    max-width: 90% !important;
+    width: 100vw !important;
     flex-direction: column !important;
-    margin: 2rem auto 6rem !important;
+    margin: 0;
+    height: 15rem;
     .main-nav-link {
       margin: 0.5rem;
     }
