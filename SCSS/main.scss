@@ -28,7 +28,7 @@
   z-index: 200;
   opacity: 1;
   position: relative;
-  z-index: 200;
+  z-index: 300;
   transition: opacity $transit-time ease-in-out;
   width: 100vw;
   height: 5rem;
@@ -46,19 +46,26 @@
   z-index: 200;
   top: 0;
   left: 0;
-  opacity: 0.3 !important;
+  // opacity: 0.3 !important;
   transition: opacity $transit-time ease-in-out;
   &:hover {
     opacity: 1 !important;
   }
 }
+.fixed-nav-mobile {
+  position: fixed !important;
+  z-index: 200;
+  top: 0;
+  left: 0;
+  // opacity: 0.3 !important;
+  transition: opacity $transit-time ease-in-out;
+}
 .nav-compensate {
   padding-top: 8rem;
 }
 
-.fixed-nav-mobile {
-  @extend .fixed-nav;
-  top: -15rem;
+.vanish {
+  opacity: 0 !important;
 }
 .nav-compensate-mobile {
   padding-top: 18rem;
@@ -70,6 +77,8 @@
   }
 }
 #aspiring {
+  position: relative;
+  z-index: 200;
   margin: 3rem auto;
   text-align: center;
 }

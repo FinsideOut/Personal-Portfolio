@@ -26,12 +26,14 @@ window.onload = () => {
 // // window.addEventListener("resize", run);
 // // window.addEventListener("scroll", run);
 const heroContainer = document.getElementById("hero-container");
-// const engineerContent = document.getElementById("engineer-content");
-// const educatorContent = document.getElementById("educator-content");
-// const developerContent = document.getElementById("developer-content");
-// const servicesContent = document.getElementById("services-content");
-// const workContent = document.getElementById("work-content");
-// const cvContent = document.getElementById("cv-content");
+const engineerContent = document.getElementById("engineer-content");
+const educatorContent = document.getElementById("educator-content");
+const developerContent = document.getElementById("developer-content");
+const servicesContent = document.getElementById("services-content");
+const workContent = document.getElementById("work-content");
+const cvContent = document.getElementById("cv-content");
+const contactContent = document.getElementById("contact-content");
+const aspiring = document.getElementById("aspiring");
 
 let heroNum = 500;
 for (let i = 0; i < heroNum; i++) {
@@ -50,14 +52,44 @@ window.addEventListener("scroll", (e) => {
   makeFlower(x / 500000, y / 2);
   handleNav();
 });
+let prevScroll = 0;
 function handleNav() {
   if (screenWidth.matches) {
-    console.log("mobile nav");
-    if (window.scrollY > navLocation.offsetTop + navLocation.offsetHeight) {
+    console.log(prevScroll);
+    if (window.scrollY > navLocation.offsetTop) {
       stickyElm.classList.add("fixed-nav-mobile");
+      stickyElm.classList.add("vanish");
       aspiring.classList.add("nav-compensate-mobile");
+      if (prevScroll > window.scrollY) {
+        // stickyElm.classList.remove("fixed-nav");
+        stickyElm.classList.remove("vanish");
+        educatorContent.classList.add("obscure");
+        engineerContent.classList.add("obscure");
+        developerContent.classList.add("obscure");
+        servicesContent.classList.add("obscure");
+        workContent.classList.add("obscure");
+        cvContent.classList.add("obscure");
+        contactContent.classList.add("obscure");
+        aspiring.classList.add("obscure");
+        // aspiring.classList.remove("nav-compensate-mobile");
+      } else if (prevScroll < window.scrollY) {
+        // stickyElm.classList.remove("fixed-nav");
+        stickyElm.classList.add("vanish");
+        educatorContent.classList.remove("obscure");
+        engineerContent.classList.remove("obscure");
+        developerContent.classList.remove("obscure");
+        servicesContent.classList.remove("obscure");
+        workContent.classList.remove("obscure");
+        cvContent.classList.remove("obscure");
+        contactContent.classList.remove("obscure");
+        aspiring.classList.remove("obscure");
+
+        // aspiring.classList.remove("nav-compensate-mobile");
+      }
     } else {
+      stickyElm.classList.remove("fixed-nav");
       stickyElm.classList.remove("fixed-nav-mobile");
+      stickyElm.classList.remove("vanish");
       aspiring.classList.remove("nav-compensate-mobile");
     }
   } else if (!screenWidth.matches) {
@@ -70,8 +102,8 @@ function handleNav() {
       stickyElm.classList.remove("fixed-nav");
       aspiring.classList.remove("nav-compensate");
     }
-    prevScroll = window.scrollY;
   }
+  prevScroll = window.scrollY;
 }
 // window.addEventListener("scroll", () => {
 //   if (window.scrollY > 50) {
