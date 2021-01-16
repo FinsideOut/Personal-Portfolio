@@ -34,8 +34,11 @@ $arrow-size: 10px;
     }
     .y-label {
       grid-area: y-axis;
+      // display: block;
       align-self: center;
-      transform: rotateZ(-90deg) translateY(150%);
+      transform: rotateZ(180deg);
+      writing-mode: vertical-lr;
+      margin-right: 1rem;
     }
     .graph-title {
       grid-area: title;
@@ -43,6 +46,7 @@ $arrow-size: 10px;
       // h4 {
       //   margin-bottom: 0.5rem;
       // }
+
       margin-bottom: 1rem;
     }
     .graph-content {

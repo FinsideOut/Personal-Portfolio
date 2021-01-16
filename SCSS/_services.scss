@@ -1,7 +1,7 @@
 @use 'sass:math';
 
-$height: 18rem;
-$bg-height: 9rem;
+$height: 20rem;
+$bg-height: 10rem;
 $half-side-length: calc(#{$bg-height} / 1.73205);
 $service-bg-size: 600px;
 #services-content {
@@ -13,18 +13,18 @@ $service-bg-size: 600px;
   color: white;
   .cards {
     // border: 1px solid white;
-    margin-top: 2rem;
+    margin: 2rem 0rem;
     z-index: 90;
     position: relative;
     width: 100%;
-    height: $height;
+
     @include flex(row, space-around);
     align-items: flex-start;
     .card {
       @include flex(column, flex-start);
 
       // border: 1px solid white;
-      height: 100%;
+      height: $height;
       display: initial;
       .card-title {
         margin-bottom: 1rem;

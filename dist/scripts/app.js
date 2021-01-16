@@ -531,7 +531,6 @@ workItems.forEach((item) => {
     workText.classList.add("obscure");
     servicesContent.classList.add("obscure");
     for (let i = 0; i < workItems.length; i++) {
-      console.log(workItems[i].parentElement);
       if (!workItems[i].classList.contains("target")) {
         workItems[i].classList.add("obscure");
       }
@@ -541,22 +540,18 @@ workItems.forEach((item) => {
 workItems.forEach((item) => {
   item.addEventListener("mouseout", (e) => {
     item.classList.remove("target");
-    // cvTitle.classList.remove("obscure");
-    // cvContent.classList.remove("obscure");
     titles[4].classList.remove("obscure");
-    // cvTitle.classList.remove("obscure");
     workText.classList.remove("obscure");
     servicesContent.classList.remove("obscure");
     cvContent.classList.remove("obscure");
     for (let i = 0; i < workItems.length; i++) {
-      // if (!workItems[i].classList.contains("target")) {
       workItems[i].classList.remove("obscure");
     }
   });
 });
-// console.log(workImgs[0].parentElement.children[1].children[1]);
-workTexts.forEach((text) => {
-  const bgContainer = text.parentElement.children[1].children[1];
+
+workItems.forEach((text) => {
+  const bgContainer = text.children[4].children[1];
   text.addEventListener("mouseover", (e) => {
     bgContainer.classList.add("normalize");
     if (text.parentElement.classList.contains("reverse")) {
@@ -570,8 +565,8 @@ workTexts.forEach((text) => {
     }
   });
 });
-workTexts.forEach((text) => {
-  const bgContainer = text.parentElement.children[1].children[1];
+workItems.forEach((text) => {
+  const bgContainer = text.children[4].children[1];
   text.addEventListener("mouseout", (e) => {
     bgContainer.classList.remove("normalize");
     if (text.parentElement.classList.contains("reverse")) {
@@ -588,7 +583,7 @@ workTexts.forEach((text) => {
   });
 });
 workImgs.forEach((img) => {
-  const bgContainer = img.parentElement.children[1].children[1];
+  const bgContainer = img.parentElement.children[4].children[1];
   img.addEventListener("mouseover", (e) => {
     bgContainer.classList.add("normalize");
     if (img.parentElement.classList.contains("reverse")) {
@@ -603,7 +598,7 @@ workImgs.forEach((img) => {
   });
 });
 workImgs.forEach((img) => {
-  const bgContainer = img.parentElement.children[1].children[1];
+  const bgContainer = img.parentElement.children[4].children[1];
   img.addEventListener("mouseout", (e) => {
     bgContainer.classList.remove("normalize");
     if (img.parentElement.classList.contains("reverse")) {

@@ -1,0 +1,251 @@
+@media (max-width: 1024px) {
+  .technical-skills {
+    flex-direction: column !important;
+    #engineer-text {
+      width: 80%;
+      margin: auto;
+      margin-bottom: 2rem;
+    }
+    #skills-graph {
+      margin-top: 2rem;
+      width: 100%;
+      grid-template:
+        "title title" 1fr
+        "y-axis graph" 5fr
+        "y-axis x-axis" 1fr/
+        1fr 9fr !important;
+    }
+  }
+  #developer-content {
+    h4 {
+      margin-top: 3rem;
+    }
+    .cards {
+      flex-direction: column !important;
+      .developer-card {
+        width: 80%;
+      }
+    }
+  }
+  .educator-icons-container {
+    flex-direction: column !important;
+    align-items: center;
+
+    .icon-container {
+      max-width: 100% !important;
+      margin: auto;
+      margin-bottom: 2rem;
+    }
+  }
+  #services-content {
+    .cards {
+      flex-direction: column !important;
+      justify-content: space-around;
+      margin-top: 4rem;
+      .card {
+        padding-bottom: 3rem;
+        height: fit-content;
+        width: 80%;
+        margin: auto;
+      }
+    }
+  }
+  .cards {
+    flex-direction: column !important;
+    justify-content: space-around;
+    margin-top: 4rem;
+    .card {
+      padding-bottom: 3rem;
+      height: fit-content;
+      width: 80%;
+      margin: auto;
+    }
+  }
+  .work-piece,
+  .reverse-piece {
+    grid-template:
+      "title title" 1fr
+      "info info" 1fr
+      "work-img work-img" 1fr
+      "site-link code-link" 1fr/
+      1fr 1fr;
+    .work-piece-info {
+      margin-bottom: 2rem;
+    }
+    .work-piece-img {
+      width: 70%;
+    }
+    margin: 12rem auto;
+  }
+  #pikajude {
+    margin-top: 4rem;
+  }
+}
+@media (max-width: 640px) {
+  #aspiring {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 4rem;
+  }
+  #logo-home {
+    font-size: 3rem;
+    // border: 1px solid white;
+    white-space: normal;
+  }
+  #logo-home,
+  #lead,
+  .card,
+  .developer-card,
+  p {
+    width: 85vw !important;
+  }
+  #main-nav {
+    max-width: 90% !important;
+    flex-direction: column !important;
+    margin: 2rem auto 6rem !important;
+    .main-nav-link {
+      margin: 0.5rem;
+    }
+  }
+  #developer-content {
+    h4 {
+      text-align: center;
+    }
+    .cards {
+      margin-top: 2rem;
+    }
+  }
+  .nav-link {
+    width: 90%;
+    margin: auto;
+  }
+  .nav-link-full {
+    width: 90%;
+    margin: auto;
+    @include flex(row, center);
+  }
+  .nav-link {
+    width: 80vw;
+    margin: auto;
+
+    text-align: center;
+  }
+  .work-piece {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: space-around;
+    // border: 1px solid white;
+    height: fit-content !important;
+    margin: 4rem 0rem !important;
+
+    .work-piece-img {
+      margin-bottom: 1rem !important;
+      width: 90% !important;
+    }
+    .code-link,
+    .site-link {
+      order: 3 !important;
+      margin: 0 !important;
+      padding: 0rem !important;
+      //   align-self: flex-start !important;
+    }
+    // .site-link {
+    //   align-self: flex-end !important;
+    // }
+    // .reverse {
+    //   flex-direction: row !important;
+    // }
+  }
+
+  #work-content {
+    .section-lead {
+      margin-bottom: 1rem !important;
+      //   max-height: 40vh !important;
+    }
+  }
+  #engineer-content {
+    .cards {
+      margin-top: 1rem !important;
+    }
+  }
+  #skills-graph {
+    .x-label,
+    .y-label,
+    .up-arrow,
+    .right-arrow {
+      display: none !important;
+    }
+    grid-template:
+      "title" 1fr
+      "graph" 1fr/
+      1fr !important;
+    max-height: 50vh !important;
+    // margin: 0 !important;
+  }
+  .icon-text {
+    width: 100% !important;
+  }
+  .graph-content {
+    margin-top: 2rem;
+    border: none !important;
+    width: 90vw !important;
+
+    // border: 1px solid green !important;
+    .python {
+      left: calc(10% - #{$bg-half}) !important;
+      top: calc(10% - #{$bg-half}) !important;
+    }
+    .github {
+      left: calc(35% - #{$bg-half}) !important;
+      top: calc(10% - #{$bg-half}) !important;
+    }
+    .javascript {
+      left: calc(65% - #{$bg-half}) !important;
+      top: calc(10% - #{$bg-half}) !important;
+    }
+    .html5 {
+      left: calc(90% - #{$bg-half}) !important;
+      top: calc(10% - #{$bg-half}) !important;
+    }
+    .css3 {
+      left: calc(10% - #{$bg-half}) !important;
+      top: calc(50% - #{$bg-half}) !important;
+    }
+    .sass {
+      left: calc(35% - #{$bg-half}) !important;
+      top: calc(50% - #{$bg-half}) !important;
+    }
+    .microchip {
+      left: calc(65% - #{$bg-half}) !important;
+      top: calc(50% - #{$bg-half}) !important;
+    }
+    .pcb {
+      left: calc(90% - #{$bg-half}) !important;
+      top: calc(50% - #{$bg-half}) !important;
+    }
+    .c-plus {
+      left: calc(10% - #{$bg-half}) !important;
+      top: calc(90% - #{$bg-half}) !important;
+    }
+    .arduino {
+      left: calc(35% - #{$bg-half}) !important;
+      top: calc(90% - #{$bg-half}) !important;
+    }
+    .matlab {
+      left: calc(65% - #{$bg-half}) !important;
+      top: calc(90% - #{$bg-half}) !important;
+    }
+  }
+}
+@media (max-width: 280px) {
+  h1,
+  h2,
+  h3 {
+    white-space: normal;
+    font-size: 3rem;
+  }
+  #logo-home {
+    font-size: 2.5rem;
+  }
+}

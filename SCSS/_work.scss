@@ -8,18 +8,35 @@ $work-bg-size: 30vw;
 
 .work-piece {
   //   border: 1px solid white;
+  height: 40vh;
   margin-bottom: 8rem;
-  @include flex(row, space-between);
-  width: 100%;
+  // max-width: 90vw !important;
+
+  // @include flex(row, space-between);
+  display: grid;
+  grid-template:
+    "title title work-img" 1fr
+    "info info work-img" 1fr
+    "site-link code-link work-img" 1fr/
+    1fr 1fr 2fr;
+
+  // max-width: 100%;
   position: relative;
   z-index: 5;
   text-align: center;
   //   height: 20vh;
+  .site-link {
+    grid-area: site-link;
+  }
+  .code-link {
+    grid-area: code-link;
+  }
   .work-piece-img {
     // border: 1px solid white;
-
-    min-width: 40%;
-    max-width: 45%;
+    grid-area: work-img;
+    width: 90%;
+    height: auto;
+    margin: auto;
     position: relative;
     z-index: 3;
     // cursor: pointer;
@@ -76,17 +93,16 @@ $work-bg-size: 30vw;
       }
     }
   }
-  .work-piece-text {
-    // width: 50%;
-    position: relative;
-    z-index: 5;
-    .work-piece-title {
-      margin-bottom: 2rem;
-    }
-    .work-piece-info {
-      width: 80%;
-      margin: auto;
-    }
+
+  .work-piece-title {
+    grid-area: title;
+
+    margin-bottom: 2rem;
+  }
+  .work-piece-info {
+    grid-area: info;
+    width: 80%;
+    margin: auto;
   }
 }
 .last {
@@ -95,27 +111,31 @@ $work-bg-size: 30vw;
 .reverse {
   flex-direction: row-reverse;
 }
+.reverse-piece {
+  grid-template:
+    "work-img title title " 1fr
+    "work-img info info " 1fr
+    "work-img site-link code-link " 1fr/
+    2fr 1fr 1fr;
+}
 // .work-piece:first-child {
 //   margin: 0rem 0 8rem;
 // }
-.work-links-container {
-  // margin-top: 1rem;
-  @include flex(row, center);
-  height: fit-content;
-  .btn-full {
-    margin: 1rem 1rem 0rem;
-    height: fit-content;
-    @include flex(row, center);
 
-    i,
-    a {
-      padding: 10px;
-    }
-  }
-  .reverse {
-    flex-direction: row-reverse;
+.btn-full {
+  margin: 1rem 1rem 0rem;
+  height: fit-content;
+  @include flex(row, center);
+
+  i,
+  a {
+    padding: 10px;
   }
 }
+.reverse {
+  flex-direction: row-reverse;
+}
+
 .btn-full {
   padding: 15px;
 }

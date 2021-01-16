@@ -5,7 +5,8 @@
           box-sizing: border-box;
 }
 
-body {
+body,
+html {
   font-family: "Lato", sans-serif;
   max-width: 100vw;
   overflow-x: hidden;
@@ -78,7 +79,7 @@ p {
 }
 
 #lead {
-  max-width: 40vw;
+  width: 40vw;
 }
 
 i {
@@ -716,8 +717,12 @@ ul li {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  -webkit-transform: rotateZ(-90deg) translateY(150%);
-          transform: rotateZ(-90deg) translateY(150%);
+  -webkit-transform: rotateZ(180deg);
+          transform: rotateZ(180deg);
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  margin-right: 1rem;
 }
 
 #engineer-content .technical-skills .graph-title {
@@ -817,7 +822,7 @@ ul li {
 }
 
 #engineer-content .technical-skills .graph-content .github .bg {
-  background: linear-gradient(245deg, rgba(68, 170, 0, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(190deg, rgba(68, 170, 0, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .javascript {
@@ -826,7 +831,7 @@ ul li {
 }
 
 #engineer-content .technical-skills .graph-content .javascript .bg {
-  background: linear-gradient(107deg, rgba(250, 213, 0, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(114deg, rgba(250, 213, 0, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .html5 {
@@ -835,7 +840,7 @@ ul li {
 }
 
 #engineer-content .technical-skills .graph-content .html5 .bg {
-  background: linear-gradient(87deg, rgba(228, 77, 38, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(232deg, rgba(228, 77, 38, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .css3 {
@@ -844,7 +849,7 @@ ul li {
 }
 
 #engineer-content .technical-skills .graph-content .css3 .bg {
-  background: linear-gradient(309deg, rgba(38, 77, 228, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(208deg, rgba(38, 77, 228, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .sass {
@@ -853,7 +858,7 @@ ul li {
 }
 
 #engineer-content .technical-skills .graph-content .sass .bg {
-  background: linear-gradient(5deg, rgba(206, 103, 154, 0.95), rgba(2, 1, 1, 0.95));
+  background: linear-gradient(17deg, rgba(206, 103, 154, 0.95), rgba(2, 1, 1, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .microchip {
@@ -862,7 +867,7 @@ ul li {
 }
 
 #engineer-content .technical-skills .graph-content .microchip .bg {
-  background: linear-gradient(121deg, rgba(238, 58, 37, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(122deg, rgba(238, 58, 37, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .pcb {
@@ -871,7 +876,7 @@ ul li {
 }
 
 #engineer-content .technical-skills .graph-content .pcb .bg {
-  background: linear-gradient(274deg, rgba(73, 196, 56, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(321deg, rgba(73, 196, 56, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .c-plus {
@@ -880,7 +885,7 @@ ul li {
 }
 
 #engineer-content .technical-skills .graph-content .c-plus .bg {
-  background: linear-gradient(167deg, rgba(0, 86, 151, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(249deg, rgba(0, 86, 151, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .arduino {
@@ -889,7 +894,7 @@ ul li {
 }
 
 #engineer-content .technical-skills .graph-content .arduino .bg {
-  background: linear-gradient(202deg, rgba(0, 146, 151, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(232deg, rgba(0, 146, 151, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .matlab {
@@ -898,7 +903,7 @@ ul li {
 }
 
 #engineer-content .technical-skills .graph-content .matlab .bg {
-  background: linear-gradient(310deg, rgba(115, 25, 15, 0.95), rgba(84, 166, 187, 0.95));
+  background: linear-gradient(84deg, rgba(115, 25, 15, 0.95), rgba(84, 166, 187, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .right-arrow {
@@ -1133,11 +1138,10 @@ ul li {
 }
 
 #services-content .cards {
-  margin-top: 2rem;
+  margin: 2rem 0rem;
   z-index: 90;
   position: relative;
   width: 100%;
-  height: 18rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1169,7 +1173,7 @@ ul li {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  height: 100%;
+  height: 20rem;
   display: initial;
   text-align: center;
   width: 40%;
@@ -1181,9 +1185,9 @@ ul li {
 
 #services-content .bgs {
   position: absolute;
-  top: calc(50% - (9rem));
+  top: calc(50% - (10rem));
   left: 30%;
-  height: 9rem;
+  height: 10rem;
   width: 40%;
   z-index: 50;
   -webkit-transform: scale(0) rotate(180deg);
@@ -1237,29 +1241,29 @@ ul li {
 }
 
 .work-piece {
+  height: 40vh;
   margin-bottom: 8rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  grid-template: "title title work-img" 1fr "info info work-img" 1fr "site-link code-link work-img" 1fr/ 1fr 1fr 2fr;
   position: relative;
   z-index: 5;
   text-align: center;
 }
 
+.work-piece .site-link {
+  grid-area: site-link;
+}
+
+.work-piece .code-link {
+  grid-area: code-link;
+}
+
 .work-piece .work-piece-img {
-  min-width: 40%;
-  max-width: 45%;
+  grid-area: work-img;
+  width: 90%;
+  height: auto;
+  margin: auto;
   position: relative;
   z-index: 3;
 }
@@ -1331,16 +1335,13 @@ ul li {
   background: rgba(255, 50, 0, 0.5) !important;
 }
 
-.work-piece .work-piece-text {
-  position: relative;
-  z-index: 5;
-}
-
-.work-piece .work-piece-text .work-piece-title {
+.work-piece .work-piece-title {
+  grid-area: title;
   margin-bottom: 2rem;
 }
 
-.work-piece .work-piece-text .work-piece-info {
+.work-piece .work-piece-info {
+  grid-area: info;
   width: 80%;
   margin: auto;
 }
@@ -1356,26 +1357,11 @@ ul li {
           flex-direction: row-reverse;
 }
 
-.work-links-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+.reverse-piece {
+  grid-template: "work-img title title " 1fr "work-img info info " 1fr "work-img site-link code-link " 1fr/ 2fr 1fr 1fr;
 }
 
-.work-links-container .btn-full, .work-links-container .work-piece-link {
+.btn-full, .work-piece-link {
   margin: 1rem 1rem 0rem;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -1395,13 +1381,13 @@ ul li {
           justify-content: center;
 }
 
-.work-links-container .btn-full i, .work-links-container .work-piece-link i,
-.work-links-container .btn-full a,
-.work-links-container .work-piece-link a {
+.btn-full i, .work-piece-link i,
+.btn-full a,
+.work-piece-link a {
   padding: 10px;
 }
 
-.work-links-container .reverse {
+.reverse {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
@@ -1561,8 +1547,8 @@ textarea {
 input:focus,
 textarea:focus {
   border-color: rgba(255, 255, 255, 0.5);
-  -webkit-box-shadow: inset 0 0 10px #fff;
-          box-shadow: inset 0 0 10px #fff;
+  -webkit-box-shadow: inset 0 0 5px #fff;
+          box-shadow: inset 0 0 5px #fff;
 }
 
 textarea {
@@ -1878,13 +1864,13 @@ button {
 }
 
 .service-right {
-  -webkit-transform: translateY(9rem) translateX(calc(9rem / 1.73205)) !important;
-          transform: translateY(9rem) translateX(calc(9rem / 1.73205)) !important;
+  -webkit-transform: translateY(10rem) translateX(calc(10rem / 1.73205)) !important;
+          transform: translateY(10rem) translateX(calc(10rem / 1.73205)) !important;
 }
 
 .service-left {
-  -webkit-transform: translateY(9rem) translateX(calc(calc(9rem / 1.73205) * -1)) !important;
-          transform: translateY(9rem) translateX(calc(calc(9rem / 1.73205) * -1)) !important;
+  -webkit-transform: translateY(10rem) translateX(calc(calc(10rem / 1.73205) * -1)) !important;
+          transform: translateY(10rem) translateX(calc(calc(10rem / 1.73205) * -1)) !important;
 }
 
 .service-wrapper-left {
@@ -2176,5 +2162,270 @@ button {
 
 #cv-content h3 {
   cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+  .technical-skills {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+  }
+  .technical-skills #engineer-text {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 2rem;
+  }
+  .technical-skills #skills-graph {
+    margin-top: 2rem;
+    width: 100%;
+    grid-template: "title title" 1fr "y-axis graph" 5fr "y-axis x-axis" 1fr/ 1fr 9fr !important;
+  }
+  #developer-content h4 {
+    margin-top: 3rem;
+  }
+  #developer-content .cards {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+  }
+  #developer-content .cards .developer-card {
+    width: 80%;
+  }
+  .educator-icons-container {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .educator-icons-container .icon-container {
+    max-width: 100% !important;
+    margin: auto;
+    margin-bottom: 2rem;
+  }
+  #services-content .cards {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin-top: 4rem;
+  }
+  #services-content .cards .card {
+    padding-bottom: 3rem;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 80%;
+    margin: auto;
+  }
+  .cards {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin-top: 4rem;
+  }
+  .cards .card {
+    padding-bottom: 3rem;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 80%;
+    margin: auto;
+  }
+  .work-piece,
+  .reverse-piece {
+    grid-template: "title title" 1fr "info info" 1fr "work-img work-img" 1fr "site-link code-link" 1fr/ 1fr 1fr;
+    margin: 12rem auto;
+  }
+  .work-piece .work-piece-info,
+  .reverse-piece .work-piece-info {
+    margin-bottom: 2rem;
+  }
+  .work-piece .work-piece-img,
+  .reverse-piece .work-piece-img {
+    width: 70%;
+  }
+  #pikajude {
+    margin-top: 4rem;
+  }
+}
+
+@media (max-width: 640px) {
+  #aspiring {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 4rem;
+  }
+  #logo-home {
+    font-size: 3rem;
+    white-space: normal;
+  }
+  #logo-home,
+  #lead,
+  .card,
+  .developer-card,
+  p {
+    width: 85vw !important;
+  }
+  #main-nav {
+    max-width: 90% !important;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+    margin: 2rem auto 6rem !important;
+  }
+  #main-nav .main-nav-link {
+    margin: 0.5rem;
+  }
+  #developer-content h4 {
+    text-align: center;
+  }
+  #developer-content .cards {
+    margin-top: 2rem;
+  }
+  .nav-link {
+    width: 90%;
+    margin: auto;
+  }
+  .nav-link-full {
+    width: 90%;
+    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .nav-link {
+    width: 80vw;
+    margin: auto;
+    text-align: center;
+  }
+  .work-piece {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    height: -webkit-fit-content !important;
+    height: -moz-fit-content !important;
+    height: fit-content !important;
+    margin: 4rem 0rem !important;
+  }
+  .work-piece .work-piece-img {
+    margin-bottom: 1rem !important;
+    width: 90% !important;
+  }
+  .work-piece .code-link,
+  .work-piece .site-link {
+    -webkit-box-ordinal-group: 4 !important;
+        -ms-flex-order: 3 !important;
+            order: 3 !important;
+    margin: 0 !important;
+    padding: 0rem !important;
+  }
+  #work-content .section-lead {
+    margin-bottom: 1rem !important;
+  }
+  #engineer-content .cards {
+    margin-top: 1rem !important;
+  }
+  #skills-graph {
+    grid-template: "title" 1fr "graph" 1fr/ 1fr !important;
+    max-height: 50vh !important;
+  }
+  #skills-graph .x-label,
+  #skills-graph .y-label,
+  #skills-graph .up-arrow,
+  #skills-graph .right-arrow {
+    display: none !important;
+  }
+  .icon-text {
+    width: 100% !important;
+  }
+  .graph-content {
+    margin-top: 2rem;
+    border: none !important;
+    width: 90vw !important;
+  }
+  .graph-content .python {
+    left: calc(10% - 375px) !important;
+    top: calc(10% - 375px) !important;
+  }
+  .graph-content .github {
+    left: calc(35% - 375px) !important;
+    top: calc(10% - 375px) !important;
+  }
+  .graph-content .javascript {
+    left: calc(65% - 375px) !important;
+    top: calc(10% - 375px) !important;
+  }
+  .graph-content .html5 {
+    left: calc(90% - 375px) !important;
+    top: calc(10% - 375px) !important;
+  }
+  .graph-content .css3 {
+    left: calc(10% - 375px) !important;
+    top: calc(50% - 375px) !important;
+  }
+  .graph-content .sass {
+    left: calc(35% - 375px) !important;
+    top: calc(50% - 375px) !important;
+  }
+  .graph-content .microchip {
+    left: calc(65% - 375px) !important;
+    top: calc(50% - 375px) !important;
+  }
+  .graph-content .pcb {
+    left: calc(90% - 375px) !important;
+    top: calc(50% - 375px) !important;
+  }
+  .graph-content .c-plus {
+    left: calc(10% - 375px) !important;
+    top: calc(90% - 375px) !important;
+  }
+  .graph-content .arduino {
+    left: calc(35% - 375px) !important;
+    top: calc(90% - 375px) !important;
+  }
+  .graph-content .matlab {
+    left: calc(65% - 375px) !important;
+    top: calc(90% - 375px) !important;
+  }
+}
+
+@media (max-width: 280px) {
+  h1,
+  h2,
+  h3 {
+    white-space: normal;
+    font-size: 3rem;
+  }
+  #logo-home {
+    font-size: 2.5rem;
+  }
 }
 /*# sourceMappingURL=main.css.map */
