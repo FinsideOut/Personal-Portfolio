@@ -27,6 +27,8 @@
   @include flex(row, space-evenly);
   z-index: 200;
   opacity: 1;
+  position: relative;
+  z-index: 200;
   transition: opacity $transit-time ease-in-out;
   width: 100vw;
   height: 5rem;
@@ -41,6 +43,7 @@
 }
 .fixed-nav {
   position: fixed !important;
+  z-index: 200;
   top: 0;
   left: 0;
   opacity: 0.3 !important;
@@ -51,6 +54,14 @@
 }
 .nav-compensate {
   padding-top: 8rem;
+}
+
+.fixed-nav-mobile {
+  @extend .fixed-nav;
+  top: -15rem;
+}
+.nav-compensate-mobile {
+  padding-top: 18rem;
 }
 #main-nav.isSticky {
   opacity: 0.3;

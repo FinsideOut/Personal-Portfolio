@@ -5,6 +5,8 @@ $bg-height: 9rem;
 $half-side-length: calc(#{$bg-height} / 1.73205);
 $service-bg-size: 600px;
 #services-content {
+  position: relative;
+  z-index: 200;
   .btn-full {
     margin-top: 0;
   }

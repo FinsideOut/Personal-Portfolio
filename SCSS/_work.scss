@@ -1,5 +1,7 @@
 $work-bg-size: 30vw;
 #work-content {
+  position: relative;
+  z-index: 200;
   @extend .container;
   .section-lead {
     margin-bottom: 4rem;

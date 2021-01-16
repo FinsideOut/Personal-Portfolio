@@ -4,6 +4,8 @@ $icon-size: 46px;
 $icon-half: 23px;
 $arrow-size: 10px;
 #engineer-content {
+    position: relative;
+  z-index: 200;
   @extend .container;
   @include flex(column, space-between);
   .technical-skills {

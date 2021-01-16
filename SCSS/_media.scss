@@ -1,4 +1,9 @@
 @media (max-width: 1024px) {
+  #hero-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
   .technical-skills {
     flex-direction: column !important;
     #engineer-text {

@@ -1,4 +1,6 @@
 #cv-content {
+  position: relative;
+  z-index: 200;
   @extend .container;
   @include flex(column, space-evenly);
   height: fit-content;

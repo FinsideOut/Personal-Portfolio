@@ -260,7 +260,7 @@ ul li {
   width: 100%;
   height: 100%;
   position: absolute;
-  z-index: 2;
+  z-index: 0;
   top: 0;
   left: 0;
   opacity: 0;
@@ -329,6 +329,8 @@ ul li {
           justify-content: space-evenly;
   z-index: 200;
   opacity: 1;
+  position: relative;
+  z-index: 200;
   -webkit-transition: opacity 300ms ease-in-out;
   transition: opacity 300ms ease-in-out;
   width: 100vw;
@@ -346,8 +348,9 @@ ul li {
   opacity: 0.6;
 }
 
-.fixed-nav {
+.fixed-nav, .fixed-nav-mobile {
   position: fixed !important;
+  z-index: 200;
   top: 0;
   left: 0;
   opacity: 0.3 !important;
@@ -355,12 +358,20 @@ ul li {
   transition: opacity 300ms ease-in-out;
 }
 
-.fixed-nav:hover {
+.fixed-nav:hover, .fixed-nav-mobile:hover {
   opacity: 1 !important;
 }
 
 .nav-compensate {
   padding-top: 8rem;
+}
+
+.fixed-nav-mobile {
+  top: -15rem;
+}
+
+.nav-compensate-mobile {
+  padding-top: 18rem;
 }
 
 #main-nav.isSticky {
@@ -485,6 +496,8 @@ ul li {
 }
 
 #educator-content {
+  position: relative;
+  z-index: 200;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -673,6 +686,8 @@ ul li {
 }
 
 #engineer-content {
+  position: relative;
+  z-index: 200;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -838,7 +853,7 @@ ul li {
 }
 
 #engineer-content .technical-skills .graph-content .github .bg {
-  background: linear-gradient(327deg, rgba(68, 170, 0, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(11deg, rgba(68, 170, 0, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .javascript {
@@ -847,7 +862,7 @@ ul li {
 }
 
 #engineer-content .technical-skills .graph-content .javascript .bg {
-  background: linear-gradient(121deg, rgba(250, 213, 0, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(325deg, rgba(250, 213, 0, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .html5 {
@@ -856,7 +871,7 @@ ul li {
 }
 
 #engineer-content .technical-skills .graph-content .html5 .bg {
-  background: linear-gradient(221deg, rgba(228, 77, 38, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(262deg, rgba(228, 77, 38, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .css3 {
@@ -865,7 +880,7 @@ ul li {
 }
 
 #engineer-content .technical-skills .graph-content .css3 .bg {
-  background: linear-gradient(328deg, rgba(38, 77, 228, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(304deg, rgba(38, 77, 228, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .sass {
@@ -874,8 +889,7 @@ ul li {
 }
 
 #engineer-content .technical-skills .graph-content .sass .bg {
-  background: -webkit-gradient(linear, left top, right top, from(rgba(206, 103, 154, 0.95)), to(rgba(2, 1, 1, 0.95)));
-  background: linear-gradient(90deg, rgba(206, 103, 154, 0.95), rgba(2, 1, 1, 0.95));
+  background: linear-gradient(235deg, rgba(206, 103, 154, 0.95), rgba(2, 1, 1, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .microchip {
@@ -884,7 +898,7 @@ ul li {
 }
 
 #engineer-content .technical-skills .graph-content .microchip .bg {
-  background: linear-gradient(304deg, rgba(238, 58, 37, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(354deg, rgba(238, 58, 37, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .pcb {
@@ -893,7 +907,7 @@ ul li {
 }
 
 #engineer-content .technical-skills .graph-content .pcb .bg {
-  background: linear-gradient(344deg, rgba(73, 196, 56, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(285deg, rgba(73, 196, 56, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .c-plus {
@@ -902,7 +916,7 @@ ul li {
 }
 
 #engineer-content .technical-skills .graph-content .c-plus .bg {
-  background: linear-gradient(86deg, rgba(0, 86, 151, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(206deg, rgba(0, 86, 151, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .arduino {
@@ -911,7 +925,7 @@ ul li {
 }
 
 #engineer-content .technical-skills .graph-content .arduino .bg {
-  background: linear-gradient(174deg, rgba(0, 146, 151, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(158deg, rgba(0, 146, 151, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .matlab {
@@ -920,7 +934,7 @@ ul li {
 }
 
 #engineer-content .technical-skills .graph-content .matlab .bg {
-  background: linear-gradient(111deg, rgba(115, 25, 15, 0.95), rgba(84, 166, 187, 0.95));
+  background: linear-gradient(49deg, rgba(115, 25, 15, 0.95), rgba(84, 166, 187, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .right-arrow {
@@ -1018,6 +1032,8 @@ ul li {
 }
 
 #developer-content {
+  position: relative;
+  z-index: 200;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1146,6 +1162,8 @@ ul li {
 
 @use 'sass:math';
 #services-content {
+  position: relative;
+  z-index: 200;
   color: white;
 }
 
@@ -1259,6 +1277,11 @@ ul li {
 
 .btn-full, .work-piece-link {
   padding: 10px;
+}
+
+#work-content {
+  position: relative;
+  z-index: 200;
 }
 
 #work-content .section-lead {
@@ -1433,6 +1456,8 @@ ul li {
 }
 
 #cv-content {
+  position: relative;
+  z-index: 200;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1524,6 +1549,11 @@ ul li {
   font-size: 0.8rem;
 }
 
+#contact-content {
+  position: relative;
+  z-index: 200;
+}
+
 #contact-content .section-lead {
   margin-bottom: 2rem;
 }
@@ -1563,7 +1593,7 @@ input,
 textarea {
   font-family: "Lato", sans-serif;
   font-size: 1.5rem;
-  background: black;
+  background: rgba(0, 0, 0, 0);
   width: 100%;
   color: white;
   padding: 0.5rem 1rem;
@@ -1614,7 +1644,7 @@ input {
 button {
   outline: none;
   border: none;
-  background: black;
+  background: rgba(0, 0, 0, 0);
   font-size: 2rem;
 }
 
@@ -2199,6 +2229,11 @@ button {
 }
 
 @media (max-width: 1024px) {
+  #hero-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
   .technical-skills {
     -webkit-box-orient: vertical !important;
     -webkit-box-direction: normal !important;

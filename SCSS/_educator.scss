@@ -1,4 +1,6 @@
 #educator-content {
+  position: relative;
+  z-index: 200;
   @extend .container;
   @include flex(column, space-between);
   text-align: center;
