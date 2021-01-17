@@ -64,9 +64,9 @@
 
   // opacity: 0.3 !important;
   transition: opacity $transit-time ease-in-out;
-  &:hover {
-    opacity: 1 !important;
-  }
+  // &:hover {
+  //   opacity: 1 !important;
+  // }
 }
 .fixed-nav-mobile {
   position: fixed !important;
@@ -76,7 +76,7 @@
   background: linear-gradient(
     rgba(0, 0, 0, 1),
     rgba(0, 0, 0, 0.7) 80%,
-    rgba(0, 0, 0, 0.5) 90%,
+    rgba(0, 0, 0, 0.6) 90%,
     rgba(0, 0, 0, 0) 100%
   ) !important;
   padding: 3rem;

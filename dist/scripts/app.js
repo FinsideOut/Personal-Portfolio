@@ -638,26 +638,26 @@ $(".main-nav-link").on("click", function (e) {
 });
 const mainNav = document.getElementById("main-nav");
 const contactContent = document.getElementById("contact-content");
-mainNav.addEventListener("mouseover", () => {
-  aspiring.classList.add("obscure");
-  educatorContent.classList.add("obscure");
-  engineerContent.classList.add("obscure");
-  developerContent.classList.add("obscure");
-  servicesContent.classList.add("obscure");
-  workContent.classList.add("obscure");
-  cvContent.classList.add("obscure");
-  contactContent.classList.add("obscure");
-});
-mainNav.addEventListener("mouseout", () => {
-  aspiring.classList.remove("obscure");
-  educatorContent.classList.remove("obscure");
-  engineerContent.classList.remove("obscure");
-  developerContent.classList.remove("obscure");
-  servicesContent.classList.remove("obscure");
-  workContent.classList.remove("obscure");
-  cvContent.classList.remove("obscure");
-  contactContent.classList.remove("obscure");
-});
+// mainNav.addEventListener("mouseover", () => {
+//   aspiring.classList.add("obscure");
+//   educatorContent.classList.add("obscure");
+//   engineerContent.classList.add("obscure");
+//   developerContent.classList.add("obscure");
+//   servicesContent.classList.add("obscure");
+//   workContent.classList.add("obscure");
+//   cvContent.classList.add("obscure");
+//   contactContent.classList.add("obscure");
+// });
+// mainNav.addEventListener("mouseout", () => {
+//   aspiring.classList.remove("obscure");
+//   educatorContent.classList.remove("obscure");
+//   engineerContent.classList.remove("obscure");
+//   developerContent.classList.remove("obscure");
+//   servicesContent.classList.remove("obscure");
+//   workContent.classList.remove("obscure");
+//   cvContent.classList.remove("obscure");
+//   contactContent.classList.remove("obscure");
+// });
 
 const stickyElm = document.querySelector("#main-nav");
 const navLocation = document.querySelector("#nav-location");

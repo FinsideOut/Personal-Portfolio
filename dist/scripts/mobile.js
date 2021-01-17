@@ -45,36 +45,113 @@ const heroDiscs = document.querySelectorAll(".hero-disc");
 const mainNav = document.querySelector("#main-nav");
 const navLocation = document.querySelector("#nav-location");
 const screenWidth = window.matchMedia("(max-width: 640px)");
-window.addEventListener("scroll", (e) => {
-  heroContainer.classList.add("shown");
-  let x = window.scrollY;
-  let y = 200;
-  makeFlower(x / 500000, y / 2);
-  handleNav();
-});
-var lastPoint = null; //global
-var lastPoint = null; //global
+let x = 0;
+let y = 0;
+makeFlower(0, 0);
+heroContainer.classList.add("shown");
 
-$(window).on("touchend", function (e) {
-  var currentPoint = e.originalEvent.changedTouches[0].pageY;
-
-  if (lastPoint != null && lastPoint < currentPoint) {
-    //swiped down
-    if (window.scrollY >= navLocation.offsetTop) {
-      mainNav.classList.add("vanish");
-
-      console.log("you scrolled up");
+if (!screenWidth.matches) {
+  window.addEventListener("scroll", (e) => {
+    let x = window.scrollY;
+    let y = 200;
+    makeFlower(x / 500000, y / 2);
+    handleNav();
+  });
+} else {
+  heroDiscs.forEach((disc) => {
+    disc.classList.add("mobile-disc-transition");
+  });
+  let position = "top";
+  let prevPosition = position;
+  window.addEventListener("scroll", (e) => {
+    heroContainer.classList.add("shown");
+    if (window.scrollY == 0) {
+      position = "top";
+      if (prevPosition !== position) {
+        x = Math.random(-0.005, 0.005);
+        y = Math.random(0, 255);
+      }
+      prevPosition = position;
     }
-  } else if (lastPoint != null && lastPoint > currentPoint) {
-    //swiped up
-    mainNav.classList.remove("vanish");
+    if (
+      window.scrollY >= aspiring.offsetTop - 100 &&
+      window.scrollY < engineerContent.offsetTop - 100
+    ) {
+      // console.log("aspire");
+      position = "aspire";
+      if (prevPosition !== position) {
+        x = Math.random(-0.005, 0.005);
+        y = Math.random(0, 255);
+      }
+      prevPosition = position;
+    } else if (
+      window.scrollY >= engineerContent.offsetTop - 100 &&
+      window.scrollY < developerContent.offsetTop - 100
+    ) {
+      position = "engine";
+      // console.log("engine");
+      if (prevPosition !== position) {
+        x = Math.random(-0.005, 0.005);
+        y = Math.random(0, 255);
+      }
+      prevPosition = position;
+    } else if (
+      window.scrollY >= developerContent.offsetTop - 100 &&
+      window.scrollY < servicesContent.offsetTop - 100
+    ) {
+      position = "developer";
+      if (prevPosition !== position) {
+        x = Math.random(-0.005, 0.005);
+        y = Math.random(0, 255);
+      }
+      prevPosition = position;
+    } else if (
+      window.scrollY >= servicesContent.offsetTop - 100 &&
+      window.scrollY < workContent.offsetTop - 100
+    ) {
+      position = "service";
+      if (prevPosition !== position) {
+        x = Math.random(-0.005, 0.005);
+        y = Math.random(0, 255);
+      }
+      prevPosition = position;
+    } else if (
+      window.scrollY >= workContent.offsetTop - 100 &&
+      window.scrollY < cvContent.offsetTop - 100
+    ) {
+      position = "work";
+      if (prevPosition !== position) {
+        x = Math.random(-0.005, 0.005);
+        y = Math.random(0, 255);
+      }
+      prevPosition = position;
+    } else if (
+      window.scrollY >= cvContent.offsetTop - 100 &&
+      window.scrollY < contactContent.offsetTop - 100
+    ) {
+      position = "cv";
+      if (prevPosition !== position) {
+        x = Math.random(-0.005, 0.005);
+        y = Math.random(0, 255);
+      }
+      prevPosition = position;
+    } else if (window.scrollY >= cvContent.offsetTop - 100) {
+      position = "contact";
+      if (prevPosition != position) {
+        x = Math.random(-0.005, 0.005);
+        y = Math.random(0, 255);
+      }
+      prevPosition = position;
+    }
+    console.log(y * 255);
+    makeFlower(x, y * 255);
+    handleNav();
+  });
+}
 
-    console.log("you scrolled down");
-  }
-
-  lastPoint = currentPoint;
-});
-function handleNav() {
+var lastPoint = null; //global
+var lastPoint = null; //global
+function handleNav(e) {
   // small mobile
   if (window.scrollY >= navLocation.offsetTop) {
     if (screenWidth.matches) {
@@ -86,13 +163,27 @@ function handleNav() {
     }
     // mainNav.classList.add("vanish");
   } else {
-    console.log("revert");
+    // console.log("revert");
     mainNav.classList.remove("fixed-nav-mobile");
     aspiring.classList.remove("fixed-nav-compensate-mobile");
     mainNav.classList.remove("fixed-nav");
     aspiring.classList.remove("fixed-nav-compensate");
     mainNav.classList.remove("vanish");
   }
+  var currentPoint = window.scrollY;
+  if (lastPoint != null && lastPoint < currentPoint) {
+    //swiped down
+    if (window.scrollY >= navLocation.offsetTop) {
+      mainNav.classList.add("vanish");
+      // console.log("you scrolled up");
+    }
+  } else if (lastPoint != null && lastPoint > currentPoint) {
+    //swiped up
+    mainNav.classList.remove("vanish");
+    // console.log("you scrolled down");
+  }
+
+  lastPoint = currentPoint;
 }
 
 // window.addEventListener("scroll", () => {

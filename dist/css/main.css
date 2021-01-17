@@ -362,17 +362,13 @@ ul li {
   transition: opacity 300ms ease-in-out;
 }
 
-.fixed-nav:hover {
-  opacity: 1 !important;
-}
-
 .fixed-nav-mobile {
   position: fixed !important;
   z-index: 200;
   top: 0;
   left: 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(black), color-stop(80%, rgba(0, 0, 0, 0.7)), color-stop(90%, rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0))) !important;
-  background: linear-gradient(black, rgba(0, 0, 0, 0.7) 80%, rgba(0, 0, 0, 0.5) 90%, rgba(0, 0, 0, 0) 100%) !important;
+  background: -webkit-gradient(linear, left top, left bottom, from(black), color-stop(80%, rgba(0, 0, 0, 0.7)), color-stop(90%, rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0))) !important;
+  background: linear-gradient(black, rgba(0, 0, 0, 0.7) 80%, rgba(0, 0, 0, 0.6) 90%, rgba(0, 0, 0, 0) 100%) !important;
   padding: 3rem;
   -webkit-transition: opacity 300ms ease-in-out;
   transition: opacity 300ms ease-in-out;
@@ -871,7 +867,7 @@ ul li {
 }
 
 #engineer-content .technical-skills .graph-content .github .bg {
-  background: linear-gradient(277deg, rgba(68, 170, 0, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(346deg, rgba(68, 170, 0, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .javascript {
@@ -880,7 +876,7 @@ ul li {
 }
 
 #engineer-content .technical-skills .graph-content .javascript .bg {
-  background: linear-gradient(40deg, rgba(250, 213, 0, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(108deg, rgba(250, 213, 0, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .html5 {
@@ -889,7 +885,7 @@ ul li {
 }
 
 #engineer-content .technical-skills .graph-content .html5 .bg {
-  background: linear-gradient(75deg, rgba(228, 77, 38, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(17deg, rgba(228, 77, 38, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .css3 {
@@ -898,7 +894,7 @@ ul li {
 }
 
 #engineer-content .technical-skills .graph-content .css3 .bg {
-  background: linear-gradient(92deg, rgba(38, 77, 228, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(308deg, rgba(38, 77, 228, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .sass {
@@ -907,7 +903,7 @@ ul li {
 }
 
 #engineer-content .technical-skills .graph-content .sass .bg {
-  background: linear-gradient(69deg, rgba(206, 103, 154, 0.95), rgba(2, 1, 1, 0.95));
+  background: linear-gradient(159deg, rgba(206, 103, 154, 0.95), rgba(2, 1, 1, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .microchip {
@@ -916,7 +912,7 @@ ul li {
 }
 
 #engineer-content .technical-skills .graph-content .microchip .bg {
-  background: linear-gradient(91deg, rgba(238, 58, 37, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(214deg, rgba(238, 58, 37, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .pcb {
@@ -925,7 +921,7 @@ ul li {
 }
 
 #engineer-content .technical-skills .graph-content .pcb .bg {
-  background: linear-gradient(48deg, rgba(73, 196, 56, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(7deg, rgba(73, 196, 56, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .c-plus {
@@ -934,7 +930,7 @@ ul li {
 }
 
 #engineer-content .technical-skills .graph-content .c-plus .bg {
-  background: linear-gradient(222deg, rgba(0, 86, 151, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(94deg, rgba(0, 86, 151, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .arduino {
@@ -943,7 +939,7 @@ ul li {
 }
 
 #engineer-content .technical-skills .graph-content .arduino .bg {
-  background: linear-gradient(18deg, rgba(0, 146, 151, 0.95), rgba(0, 0, 0, 0.95));
+  background: linear-gradient(204deg, rgba(0, 146, 151, 0.95), rgba(0, 0, 0, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .matlab {
@@ -952,7 +948,7 @@ ul li {
 }
 
 #engineer-content .technical-skills .graph-content .matlab .bg {
-  background: linear-gradient(308deg, rgba(115, 25, 15, 0.95), rgba(84, 166, 187, 0.95));
+  background: linear-gradient(240deg, rgba(115, 25, 15, 0.95), rgba(84, 166, 187, 0.95));
 }
 
 #engineer-content .technical-skills .graph-content .right-arrow {
@@ -2240,6 +2236,13 @@ button {
 
 .right-list-home {
   font-size: 2.5rem !important;
+}
+
+.mobile-disc-transition {
+  -webkit-transition: background 200ms ease-in-out, -webkit-transform 500ms ease-in-out;
+  transition: background 200ms ease-in-out, -webkit-transform 500ms ease-in-out;
+  transition: transform 500ms ease-in-out, background 200ms ease-in-out;
+  transition: transform 500ms ease-in-out, background 200ms ease-in-out, -webkit-transform 500ms ease-in-out;
 }
 
 #cv-content h3 {
