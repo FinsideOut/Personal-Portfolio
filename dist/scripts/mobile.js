@@ -1,4 +1,4 @@
-// console.log("mobile");
+console.log("mobile");
 // // //from traversy mdeia
 const preloader = document.getElementById("preloader");
 window.onload = () => {
@@ -42,7 +42,7 @@ for (let i = 0; i < heroNum; i++) {
   heroContainer.appendChild(newDisc);
 }
 const heroDiscs = document.querySelectorAll(".hero-disc");
-const stickyElm = document.querySelector("#main-nav");
+const mainNav = document.querySelector("#main-nav");
 const navLocation = document.querySelector("#nav-location");
 const screenWidth = window.matchMedia("(max-width: 640px)");
 window.addEventListener("scroll", (e) => {
@@ -52,59 +52,49 @@ window.addEventListener("scroll", (e) => {
   makeFlower(x / 500000, y / 2);
   handleNav();
 });
-let prevScroll = 0;
-function handleNav() {
-  if (screenWidth.matches) {
-    console.log(prevScroll);
-    if (window.scrollY > navLocation.offsetTop) {
-      stickyElm.classList.add("fixed-nav-mobile");
-      stickyElm.classList.add("vanish");
-      aspiring.classList.add("nav-compensate-mobile");
-      if (prevScroll > window.scrollY) {
-        // stickyElm.classList.remove("fixed-nav");
-        stickyElm.classList.remove("vanish");
-        educatorContent.classList.add("obscure");
-        engineerContent.classList.add("obscure");
-        developerContent.classList.add("obscure");
-        servicesContent.classList.add("obscure");
-        workContent.classList.add("obscure");
-        cvContent.classList.add("obscure");
-        contactContent.classList.add("obscure");
-        aspiring.classList.add("obscure");
-        // aspiring.classList.remove("nav-compensate-mobile");
-      } else if (prevScroll < window.scrollY) {
-        // stickyElm.classList.remove("fixed-nav");
-        stickyElm.classList.add("vanish");
-        educatorContent.classList.remove("obscure");
-        engineerContent.classList.remove("obscure");
-        developerContent.classList.remove("obscure");
-        servicesContent.classList.remove("obscure");
-        workContent.classList.remove("obscure");
-        cvContent.classList.remove("obscure");
-        contactContent.classList.remove("obscure");
-        aspiring.classList.remove("obscure");
+var lastPoint = null; //global
+var lastPoint = null; //global
 
-        // aspiring.classList.remove("nav-compensate-mobile");
-      }
-    } else {
-      stickyElm.classList.remove("fixed-nav");
-      stickyElm.classList.remove("fixed-nav-mobile");
-      stickyElm.classList.remove("vanish");
-      aspiring.classList.remove("nav-compensate-mobile");
-    }
-  } else if (!screenWidth.matches) {
-    console.log("nav");
+$(window).on("touchend", function (e) {
+  var currentPoint = e.originalEvent.changedTouches[0].pageY;
 
-    if (window.scrollY > navLocation.offsetTop) {
-      stickyElm.classList.add("fixed-nav");
-      aspiring.classList.add("nav-compensate");
-    } else {
-      stickyElm.classList.remove("fixed-nav");
-      aspiring.classList.remove("nav-compensate");
+  if (lastPoint != null && lastPoint < currentPoint) {
+    //swiped down
+    if (window.scrollY >= navLocation.offsetTop) {
+      mainNav.classList.add("vanish");
+
+      console.log("you scrolled up");
     }
+  } else if (lastPoint != null && lastPoint > currentPoint) {
+    //swiped up
+    mainNav.classList.remove("vanish");
+
+    console.log("you scrolled down");
   }
-  prevScroll = window.scrollY;
+
+  lastPoint = currentPoint;
+});
+function handleNav() {
+  // small mobile
+  if (window.scrollY >= navLocation.offsetTop) {
+    if (screenWidth.matches) {
+      mainNav.classList.add("fixed-nav-mobile");
+      aspiring.classList.add("fixed-nav-compensate-mobile");
+    } else {
+      mainNav.classList.add("fixed-nav");
+      aspiring.classList.add("fixed-nav-compensate");
+    }
+    // mainNav.classList.add("vanish");
+  } else {
+    console.log("revert");
+    mainNav.classList.remove("fixed-nav-mobile");
+    aspiring.classList.remove("fixed-nav-compensate-mobile");
+    mainNav.classList.remove("fixed-nav");
+    aspiring.classList.remove("fixed-nav-compensate");
+    mainNav.classList.remove("vanish");
+  }
 }
+
 // window.addEventListener("scroll", () => {
 //   if (window.scrollY > 50) {
 //     heroContainer.classList.remove("shown");
