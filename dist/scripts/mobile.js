@@ -153,7 +153,7 @@ var lastPoint = null; //global
 var lastPoint = null; //global
 function handleNav(e) {
   // small mobile
-  if (window.scrollY >= navLocation.offsetTop) {
+  if (window.scrollY >= aspiring.offsetTop) {
     if (screenWidth.matches) {
       mainNav.classList.add("fixed-nav-mobile");
       aspiring.classList.add("fixed-nav-compensate-mobile");
@@ -173,7 +173,7 @@ function handleNav(e) {
   var currentPoint = window.scrollY;
   if (lastPoint != null && lastPoint < currentPoint) {
     //swiped down
-    if (window.scrollY >= navLocation.offsetTop) {
+    if (window.scrollY >= aspiring.offsetTop) {
       mainNav.classList.add("vanish");
       // console.log("you scrolled up");
     }
@@ -223,7 +223,7 @@ function makeFlower(modifier, color) {
     opac -= 0.002;
   }
 }
-// const titles = document.querySelectorAll(".section-title");
+const titles = document.querySelectorAll(".section-title");
 // const educatorIconRight = document.getElementById("educator-icon-right");
 // const educatorIconCenter = document.getElementById("educator-icon-center");
 // const educatorIconLeft = document.getElementById("educator-icon-left");
@@ -317,16 +317,12 @@ function makeFlower(modifier, color) {
 // graphIcons.forEach((icon) => {
 //   icon.addEventListener("mouseenter", (e) => {
 //     e.target.classList.remove("obscure");
+
 //     graphTitle.classList.add("obscure");
-//     LabelX.classList.add("obscure");
-//     LabelY.classList.add("obscure");
 //     titles[1].classList.add("obscure");
 //     engineerText.classList.add("obscure");
 //     educatorContent.classList.add("obscure");
 //     softSkills.classList.add("obscure");
-//     graphContent.classList.add("obscure-borders");
-//     graphArrowUp.classList.add("obscure-arrow-up");
-//     graphArrowRight.classList.add("obscure-arrow-right");
 //     e.target.parentElement.childNodes[1].classList.add("normalize");
 //     e.target.parentElement.childNodes[3].classList.add("shown");
 //     e.target.parentElement.childNodes[7].classList.add("shown");
@@ -342,6 +338,7 @@ function makeFlower(modifier, color) {
 // });
 // graphIcons.forEach((icon) => {
 //   icon.addEventListener("mouseout", (e) => {
+
 //     graphTitle.classList.remove("obscure");
 //     LabelX.classList.remove("obscure");
 //     LabelY.classList.remove("obscure");
