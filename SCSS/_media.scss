@@ -87,6 +87,24 @@
   }
 }
 @media (max-width: 640px) {
+ #main-header{
+  //  border: 1px solid white !important;
+  //  color: green !important;
+  margin-bottom: calc((50vh - 15rem)/2) !important;
+  height: 50vh !important;
+  #logo-home,
+  #lead {
+    margin: 1rem auto !important;
+    text-align: center;
+  }
+  #lead{
+    margin-bottom: 4rem !important;
+  }
+  //  
+ }
+ 
+
+  
   form {
     grid-template-columns: repeat(1, 1fr) !important;
     .subject,
@@ -117,6 +135,7 @@
     width: 85vw !important;
   }
   #main-nav {
+    // border: 1px solid white;
     width: 100vw !important;
     flex-direction: column !important;
     margin: 0;
@@ -174,7 +193,20 @@
     //   flex-direction: row !important;
     // }
   }
-
+#skills-graph{
+  .graph-title{
+    p{
+      display: none !important;
+    }
+  }
+  .graph-icons{
+    i,img{
+      &:hover {
+        transform: scale(1) !important;
+      }
+  }
+  }
+}
   #work-content {
     .section-lead {
       margin-bottom: 1rem !important;

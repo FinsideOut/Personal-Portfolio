@@ -31,7 +31,7 @@ const educatorContent = document.getElementById("educator-content");
 const developerContent = document.getElementById("developer-content");
 const servicesContent = document.getElementById("services-content");
 const workContent = document.getElementById("work-content");
-const cvContent = document.getElementById("cv-content");
+// const cvContent = document.getElementById("cv-content");
 const contactContent = document.getElementById("contact-content");
 const aspiring = document.getElementById("aspiring");
 
@@ -68,8 +68,8 @@ if (!screenWidth.matches) {
     if (window.scrollY == 0) {
       position = "top";
       if (prevPosition !== position) {
-        x = Math.random(-0.005, 0.005);
-        y = Math.random(0, 255);
+        x = 0;
+       y = 0.4;
       }
       prevPosition = position;
     }
@@ -80,8 +80,9 @@ if (!screenWidth.matches) {
       // console.log("aspire");
       position = "aspire";
       if (prevPosition !== position) {
-        x = Math.random(-0.005, 0.005);
-        y = Math.random(0, 255);
+    
+        x =  0.36634998893607196 
+       y = 0.6;
       }
       prevPosition = position;
     } else if (
@@ -91,8 +92,10 @@ if (!screenWidth.matches) {
       position = "engine";
       // console.log("engine");
       if (prevPosition !== position) {
-        x = Math.random(-0.005, 0.005);
-        y = Math.random(0, 255);
+       
+        x = 0.7976439770338069
+      
+       y = 0.4;
       }
       prevPosition = position;
     } else if (
@@ -101,8 +104,8 @@ if (!screenWidth.matches) {
     ) {
       position = "developer";
       if (prevPosition !== position) {
-        x = Math.random(-0.005, 0.005);
-        y = Math.random(0, 255);
+        x = 0.34129414946673364
+       y = 0.6;
       }
       prevPosition = position;
     } else if (
@@ -111,39 +114,40 @@ if (!screenWidth.matches) {
     ) {
       position = "service";
       if (prevPosition !== position) {
-        x = Math.random(-0.005, 0.005);
-        y = Math.random(0, 255);
+        x = 0.044933495035455184 
+
+       y = 0.4;
       }
       prevPosition = position;
     } else if (
       window.scrollY >= workContent.offsetTop - 100 &&
-      window.scrollY < cvContent.offsetTop - 100
+      window.scrollY < contactContent.offsetTop - 100
     ) {
       position = "work";
       if (prevPosition !== position) {
-        x = Math.random(-0.005, 0.005);
-        y = Math.random(0, 255);
+        x = 0.0366552612946905
+       y = 0.6;
       }
       prevPosition = position;
-    } else if (
-      window.scrollY >= cvContent.offsetTop - 100 &&
-      window.scrollY < contactContent.offsetTop - 100
-    ) {
-      position = "cv";
-      if (prevPosition !== position) {
-        x = Math.random(-0.005, 0.005);
-        y = Math.random(0, 255);
-      }
-      prevPosition = position;
-    } else if (window.scrollY >= cvContent.offsetTop - 100) {
+    // } else if (
+    //   window.scrollY >= cvContent.offsetTop - 100 &&
+    //   window.scrollY < contactContent.offsetTop - 100
+    // ) {
+    //   position = "cv";
+    //   if (prevPosition !== position) {
+    //     x = Math.random(-0.005, 0.005);
+    //    y = 0.5;
+    //   }
+    //   prevPosition = position;
+    } else if (window.scrollY >= contactContent.offsetTop - 100) {
       position = "contact";
       if (prevPosition != position) {
-        x = Math.random(-0.005, 0.005);
-        y = Math.random(0, 255);
+        x =  0.6102570641271485
+       y = 0.4;
       }
       prevPosition = position;
     }
-    console.log(y * 255);
+    console.log(x,y * 255);
     makeFlower(x, y * 255);
     handleNav();
   });

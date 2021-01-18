@@ -30,7 +30,7 @@ const educatorContent = document.getElementById("educator-content");
 const developerContent = document.getElementById("developer-content");
 const servicesContent = document.getElementById("services-content");
 const workContent = document.getElementById("work-content");
-const cvContent = document.getElementById("cv-content");
+// const cvContent = document.getElementById("cv-content");
 
 let heroNum = 500;
 for (let i = 0; i < heroNum; i++) {
@@ -530,7 +530,7 @@ workItems.forEach((item) => {
     item.classList.add("target");
     titles[4].classList.add("obscure");
     // cvTitle.classList.add("obscure");
-    cvContent.classList.add("obscure");
+    // cvContent.classList.add("obscure");
     workText.classList.add("obscure");
     servicesContent.classList.add("obscure");
     for (let i = 0; i < workItems.length; i++) {
@@ -558,7 +558,7 @@ workItems.forEach((item) => {
     titles[4].classList.remove("obscure");
     workText.classList.remove("obscure");
     servicesContent.classList.remove("obscure");
-    cvContent.classList.remove("obscure");
+    // cvContent.classList.remove("obscure");
     for (let i = 0; i < workItems.length; i++) {
       workItems[i].classList.remove("obscure");
     }
