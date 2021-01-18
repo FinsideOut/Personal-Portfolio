@@ -670,3 +670,5 @@ window.onscroll = () => {
     aspiring.classList.remove("nav-compensate");
   }
 };
+const robots = document.getElementById('robots');
+console.log(robots);
