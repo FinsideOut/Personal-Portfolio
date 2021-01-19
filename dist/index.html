@@ -1,632 +1,638 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script
+      src="https://kit.fontawesome.com/a19fa3feff.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Sansita+Swashed:wght@300;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-        <script src="https://kit.fontawesome.com/a19fa3feff.js" crossorigin="anonymous"></script>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Sansita+Swashed:wght@300;600;800&display=swap"
-            rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>Finlay Williamson</title>
+  </head>
 
-        <link rel="stylesheet" href="./css/main.css">
-        <title>Finlay Williamson</title>
-    </head>
+  <body>
+    <main id="preloader"></main>
+    <div id="hero-container"></div>
+    <header id="main-header">
+      <h1 id="logo-home" class="logo book-text-left">
+        Fin Williamson | Educator
+      </h1>
 
-    <body>
+      <p id="lead">
+        I like to code things, and teach others how to code things too. I
+        specialize in unique interactive design and sleek web development
+      </p>
+    </header>
+    <aside id="nav-location"></aside>
+    <nav id="main-nav">
+      <a href="#aspiring" class="main-nav-link">About</a>
+      <a href="#services-content" class="main-nav-link">Services</a>
+      <a href="#work-content" class="main-nav-link">Portfolio</a>
+      <a href="#contact-content" class="main-nav-link">Contact</a>
+    </nav>
 
-        <main id="preloader"></main>
-        <div id="hero-container">
+    <h2 id="aspiring">I am an Aspiring...</h2>
+
+    <section id="educator-content">
+      <h3 class="section-title" id="educator-title">Educator</h3>
+      <div class="educator-text-container">
+        <p class="section-lead">
+          I am currently waiting to hear back from Universities in Glasgow
+          regarding my application for a Professional Graduate Diploma in
+          Education (PGDE). This will allow me to start my career as a computing
+          science teacher in Scotland.
+        </p>
+        <p class="section-lead">
+          Due to the circumstances since completing my Electrical and Electronic
+          Engineering (EEE) degree at the University of Strathclyde in 2020 I
+          have not had the opportunity to gain practical experience in the
+          classroom. Nonetheless, as things open up soon here are a few things
+          that I am looking forward to!
+        </p>
+      </div>
+      <div class="hover-icons-wrapper">
+        <div class="educator-icons-container">
+          <div id="educator-icon-left" class="icon-container">
+            <h5 class="icon-title">
+              <i class="fas fa-search"></i>Talking<br />Teaching
+            </h5>
+            <p class="icon-text">
+              Teaching Scotland are providing a number of seminars this January
+              during their “Online Festival of Interactive Events”
+            </p>
+          </div>
+          <div id="educator-icon-center" class="icon-container">
+            <h5 class="icon-title">
+              <i class="far fa-eye"></i> Classroom<br />Observations
+            </h5>
+            <p class="icon-text">
+              Having reached out to a number of local schools, as well as
+              friends that are already teachers, the opportunity for classroom
+              experience is just round the corner
+            </p>
+          </div>
+          <div id="educator-icon-right" class="icon-container">
+            <h5 class="icon-title">
+              <i class="fas fa-fish"></i> Hello<br />Whorld!
+            </h5>
+            <p class="icon-text">
+              Hello Whorld is a series of tutorials that I have been working on
+              with the hope of volunteering in schools that cannot offer a
+              Computer Science curriculum.
+            </p>
+          </div>
         </div>
-        <header id="main-header">
-            <h1 id='logo-home' class="logo book-text-left">Fin Williamson</h1>
+        <div class="more-info-container">
+          <div id="more-info-right" class="more-info">
+            <p>
+              I believe that the most engaging, enjoyable and efficient way to
+              learn is to learn by doing. In the Hello Whorld course
+              participants will code, from scratch and alongside myself, their
+              first website. By allowing students to create the website on
+              whatever wild idea they can imagine, the process will be infused
+              with inspiration whilst introducing skills and concepts that can
+              be applied to all of Web Dev!
+            </p>
+          </div>
+          <div id="more-info-left" class="more-info">
+            <p>
+              In particular the talks on "Life as a Teacher" and "Progression in
+              Teaching" are appealing to me. Though I haven't begun my career
+              yet I've no lack of ambition! The event should provide another
+              opportunity to ask questions to newly qualified and more
+              experienced teachers.
+            </p>
+          </div>
 
-            <p id='lead'>I like to code things, and teach others how to code things too.
-                I
-                specialize in unique interactive design and sleek web design</p>
-        </header>
-        <aside id="nav-location"></aside>
-        <nav id="main-nav">
-            <a href="#aspiring" class="main-nav-link">About</a>
-            <a href="#services-content" class="main-nav-link">Services</a>
-            <a href="#work-content" class="main-nav-link">Portfolio</a>
-            <a href="#contact-content" class="main-nav-link">Contact</a>
-        </nav>
+          <p id="more-info-center-left" class="more-info">
+            I also hope to chat with a number of experienced teachers about the
+            job, specifically elements of the profession that are not class
+            facing. This should help me prepare in the best way for the coming
+            PGDE, pointing me towards the set of administrative and perhaps
+            bureaucratic skills I should develope in the meantime.
+          </p>
+          <p id="more-info-center-right" class="more-info">
+            As is customary for one at the start of a new road I have spent no
+            short time daydreaming and imagining what kind of teacher I will be.
+            I'm looking forward to experiencing a wide variety of teaching
+            styles and philosophies such that my own can be challenged, refined
+            and matured prior to placements.
+          </p>
+        </div>
+        <div class="educator-bg-container">
+          <div class="educator-bg ebg-1"></div>
+          <div class="educator-bg ebg-2"></div>
+          <div class="educator-bg ebg-3"></div>
+          <div class="educator-bg ebg-4"></div>
+        </div>
+      </div>
+    </section>
 
-        <h2 id='aspiring'>I am an Aspiring...</h2>
-
-        <section id="educator-content">
-            <h3 class='section-title' id='educator-title'>Educator</h3>
-            <div class="educator-text-container">
-                <p class='section-lead'>I am currently waiting to hear back from Universities in
-                    Glasgow
-                    regarding my
-                    application for a Professional Graduate Diploma in Education (PGDE).
-                    This
-                    will allow me to start my career as a computer science teacher in
-                    Scotland.
-                </p>
-                <p class='section-lead'> Due to the circumstances since my graduation from the
-                    University of
-                    Strathclyde in 2020 I have not had the
-                    opportunity to gain
-                    practical experience in the classroom. Nonetheless, as things open up
-                    soon
-                    here are a few
-                    things that I am
-                    looking
-                    forward to!</p>
+    <section id="engineer-content">
+      <h3 class="section-title">Engineer</h3>
+      <!-- <section id="engineer-content"> -->
+      <div class="technical-skills">
+        <p id="engineer-text">
+          During my time at the University of Strathclyde I studied a wide range
+          of Electronic and Electrical Engineering (EEE) concepts, from PCB and
+          analogue circuit design to interpreted languages like Python 3. Since
+          graduating I have continued to develop these skills in my own
+          projects, which can be viewed in my portfolio
+        </p>
+        <div id="skills-graph">
+          <div class="graph-title">
+            <h4>Technical Skills</h4>
+            <p>Hover to read more!</p>
+          </div>
+          <h5 class="x-label">Experience</h5>
+          <h5 class="y-label">Abstraction</h5>
+          <div class="graph-content">
+            <div class="graph-icons python">
+              <div class="graph-icon-bg bg"></div>
+              <h4 class="graph-icon-text">Python 3</h4>
+              <i class="fab fa-python graph-icon"></i>
+              <p class="graph-icon-text">
+                Python 3 is an interpreted and highly abstracted programing
+                language, often used for machine learning and data science
+                purposes. The simple syntax means that the language is easy to
+                read and quick to learn for beginners, and cuts development time
+                massively for more experienced programmers.
+              </p>
             </div>
-            <div class="hover-icons-wrapper">
-                <div class="educator-icons-container">
-                    <div id='educator-icon-left' class="icon-container">
-                        <h5 class="icon-title"><i class="fas fa-search"></i>Talking<br />Teaching
-                        </h5>
-                        <p class="icon-text">Teaching Scotland are providing a number of
-                            seminars this January
-                            during their “Online Festival of Interactive Events”</p>
-                    </div>
-                    <div id='educator-icon-center' class="icon-container">
-                        <h5 class="icon-title"><i class="far fa-eye"></i>
-                            Classroom<br />Observations</h5>
-                        <p class="icon-text">Having reached out to a number of local
-                            schools, as well as friends
-                            that are already teachers, the opportunity for classroom experience is just round the corner
-                        </p>
-                    </div>
-                    <div id='educator-icon-right' class="icon-container">
-                        <h5 class="icon-title"><i class="fas fa-fish"></i>
-                            Hello<br />Whorld!</h5>
-                        <p class="icon-text">Hello Whorld is a series of tutorials that I
-                            have been
-                            working on
-                            with
-                            the hope of volunteering in schools that cannot
-                            offer a Computer Science curriculum.</p>
-                    </div>
-                </div>
-                <div class="more-info-container">
-                    <div id='more-info-right' class="more-info">
-                        <p>I believe that the most engaging, enjoyable and efficient way to
-                            learn is to learn by doing. In the Hello Whorld course
-                            participants
-                            will code, from scratch and alongside myself, their first
-                            website.
-                            By allowing students to create the website on whatever wild idea
-                            they
-                            can imagine, the process will be infused with inspiration whilst
-                            introducing skills and concepts that can be applied to all of
-                            Web
-                            Dev! </p>
-                    </div>
-                    <div id='more-info-left' class="more-info">
-                        <p> In particular the talks on "Life as a Teacher" and "Progression
-                            in
-                            Teaching" are appealing to me. Though I haven't begun my career
-                            yet
-                            I've no lack of ambition! The event should provide another
-                            opportunity to ask questions to newly qualified and more
-                            experienced teachers.</p>
-                    </div>
-
-                    <p id='more-info-center-left' class="more-info">I also hope to chat
-                        with a
-                        number of experienced teachers about the job, speciffically elements
-                        of
-                        the proffession that are not class facing. This should help me
-                        prepare
-                        in the best way for the coming PGDE, pointing me towards the set of
-                        administrative and perhaps beuarocratic skills I should develope in
-                        the
-                        meantime.
-                    </p>
-                    <p id='more-info-center-right' class="more-info">As is customary for one
-                        at
-                        the start of a new road I have spent no short time daydreaming and
-                        imagining what kind of teacher I will be. I'm looking forward to
-                        experiencing a wide variety of teaching styles and philosophies such
-                        that
-                        my own can be challenged, refined and matured prior to placements.</p>
-                </div>
-                <div class="educator-bg-container">
-                    <div class="educator-bg ebg-1"></div>
-                    <div class="educator-bg ebg-2"></div>
-                    <div class="educator-bg ebg-3"></div>
-                    <div class="educator-bg ebg-4"></div>
-                </div>
+            <div class="graph-icons github">
+              <div class="graph-icon-bg bg"></div>
+              <h4 class="graph-icon-text">Git</h4>
+              <i class="fab fa-github graph-icon"></i>
+              <p class="graph-icon-text">
+                A source control system is essential for any form of
+                engineering, allowing many programmers to work on a project
+                without conflicts. In an education context Git offers an easy
+                way to grade individuals for their own contributions to a group
+                project, rather than the quality of the project overall. I
+                believe this would allow a more fair way of encouraging team
+                work.
+              </p>
             </div>
-
-        </section>
-
-
-        <section id="engineer-content">
-            <h3 class='section-title'>
-                Engineer
-            </h3>
-            <!-- <section id="engineer-content"> -->
-            <div class="technical-skills">
-                <p id='engineer-text'>During my time at the University of Strathclyde I
-                    studied
-                    a wide range of
-                    Electronic and Electrical Engineering (EEE) concepts, from PCB and
-                    analogue
-                    circuit design to
-                    interpreted languages like Python 3. Since graduating I have continued
-                    to
-                    develop these skills in my
-                    own projects, which
-                    can be viewed in my portfolio</p>
-                <div id='skills-graph'>
-                    <div class="graph-title">
-                        <h4>Technical Skills</h4>
-                        <p>Hover to read more!</p>
-                    </div>
-                    <h5 class="x-label">Experience</h5>
-                    <h5 class="y-label">Abstraction</h5>
-                    <div class="graph-content">
-                        <div class="graph-icons python">
-                            <div class="graph-icon-bg bg"></div>
-                            <h4 class=graph-icon-text>Python 3</h4>
-                            <i class="fab fa-python graph-icon"></i>
-                            <p class='graph-icon-text'>Python 3 is an interpreted and
-                                highly
-                                abstracted programing language, often used for machine
-                                learning
-                                and data science purposes. The simple syntax means that the language is easy to read and
-                                quick to learn for
-                                beginners, and cuts development time massively for more experienced programmers. </p>
-                        </div>
-                        <div class="graph-icons github">
-                            <div class="graph-icon-bg bg"></div>
-                            <h4 class=graph-icon-text>Git</h4>
-                            <i class="fab fa-github graph-icon"></i>
-                            <p class='graph-icon-text'>A source control system is essential
-                                for
-                                any form of engineering, allowing many programmers to work
-                                on a
-                                project without conflicts. In an education context Git offers an easy way to grade
-                                individuals for their own contributions to a project, rather than the quality of the
-                                project overall. I believe this would allow a more fair way of encouraging team work.
-                            </p>
-                        </div>
-                        <div class="graph-icons javascript">
-                            <div class="graph-icon-bg bg"></div>
-                            <h4 class=graph-icon-text>Javascript</h4>
-                            <i class="fab fa-js-square graph-icon"></i>
-                            <p class='graph-icon-text'>The programming language with which
-                                the
-                                modern internet is founded upon, JS has become the most languages today. Not only is the
-                                language easy to get started with but the extensive support for 3rd party libraries and
-                                frameworks means that the possibilities with it are endless.
-                            </p>
-                        </div>
-                        <div class="graph-icons html5">
-                            <div class="graph-icon-bg bg"></div>
-                            <h4 class=graph-icon-text>HTML 5</h4>
-                            <i class="fab fa-html5 graph-icon"></i>
-                            <p class='graph-icon-text'>Hyper Text Mark-up Language is used
-                                to
-                                describe the contents of a webpage in it's most basic and
-                                unadorned form. As such it provides a road-map for anyone viewing or writing the source
-                                code of a website. Well written and clean HTML is the foundation of most web development
-                                projects.</p>
-                        </div>
-                        <div class="graph-icons css3">
-                            <div class="graph-icon-bg bg"></div>
-                            <h4 class=graph-icon-text>CSS 3</h4>
-                            <i class="fab fa-css3 graph-icon"></i>
-                            <p class='graph-icon-text'>CSS is the visual design language that is used to format and
-                                style HTML by adding colors, fonts, positioning, scale etc. I consider myself to be
-                                hugely lucky that I began with
-                                the
-                                third iteration of Cascading Style Sheets. Ease of access
-                                to
-                                features like transitions, animations, flex and grid make simple what only a few years
-                                ago would have caused migraines.</p>
-                        </div>
-                        <div class="graph-icons sass">
-                            <div class="graph-icon-bg bg"></div>
-                            <h4 class=graph-icon-text>SASS/SCSS</h4>
-                            <i class="fab fa-sass graph-icon"></i>
-                            <p class='graph-icon-text'>Syntactically Awesome Style Sheets is
-                                a
-                                further abstraction of CSS that introduces functions,
-                                nesting,
-                                reusable code and much, much more. This brings the visual
-                                design
-                                language to become more similar to the proggraming languages
-                                I
-                                am familiar with whilst helping me adhere to the fundamental
-                                "Don't repeat yourself" coding principle.</p>
-                        </div>
-                        <div class="graph-icons microchip">
-                            <div class="graph-icon-bg bg"></div>
-                            <h4 class=graph-icon-text>FPGA Verification</h4>
-                            <i class="fas fa-microchip graph-icon"></i>
-                            <p class='graph-icon-text'>Field Programable Gate Arrays are
-                                integrated circuits that can be configured after
-                                manufacturing, providing an essential tool for prototyping
-                                new
-                                processors and ASICs. Having an interest in signal processing I used
-                                VHDL,
-                                system generator and Simulink to describe novel hardware
-                                frequently. </p>
-                        </div>
-                        <div class="graph-icons pcb">
-                            <div class="graph-icon-bg bg"></div>
-                            <h4 class=graph-icon-text>PCB Design</h4>
-                            <img class='graph-icon' src='./img/bio-sensor.svg'>
-                            <p class='graph-icon-text'>To many tedious, to me queerly
-                                therapeutic, Printed Circuit Board design is often like
-                                solving
-                                a puzzle. At it's core this involves optimization, creating
-                                all
-                                connections a circuit needs whilst minimizing the space on
-                                the
-                                board it takes. However the many nuances involved regarding
-                                path
-                                length, propagation delays and heat syncs mean that, to me
-                                at
-                                least, it is more art than science.</p>
-                        </div>
-                        <div class="graph-icons c-plus">
-                            <div class="graph-icon-bg bg"></div>
-                            <h4 class=graph-icon-text>C++</h4>
-                            <img class='graph-icon' src="./img/c.svg">
-                            <p class='graph-icon-text'>C++ often serves as the bridge
-                                between
-                                hardware and software, since it adopts the memory management
-                                and
-                                efficiency of low level languages but also some of the abstractions
-                                of
-                                high level languages. For instance operating systems and
-                                video
-                                games are written in C++, allowing for extremely high
-                                performance. The sacrifice for this performance is a huge
-                                development time however, as C++ is a very labour intensive
-                                language to work with. </p>
-                        </div>
-                        <div class="graph-icons arduino">
-                            <div class="graph-icon-bg bg"></div>
-                            <h4 class=graph-icon-text>Embedded C</h4>
-                            <img class='graph-icon' src="./img/icons8-arduino-uno-board-100.png" alt="">
-                            <p class='graph-icon-text'>Programming microcontrollers allows
-                                your
-                                code to interact with the real world through sensors,
-                                motors,
-                                speakers or even just LEDs. Whilst my Uni projects revolved
-                                around the TIMSP430 most of my experience comes from
-                                personal
-                                projects using the ATMEGA328P and the Arduino development board. </p>
-                        </div>
-                        <div class="graph-icons matlab">
-                            <div class="graph-icon-bg bg"></div>
-                            <h4 class=graph-icon-text>Matlab</h4>
-                            <img class='graph-icon' src="./img/icons8-matlab.svg">
-                            <p class='graph-icon-text'>Matlab is the combination of a
-                                numeric
-                                computing environment and programing language that has a
-                                massive variety of uses in engineering. In my time at uni I
-                                used
-                                the environment extensively for Digital Signal Processing,
-                                data
-                                analysis and statistics. I also used Matlab's subset of
-                                programs,
-                                mostly Simulink and System Generator, in conjunction with
-                                Xillinx Design Suite for FPGA Verification</p>
-                        </div>
-
-                        <div class="right-arrow arrow"></div>
-                        <div class="up-arrow arrow"></div>
-                    </div>
-                </div>
+            <div class="graph-icons javascript">
+              <div class="graph-icon-bg bg"></div>
+              <h4 class="graph-icon-text">Javascript</h4>
+              <i class="fab fa-js-square graph-icon"></i>
+              <p class="graph-icon-text">
+                The programming language with which the modern internet is
+                founded upon, JS has become the most used language in the world
+                today. Not only is the language easy to get started with but the
+                extensive support for 3rd party libraries and frameworks means
+                that the possibilities with it are endless.
+              </p>
             </div>
-            <div class="soft-skills">
-                <div class="cards">
-                    <div class="card">
-                        <h4 class="card-title">Project <br />Planning</h4>
-                        <p class="card-text">Setting success criteria, prioritizing
-                            features,
-                            envisioning deadlines that account for inevitable delays. Many
-                            projects fail before they have even begun due to inadequate
-                            planning, which is a pitfall that I learned to avoid at university</p>
-                    </div>
-                    <div class="card">
-                        <h4 class="card-title">Project <br />Management</h4>
-                        <p class="card-text">For larger projects it was often necessary to
-                            collate the progress of the group and present to our mentor
-                            weekly.
-                            This meant ensuring each member of the group kept appropriate
-                            documentation and completed tasks on schedule.</p>
-                    </div>
-
-                    <div class="card">
-                        <h4 class="card-title">Team <br />Work</h4>
-                        <p class="card-text">Communication, sticking to deadlines and
-                            personal
-                            accountability have been essential attributes developed during my
-                            many
-                            group projects and reports at University. </p>
-                    </div>
-                    <div class="card">
-                        <h4 class="card-title">Quick <br /> Learning</h4>
-                        <p class="card-text">The rate at
-                            which
-                            University threw new technologies and languages at us meant that learning new technologies
-                            became a
-                            skill in itself. This allows me to pick up new languages
-                            comfortably
-                            within a matter of weeks.</p>
-                    </div>
-                    <div class="discs">
-                        <div class="soft-skills-disc disc"></div>
-                        <div class="soft-skills-disc disc"></div>
-                        <div class="soft-skills-disc disc"></div>
-                        <div class="soft-skills-disc disc"></div>
-                        <div class="soft-skills-disc disc"></div>
-                        <div class="soft-skills-disc disc"></div>
-                        <div class="soft-skills-disc disc"></div>
-                        <div class="soft-skills-disc disc"></div>
-                        <div class="soft-skills-disc disc"></div>
-                        <div class="soft-skills-disc disc"></div>
-                        <div class="soft-skills-disc disc"></div>
-                        <div class="soft-skills-disc disc"></div>
-                    </div>
-                </div>
+            <div class="graph-icons html5">
+              <div class="graph-icon-bg bg"></div>
+              <h4 class="graph-icon-text">HTML 5</h4>
+              <i class="fab fa-html5 graph-icon"></i>
+              <p class="graph-icon-text">
+                Hyper Text Mark-up Language is used to describe the contents of
+                a webpage in it's most basic and unadorned form. As such it
+                provides a road-map for anyone viewing or writing the source
+                code of a website. Well written and clean HTML is the foundation
+                of most web development projects.
+              </p>
+            </div>
+            <div class="graph-icons css3">
+              <div class="graph-icon-bg bg"></div>
+              <h4 class="graph-icon-text">CSS 3</h4>
+              <i class="fab fa-css3 graph-icon"></i>
+              <p class="graph-icon-text">
+                CSS is the visual design language that is used to format and
+                style HTML by adding colors, fonts, positioning, scale etc. I
+                consider myself to be hugely lucky that I began with the third
+                iteration of Cascading Style Sheets. Ease of access to features
+                like transitions, animations, flex and grid make simple what
+                only a few years ago would have caused migraines.
+              </p>
+            </div>
+            <div class="graph-icons sass">
+              <div class="graph-icon-bg bg"></div>
+              <h4 class="graph-icon-text">SASS/SCSS</h4>
+              <i class="fab fa-sass graph-icon"></i>
+              <p class="graph-icon-text">
+                Syntactically Awesome Style Sheets is a further abstraction of
+                CSS that introduces functions, nesting, reusable code and much,
+                much more. This brings the visual design language to become more
+                similar to the proggraming languages I am familiar with whilst
+                helping me adhere to the fundamental "Don't repeat yourself"
+                coding principle.
+              </p>
+            </div>
+            <div class="graph-icons microchip">
+              <div class="graph-icon-bg bg"></div>
+              <h4 class="graph-icon-text">FPGA Verification</h4>
+              <i class="fas fa-microchip graph-icon"></i>
+              <p class="graph-icon-text">
+                Field Programable Gate Arrays are integrated circuits that can
+                be configured after manufacturing, providing an essential tool
+                for prototyping new processors and ASICs. Having an interest in
+                signal processing I used VHDL, system generator and Simulink to
+                describe novel hardware frequently.
+              </p>
+            </div>
+            <div class="graph-icons pcb">
+              <div class="graph-icon-bg bg"></div>
+              <h4 class="graph-icon-text">PCB Design</h4>
+              <img class="graph-icon" src="./img/bio-sensor.svg" />
+              <p class="graph-icon-text">
+                To many tedious, to me queerly therapeutic, Printed Circuit
+                Board design is often like solving a puzzle. At it's core this
+                involves optimization, creating all connections a circuit needs
+                whilst minimizing the space on the board it takes. However the
+                many nuances involved regarding path length, propagation delays
+                and heat syncs mean that, to me at least, it is more art than
+                science.
+              </p>
+            </div>
+            <div class="graph-icons c-plus">
+              <div class="graph-icon-bg bg"></div>
+              <h4 class="graph-icon-text">C++</h4>
+              <img class="graph-icon" src="./img/c.svg" />
+              <p class="graph-icon-text">
+                C++ often serves as the bridge between hardware and software,
+                since it adopts the memory management and efficiency of low
+                level languages but also some of the abstractions of high level
+                languages. For instance operating systems and video games are
+                written in C++, allowing for extremely high performance. The
+                sacrifice for this performance is a huge development time
+                however, as C++ is a very labour intensive language to work
+                with.
+              </p>
+            </div>
+            <div class="graph-icons arduino">
+              <div class="graph-icon-bg bg"></div>
+              <h4 class="graph-icon-text">Embedded C</h4>
+              <img
+                class="graph-icon"
+                src="./img/icons8-arduino-uno-board-100.png"
+                alt=""
+              />
+              <p class="graph-icon-text">
+                Programming microcontrollers allows your code to interact with
+                the real world through sensors, motors, speakers or even just
+                LEDs. Whilst my Uni projects revolved around the TIMSP430 most
+                of my experience comes from personal projects using the
+                ATMEGA328P and the Arduino development board.
+              </p>
+            </div>
+            <div class="graph-icons matlab">
+              <div class="graph-icon-bg bg"></div>
+              <h4 class="graph-icon-text">Matlab</h4>
+              <img class="graph-icon" src="./img/icons8-matlab.svg" />
+              <p class="graph-icon-text">
+                Matlab is the combination of a numeric computing environment and
+                programing language that has a massive variety of uses in
+                engineering. In my time at uni I used the environment
+                extensively for Digital Signal Processing, data analysis and
+                statistics. I also used Matlab's subset of programs, mostly
+                Simulink and System Generator, in conjunction with Xillinx
+                Design Suite for FPGA Verification
+              </p>
             </div>
 
-        </section>
+            <div class="right-arrow arrow"></div>
+            <div class="up-arrow arrow"></div>
+          </div>
+        </div>
+      </div>
+      <div class="soft-skills">
+        <div class="cards">
+          <div class="card">
+            <h4 class="card-title">Project <br />Planning</h4>
+            <p class="card-text">
+              Setting success criteria, prioritizing features, envisioning
+              deadlines that account for inevitable delays. Many projects fail
+              before they have even begun due to inadequate planning, which is a
+              pitfall that I learned to avoid at university
+            </p>
+          </div>
+          <div class="card">
+            <h4 class="card-title">Project <br />Management</h4>
+            <p class="card-text">
+              For larger projects it was often necessary to collate the progress
+              of the group and present to our mentor weekly. This meant ensuring
+              each member of the group kept appropriate documentation and
+              completed tasks on schedule.
+            </p>
+          </div>
 
-        <section id="developer-content">
+          <div class="card">
+            <h4 class="card-title">Team <br />Work</h4>
+            <p class="card-text">
+              Communication, sticking to deadlines and personal accountability
+              have been essential attributes developed during my many group
+              projects and reports at University.
+            </p>
+          </div>
+          <div class="card">
+            <h4 class="card-title">
+              Quick <br />
+              Learning
+            </h4>
+            <p class="card-text">
+              The rate at which University threw new technologies and languages
+              at us meant that learning new technologies became a skill in
+              itself. This allows me to pick up new languages comfortably within
+              a matter of weeks.
+            </p>
+          </div>
+          <div class="discs">
+            <div class="soft-skills-disc disc"></div>
+            <div class="soft-skills-disc disc"></div>
+            <div class="soft-skills-disc disc"></div>
+            <div class="soft-skills-disc disc"></div>
+            <div class="soft-skills-disc disc"></div>
+            <div class="soft-skills-disc disc"></div>
+            <div class="soft-skills-disc disc"></div>
+            <div class="soft-skills-disc disc"></div>
+            <div class="soft-skills-disc disc"></div>
+            <div class="soft-skills-disc disc"></div>
+            <div class="soft-skills-disc disc"></div>
+            <div class="soft-skills-disc disc"></div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-            <h3 class='section-title'>
-                Developer
-            </h3>
-            <p class='section-lead' id='developer-text'>My engineering skill-set has lent itself well to web
-                development, which has proven an exciting and engaging experience. My projects exploit my
-                programming aptitude through extensive animations and transitions in order
-                to
-                hold the users attention. As my career advances I hope to hone the aesthetic
-                elements of my web development and foster a stronger understanding of design
-                principals.</p>
-            <h4> What I'm working on..</h4>
-            <div class="cards">
-                <div class="card developer-card dev-left">
-                    <div class="developer-wrapper ">
-                        <div class="developer-bg dbg-1 wrap-left"></div>
-                        <div class="developer-bg dbg-2 wrap-left"></div>
-                        <div class="developer-bg dbg-3 wrap-left"></div>
-                    </div>
+    <section id="developer-content">
+      <h3 class="section-title">Developer</h3>
+      <p class="section-lead" id="developer-text">
+        My engineering skill-set has lent itself well to web development, which
+        has proven an exciting and engaging experience. My projects exploit my
+        programming aptitude through extensive animations and transitions in
+        order to hold the users attention. As my career advances I hope to hone
+        the aesthetic elements of my web development and foster a stronger
+        understanding of design principals.
+      </p>
+      <h4>What I'm working on..</h4>
+      <div class="cards">
+        <div class="card developer-card dev-left">
+          <div class="developer-wrapper">
+            <div class="developer-bg dbg-1 wrap-left"></div>
+            <div class="developer-bg dbg-2 wrap-left"></div>
+            <div class="developer-bg dbg-3 wrap-left"></div>
+          </div>
 
-                    <h4 class="card-title">Now</h4>
-                    <i class="fab fa-js-square"></i>
-                    <h5 class='card-subtitle'>Javascript</h5>
-                    <p class='card-text'>Though I have taken to JS like a duck to water
-                        there is
-                        a depth of features that I have yet to explore. I intend to have a
-                        thorough grasp of Vanilla JS and its various nuances before moving
-                        on to
-                        any kind of framework </p>
-                </div>
-                <div class="card developer-card dev-center">
-                    <div class="developer-wrapper ">
-                        <div class="developer-bg dbg-1 wrap-center"></div>
-                        <div class="developer-bg dbg-2 wrap-center"></div>
-                        <div class="developer-bg dbg-3 wrap-center"></div>
-                    </div>
-                    <h4 class="card-title">Soon</h4>
-                    <i class="fab fa-react"></i>
-                    <h5 class='card-subtitle'>React</h5>
-                    <p class='card-text'>The framework created and used by Facebook, as well
-                        as
-                        Twitter and countless other popular sites. This should make dynamic
-                        and
-                        multi page websites much easier and quicker to create</p>
-                </div>
-                <div class="card developer-card dev-right">
-                    <div class="developer-wrapper ">
-                        <div class="developer-bg dbg-1 wrap-right"></div>
-                        <div class="developer-bg dbg-2 wrap-right"></div>
-                        <div class="developer-bg dbg-3 wrap-right"></div>
-                    </div>
-                    <h4 class="card-title">Soonish</h4>
-                    <i class="fas fa-money-check-alt"></i>
-                    <h5 class='card-subtitle'>E-Commerce</h5>
-                    <p class='card-text'>Though it is true that my career will be in
-                        teaching, a
-                        diversified income is important. E-commerce will allow me to offer
-                        free-lance web
-                        dev services to a wider and more professional clientele </p>
-                </div>
-            </div>
-            <div id='scroll-from-developer' class="enquire-link enquire nav-link-full">
-                <h5><a href='#work-content' class="btn-full nav-link">View my Portfolio</a>
-                </h5>
-            </div>
-        </section>
+          <h4 class="card-title">Now</h4>
+          <i class="fab fa-js-square"></i>
+          <h5 class="card-subtitle">Javascript</h5>
+          <p class="card-text">
+            Though I have taken to JS like a duck to water there is a depth of
+            features that I have yet to explore. I intend to have a thorough
+            grasp of Vanilla JS and its various nuances before moving on to any
+            kind of framework
+          </p>
+        </div>
+        <div class="card developer-card dev-center">
+          <div class="developer-wrapper">
+            <div class="developer-bg dbg-1 wrap-center"></div>
+            <div class="developer-bg dbg-2 wrap-center"></div>
+            <div class="developer-bg dbg-3 wrap-center"></div>
+          </div>
+          <h4 class="card-title">Soon</h4>
+          <i class="fab fa-react"></i>
+          <h5 class="card-subtitle">React</h5>
+          <p class="card-text">
+            The framework created and used by Facebook, as well as Twitter and
+            countless other popular sites. This should make dynamic and multi
+            page websites much easier and quicker to create
+          </p>
+        </div>
+        <div class="card developer-card dev-right">
+          <div class="developer-wrapper">
+            <div class="developer-bg dbg-1 wrap-right"></div>
+            <div class="developer-bg dbg-2 wrap-right"></div>
+            <div class="developer-bg dbg-3 wrap-right"></div>
+          </div>
+          <h4 class="card-title">Soonish</h4>
+          <i class="fas fa-money-check-alt"></i>
+          <h5 class="card-subtitle">E-Commerce</h5>
+          <p class="card-text">
+            Though it is true that my career will be in teaching, a diversified
+            income is important. E-commerce will allow me to offer free-lance
+            web dev services to a wider and more professional clientele
+          </p>
+        </div>
+      </div>
+      <div
+        id="scroll-from-developer"
+        class="enquire-link enquire nav-link-full"
+      >
+        <h5>
+          <a href="#work-content" class="btn-full nav-link"
+            >View my Portfolio</a
+          >
+        </h5>
+      </div>
+    </section>
 
-        <section id="services-content">
-            <h2 class='section-title'>
-                My Services
-            </h2>
-            <p class='section-lead' id='services-text'>From getting your first business off the
-                ground
-                to getting ahead
-                with the Scottish computing curriculum, I am here to help! Feel free to
-                fire
-                me
-                a wee message about what I can do for you or any questions regarding
-                pricing.
-                I'm more than happy to chat! </p>
-            <div class="services-wrapper">
-                <div class="cards" id='service-cards'>
-                    <div class="card service-card services-left">
-                        <h4 class="card-title">Tutoring</h4>
-                        <p class="card-text">You should always seek help from your
-                            teacher
-                            before
-                            considering a tutor, but if you feel a different approach
-                            will
-                            benefit
-                            your learning I can help wrap your head around what's going
-                            on
-                            in
-                            class.
-                            I offer tutoring services up to and including advance higher
-                            level
-                            through zoom or in person
-                        </p>
-                    </div>
-                    <div class="card service-card services-center">
-                        <h4 class="card-title">Consultations</h4>
-                        <p class="card-text">Sometimes you are just banging your head
-                            against a
-                            problem for days. Usually the solution is just a few lines
-                            of
-                            code
-                            away!
-                            If you are really stuck with something specific I can help
-                            set
-                            you
-                            on
-                            the right path with a one-off consultation.
-                        </p>
-                    </div>
-                    <div class="card service-card services-right">
-                        <h4 class="card-title">Web Design</h4>
-                        <p class="card-text">A strong digital presence has now become vital for any business or
-                            professional. Whether you need a portfolio for your work or
-                            a
-                            way to
-                            get
-                            your new bushiness off the ground I can offer fluid and
-                            unique
-                            web
-                            development to make sure that your brand will not be
-                            forgotten
-                        </p>
-                    </div>
-                </div>
-                <div class="bgs" id='services-bg'>
-                    <div class="services-bg sbg-1"></div>
-                    <div class="services-bg sbg-2"></div>
-                    <div class="services-bg sbg-3"></div>
-                </div>
-            </div>
-            <div id='scroll-from-services' class="enquire enquire-link nav-link-full">
-                <h5><a href='#contact-content' class="btn-full nav-link">Enquire about my services</a>
-                </h5>
-            </div>
+    <section id="services-content">
+      <h2 class="section-title">My Services</h2>
+      <p class="section-lead" id="services-text">
+        From getting your first business off the ground to getting ahead with
+        the Scottish computing curriculum, I am here to help! Feel free to fire
+        me a wee message about what I can do for you, or any questions regarding
+        pricing. I'm more than happy to chat!
+      </p>
+      <div class="services-wrapper">
+        <div class="cards" id="service-cards">
+          <div class="card service-card services-left">
+            <h4 class="card-title">Tutoring</h4>
+            <p class="card-text">
+              You should always seek help from your teacher before considering a
+              tutor, but if you feel a different approach will benefit your
+              learning I can help wrap your head around what's going on in
+              class. I offer tutoring services up to and including advance
+              higher level through zoom or in person.
+            </p>
+          </div>
+          <div class="card service-card services-center">
+            <h4 class="card-title">Consultations</h4>
+            <p class="card-text">
+              Sometimes you are just banging your head against a problem for
+              days. Usually the solution is just a few lines of code away! If
+              you are really stuck with something specific I can help set you on
+              the right path with a one-off consultation.
+            </p>
+          </div>
+          <div class="card service-card services-right">
+            <h4 class="card-title">Web Design</h4>
+            <p class="card-text">
+              A strong digital presence has now become vital for any business or
+              individual. Whether you need a portfolio for your work or a way to
+              get your new business off the ground I can offer fluid and unique
+              web development to make sure that your brand will not be
+              forgotten.
+            </p>
+          </div>
+        </div>
+        <div class="bgs" id="services-bg">
+          <div class="services-bg sbg-1"></div>
+          <div class="services-bg sbg-2"></div>
+          <div class="services-bg sbg-3"></div>
+        </div>
+      </div>
+      <div id="scroll-from-services" class="enquire enquire-link nav-link-full">
+        <h5>
+          <a href="#contact-content" class="btn-full nav-link"
+            >Enquire about my services</a
+          >
+        </h5>
+      </div>
+    </section>
 
-        </section>
+    <section id="work-content">
+      <h2 class="section-title">My Portfolio</h2>
+      <p class="section-lead" id="work-text">
+        My best and most recent work, limited to my recent ventures in web
+        development. Websites are way more fun to look at than schematics and
+        algorithms, after all!
+      </p>
+      <div class="work-piece" id="pikajude">
+        <h3 class="work-piece-title work-piece-text jude-title">PikaJude</h3>
+        <p class="work-piece-info work-piece-text">
+          PikaJude is a Twitch streamer and gamer from Glasgow, specializing in
+          first person shooters and boutique booze. My first true solo mission
+          in web dev!
+        </p>
 
+        <a
+          href="https://condescending-chandrasekhar-4d7ab6.netlify.app/"
+          target="_blank"
+          class="work-piece-link site-link"
+          >View Website <i class="fas fa-search"></i
+        ></a>
+        <a
+          href="https://github.com/finsignificant/Twitch-Portfolio"
+          target="_blank"
+          class="work-piece-link code-link reverse"
+          >View Source Code <i class="fab fa-github"></i
+        ></a>
 
-        <section id="work-content">
+        <div class="work-piece-img" id="jude-shot">
+          <img
+            id="jude-img"
+            src="./img/Jude_shot.PNG"
+            alt="PikaJude Not Found"
+          />
+          <div class="work-bg-container">
+            <div class="work-bg"></div>
+            <div class="work-bg"></div>
+            <div class="work-bg"></div>
+            <div class="work-bg"></div>
+            <div class="work-bg"></div>
+            <div class="work-bg"></div>
+            <div class="work-bg"></div>
+            <div class="work-bg"></div>
+          </div>
+        </div>
+      </div>
+      <div class="work-piece reverse-piece">
+        <h3 class="work-piece-title john-title">John the Designer</h3>
+        <p class="work-piece-info">
+          John sure has won a lot of awards! John the Designer is a fictional
+          character whose portfolio site I used to practice with CSS and JS
+        </p>
 
-            <h2 class="section-title">My Portfolio</h2>
-            <p class="section-lead" id='work-text'>My best and most recent work, limited
-                to
-                my
-                recent
-                ventures in web
-                development. Websites are way more fun to look at than schematics and
-                algorithms, after all!</p>
-            <div class="work-piece" id='pikajude'>
+        <a
+          href="https://sharp-minsky-00b8d2.netlify.app/"
+          target="_blank"
+          class="work-piece-link site-link"
+          >View Website <i class="fas fa-search"></i
+        ></a>
 
-                <h3 class="work-piece-title work-piece-text jude-title">PikaJude</h3>
-                <p class="work-piece-info work-piece-text">PikaJude is a Twitch streamer and gamer
-                    from
-                    Glasgow, specializing in first person shooters and boutique
-                    booze. My first true solo mission in web dev!
-                </p>
+        <a
+          href="https://github.com/finsignificant/JD-Portfolio"
+          class="work-piece-link code-link reverse"
+          target="_blank"
+          >View Source Code <i class="fab fa-github"></i
+        ></a>
 
+        <div class="work-piece-img" id="jude-shot">
+          <img
+            id="john-img"
+            src="./img/john_shot.PNG"
+            alt="PikaJude Not Found"
+          />
+          <div class="work-bg-container john-shot">
+            <div class="work-bg"></div>
+            <div class="work-bg"></div>
+            <div class="work-bg"></div>
+            <div class="work-bg"></div>
+            <div class="work-bg"></div>
+            <div class="work-bg"></div>
+            <div class="work-bg"></div>
+            <div class="work-bg"></div>
+          </div>
+        </div>
+      </div>
+      <div class="work-piece last">
+        <h3 class="work-piece-title news-title">News Grid</h3>
+        <p class="work-piece-info">
+          News grid is a practice site I created in order to hone my CSS skills.
+          The main aim was to get comfortable with the CSS3 feature called,
+          believe it or not, CSS Grid
+        </p>
+        <a
+          href="https://clever-albattani-a31680.netlify.app/"
+          target="_blank"
+          class="work-piece-link site-link"
+          >View Website <i class="fas fa-search"></i
+        ></a>
 
-                <a href="https://condescending-chandrasekhar-4d7ab6.netlify.app/" target="_blank"
-                    class="work-piece-link site-link">View Website <i class="fas fa-search"></i></a>
-                <a href="https://github.com/finsignificant/Twitch-Portfolio" target="_blank"
-                    class="work-piece-link code-link reverse">View Source
-                    Code <i class="fab fa-github"></i></a>
+        <a
+          href="https://github.com/finsignificant/NewsGrid"
+          class="work-piece-link code-link reverse"
+          target="_blank"
+          >View Source Code <i class="fab fa-github"></i
+        ></a>
+        <div class="work-piece-img" id="jude-shot">
+          <img
+            id="news-img"
+            src="./img/news_shot.PNG"
+            alt="PikaJude Not Found"
+          />
+          <div class="work-bg-container news-shot">
+            <div class="work-bg"></div>
+            <div class="work-bg"></div>
+            <div class="work-bg"></div>
+            <div class="work-bg"></div>
+            <div class="work-bg"></div>
+            <div class="work-bg"></div>
+            <div class="work-bg"></div>
+            <div class="work-bg"></div>
+          </div>
+        </div>
+      </div>
+      <div id="scroll-from-work" class="enquire enquire-link nav-link-full">
+        <h5>
+          <a href="#contact-content" class="btn-full nav-link"
+            >Get your website started</a
+          >
+        </h5>
+      </div>
+    </section>
 
-
-                <div class='work-piece-img' id="jude-shot">
-                    <img id='jude-img' src="./img/Jude_shot.PNG" alt="PikaJude Not Found">
-                    <div class="work-bg-container">
-                        <div class="work-bg"></div>
-                        <div class="work-bg"></div>
-                        <div class="work-bg"></div>
-                        <div class="work-bg"></div>
-                        <div class="work-bg"></div>
-                        <div class="work-bg"></div>
-                        <div class="work-bg"></div>
-                        <div class="work-bg"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="work-piece reverse-piece">
-
-                <h3 class="work-piece-title john-title">John the Designer</h3>
-                <p class="work-piece-info">John sure has won a lot of awards! John the Designer is a fictional
-                    character whose portfolio site I used to practice with CSS and JS
-                </p>
-
-                <a href="https://sharp-minsky-00b8d2.netlify.app/" target="_blank"
-                    class="work-piece-link site-link">View
-                    Website <i class="fas fa-search"></i></a>
-
-                <a href="https://github.com/finsignificant/JD-Portfolio" class="work-piece-link code-link reverse"
-                    target="_blank">View Source
-                    Code <i class="fab fa-github"></i></a>
-
-
-                <div class='work-piece-img' id="jude-shot">
-                    <img id='john-img' src="./img/john_shot.PNG" alt="PikaJude Not Found">
-                    <div class="work-bg-container john-shot">
-                        <div class="work-bg"></div>
-                        <div class="work-bg"></div>
-                        <div class="work-bg"></div>
-                        <div class="work-bg"></div>
-                        <div class="work-bg"></div>
-                        <div class="work-bg"></div>
-                        <div class="work-bg"></div>
-                        <div class="work-bg"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="work-piece last">
-
-                <h3 class="work-piece-title news-title">News Grid</h3>
-                <p class="work-piece-info">News grid is a practice site I created in order to hone my CSS skills. The main aim was to get comfortable with the CSS3 feature called, believe it or not, CSS Grid
-                </p>
-                <a href="https://clever-albattani-a31680.netlify.app/" target="_blank"
-                    class="work-piece-link site-link">View
-                    Website <i class="fas fa-search"></i></a>
-
-                <a href="https://github.com/finsignificant/NewsGrid" class="work-piece-link code-link reverse"
-                    target="_blank">View Source
-                    Code <i class="fab fa-github"></i></a>
-                <div class='work-piece-img' id="jude-shot">
-                    <img id='news-img' src="./img/news_shot.PNG" alt="PikaJude Not Found">
-                    <div class="work-bg-container news-shot">
-                        <div class="work-bg"></div>
-                        <div class="work-bg"></div>
-                        <div class="work-bg"></div>
-                        <div class="work-bg"></div>
-                        <div class="work-bg"></div>
-                        <div class="work-bg"></div>
-                        <div class="work-bg"></div>
-                        <div class="work-bg"></div>
-                    </div>
-                </div>
-            </div>
-            <div id='scroll-from-work' class="enquire enquire-link nav-link-full">
-                <h5><a href='#contact-content' class="btn-full nav-link">Get your website started</a>
-                </h5>
-            </div>
-        </section>
-
-        <!-- <section id="cv-content">
+    <!-- <section id="cv-content">
             <h2 class="section-title">My CV</h2>
             <p class='section-lead'>For your records a downloadable version of my CV is available here</p>
             <div id='cv-download' class="enquire-link nav-link-full">
@@ -635,60 +641,61 @@
             </div>
         </section> -->
 
+    <section id="contact-content">
+      <h2 class="section-title">Say Hello</h2>
+      <p class="section-lead">
+        Don't hesitate to drop me a line regarding tutoring, consultations or
+        getting your new website started. I always endeavour to respond on the
+        same working day
+      </p>
 
+      <form name="contact" method="POST" data-netlify="true" id="contact">
+        <div class="input-wrapper">
+          <label for="name">Your Name</label>
+          <input type="text" name="name" id="name" />
+        </div>
+        <div class="input-wrapper">
+          <label for="email">Your Email</label>
+          <input type="email" name="email" id="email" />
+        </div>
+        <div class="input-wrapper subject">
+          <label for="subject">Subject</label>
+          <input type="subject" name="subject" id="subject" />
+        </div>
+        <div class="input-wrapper message">
+          <label for="message">Message</label>
+          <textarea name="message" id="message" cols="30" rows="10"></textarea>
+        </div>
+        <!-- <div class="g-recaptcha" data-sitekey="6LcN4zEaAAAAAJo8w_-WwizJLmniJWn-iCm-SXvb"></div> -->
+        <!-- <div id ='robots' data-netlify-recaptcha="true"></div> -->
+        <div class="input-wrapper submit">
+          <button class="btn-full" type="submit">Send</button>
+        </div>
+      </form>
+    </section>
 
+    <footer id="main-footer">
+      <p class="footer-text">
+        &copy; 2020 All Rights Reserved | Design: Finlay Williamson
+      </p>
+    </footer>
 
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.min.js"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+      crossorigin="anonymous"
+    ></script>
+    <!-- <script src='./scripts/app.js'></script> -->
+    <script>
+      if (screen && screen.width > 1025) {
+        document.write("<script src='./scripts/app.js'><\/script>");
+      }
+    </script>
 
-        <section id="contact-content">
-            <h2 class='section-title'>Say Hello</h2>
-            <p class='section-lead'>Don't hesitate to fire me a message regarding tutoring, consultations or getting your new website started. I always endeavour to respond on the same working day</p>
-
-            <form name="contact" method="POST" data-netlify="true"  id="contact">
-                <div class="input-wrapper">
-                    <label for="name">Your Name</label>
-                    <input type="text" name="name" id="name">
-                </div>
-                <div class="input-wrapper">
-                    <label for="email">Your Email</label>
-                    <input type="email" name="email" id="email">
-                </div>
-                <div class="input-wrapper subject">
-                    <label for="subject">Subject</label>
-                    <input type="subject" name="subject" id="subject">
-                </div>
-                <div class="input-wrapper message">
-                    <label for="message">Message</label>
-                    <textarea name="message" id="message" cols="30" rows="10"></textarea>
-                </div>
-                <!-- <div class="g-recaptcha" data-sitekey="6LcN4zEaAAAAAJo8w_-WwizJLmniJWn-iCm-SXvb"></div> -->
-                <!-- <div id ='robots' data-netlify-recaptcha="true"></div> -->
-                <div class="input-wrapper submit">
-                    <button class='btn-full' type="submit">Send</button>
-                </div>
-
-            </form>
-
-        </section>
-
-        <footer id="main-footer">
-            <p class="footer-text">&copy; 2020 All Rights Reserved | Design: Finlay Williamson</p>
-        </footer>
-
-
-        <script src="https://code.jquery.com/jquery-3.5.1.min.js"
-            integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-        <!-- <script src='./scripts/app.js'></script> -->
-        <script>
-            if (screen && screen.width > 1025) {
-                document.write("<script src='./scripts/app.js'><\/script>");
-            }
-        </script>
-
-        <script>
-            if (screen && screen.width < 1025) {
-                document.write("<script src='./scripts/mobile.js'><\/script>");
-            }
-        </script>
-    </body>
-
+    <script>
+      if (screen && screen.width < 1025) {
+        document.write("<script src='./scripts/mobile.js'><\/script>");
+      }
+    </script>
+  </body>
 </html>

@@ -664,10 +664,10 @@ const navLocation = document.querySelector("#nav-location");
 window.onscroll = () => {
   if (window.scrollY > navLocation.offsetTop) {
     stickyElm.classList.add("fixed-nav");
-    aspiring.classList.add("nav-compensate");
+    aspiring.classList.add("fixed-nav-compensate");
   } else {
     stickyElm.classList.remove("fixed-nav");
-    aspiring.classList.remove("nav-compensate");
+    aspiring.classList.remove("fixed-nav-compensate");
   }
 };
 const robots = document.getElementById('robots');

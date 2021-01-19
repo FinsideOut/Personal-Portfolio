@@ -305,62 +305,64 @@ const titles = document.querySelectorAll(".section-title");
 //     educatorBgs[i].classList.remove("educator-bg-center-" + [i]);
 //   }
 // });
+if(!screenWidth.matches){
+const graphIcons = document.querySelectorAll(".graph-icon");
+const graphTexts = document.querySelectorAll(".graph-icon-text");
+const graphBgs = document.querySelectorAll(".graph-icon-bg");
+const graphTitle = document.querySelector(".graph-title");
+const LabelX = document.querySelector(".x-label");
+const LabelY = document.querySelector(".y-label");
+const graphContent = document.querySelector(".graph-content");
+const graphArrowUp = document.querySelector(".up-arrow");
+const graphArrowRight = document.querySelector(".right-arrow");
+const engineerText = document.getElementById("engineer-text");
+const softSkills = document.querySelector(".soft-skills");
+const technicalSkills = document.querySelector(".technical-skills");
+graphIcons.forEach((icon) => {
+  icon.addEventListener("mouseenter", (e) => {
+    e.target.classList.remove("obscure");
 
-// const graphIcons = document.querySelectorAll(".graph-icon");
-// const graphTexts = document.querySelectorAll(".graph-icon-text");
-// const graphBgs = document.querySelectorAll(".graph-icon-bg");
-// const graphTitle = document.querySelector(".graph-title");
-// const LabelX = document.querySelector(".x-label");
-// const LabelY = document.querySelector(".y-label");
-// const graphContent = document.querySelector(".graph-content");
-// const graphArrowUp = document.querySelector(".up-arrow");
-// const graphArrowRight = document.querySelector(".right-arrow");
-// const engineerText = document.getElementById("engineer-text");
-// const softSkills = document.querySelector(".soft-skills");
-// const technicalSkills = document.querySelector(".technical-skills");
-// graphIcons.forEach((icon) => {
-//   icon.addEventListener("mouseenter", (e) => {
-//     e.target.classList.remove("obscure");
+    graphTitle.classList.add("obscure");
+    titles[1].classList.add("obscure");
+    engineerText.classList.add("obscure");
+    educatorContent.classList.add("obscure");
+    softSkills.classList.add("obscure");
+    e.target.parentElement.childNodes[1].classList.add("normalize");
+    e.target.parentElement.childNodes[3].classList.add("shown");
+    e.target.parentElement.childNodes[7].classList.add("shown");
+    graphIcons.forEach((icon) => {
+      if (e.target.classList !== icon.classList) {
+        icon.classList.add("obscure");
+        icon.parentElement.childNodes[1].classList.remove("normalize");
+        icon.parentElement.childNodes[3].classList.remove("shown");
+        icon.parentElement.childNodes[7].classList.remove("shown");
+      }
+    });
+  });
+});
+graphIcons.forEach((icon) => {
+  icon.addEventListener("mouseout", (e) => {
 
-//     graphTitle.classList.add("obscure");
-//     titles[1].classList.add("obscure");
-//     engineerText.classList.add("obscure");
-//     educatorContent.classList.add("obscure");
-//     softSkills.classList.add("obscure");
-//     e.target.parentElement.childNodes[1].classList.add("normalize");
-//     e.target.parentElement.childNodes[3].classList.add("shown");
-//     e.target.parentElement.childNodes[7].classList.add("shown");
-//     graphIcons.forEach((icon) => {
-//       if (e.target.classList !== icon.classList) {
-//         icon.classList.add("obscure");
-//         icon.parentElement.childNodes[1].classList.remove("normalize");
-//         icon.parentElement.childNodes[3].classList.remove("shown");
-//         icon.parentElement.childNodes[7].classList.remove("shown");
-//       }
-//     });
-//   });
-// });
-// graphIcons.forEach((icon) => {
-//   icon.addEventListener("mouseout", (e) => {
+    graphTitle.classList.remove("obscure");
+    LabelX.classList.remove("obscure");
+    LabelY.classList.remove("obscure");
+    titles[1].classList.remove("obscure");
+    engineerText.classList.remove("obscure");
+    educatorContent.classList.remove("obscure");
+    softSkills.classList.remove("obscure");
+    graphContent.classList.remove("obscure-borders");
+    graphArrowUp.classList.remove("obscure-arrow-up");
+    graphArrowRight.classList.remove("obscure-arrow-right");
+    e.target.parentElement.childNodes[1].classList.remove("normalize");
+    e.target.parentElement.childNodes[3].classList.remove("shown");
+    e.target.parentElement.childNodes[7].classList.remove("shown");
+    graphIcons.forEach((icon) => {
+      icon.classList.remove("obscure");
+    });
+  });
+});
+}
 
-//     graphTitle.classList.remove("obscure");
-//     LabelX.classList.remove("obscure");
-//     LabelY.classList.remove("obscure");
-//     titles[1].classList.remove("obscure");
-//     engineerText.classList.remove("obscure");
-//     educatorContent.classList.remove("obscure");
-//     softSkills.classList.remove("obscure");
-//     graphContent.classList.remove("obscure-borders");
-//     graphArrowUp.classList.remove("obscure-arrow-up");
-//     graphArrowRight.classList.remove("obscure-arrow-right");
-//     e.target.parentElement.childNodes[1].classList.remove("normalize");
-//     e.target.parentElement.childNodes[3].classList.remove("shown");
-//     e.target.parentElement.childNodes[7].classList.remove("shown");
-//     graphIcons.forEach((icon) => {
-//       icon.classList.remove("obscure");
-//     });
-//   });
-// });
 // const discs = document.querySelectorAll(".soft-skills-disc");
 // softSkills.addEventListener("mouseover", (e) => {
 //   // console.log(discs);
